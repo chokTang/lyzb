@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:commonRecyclerView="http://schemas.android.com/tools"
+    android:background="@color/colorTen"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tabHeight"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/fragment_shop_bonus_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/shopBonus"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo" />
+
+
+        <TextView
+            android:id="@+id/fragment_pay_bonus_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/platformBonus"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorEight" />
+
+    <me.zongren.pullablelayout.Main.PullableLayout xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_bonus_pullableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        PullableLayout:pullablelayout_side="TOP">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_bonus_pullableRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            commonRecyclerView:emptyImage="@mipmap/bg_public"
+            commonRecyclerView:emptyTitle="@string/emptyBonusTitle"
+            />
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/app_margin"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/app_margin">
+
+        <ImageView
+            android:id="@+id/img_item_cir_appl_head"
+            android:layout_width="@dimen/member_headerImg_big"
+            android:layout_height="@dimen/member_headerImg_big"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/adaptive_12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_item_cir_appl_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14"
+                tools:text="赵婷婷"/>
+
+            <TextView
+                android:id="@+id/tv_item_cir_appl_com"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_line_space"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize12"
+                tools:text="重庆市礼仪之邦电子商务有限公司"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:background="@color/colorLine"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/app_margin">
+
+        <TextView
+            android:id="@+id/tv_item_cir_appl_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:textColor="@color/fontcColor3"
+            android:textSize="@dimen/textSize12"
+            tools:text="这是时间"/>
+
+        <TextView
+            android:id="@+id/tv_item_cir_appl_agreed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/st_linecolor_r2"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="3dp"
+            android:text="同意"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14"/>
+
+        <TextView
+            android:id="@+id/tv_item_cir_appl_refuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/st_linecolor_r2"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="3dp"
+            android:text="拒绝"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14"/>
+
+        <TextView
+            android:id="@+id/tv_item_cir_appl_resulte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fontcColor3"
+            android:textSize="@dimen/textSize12"
+            android:visibility="gone"
+            tools:text="已同意"/>
+    </LinearLayout>
+</LinearLayout>

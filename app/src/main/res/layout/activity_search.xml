@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_common_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/toolbar_bottom_border"
+            android:weightSum="1"
+            app:contentInsetEndWithActions="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:navigationIcon="@mipmap/btn_back_dark">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.szy.common.View.CommonEditText
+                    android:id="@+id/activity_search_search_eidttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toLeftOf="@+id/activity_search_srearch_button"
+                    android:layout_toStartOf="@+id/activity_search_srearch_button"
+                    android:background="@drawable/fragment_category_title_search_background"
+                    android:gravity="center_vertical"
+                    android:hint="@string/pleaseEdit"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorOne"
+                    android:textColorHint="@color/colorFive"
+                    android:textSize="@dimen/fontThree"/>
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/ic_search"/>
+
+                <ImageView
+                    android:id="@+id/img_seach_photo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@id/activity_search_srearch_button"
+                    android:src="@mipmap/img_seach"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/activity_search_srearch_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:text="@string/search"
+                    android:textColor="@color/colorThree"
+                    android:textSize="@dimen/fontSeven"/>
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/activity_common_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_toRightOf="@+id/activity_filter_closeView"/>
+</RelativeLayout>

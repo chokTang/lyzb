@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/top_bottom_border_one"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/item_review_title_value"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontThree"
+        android:text=""
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/item_review_star_one_img"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/btn_collect_selected" />
+
+    <ImageView
+        android:id="@+id/item_review_star_two_img"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/btn_collect_selected" />
+
+    <ImageView
+        android:id="@+id/item_review_star_three_img"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/btn_collect_selected" />
+
+    <ImageView
+        android:id="@+id/item_review_star_four_img"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/btn_collect_selected" />
+
+    <ImageView
+        android:id="@+id/item_review_star_five_img"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/btn_collect_selected" />
+
+    <TextView
+        android:id="@+id/item_review_date"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="end|center_vertical"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontSix"
+        android:layout_weight="1"/>
+
+</LinearLayout>

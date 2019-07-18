@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:background="@drawable/toolbar_bottom_border"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/statistics_back_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/btn_back_dark"/>
+
+    <TextView
+        android:id="@+id/statistics_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize16"
+        tools:text="Fragment Title"/>
+
+
+    <TextView
+        android:id="@+id/statistics_right_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:paddingRight="@dimen/app_margin"
+        android:singleLine="true"
+        android:text="@string/placeholderActivityTitle"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14"
+        />
+
+</RelativeLayout>

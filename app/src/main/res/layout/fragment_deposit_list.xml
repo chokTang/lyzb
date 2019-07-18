@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical">
+
+    <me.zongren.pullablelayout.Main.PullableLayout xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_withdrawal_record_pushlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        PullableLayout:pullablelayout_side="TOP">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_withdrawal_record_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            PullableLayout:emptyImage="@mipmap/bg_public"
+            PullableLayout:emptyTitle="@string/emptyData" />
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+
+    <include layout="@layout/layout_bottom_menu_common" />
+</LinearLayout>

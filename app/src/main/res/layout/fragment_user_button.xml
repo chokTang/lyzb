@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <View
+        android:id="@+id/view_left"
+        android:layout_width="10dp"
+        android:layout_height="1dp"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:id="@+id/rl_user_button_bg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/fragment_user_button_iconImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/btn_await_pay" />
+
+        <TextView
+            android:id="@+id/fragment_user_button_titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_user_button_iconImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:paddingBottom="5dp"
+            android:text="@string/placeholderTitle"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour" />
+
+        <TextView
+            android:id="@+id/fragment_user_button_badge_numberTextView"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignLeft="@+id/fragment_user_button_iconImageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/fragment_user_button_iconImageView"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/fragment_user_button_number"
+            android:gravity="center"
+            android:text="@string/placeholderNumber"
+            android:textColor="@android:color/white"
+            android:textSize="10dp" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/view_right"
+        android:layout_width="10dp"
+        android:layout_height="1dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

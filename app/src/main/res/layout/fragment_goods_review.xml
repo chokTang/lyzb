@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/fragment_comment_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingTop="15dp"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/fragment_goods_comment_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorTen"
+        />
+
+    <me.zongren.pullablelayout.Main.PullableLayout
+        android:id="@+id/fragment_comment_list_recyclerView_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        PullableLayout:pullablelayout_side="TOP">
+
+        <com.szy.common.View.CommonRecyclerView
+            xmlns:commonRecyclerView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fragment_goods_review_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            commonRecyclerView:emptyImage="@mipmap/bg_public"
+            commonRecyclerView:emptySubtitle="@string/emptyReviewListSubtitle"
+            commonRecyclerView:emptyTitle="@string/emptyGoodsCommentTitle"
+            />
+
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+</LinearLayout>

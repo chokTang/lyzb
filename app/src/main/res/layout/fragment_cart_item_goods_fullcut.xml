@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="41dp"
+        android:layout_height="wrap_content">
+
+        <com.szy.yishopcustomer.View.DashedLineView
+            android:layout_width="1px"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageView
+            android:id="@+id/item_cart_goods_treeCheckBox"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:background="@android:color/white"
+            android:checked="false"
+            android:src="@drawable/image_checkbox_selector"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/item_border_one"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp">
+
+            <ImageView
+                android:id="@+id/item_cart_goods_imageView"
+                android:layout_width="82dp"
+                android:layout_height="82dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gray_border_button_six"
+                android:padding="1dp"
+                android:src="@mipmap/pl_image"/>
+
+            <TextView
+                android:id="@+id/item_cart_goods_name_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/item_cart_goods_imageView"
+                android:layout_toRightOf="@+id/item_cart_goods_imageView"
+                android:maxLines="2"
+                android:text="商品名称"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontThree"/>
+
+            <TextView
+                android:id="@+id/item_cart_goods_attribute_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/item_cart_goods_name_textView"
+                android:layout_alignStart="@+id/item_cart_goods_name_textView"
+                android:layout_below="@+id/item_cart_goods_name_textView"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorGoodsDesc"
+                android:textSize="@dimen/fontSix"/>
+
+            <TextView
+                android:id="@+id/item_cart_deductibleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/item_cart_goods_imageView"
+                android:layout_alignLeft="@+id/item_cart_goods_price_textView"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontFive"
+                android:visibility="visible"
+                tools:text="元宝最高抵扣"/>
+
+            <TextView
+                android:id="@+id/item_cart_goods_price_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/item_cart_goods_imageView"
+                android:layout_toRightOf="@+id/item_cart_goods_imageView"
+                android:text="@string/placeholderGoodsPrice"
+                android:textColor="@color/colorPrimary"
+                android:layout_above="@+id/item_cart_deductibleTextView"
+                android:textSize="@dimen/fontOne"/>
+
+            <TextView
+                android:id="@+id/fragment_cart_goods_activity"
+                android:layout_width="30dp"
+                android:layout_height="17dp"
+                android:layout_alignLeft="@+id/item_cart_goods_imageView"
+                android:layout_alignStart="@+id/item_cart_goods_imageView"
+                android:layout_alignTop="@+id/item_cart_goods_imageView"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="@dimen/fontSix"/>
+
+            <TextView
+                android:id="@+id/fragment_cart_goods_moq"
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:layout_alignBottom="@+id/item_cart_goods_imageView"
+                android:layout_alignEnd="@+id/item_cart_goods_imageView"
+                android:layout_alignRight="@+id/item_cart_goods_imageView"
+                android:background="@drawable/goods_moq_background"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontSix"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/item_cart_goods_imageView"
+                android:layout_below="@+id/item_cart_goods_imageView"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/item_cart_goods_delete_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_delete_dark"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"/>
+
+                <include layout="@layout/layout_add_to_cart"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

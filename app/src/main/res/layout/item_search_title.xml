@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_height="10dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorTen"
+        />
+
+    <TextView
+        android:id="@+id/activity_search_history_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/recentSearch"
+        android:textColor="@color/colorOne"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:textSize="17dp" />
+    
+     <include layout="@layout/item_border_one"/>
+
+</LinearLayout>

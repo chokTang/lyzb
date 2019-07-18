@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_one"
+    android:gravity="center_vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/imageView_shop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/activity_circle_circleimageview"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="top|left"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_shop_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="王雷_店铺"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo" />
+
+        <TextView
+            android:id="@+id/textView_store_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:maxLines="1"
+            android:text="店铺积分：12 积分"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontFive" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/shape_corner_white"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="去兑换"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree" />
+
+</LinearLayout>

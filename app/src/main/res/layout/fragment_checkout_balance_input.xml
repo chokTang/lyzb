@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_checkout_payment_label_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/fragment_checkout_payment_input_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/fragment_checkout_balance_input_labelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@string/labelPayByBalance"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo" />
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/fragment_checkout_balance_input_balanceEditText"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/fragment_checkout_balance_input_labelTextView"
+            android:layout_alignTop="@+id/fragment_checkout_balance_input_labelTextView"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@+id/fragment_checkout_balance_input_labelTextView"
+            android:layout_toRightOf="@+id/fragment_checkout_balance_input_labelTextView"
+            android:background="@drawable/fragment_checkout_balance_input"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo" />
+
+        <TextView
+            android:id="@+id/fragment_checkout_balance_input_unitTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_toRightOf="@+id/fragment_checkout_balance_input_balanceEditText"
+            android:gravity="center"
+            android:text="@string/unitDollar"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo" />
+
+        <TextView
+            android:id="@+id/fragment_checkout_balance_input_minusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/fragment_checkout_balance_input_unitTextView"
+            android:gravity="center"
+            android:text="@string/symbolMinus"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontTwo" />
+
+        <TextView
+            android:id="@+id/fragment_checkout_balance_input_balanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/fragment_checkout_balance_input_minusTextView"
+            android:layout_toRightOf="@+id/fragment_checkout_balance_input_minusTextView"
+            android:gravity="center"
+            android:text="@string/placeholderBalanceFormat"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontTwo" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restAmount"
+            android:textColor="@color/colorGoodsDesc"
+            android:textSize="@dimen/fontFive" />
+
+        <TextView
+            android:id="@+id/fragment_checkout_payment_label_moneyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/placeholderUserMoney"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pleaseSelectPaymentFromBelow"
+            android:textColor="@color/colorGoodsDesc"
+            android:textSize="@dimen/fontFive" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/item_border_two"
+        />
+
+</LinearLayout>

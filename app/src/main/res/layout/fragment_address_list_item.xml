@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/top_bottom_border_one"
+              android:orientation="vertical"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/fragment_address_list_topWrapperRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/fragment_address_list_nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxEms="10"
+            android:padding="3dp"
+            android:singleLine="true"
+            android:text="收货人"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontSeven"/>
+
+        <TextView
+            android:id="@+id/fragment_address_list_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/fragment_address_list_nameTextView"
+            android:background="@color/colorPrimary"
+            android:padding="2dp"
+            android:text="默认地址"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontSix"
+            />
+
+        <TextView
+            android:id="@+id/fragment_address_list_phoneTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_address_list_nameTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/fragment_address_list_nameTextView"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/placeholderPhoneFormat"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontSeven"/>
+
+        <TextView
+            android:id="@+id/fragment_address_list_addressTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fragment_address_list_nameTextView"
+            android:layout_below="@+id/fragment_address_list_nameTextView"
+            android:layout_marginTop="10dp"
+            android:maxLines="3"
+            android:text="@string/placeholderConsigneeAddress"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree"/>
+    </RelativeLayout>
+
+    <include layout="@layout/item_border_two"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_address_list_bottomWrapperRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <include
+            layout="@layout/layout_checkbox"/>
+
+        <TextView
+            android:id="@+id/fragment_address_list_checkboxTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/setDefaultAddressLong"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree"/>
+
+        <TextView
+            android:id="@+id/fragment_address_list_editTextView"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/gray_border_button_one"
+            android:gravity="center"
+            android:text="@string/edit"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour"/>
+
+        <TextView
+            android:id="@+id/fragment_address_list_deleteTextView"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/gray_border_button_one"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/delete"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.like.longshaolib.widget.AutoWidthTabLayout
+        android:id="@+id/tab_home_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/fontcColor3"
+        app:tabIndicatorHeight="2dp"
+        app:tabSelectTextColor="@color/fontcColor1"
+        app:tabSelectTextSize="16"
+        app:tabTextColor="@color/fontcColor3"
+        app:tabTextSize="16"
+        app:tab_Mode="mode_fixed" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/app_margin"
+        android:paddingRight="@dimen/app_margin"
+        app:layout_scrollFlags="enterAlways|scroll">
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="定位中..."
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_gray_bg"
+            android:drawableRight="@drawable/search_home"
+            android:gravity="center_vertical"
+            android:hint="搜索动态、商品、用户、圈子"
+            android:paddingLeft="10dp"
+            android:paddingRight="@dimen/app_margin"
+            android:textColorHint="@color/fontcColor3"
+            android:textSize="@dimen/textSize14" />
+
+    </LinearLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <LinearLayout
+        android:id="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:alpha="0.9"
+        android:background="#e1f4ff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/app_margin"
+        android:paddingRight="@dimen/app_margin"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/img_info_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="4dp"
+            android:padding="4dp"
+            android:src="@mipmap/ic_area_closed"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="免费定制智能名片，增加更多合作机会"
+            android:textColor="@color/fontcColor2"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tv_go_perfect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="立即定制>>"
+            android:textColor="@color/app_blue"
+            android:textSize="@dimen/textSize14" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

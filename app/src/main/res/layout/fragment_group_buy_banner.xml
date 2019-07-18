@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="0.6dp"
+    >
+
+    <com.szy.yishopcustomer.View.HeadWrapContentViewPager
+        android:id="@+id/fragment_group_buy_banner_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        />
+
+    <com.szy.yishopcustomer.View.CirclePageIndicator
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_group_buy_banner_pageIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/fragment_group_buy_banner_viewPager"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        app:fillColor="#fc4955"
+        app:paddingStart="5dp"
+        app:pageColor="#88f4f7fc"
+        app:radius="3dp"
+        app:strokeColor="#88d5dae2"
+        app:strokeWidth="0dp"/>
+
+</RelativeLayout>

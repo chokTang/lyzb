@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingTop="40dp">
+
+
+    <TextView
+        android:id="@+id/fragment_login_by_weixin_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/tooManyAccountsToRememberLoginByWeixinTip"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontTwo"/>
+
+    <ImageView
+        android:id="@+id/fragment_login_by_weixin_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:minHeight="75dp"
+        android:minWidth="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+
+    <Button
+        android:id="@+id/fragment_login_by_weixin_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/green_border_button_two"
+        android:text="@string/loginByWeixin"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontSeven"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="24dp"/>
+
+
+    <Button
+        android:id="@+id/fragment_login_by_otherWay_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/green_border_button_one"
+        android:text="@string/loginByOtherWay"
+        android:textColor="#72D135"
+        android:textSize="@dimen/fontSeven"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
+
+</LinearLayout>

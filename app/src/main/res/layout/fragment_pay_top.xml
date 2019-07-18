@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@color/colorPrimary"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_capital_top"
+        />
+
+    <TextView
+        android:id="@+id/fragment_pay_top_alertTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:text="@string/lastStepPleaseHurry"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/fontOne"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+
+    <TextView
+        android:id="@+id/fragment_pay_top_orderLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fragment_pay_top_alertTextView"
+        android:layout_above="@+id/fragment_pay_top_moneyLabelTextView"
+        android:text="@string/labelOrderSn"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/fontTwo"
+        />
+
+    <TextView
+        android:id="@+id/fragment_pay_top_orderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fragment_pay_top_orderLabelTextView"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/fragment_pay_top_orderLabelTextView"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/fontTwo"
+        />
+
+    <TextView
+        android:id="@+id/fragment_pay_top_moneyLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fragment_pay_top_alertTextView"
+        android:layout_marginTop="5dp"
+        android:text="@string/labelSupposedToPay"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/fontTwo"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/fragment_pay_top_moneyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fragment_pay_top_moneyLabelTextView"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/fragment_pay_top_moneyLabelTextView"
+        android:text="@string/placeholderOrderMoney"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/fontTwo"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:background="@color/lineColor" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/app_margin"
+        android:paddingRight="@dimen/app_margin">
+
+        <TextView
+            android:id="@+id/addstaff_organ_item_organname_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="机构类型"
+            android:textColor="@color/fontcColor2"
+            android:textSize="@dimen/textSize14" />
+
+        <RadioButton
+            android:id="@+id/addstaff_organ_item_staff_rbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/ic_choice_organ"
+            android:drawablePadding="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="普通成员"
+            android:textColor="@color/fontcColor2"
+            android:textSize="@dimen/textSize14" />
+
+        <RadioButton
+            android:id="@+id/addstaff_organ_item_admin_rbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/ic_choice_organ"
+            android:drawablePadding="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="管理员"
+            android:textColor="@color/fontcColor2"
+            android:textSize="@dimen/textSize14" />
+
+    </RadioGroup>
+</LinearLayout>

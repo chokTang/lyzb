@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh_video"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_video"
+        android:layout_width="match_parent"
+        android:background="@color/windows_bg"
+        android:layout_height="match_parent"
+        android:paddingTop="7.5dp"
+        android:paddingRight="7.5dp"
+        android:paddingLeft="7.5dp" />
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

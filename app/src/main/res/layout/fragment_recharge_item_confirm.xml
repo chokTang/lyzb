@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/fragment_recharge_item_confirm_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_marginLeft="@dimen/buttonEdgeMargin"
+        android:layout_marginTop="@dimen/buttonMarginTop"
+        android:layout_marginRight="@dimen/buttonEdgeMargin"
+        android:textColor="@drawable/button_text_selector"
+        android:background="@drawable/enable_button"
+        android:textSize="@dimen/fontSeven"
+        android:text="@string/confirm"
+        />
+</LinearLayout>

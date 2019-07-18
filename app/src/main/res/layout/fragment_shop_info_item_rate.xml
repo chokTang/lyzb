@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    >
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/fragment_shop_info_item_left"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/fragment_shop_info_item_descriptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontThree"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment_shop_info_item_descriptionTextView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/description"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontFour"
+                />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/fragment_shop_info_item_left"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/fragment_shop_info_item_serviceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontThree"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment_shop_info_item_serviceTextView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/serviceAttitude"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontFour"
+                />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/fragment_shop_info_item_expressTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontThree"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment_shop_info_item_expressTextView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/deliverySpeed"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontFour"
+                />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

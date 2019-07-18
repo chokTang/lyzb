@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/bottom_border_one"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/fragment_integral_sort_default"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/fragment_goods_list_sort_background"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/fragment_integral_sort_default_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="默认排序"
+            android:textColor="@drawable/tab_text_selector"
+            android:textSize="@dimen/fontThree"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_integral_sort_exchange_amount"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/fragment_goods_list_sort_background"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/fragment_integral_sort_exchange_amount_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="兑换量"
+            android:textColor="@drawable/tab_text_selector"
+            android:textSize="@dimen/fontThree"/>
+
+        <ImageView
+            android:id="@+id/fragment_integral_sort_exchange_amount_imageview"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/bg_arrow_default"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_integral_sort_integral_value"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/fragment_goods_list_sort_background"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/fragment_integral_sort_integral_value_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="积分值"
+            android:textColor="@drawable/tab_text_selector"
+            android:textSize="@dimen/fontThree"/>
+
+        <ImageView
+            android:id="@+id/fragment_integral_sort_integral_value_imageview"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/bg_arrow_default"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_integral_sort_shelf_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/fragment_goods_list_sort_background"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/fragment_integral_sort_shelf_time_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="上架时间"
+            android:textColor="@drawable/tab_text_selector"
+            android:textSize="@dimen/fontThree"/>
+
+        <ImageView
+            android:id="@+id/fragment_integral_sort_shelf_time_imageview"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/bg_arrow_default"/>
+
+    </LinearLayout>
+
+</LinearLayout>

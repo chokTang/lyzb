@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/track_record_smartrefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/track_record_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingTop="@dimen/app_margin"/>
+
+            <include
+                android:id="@+id/track_record_notdata"
+                layout="@layout/empty_layout"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/track_record_addtrack_tv"
+        style="@style/common_bottom_btn_style"
+        android:layout_marginTop="@dimen/app_margin"
+        android:text="添加跟进"/>
+</LinearLayout>

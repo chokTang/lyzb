@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:divider="@drawable/linediver"
+    app:showDividers="middle">
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/single_layout_height"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/app_margin"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14"
+        tools:text="item1" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_me_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</android.support.v7.widget.LinearLayoutCompat>

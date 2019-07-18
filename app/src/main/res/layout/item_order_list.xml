@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/item_order_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border_two"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp">
+
+    <ImageView
+        android:id="@+id/item_order_list_goods_imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/pl_image"/>
+
+    <TextView
+        android:id="@+id/item_order_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/item_order_list_goods_imageView"
+        android:layout_toLeftOf="@+id/fragment_order_list_goods_number"
+        android:layout_toRightOf="@+id/item_order_list_goods_imageView"
+        android:maxLines="2"
+        android:text="自由购"
+        android:background="@drawable/enable_button"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        android:textSize="@dimen/fontFive"/>
+
+    <TextView
+        android:id="@+id/item_order_list_goods_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/item_order_list_goods_imageView"
+        android:layout_toLeftOf="@+id/fragment_order_list_goods_number"
+        android:layout_toRightOf="@+id/item_order_list_goods_imageView"
+        android:maxLines="2"
+        android:lineSpacingExtra="2dp"
+        android:text="              商品名称商品名称商品名称商品名称商品名称商品名称商品名称"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree"/>
+
+    <TextView
+        android:id="@+id/item_order_list_goods_attribute_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_order_list_goods_name_textView"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/item_order_list_goods_imageView"
+        android:layout_toRightOf="@+id/item_order_list_goods_imageView"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="商品属性"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontSix"/>
+
+    <TextView
+        android:id="@+id/fragment_order_list_goods_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fragment_checkout_goods_numberTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="x1"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontFour"/>
+
+    <TextView
+        android:id="@+id/fragment_checkout_goods_numberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_order_list_goods_imageView"
+        android:layout_toRightOf="@+id/item_order_list_goods_imageView"
+        android:text="商品价格"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontSeven"/>
+
+    <TextView
+        android:id="@+id/fragment_order_list_back_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fragment_order_list_goods_number"
+        android:layout_marginTop="10dp"
+        android:text="退款/退货成功"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFive"
+        android:visibility="gone"
+       />
+
+    <TextView
+        android:id="@+id/fragment_order_goods_activity"
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="@dimen/fontSix"/>
+
+</RelativeLayout>

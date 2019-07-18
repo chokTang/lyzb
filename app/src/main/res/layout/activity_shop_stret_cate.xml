@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/activity_shop_street_back_textView"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:text="@string/close"/>
+    <ImageView
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_below="@+id/activity_shop_street_two_cate_listView"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="269dp"
+        android:src="@mipmap/btn_right_arrow_circled"
+        />
+
+    <ListView
+        android:id="@+id/activity_shop_street_one_cate_listView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/activity_shop_street_back_textView"
+        android:background="@android:color/white"
+        >
+    </ListView>
+
+    <ListView
+        android:id="@+id/activity_shop_street_two_cate_listView"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/darker_gray"
+        android:visibility="gone"
+        >
+
+    </ListView>
+
+</RelativeLayout>

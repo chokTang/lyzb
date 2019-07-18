@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ingot_number_bg">
+
+
+    <TextView
+        android:id="@+id/tv_ingot_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="42dp"
+        android:textColor="@color/colorShopBase"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        tools:text="7540"/>
+
+    <TextView
+        android:id="@+id/tv_ingot_number_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ingot_number"
+        android:layout_marginLeft="42dp"
+        android:text="@string/usableIngot"
+        android:textColor="@color/colorShopBase"
+        android:textSize="12dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/ing_nub"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ingot_number_title"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/fme_ingot_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/ing_de"
+                android:drawablePadding="6dp"
+                android:text="@string/ingot_detail"
+                android:textColor="@color/colorShopBase"
+                android:textSize="14dp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="18dp"
+                android:layout_gravity="right|center"
+                android:background="@color/aliwx_white"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fme_ingot_explain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/ing_exp"
+                android:drawablePadding="6dp"
+                android:text="@string/ingot_exp"
+                android:textColor="@color/colorShopBase"
+                android:textSize="14dp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="18dp"
+                android:layout_gravity="right|center"
+                android:background="@color/aliwx_white"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fme_ingot_shop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/ing_shop"
+                android:drawablePadding="6dp"
+                android:text="@string/ingot_shop"
+                android:textColor="@color/colorShopBase"
+                android:textSize="14dp"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

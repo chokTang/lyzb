@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/fragment_result_order_orderLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="@string/labelOrderSn"
+        android:textSize="@dimen/fontThree"
+        android:textColor="@color/colorThree"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/fragment_result_order_orderTextView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/fragment_result_order_moneyLabelTextView"
+        android:layout_toRightOf="@+id/fragment_result_order_orderLabelTextView"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontThree" />
+
+    <TextView
+        android:id="@+id/fragment_result_order_moneyLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_toLeftOf="@+id/fragment_result_order_moneyTextView"
+        android:gravity="center"
+        android:text="@string/labelOrderMoney"
+        android:textSize="@dimen/fontThree"
+        android:textColor="@color/colorThree"/>
+
+    <TextView
+        android:id="@+id/fragment_result_order_moneyTextView"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:gravity="start|center_vertical"
+        android:text="@string/placeholderOrderMoney"
+        android:textColor="#fa4862"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorTen"
+        android:layout_below="@+id/fragment_result_order_orderLabelTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp"/>
+</RelativeLayout>

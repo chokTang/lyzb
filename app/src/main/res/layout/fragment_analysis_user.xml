@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_statistics"/>
+
+    <TextView
+        android:id="@+id/analysis_user_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/app_margin"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14"
+        tools:text="近30天企业共引流新用户555人"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/analysis_user_smartrefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/analysis_user_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/windows_bg"/>
+
+            <include
+                android:id="@+id/analysis_user_nodata_in"
+                layout="@layout/empty_layout"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

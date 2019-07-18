@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+def cfg = rootProject.ext.configuration//配置
+def libs = rootProject.ext.libraries//库
+
+android {
+    compileSdkVersion cfg.compileVersion
+    buildToolsVersion cfg.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion cfg.minSdk
+        targetSdkVersion cfg.targetSdkopensdk
+        versionCode cfg.version_code
+        versionName cfg.version_name
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    api 'com.huawei.android.hms:iap:2.6.3.301'
+    api 'com.huawei.android.hms:game:2.6.3.301'
+    api 'com.huawei.android.hms:sns:2.6.3.301'
+    api 'com.huawei.android.hms:hwid:2.6.3.301'
+    api 'com.huawei.android.hms:push:2.6.3.301'
+    api 'com.huawei.android.hms:opendevice:2.6.3.301'
+
+}
+
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/top_bottom_border_one"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:id="@+id/layout_shop_item"
+    >
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginEnd="3dp"
+        android:src="@mipmap/ic_shop_seller"
+        />
+
+    <TextView
+        android:id="@+id/item_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontTwo"
+        android:maxLines="1"
+        android:maxEms="8"
+        android:ellipsize="end"
+        android:text="店铺名称店铺名称店铺名称"
+        />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@mipmap/btn_right_arrow"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/textViewTableNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0111"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textSize="@dimen/fontFour"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/red_border_button_one"/>
+
+    <TextView
+        android:id="@+id/item_status"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="状态占位"
+        android:gravity="right"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontThree"/>
+
+</LinearLayout>

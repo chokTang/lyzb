@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_two"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/collection_shop_logo"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/pl_image" />
+
+    <TextView
+        android:id="@+id/collection_shop_name_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text=""
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontTwo" />
+
+    <ImageView
+        android:id="@+id/right_arrow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@mipmap/btn_right_arrow" />
+
+</LinearLayout>

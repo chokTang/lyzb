@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/app_margin">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rel_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35dp"
+                android:background="@mipmap/union_me_header_bg"
+                android:paddingTop="50dp">
+
+                <ImageView
+                    android:id="@+id/cim_union_me_img"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:id="@+id/ll_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_toRightOf="@id/cim_union_me_img"
+                    android:orientation="vertical"
+                    android:paddingRight="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_union_me_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLength="12"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize16"
+                            tools:text="杨" />
+
+                        <ImageView
+                            android:id="@+id/img_union_me_vip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:src="@drawable/union_vip"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_union_me_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/union_white_round_right"
+                            android:drawablePadding="@dimen/text_icon_space"
+                            android:gravity="right"
+                            android:text="完善名片"
+                            android:textColor="@color/app_golden"
+                            android:textSize="@dimen/textSize12" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_card_info"
+                        style="@style/me_info_proress"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:max="100"
+                        tools:progress="50" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_card_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize12"
+                        tools:text="名片完善40%,超过60%用户" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cim_union_me_img"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/app_margin">
+
+                    <LinearLayout
+                        android:id="@+id/lin_union_me_publish"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_un_me_pub"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize16"
+                            tools:text="66" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/text_line_space"
+                            android:gravity="center"
+                            android:text="发表"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_union_me_focus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_un_me_focus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize16"
+                            tools:text="120" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/text_line_space"
+                            android:gravity="center"
+                            android:text="关注"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize12" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_union_me_fans"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_un_me_fans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize16"
+                            tools:text="888" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/text_line_space"
+                            android:gravity="center"
+                            android:text="粉丝"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize12" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_union_me_collect"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_un_me_coll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize16"
+                            tools:text="99" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/text_line_space"
+                            android:gravity="center"
+                            android:text="收藏"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize12" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lin_card_number"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="@dimen/adaptive_6dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="45dp"
+                    android:background="@drawable/me_card_round_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_me_card_grow"
+                        android:layout_width="@dimen/adaptive_42dp"
+                        android:layout_height="@dimen/adaptive_36dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/adaptive_18dp"
+                        android:layout_marginTop="@dimen/adaptive_6dp"
+                        android:layout_marginBottom="@dimen/adaptive_6dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/text_me_card_grow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/adaptive_18dp"
+                        android:layout_marginRight="@dimen/adaptive_18dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/adaptive_16sp"
+                        tools:text="我的长度：0.6CM" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_company_info"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:background="@drawable/bg_radio_3"
+                android:elevation="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/img_company_header"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitXY"
+                    tools:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/tv_company_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14"
+                    tools:text="重庆礼仪之邦电子商务有限公司" />
+
+                <TextView
+                    android:id="@+id/tv_company_into"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_stock_gray"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="6dp"
+                    android:text="进入企业"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize12" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_me"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_inside_margin"
+            android:background="@color/white" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

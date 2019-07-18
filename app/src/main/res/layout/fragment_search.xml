@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/fragment_search_window"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/search_pop_layout_two"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/activity_goods_tab_selector"
+                    android:gravity="center"
+                    android:text="商品搜索"
+                    android:textColor="@drawable/tab_text_selector_three"
+                    android:textSize="15dp"/>
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:background="#e4e3e3"/>
+
+
+                <TextView
+                    android:id="@+id/search_pop_layout_one"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/activity_goods_tab_selector"
+                    android:gravity="center"
+                    android:text="店铺搜索"
+                    android:textColor="@drawable/tab_text_selector_three"
+                    android:textSize="15dp"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#e4e3e3"/>
+
+            <com.szy.common.View.CommonRecyclerView
+                android:id="@+id/fragment_search_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            </com.szy.common.View.CommonRecyclerView>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_voice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#d7ffffff"
+            android:visibility="invisible">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/textView_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#222"
+                        android:textSize="20dp"/>
+                </LinearLayout>
+            </ScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout_voice"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_corner_voice"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="5dp">
+
+                <com.szy.yishopcustomer.core.voice.CustomVolumeView
+                    android:id="@+id/customVolumeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"/>
+
+                <ImageView
+                    android:id="@+id/imageView_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:src="@mipmap/ic_voice_cancellation"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView_cancel_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="亲，向上滑动取消"
+                        android:textColor="@android:color/white"/>
+
+                    <TextView
+                        android:id="@+id/textView_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/shape_corner_voice_cancel"
+                        android:gravity="center"
+                        android:text="松开手指取消发送"
+                        android:textColor="@android:color/white"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="#f8f8f8"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_corner_voice_two"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/ic_voice"
+                android:tint="#222222"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="按住 说出你要的宝贝"
+                android:textColor="#222222"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

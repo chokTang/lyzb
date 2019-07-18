@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_gray_white_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/text_line_space"
+        android:paddingTop="40dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="40dp"
+        android:text="已将TA设为意向客户，您可以在“我的-客户管理”中管理意向客户"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14" />
+
+    <CheckBox
+        android:id="@+id/check_inter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:button="@drawable/sele_agr_check"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:text="不再提示"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize12" />
+
+    <include layout="@layout/line_layout" />
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/single_layout_height"
+        android:gravity="center"
+        android:text="知道了~"
+        android:textColor="@color/app_blue"
+        android:textSize="@dimen/textSize14" />
+</LinearLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/activity_base_blank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/shape_regular_triangle" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_fillet_translucent"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/activity_base_homeMenu"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_menu_underline"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_menu_home" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/action_home"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontTwo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_base_share"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:background="@drawable/shape_menu_underline"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/btn_share_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/action_share"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontTwo"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_base_categoryMenu"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_menu_underline"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_menu_category" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/tabCategory"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontTwo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_base_messageMenu"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_menu_underline"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_menu_message" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/action_message"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontTwo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_base_searchMenu"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_menu_underline"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_menu_search" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/action_search"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontTwo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_base_cartMenu"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_menu_underline"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_menu_cart" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/tabCart"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontTwo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_base_userMenu"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:baselineAligned="false"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_menu_user" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/tabUser"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontTwo"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/action_my_following"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_menu_following" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/action_my_following"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontTwo"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

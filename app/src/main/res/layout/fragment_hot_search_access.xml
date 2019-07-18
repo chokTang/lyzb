@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/single_layout_height"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/app_margin"
+        android:paddingLeft="@dimen/app_margin"
+        android:background="@color/white"
+        android:paddingTop="6dp"
+        android:paddingRight="@dimen/app_margin"
+        android:paddingBottom="6dp">
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_gray_white_bg"
+            android:gravity="center_vertical"
+            android:hint="开始时间"
+            android:paddingLeft="@dimen/app_margin"
+            android:paddingRight="@dimen/app_margin"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:text="至"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_gray_white_bg"
+            android:gravity="center_vertical"
+            android:hint="结束时间"
+            android:paddingLeft="@dimen/app_margin"
+            android:paddingRight="@dimen/app_margin"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14" />
+
+        <Button
+            android:id="@+id/btn_search"
+            style="@style/common_bottom_btn_style"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:text="搜索" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_hot_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_hot_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/empty_view"
+                    layout="@layout/empty_layout"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <TextView
+            android:id="@+id/tv_hint_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="请选择您要查询的时间段"
+            android:textColor="@color/fontcColor3"
+            android:textSize="@dimen/textSize14" />
+    </FrameLayout>
+</LinearLayout>

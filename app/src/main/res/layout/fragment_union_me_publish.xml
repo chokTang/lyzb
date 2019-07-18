@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <com.like.longshaolib.widget.AutoWidthTabLayout
+        android:id="@+id/tab_un_me_publish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/windows_bg"
+        app:tabIndicatorColor="@color/fontcColor3"
+        app:tabIndicatorHeight="1dp"
+        app:tabSelectTextColor="@color/fontcColor1"
+        app:tabSelectTextSize="16"
+        app:tabTextColor="@color/fontcColor3"
+        app:tabTextSize="16"
+        app:tab_Mode="mode_fixed" />
+
+    <FrameLayout
+        android:id="@+id/lin_un_me_publish"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

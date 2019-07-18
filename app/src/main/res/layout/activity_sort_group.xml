@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/aliwx_white">
+
+    <ImageView
+        android:id="@+id/img_sort_group_back"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:src="@mipmap/btn_back_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:enabled="true"
+        android:gravity="center"
+        android:maxLength="11"
+        android:text="团购"
+        android:textColor="@color/aliwx_black"
+        android:textSize="16dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/linea_sort_seach"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@id/img_sort_group_back"
+        android:background="#F2F2F2"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_same_city_near_seach"
+            android:drawableLeft="@mipmap/edt_seach"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="  请输入关键字"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linea_sor_group_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/linea_sort_seach"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/rela_sort_group_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_sort_group_title_all"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@color/aliwx_black"
+                android:textSize="12dp"/>
+
+            <ImageView
+                android:id="@+id/img_sort_group_title_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_sort_group_title_all"
+                android:background="@mipmap/near_tab_normal"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_sort_group_near"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_sort_group_title_near"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="附近(智能排序)"
+                android:textColor="@color/aliwx_black"
+                android:textSize="12dp"/>
+
+            <ImageView
+                android:id="@+id/img_sort_group_title_near"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_sort_group_title_near"
+                android:background="@mipmap/near_tab_normal"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_sort_group_sale"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_sort_group_title_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="元宝抵扣"
+                android:textColor="@color/aliwx_black"
+                android:textSize="12dp"/>
+
+            <ImageView
+                android:id="@+id/img_sort_group_title_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_sort_group_title_sale"
+                android:background="@mipmap/near_tab_normal"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_group"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/linea_sor_group_title"
+        android:background="@color/divider"/>
+    <me.zongren.pullablelayout.Main.PullableLayout
+        xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_sort_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divider_group"
+        android:background="#F2F5F7"
+        PullableLayout:pullablelayout_side="BOTTOM">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/recy_sort_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+</RelativeLayout>

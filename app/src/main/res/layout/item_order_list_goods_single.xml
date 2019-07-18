@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_order_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorShopBase"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/item_order_list_goods_imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/gray_border_button_six"
+        android:padding="1dp"
+        android:src="@mipmap/pl_image" />
+
+    <TextView
+        android:id="@+id/item_order_list_goods_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/item_order_list_goods_deductibleTextView"
+        android:layout_alignTop="@+id/item_order_list_goods_imageView"
+        android:layout_toEndOf="@+id/item_order_list_goods_imageView"
+        android:layout_toLeftOf="@+id/fragment_order_list_goods_number"
+        android:layout_toRightOf="@+id/item_order_list_goods_imageView"
+        android:gravity="top"
+        android:lineSpacingExtra="2dp"
+        android:text="商品名称商品名称商品名称商品名称商品名称商品名称商品名称"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree" />
+
+    <TextView
+        android:id="@+id/item_order_list_goods_deductibleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_order_list_goods_imageView"
+        android:layout_alignLeft="@+id/item_order_list_goods_name_textView"
+        android:layout_alignStart="@+id/item_order_list_goods_name_textView"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontFive"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/fragment_order_goods_activity"
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="@dimen/fontSix" />
+
+</RelativeLayout>

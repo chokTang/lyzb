@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_one"
+    android:paddingBottom="10dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/item_back_detail_three_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:maxLength="4"
+            android:text=""
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/item_back_detail_three_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:text=""
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"
+            android:layout_toRightOf="@id/item_back_detail_three_title"/>
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_back_detail_three_value"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/item_back_detail_three_value"
+        android:layout_alignStart="@+id/item_back_detail_three_value"/>
+
+</RelativeLayout>

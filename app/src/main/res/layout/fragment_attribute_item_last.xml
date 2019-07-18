@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_sku_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/textView_sku_stock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/item_cart_goods_minus_button"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:background="@drawable/selector_btn_free_minus" />
+
+            <EditText
+                android:id="@+id/item_cart_goods_number"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:background="@mipmap/btn_free_frame_normal"
+                android:text="0"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontThree" />
+
+            <ImageView
+                android:id="@+id/item_cart_goods_add_button"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:background="@drawable/selector_btn_free_plus"
+                 />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/item_border_one" />
+
+</LinearLayout>

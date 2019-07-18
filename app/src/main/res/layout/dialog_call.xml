@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_circle_three"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/dialog_call_num_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="13582093403"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFive"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        />
+
+    <TextView
+        android:id="@+id/dialog_call_do_call_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dial"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontSeven"
+        android:padding="15dp"
+        />
+
+    <include
+        layout="@layout/item_border_two"/>
+
+    <TextView
+        android:id="@+id/dialog_call_do_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sendMessage"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontSeven"
+        android:padding="15dp"
+        />
+
+    <include
+        layout="@layout/item_border_two"/>
+
+    <TextView
+        android:id="@+id/dialog_call_do_copy_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/copy"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontSeven"
+        android:padding="15dp"
+        />
+    <include
+        layout="@layout/item_border_two"/>
+
+    <TextView
+        android:id="@+id/dialog_call_do_add_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addContact"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontSeven"
+        android:padding="15dp"
+        />
+
+</LinearLayout>

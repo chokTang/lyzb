@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_best_time_titleTextView"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/bottom_border_two"
+    android:gravity="start|center_vertical"
+    android:paddingLeft="10dp"
+    android:text="@string/placeholderBestTimeTime"
+    android:textColor="@color/colorOne"
+    android:textSize="@dimen/fontThree"/>

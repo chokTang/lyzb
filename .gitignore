@@ -1,0 +1,27 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+*.iml
+/.gradle
+.idea
+/.idea
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+/annotationlib/build
+/compilerlib/build
+/app/build
+/longshaolib/build
+/utilslib/build
+/core/build
+/easeui/build
+/PhotoPicker/build
+/hmsagents/build
+/videocompressor/build
+
+
+
+

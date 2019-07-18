@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212837"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_statistics"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/single_layout_height"
+                android:drawableLeft="@drawable/union_dot_violet"
+                android:drawablePadding="@dimen/text_icon_space"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/app_margin"
+                android:text="数据预览"
+                android:textColor="@color/fontcColor3"
+                android:textSize="@dimen/textSize14"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/union_access_bg">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/analysis_visit_number_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/app_green"
+                                android:textSize="30sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:text="次"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize12"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="访问次数"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize12"/>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    app:divider="@drawable/linediver"
+                    app:showDividers="middle">
+
+                    <TextView
+                        android:id="@+id/analysis_visit_bcardnumber_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/text_icon_space"
+                        android:text="0次\n名片"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/analysis_visit_goodsnumber_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/text_icon_space"
+                        android:text="0次\n商品"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/analysis_visit_dynamic_number_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/text_icon_space"
+                        android:text="0次\n动态"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/analysis_visit_hottext_number_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/text_icon_space"
+                        android:text="0次\n热文"
+                        android:textColor="@color/white"/>
+                </android.support.v7.widget.LinearLayoutCompat>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/single_layout_height"
+                android:drawableLeft="@drawable/union_dot_yellow"
+                android:drawablePadding="@dimen/text_icon_space"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/app_margin"
+                android:text="来源分析"
+                android:textColor="@color/fontcColor3"
+                android:textSize="@dimen/textSize14"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:padding="@dimen/app_margin">
+
+                <LinearLayout
+                    android:id="@+id/analysis_visit_app_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/analysis_visit_wxmini_ll"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.like.longshaolib.widget.BezierView
+                        android:id="@+id/analysis_visit_app_number_bezierview"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:cirColor="#212837"
+                        app:cirSideColor="#299b3b"
+                        app:cirSideProcessEndColor="#10969f"
+                        app:cirSideProcessStartColor="#299b3b"
+                        app:cirSideWidth="2dp"
+                        app:cirTitleSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/app_margin"
+                        android:text="共商联盟APP"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize14"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/analysis_visit_wxmini_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toRightOf="@+id/analysis_visit_app_ll"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.like.longshaolib.widget.BezierView
+                        android:id="@+id/analysis_visit_wxmini_number_bezierview"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:cirColor="#212837"
+                        app:cirSideColor="#bb672a"
+                        app:cirSideProcessEndColor="#caa64d"
+                        app:cirSideProcessStartColor="#bb672a"
+                        app:cirSideWidth="2dp"
+                        app:cirTitleSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/app_margin"
+                        android:text="共商联盟小程序"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize14"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/analysis_visit_share_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/analysis_visit_other_ll"
+                    app:layout_constraintTop_toBottomOf="@+id/analysis_visit_app_ll">
+
+                    <com.like.longshaolib.widget.BezierView
+                        android:id="@+id/analysis_visit_share_number_bezierview"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:cirColor="#212837"
+                        app:cirSideColor="#1a6eac"
+                        app:cirSideProcessEndColor="#30becd"
+                        app:cirSideProcessStartColor="#1a6eac"
+                        app:cirSideWidth="2dp"
+                        app:cirTitleSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/app_margin"
+                        android:text="微信分享"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize14"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/analysis_visit_other_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toRightOf="@+id/analysis_visit_share_ll"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/analysis_visit_wxmini_ll">
+
+                    <com.like.longshaolib.widget.BezierView
+                        android:id="@+id/analysis_visit_other_number_bezierview"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:cirColor="#212837"
+                        app:cirSideColor="#b434bb"
+                        app:cirSideProcessEndColor="#aa8cc3"
+                        app:cirSideProcessStartColor="#b434bb"
+                        app:cirSideWidth="2dp"
+                        app:cirTitleSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/app_margin"
+                        android:text="其他"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize14"/>
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

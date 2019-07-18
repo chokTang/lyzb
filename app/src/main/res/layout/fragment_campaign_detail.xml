@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/windows_bg">
+
+            <ImageView
+                android:id="@+id/img_campaign_background"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="@color/app_blue" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cons_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginTop="140dp"
+                android:layout_marginRight="@dimen/app_margin"
+                android:background="@drawable/shape_gray_white_bg"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_campaign_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:lineSpacingExtra="@dimen/text_line_space"
+                    android:maxLines="2"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="礼仪之邦共商联盟大赛开始了" />
+
+                <TextView
+                    android:id="@+id/tv_scan_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/fontcColor2"
+                    android:textSize="@dimen/textSize14"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_share_number"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_campaign_title"
+                    tools:text="76456人浏览" />
+
+                <TextView
+                    android:id="@+id/tv_share_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@drawable/union_share"
+                    android:drawablePadding="@dimen/text_icon_space"
+                    android:gravity="center"
+                    android:textColor="@color/fontcColor2"
+                    android:textSize="@dimen/textSize14"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_scan_number"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_scan_number"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_campaign_title"
+                    tools:text="520" />
+
+                <TextView
+                    android:id="@+id/tv_follow_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@drawable/union_follow"
+                    android:drawablePadding="@dimen/text_icon_space"
+                    android:gravity="center"
+                    android:textColor="@color/fontcColor2"
+                    android:textSize="@dimen/textSize14"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_share_number"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_share_number"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_campaign_title"
+                    tools:text="520" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/lineSize"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_scan_number"
+                    android:background="@color/lineColor"/>
+
+                <TextView
+                    android:id="@+id/tv_campaign_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:drawableLeft="@drawable/union_campaign_time"
+                    android:drawablePadding="12dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_scan_number"
+                    tools:text="02-12  12:00至  02-25  12:00" />
+
+                <TextView
+                    android:id="@+id/tv_campaign_city"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/union_address"
+                    android:drawableRight="@drawable/pub_right"
+                    android:drawablePadding="12dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_campaign_time"
+                    tools:text="重庆市渝北区两江新区幸福广场南" />
+
+                <TextView
+                    android:id="@+id/tv_campaign_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/union_address"
+                    android:drawablePadding="12dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_campaign_city"
+                    tools:text="5人报名/限10人" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cons_host_detail"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginTop="@dimen/group_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:background="@drawable/shape_gray_white_bg"
+                android:paddingLeft="@dimen/app_margin"
+                android:paddingRight="@dimen/app_margin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cons_card">
+
+                <ImageView
+                    android:id="@+id/img_host_header"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/layout_host_detail"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    android:id="@+id/layout_host_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/img_host_header"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_host_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14"
+                        tools:text="龙少" />
+
+                    <TextView
+                        android:id="@+id/tv_host_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/fontcColor2"
+                        android:textSize="@dimen/textSize12"
+                        android:layout_marginTop="8dp"
+                        tools:text="5活动|99粉丝" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_no_follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:background="@drawable/shape_round_gray_line"
+                    android:drawableStart="@drawable/union_add_gray"
+                    android:drawableLeft="@drawable/union_add_gray"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:drawablePadding="@dimen/text_icon_space"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="关注"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_yes_follow"
+                    android:layout_width="60dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/shape_round_gray_line"
+                    android:gravity="center"
+                    android:text="已关注"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/fontcColor2"
+                    android:textSize="@dimen/textSize14"
+                    android:visibility="gone" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cons_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:background="@drawable/shape_gray_white_bg"
+                android:padding="@dimen/app_margin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cons_host_detail">
+
+                <TextView
+                    android:id="@+id/tv_describe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="活动描述"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_describe_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:lineSpacingExtra="@dimen/text_icon_space"
+                    android:textColor="@color/fontcColor2"
+                    android:textSize="@dimen/textSize14"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_describe"
+                    tools:text="活动描述" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:background="@drawable/shape_gray_white_bg"
+                android:padding="@dimen/app_margin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cons_desc">
+
+                <TextView
+                    android:id="@+id/tv_part_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="报名（5）" />
+
+                <TextView
+                    android:id="@+id/tv_part_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更多 >"
+                    android:textColor="@color/app_blue"
+                    android:textSize="@dimen/textSize14"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_part_user"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_part_number" />
+
+                <TextView
+                    android:id="@+id/tv_no_number"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/text_line_space"
+                    android:text="还没有人报名哦，点击“我要报名”成为该活动第一个报名的吧~"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_fabu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/union_campaign_fabu"
+            android:drawablePadding="@dimen/text_icon_space"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="免费发布"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/union_campaign_message"
+            android:drawablePadding="@dimen/text_icon_space"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="在线咨询"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tv_follow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_union_follow"
+            android:drawablePadding="@dimen/text_icon_space"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="收藏"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tv_campaign_status"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="@color/app_red"
+            android:gravity="center"
+            android:text="我要报名"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize18" />
+    </LinearLayout>
+</LinearLayout>
+

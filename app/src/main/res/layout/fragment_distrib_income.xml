@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@mipmap/bg_login_top"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        >
+
+        <com.szy.yishopcustomer.View.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/btn_redemption"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的账户"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontTwo"/>
+
+            <TextView
+                android:id="@+id/fragment_distrib_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="您的所有佣金收入都在这里哦！"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontFive"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户余额(元)"/>
+
+            <TextView
+                android:id="@+id/distrib_income_total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontOne"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.6dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorTen"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/depositMoneyLimit"/>
+
+            <TextView
+                android:id="@+id/distrib_income_deposit_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontOne"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="0.6dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计收入(元)"/>
+
+            <TextView
+                android:id="@+id/distrib_income_total_dis_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontOne"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.6dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorTen"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计提现金额(元)"/>
+
+            <TextView
+                android:id="@+id/distrib_income_total_income_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontOne"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/distrib_income_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/red_border_button_one"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="申请提现"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <include
+        layout="@layout/item_border_one"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSeven"/>
+
+    <LinearLayout
+        android:id="@+id/distrib_income_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/accountdetails"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"
+            />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/btn_right_arrow"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/distrib_income_record_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_marginTop="0.6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/withdrawalrecord"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"
+            />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/btn_right_arrow"/>
+    </LinearLayout>
+
+    <include
+        layout="@layout/item_border_one"/>
+
+</LinearLayout>

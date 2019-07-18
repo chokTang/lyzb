@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_index_shop_list_item_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_two"
+    android:paddingBottom="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="15dp">
+
+
+    <TextView
+        android:id="@+id/fragment_index_shop_list_item_nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxEms="10"
+        android:singleLine="true"
+        android:text="@string/placeholderShopName"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontSeven"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fragment_index_shop_list_item_distanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fragment_index_shop_list_item_nameTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/placeholderDistance"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFive" />
+
+
+    <TextView
+        android:id="@+id/fragment_index_shop_list_item_addressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/fragment_index_shop_list_item_nameTextView"
+        android:layout_marginTop="4dp"
+        android:layout_toLeftOf="@+id/fragment_index_shop_list_item_location"
+        android:ellipsize="middle"
+        android:maxLines="3"
+        android:text=""
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+    <LinearLayout
+        android:id="@+id/fragment_index_shop_list_item_location"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fragment_index_shop_list_item_distanceTextView"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/btn_shop_navigation" />
+
+        <TextView
+            android:id="@+id/location_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:text="导航"
+            android:textColor="#2594fb"
+            android:textSize="@dimen/fontFour" />
+    </LinearLayout>
+
+</RelativeLayout>

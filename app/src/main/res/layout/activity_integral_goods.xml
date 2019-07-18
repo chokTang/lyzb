@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical"
+    tools:context="com.szy.yishopcustomer.Activity.GoodsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_goods_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bottom_border_one"
+        android:theme="@style/ToolbarTheme"
+        app1:popupTheme="@style/PopupMenu">
+
+        <LinearLayout
+            android:id="@+id/activity_goods_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:textColor="@color/colorOne"
+            android:paddingBottom="1dp"
+            android:textSize="15sp">
+
+            <TextView
+                android:id="@+id/radioButtonIndex"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:background="@drawable/activity_goods_tab_selector"
+                android:textColor="@drawable/tab_text_selector"
+                android:checked="true"
+                android:text="商品" />
+
+            <TextView
+                android:id="@+id/radioButtonDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:textSize="14dp"
+                android:background="@drawable/activity_goods_tab_selector"
+                android:textColor="@drawable/tab_text_selector"
+                android:text="详情" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/id_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:id="@+id/fragment_goods_index_button"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:background="@drawable/right_border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginBottom="2dp"
+                    android:src="@mipmap/tab_shop_seller" />
+
+                <TextView
+                    android:id="@+id/fragment_goods_index_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="首页"
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontEight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_goods_collect_button"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:background="@drawable/right_border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tab_star"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginBottom="2dp"
+                    android:src="@mipmap/tab_shop_contact" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客服"
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontEight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_goods_buy_now_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="5"
+                android:background="#ff0000"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/fragment_goods_add_to_cart_button_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/buttonBuyNow"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/fontTwo" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/item_border_one" />
+    </LinearLayout>
+
+</LinearLayout>

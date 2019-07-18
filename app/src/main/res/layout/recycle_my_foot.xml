@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/app_margin"
+        android:text="2019年"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/app_margin">
+
+        <TextView
+            android:id="@+id/tv_mouth"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="3月"
+            android:textColor="@color/fontcColor2"
+            android:textSize="@dimen/textSize14" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/line_header"
+                android:layout_width="@dimen/lineSize"
+                android:layout_height="16dp"
+                android:background="@color/lineColor" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/shape_round_gray" />
+
+            <View
+                android:layout_width="@dimen/lineSize"
+                android:layout_height="match_parent"
+                android:background="@color/lineColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_acs_time"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textSize12"
+                android:textColor="@color/fontcColor3"
+                tools:text="2019年2月11日 12:55:66" />
+
+            <TextView
+                android:id="@+id/item_acs_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_margin"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/text_line_space"
+                android:maxLines="2"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14"
+                tools:text="查看了我的名片XXX次" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lineSize"
+                android:layout_marginTop="@dimen/app_margin"
+                android:background="@color/lineColor" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

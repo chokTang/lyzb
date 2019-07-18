@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@android:color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+
+    <TextView
+        android:id="@+id/fragment_checkout_postscript_labelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="@string/postscript"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontTwo"/>
+
+    <com.szy.yishopcustomer.View.YSCBaseEditText
+        android:id="@+id/fragment_checkout_postscript_contentCommonEditText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:hint="@string/hintPostscript"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/colorOne"
+        android:textColorHint="@color/colorFive"
+        android:textSize="@dimen/fontThree"
+        />
+</LinearLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <View
+        android:id="@+id/viewTop"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/colorLine" />
+
+    <TextView
+        android:id="@+id/product_amount_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewTop"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/productAmount"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/product_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/product_amount_label"
+        android:layout_marginRight="10dp"
+        android:text="11"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/shipping_fee_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/product_amount_label"
+        android:layout_below="@+id/product_amount_label"
+        android:layout_marginBottom="10dp"
+        android:text="@string/shippingFee"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/shipping_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/product_amount"
+        android:layout_alignRight="@+id/product_amount"
+        android:layout_alignTop="@+id/shipping_fee_label"
+        android:text="22"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/cod_cash_more_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/product_amount_label"
+        android:layout_below="@+id/shipping_fee_label"
+        android:layout_marginBottom="10dp"
+        android:text="@string/codCashMore"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/cod_cash_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/product_amount"
+        android:layout_alignRight="@+id/product_amount"
+        android:layout_alignTop="@+id/cod_cash_more_label"
+        android:text="222"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+
+    <TextView
+        android:id="@+id/bonus_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/product_amount_label"
+        android:layout_below="@+id/cod_cash_more_label"
+        android:layout_marginBottom="10dp"
+        android:text="@string/bonus"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/bonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/product_amount"
+        android:layout_alignRight="@+id/product_amount"
+        android:layout_alignTop="@+id/bonus_label"
+        android:text="33"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/benefit_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/product_amount_label"
+        android:layout_below="@+id/bonus_label"
+        android:layout_marginBottom="10dp"
+        android:text="@string/benefit"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/benefit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/product_amount"
+        android:layout_alignRight="@+id/product_amount"
+        android:layout_alignTop="@+id/benefit_label"
+        android:text="-¥0.00"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/deductible_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/benefit_label"
+        android:layout_below="@+id/benefit_label"
+        android:layout_marginBottom="10dp"
+        android:text="@string/deductible"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/deductible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/product_amount"
+        android:layout_alignRight="@+id/product_amount"
+        android:layout_alignTop="@+id/deductible_label"
+        android:text="-¥0"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFour" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout_order_amount"
+        android:layout_alignLeft="@+id/product_amount_label"
+        android:layout_below="@+id/deductible_label">
+
+        <TextView
+            android:id="@+id/order_amount_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/orderAmount"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo" />
+
+        <TextView
+            android:id="@+id/order_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/order_amount_label"
+            android:text="55"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontTwo" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignLeft="@+id/order_amount_label"
+            android:layout_below="@+id/order_amount_label"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorEight" />
+
+
+        <TextView
+            android:id="@+id/money_paid_online_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/order_amount_label"
+            android:layout_below="@+id/view2"
+            android:layout_marginBottom="10dp"
+            android:text="@string/payOnline"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour" />
+
+        <TextView
+            android:id="@+id/balance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/money_paid_online_label"
+            android:layout_alignStart="@+id/money_paid_online_label"
+            android:layout_below="@+id/money_paid_online_label"
+            android:text="@string/balance"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour"
+            android:layout_marginBottom="10dp"/>
+
+
+        <TextView
+            android:id="@+id/order_money_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/order_amount_label"
+            android:layout_below="@+id/balance_label"
+            android:text="@string/actualPayment"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo" />
+
+        <TextView
+            android:id="@+id/money_paid_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/order_amount"
+            android:layout_alignRight="@+id/order_amount"
+            android:layout_alignTop="@+id/money_paid_online_label"
+            android:text="77"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree" />
+
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/order_amount"
+            android:layout_alignRight="@+id/order_amount"
+            android:layout_alignTop="@+id/balance_label"
+            android:text="66"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree" />
+
+
+        <TextView
+            android:id="@+id/order_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/order_amount"
+            android:layout_alignRight="@+id/order_amount"
+            android:layout_alignTop="@+id/order_money_label"
+            android:layout_marginBottom="15dp"
+            android:text="88"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontTwo" />
+
+        <View
+            android:id="@+id/viewBottom"
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_below="@+id/order_money"
+            android:background="@color/colorEight" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

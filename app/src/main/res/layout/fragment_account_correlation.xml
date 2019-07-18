@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_statistics"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/app_margin">
+
+            <ImageView
+                android:layout_width="@dimen/member_headerImg_small"
+                android:layout_height="@dimen/member_headerImg_small"
+                android:src="@mipmap/btn_weixin_friends"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="微信"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14"/>
+
+            <TextView
+                android:id="@+id/account_correlation_account_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:hint="未关联"
+                android:textColor="@color/fontcColor1"
+                android:textColorHint="@color/fontcColor3"
+                android:textSize="@dimen/textSize14"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/ic_pub_right"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lineSize"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:background="@color/line_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="@dimen/app_margin"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="@dimen/text_line_space"
+            android:text="账号关联之后，用户可使用微信号快速登录共商联盟。\n在各个渠道（共商联盟小程序、热文提供H5等）登录时，均可同步已关联的账号\n共商联盟承诺保障您的账号隐私安全。"
+            android:textColor="@color/fontcColor3"
+            android:textSize="@dimen/textSize12"/>
+    </LinearLayout>
+</LinearLayout>

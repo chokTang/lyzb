@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/shape_corner_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_margin="15dp">
+
+        <Button
+            android:id="@+id/fragment_attribute_closeButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:background="@drawable/fragment_attribute_close_button" />
+
+        <TextView
+            android:id="@+id/textView_goods_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/fragment_attribute_closeButton"
+            android:layout_toStartOf="@+id/fragment_attribute_closeButton"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontOne" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_goods_name"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/fragment_attribute_priceTextView_begin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontTwo" />
+
+            <TextView
+                android:id="@+id/fragment_attribute_priceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 0"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/fragment_attribute_stockTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/fragment_attribute_stockLabelTextView"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/fragment_attribute_stockLabelTextView"
+                android:text="库存：0"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontThree" />
+
+
+            <TextView
+                android:id="@+id/fragment_purchase_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/fragment_attribute_stockLabelTextView"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/fragment_attribute_stockTextView"
+                android:text="（每人限购1件）"
+                android:textColor="@color/colorOne"
+                android:visibility="gone"
+                android:textSize="@dimen/fontFour" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/fragment_attribute_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:scrollbars="horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_attribute_numberWrapperRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <TextView
+            android:id="@+id/fragment_attribute_numberTip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/number"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/fragment_attribute_goodsMoq"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/fragment_attribute_numberTip"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree" />
+
+        <EditText
+            android:id="@+id/fragment_attribute_numberEditText"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_attribute_plusButton"
+            android:layout_alignTop="@+id/fragment_attribute_plusButton"
+            android:layout_toLeftOf="@+id/fragment_attribute_plusButton"
+            android:background="@mipmap/btn_free_frame_normal"
+            android:gravity="center"
+            android:inputType="numberSigned"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="1"
+            android:textColor="@color/free_buy_primary"
+            android:textSize="@dimen/fontThree" />
+
+        <Button
+            android:id="@+id/fragment_attribute_minusButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fragment_attribute_numberEditText"
+            android:layout_toStartOf="@+id/fragment_attribute_numberEditText"
+            android:background="@drawable/selector_btn_free_minus"
+            android:padding="5dp" />
+
+        <Button
+            android:id="@+id/fragment_attribute_plusButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/fragment_attribute_minusButton"
+            android:background="@drawable/selector_btn_free_plus" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#eee"
+        />
+    <LinearLayout
+        android:id="@+id/fragment_attribute_addToCartLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <Button
+            android:id="@+id/fragment_attribute_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="取消"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo" />
+
+
+        <Button
+            android:id="@+id/fragment_attribute_addToCartButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_corner_freebuy_enable"
+            android:text="@string/add_to_cart"
+            android:layout_marginLeft="15dp"
+            android:textColor="#FFFFFF"
+            android:enabled="false"
+            android:textSize="@dimen/fontTwo" />
+
+        <Button
+            android:id="@+id/fragment_attribute_buyNowButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/normal_button_selector"
+            android:text="@string/buttonBuyNow"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            android:textSize="@dimen/fontTwo" />
+    </LinearLayout>
+
+</LinearLayout>
+

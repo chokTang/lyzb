@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_one"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/fragment_shop_info_item_image_nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shopLicense"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree"
+        android:layout_marginRight="20dp"
+        />
+    
+    <ImageView
+        android:id="@+id/national_emblem_light"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/national_emblem_light2"
+        android:layout_marginRight="5dp"/>
+
+    <ImageView
+        android:id="@+id/national_emblem_light2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/national_emblem_light"
+       />
+
+</LinearLayout>

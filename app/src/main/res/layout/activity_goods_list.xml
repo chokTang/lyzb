@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/toolbar_bottom_border"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/activity_goods_list_backImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="11dp"
+                android:src="@mipmap/btn_back_goods_list" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/fragment_category_title_search_background"
+                android:layout_toEndOf="@+id/activity_goods_list_backImage"
+                android:layout_toLeftOf="@+id/activity_goods_list_showType"
+                android:layout_toRightOf="@+id/activity_goods_list_backImage"
+                android:layout_toStartOf="@+id/activity_goods_list_showType"
+                android:paddingLeft="5dp"
+                android:paddingRight="35dp"
+                android:layout_centerVertical="true">
+
+                <com.szy.common.View.CommonEditText
+                    android:id="@+id/activity_goods_list_commonEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/hintEnterGoodsName"
+                    android:imeOptions="actionSearch"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorOne"
+                    android:textColorHint="@color/colorFive"
+                    android:textSize="@dimen/fontThree" />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:background="@drawable/fragment_search_tag_background"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textSize="@dimen/fontFour"
+                        android:textColor="@color/colorTwo"
+                        android:maxEms="10"
+                        android:ellipsize="end"
+                        android:text="牛仔裤"/>
+
+                    <ImageView
+                        android:id="@+id/imageView_tag_gone"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="4dp"
+                        android:src="@mipmap/ic_area_closed"
+                        android:tint="@color/colorTwo"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/activity_goods_list_searchImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/activity_goods_list_showType"
+                android:layout_toStartOf="@+id/activity_goods_list_showType"
+                android:background="@mipmap/ic_search" />
+
+            <ImageView
+                android:id="@+id/activity_goods_list_showType"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="13dp" />
+
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/activity_common_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <include
+        android:id="@+id/activity_goods_list_cartWrapper"
+        layout="@layout/layout_float_cart" />
+
+    <include
+        android:id="@+id/activity_goods_list_filterShadowView"
+        layout="@layout/fragment_shop_goods_list_filter_shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</android.support.design.widget.CoordinatorLayout>

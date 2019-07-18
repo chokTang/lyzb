@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:hyphenate="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_ly_message"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/toolbar_bottom_border"
+        android:theme="@style/ToolbarTheme"
+        app:navigationIcon="@mipmap/btn_back_dark">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="消息"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize16" />
+
+        <ImageView
+            android:id="@+id/img_ly_message_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="6dp"
+            android:src="@mipmap/ly_message_set" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/rela_ly_message"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/aliwx_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <RelativeLayout
+            android:layout_width="48dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/im_message_right"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_unread_xb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/ease_unread_count_bg"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_message_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统通知"
+                android:textColor="@color/colorOne"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_message_hint_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorThree"
+                android:textSize="13sp"
+                tools:text="最后一条消息通知" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_message_hint_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTwo"
+                android:textSize="11sp"
+                android:visibility="gone"
+                tools:text="昨天 09:55" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="1"
+                android:textColor="@color/colorThree"
+                android:textSize="13sp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_service"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/aliwx_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <RelativeLayout
+            android:layout_width="48dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/union_service"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_kefu_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/ease_unread_count_bg"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="官方客服"
+                android:textColor="@color/colorOne"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_kefu_last_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="暂无消息"
+                android:textColor="@color/colorThree"
+                android:textSize="13sp"
+                tools:text="最后一条消息通知" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_kefu_message_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize12"
+                android:visibility="gone"
+                tools:text="昨天 09:55" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="1"
+                android:textColor="@color/fontcColor3"
+                android:textSize="@dimen/textSize14"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.hyphenate.easeui.widget.EaseConversationList
+        android:id="@+id/conver_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:cacheColorHint="@color/white"
+        android:divider="@null"
+        hyphenate:cvsListPrimaryTextSize="14dp" />
+
+
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/toolbar_bottom_border"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/activity_goods_list_backImage"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="2dp"
+                android:src="@mipmap/btn_back_dark" />
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/activity_goods_list_commonEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/fragment_category_title_search_background"
+                android:imeOptions="actionSearch"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:singleLine="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/activity_goods_list_searchImageView"
+                android:layout_toEndOf="@+id/activity_goods_list_backImage"
+                android:layout_toLeftOf="@+id/activity_goods_list_showType"
+                android:layout_toStartOf="@+id/activity_goods_list_showType"
+                android:textColor="@color/colorOne"
+                android:textColorHint="@color/colorFive"
+                android:textSize="@dimen/fontThree"
+                android:hint="请输入自提点名称/所在地"/>
+
+            <ImageView
+                android:id="@+id/activity_goods_list_searchImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/activity_goods_list_backImage"
+                android:src="@mipmap/ic_search"/>
+
+            <TextView
+                android:id="@+id/activity_goods_list_showType"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="@string/search"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontSeven"
+                android:paddingRight="13dp"
+                android:paddingLeft="13dp"/>
+        </RelativeLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_common_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/toolbar_bottom_border"
+            android:focusableInTouchMode="true"
+            android:visibility="gone"
+            android:weightSum="1"
+            app:contentInsetEndWithActions="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:navigationIcon="@mipmap/btn_back_goods_list">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/fragment_category_title_search_background">
+
+                <com.szy.common.View.CommonEditText
+                    android:id="@+id/activity_goods_list_commonEditText2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/activity_goods_list_searchImageView2"
+                    android:background="#00000000"
+                    android:hint="@string/hintEnterGoodsName"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTwo"
+                    android:textColorHint="@color/colorFive"
+                    android:textSize="@dimen/fontThree" />
+
+                <ImageView
+                    android:id="@+id/activity_goods_list_searchImageView2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@mipmap/ic_search" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/activity_common_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

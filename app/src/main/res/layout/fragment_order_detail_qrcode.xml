@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:orientation="vertical"
+              android:paddingTop="15dp"
+    >
+
+    <TextView
+        android:id="@+id/textViewReachbuyNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0008"
+        android:background="@drawable/black_border_button_one"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        android:textColor="@color/colorGoodsDesc"/>
+
+    <ImageView
+        android:id="@+id/fragment_order_detail_qrcode"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_notepad"/>
+
+    <TextView
+        android:id="@+id/fragment_order_detail_order_sn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontTwo"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/saveTheScreenshotPicture"
+        android:textColor="@color/colorGoodsDesc"
+        android:textSize="@dimen/fontThree"
+        android:layout_marginBottom="15dp" />
+
+    <include
+        layout="@layout/item_border_one"/>
+</LinearLayout>

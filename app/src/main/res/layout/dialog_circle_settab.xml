@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/app_margin"
+    android:background="@drawable/sl_white_r5"
+    android:elevation="5dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        android:text="栏目设置"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize16"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/circle_settab_member_dynamic_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/st_linecolor_r2"
+            android:maxLength="4"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"/>
+
+        <CheckBox
+            android:id="@+id/circle_settab_member_dynamic_cbx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_customer_sex"
+            android:text="隐藏"
+            android:textColor="@color/fontcColor2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/circle_settab_company_dynamic_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/st_linecolor_r2"
+            android:maxLength="4"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"/>
+
+        <CheckBox
+            android:id="@+id/circle_settab_company_dynamic_cbx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_customer_sex"
+            android:text="隐藏"
+            android:textColor="@color/fontcColor2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/circle_settab_website_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/st_linecolor_r2"
+            android:maxLength="4"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"/>
+
+        <CheckBox
+            android:id="@+id/circle_settab_website_cbx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_customer_sex"
+            android:text="隐藏"
+            android:textColor="@color/fontcColor2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/circle_settab_mall_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/st_linecolor_r2"
+            android:maxLength="4"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"/>
+
+        <CheckBox
+            android:id="@+id/circle_settab_mall_cbx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_customer_sex"
+            android:text="隐藏"
+            android:textColor="@color/fontcColor2"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/app_margin">
+
+        <TextView
+            android:id="@+id/circle_settab_cancel_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/app_margin"
+            android:text="取消"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize16"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:layout_marginTop="10dp"
+            android:background="@color/line_color"/>
+
+        <TextView
+            android:id="@+id/circle_settab_sure_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/app_margin"
+            android:text="确定"
+            android:textColor="@color/app_blue"
+            android:textSize="@dimen/textSize16"/>
+    </LinearLayout>
+</LinearLayout>

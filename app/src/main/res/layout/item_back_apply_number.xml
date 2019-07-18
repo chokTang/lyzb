@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical"
+    android:background="@drawable/search_edittext_border"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+    >
+
+    <TextView
+        android:id="@+id/required_label"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="*"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontTwo"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        />
+    <TextView
+        android:id="@+id/back_apply_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="退款数量"
+        android:layout_toRightOf="@+id/required_label"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontTwo"
+        android:inputType="number"
+        />
+
+<!--    <com.szy.common.View.CommonEditText
+        android:id="@+id/back_apply_number_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/back_apply_number_label"
+        android:layout_toLeftOf="@+id/bg_arrow_down_gray"
+        android:text="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontTwo"
+        android:background="@null"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        />-->
+
+    <TextView
+        android:id="@+id/back_apply_number_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/back_apply_number_label"
+        android:layout_toLeftOf="@+id/bg_arrow_down_gray"
+        android:text="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontTwo"
+        />
+
+</RelativeLayout>

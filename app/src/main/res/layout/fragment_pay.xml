@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.zongren.pullablelayout.Main.PullableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_pay_pullableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen">
+
+    <me.zongren.pullablelayout.View.PullableRecyclerView
+        android:id="@+id/fragment_pay_pullableRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</me.zongren.pullablelayout.Main.PullableLayout>

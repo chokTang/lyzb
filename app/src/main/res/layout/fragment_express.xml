@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_express_selectedRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/fragment_express_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/fragment_express_selectedRecyclerView"
+        >
+
+        <TextView
+            android:id="@+id/fragment_express_textview_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/fragment_express_textview_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_express_selectedRecyclerView_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fragment_express_border"
+            android:paddingBottom="10dp"/>
+
+        <ListView
+            android:id="@+id/fragment_express_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:divider="@null"
+            android:scrollbars="none"
+            />
+
+        <LinearLayout
+            android:id="@+id/relativeLayout_empty_two"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorTen"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="50dp"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@mipmap/bg_public" />
+
+            <TextView
+                android:id="@+id/empty_view_titleTextView_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emptyData"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontSeven" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_default_empty"
+        />
+
+    <ImageView
+        android:id="@+id/express_delivery"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_postmen_map0"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

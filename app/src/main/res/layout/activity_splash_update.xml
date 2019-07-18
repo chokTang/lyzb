@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/relativeLayout_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="@android:color/black"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_app_update"
+            />
+
+        <ScrollView
+            android:id="@+id/activity_splash_update_scrollview"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/imageView2"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/splash_update_text_view_circle"
+            android:paddingBottom="70dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            >
+
+            <TextView
+                android:id="@+id/activity_splash_update_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontTwo"
+                />
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/activity_splash_update_scrollview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp">
+
+
+            <Button
+                android:id="@+id/activity_splash_update_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/activity_splash_update_button"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:text="@string/goToUpdate"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontSeven"/>
+
+
+            <Button
+                android:id="@+id/activity_splash_use_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/activity_splash_update_button"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:text="@string/goToUse"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontSeven"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

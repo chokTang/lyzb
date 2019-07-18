@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/union_me_menu"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/group_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_un_me_card_good_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/adaptive_12dp"
+                android:background="@drawable/selector_goods_status"
+                android:gravity="center"
+                android:paddingLeft="@dimen/app_margin"
+                android:paddingTop="@dimen/adaptive_4dp"
+                android:paddingRight="@dimen/app_margin"
+                android:paddingBottom="@dimen/adaptive_4dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/adaptive_14sp"
+                tools:text="未通过" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/img_un_me_card_good_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_un_me_card_good_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/adaptive_10dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="@dimen/adaptive_10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/black_333333"
+        android:textSize="@dimen/adaptive_18sp"
+        tools:text="商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/adaptive_10dp"
+        android:layout_marginTop="@dimen/adaptive_10dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_un_me_card_good_tag_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/adaptive_24sp"
+            tools:text="$188.00" />
+
+        <TextView
+            android:id="@+id/tv_un_me_card_good_tag_ingot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/adaptive_14sp"
+            tools:text="+20元宝" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginLeft="@dimen/adaptive_10dp"
+        android:layout_marginTop="@dimen/adaptive_10dp"
+        android:layout_marginBottom="@dimen/adaptive_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_un_me_card_good_shop_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:lines="1"
+            android:maxEms="8"
+            android:textSize="@dimen/textSize12"
+            tools:text="黔江古镇老店" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/app_margin">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/union_delete" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

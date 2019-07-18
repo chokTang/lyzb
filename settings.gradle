@@ -1,0 +1,4 @@
+include ':app', ':longshaolib', ':annotationlib', ':compilerlib', ':utilslib', ':core', ':easeui', ':PhotoPicker', ':hmsagents', ':videocompressor'
+
+
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_checkout_child_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_three"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/fragment_checkout_group_titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/shippingList"
+            android:textSize="@dimen/fontTwo"
+            android:textColor="@color/colorOne"
+            android:layout_weight="1"
+            />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left">
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_since_some"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/textView_since_some_tip"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontFive"
+            android:text="白塔岭自提点"
+            android:textColor="@color/colorTwo"/>
+
+        <TextView
+            android:id="@+id/textView_since_some_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontFive"
+            android:text="点击修改 >"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+</LinearLayout>

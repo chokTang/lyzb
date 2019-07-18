@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/single_layout_height"
+            android:gravity="center"
+            android:text="选择地区"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14" />
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="@dimen/single_layout_height"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_close" />
+    </FrameLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/single_layout_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/first_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_city_region"
+            android:gravity="center"
+            android:paddingLeft="@dimen/app_margin"
+            android:paddingRight="@dimen/app_margin"
+            android:textColor="@color/selector_city_color"
+            android:textSize="@dimen/textSize14"
+            tools:text="重庆" />
+
+        <TextView
+            android:id="@+id/second_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_city_region"
+            android:gravity="center"
+            android:paddingLeft="@dimen/app_margin"
+            android:paddingRight="@dimen/app_margin"
+            android:textColor="@color/selector_city_color"
+            android:textSize="@dimen/textSize14"
+            tools:text="重庆" />
+
+        <TextView
+            android:id="@+id/three_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_city_region"
+            android:gravity="center"
+            android:paddingLeft="@dimen/app_margin"
+            android:paddingRight="@dimen/app_margin"
+            android:textColor="@color/selector_city_color"
+            android:textSize="@dimen/textSize14"
+            tools:text="重庆" />
+    </LinearLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_region"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+</LinearLayout>

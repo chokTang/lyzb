@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:elevation="0dp"
+            app:layout_behavior="com.lyzb.jbx.widget.FixAppBarLayoutBehavior">
+
+            <LinearLayout
+                android:id="@+id/layout_share_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/ll_show_hide_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_show_hide_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/single_layout_height"
+                        android:drawableRight="@mipmap/icon_arrow_down"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:text="展开全部名片信息"
+                        android:textColor="@color/fontcColor2"
+                        android:textSize="@dimen/textSize14" />
+
+                    <include
+                        android:id="@+id/ll_card_more"
+                        layout="@layout/layout_card_more"
+                        android:visibility="gone" />
+                </LinearLayout>
+                <!--官网-->
+                <LinearLayout
+                    android:id="@+id/ll_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginTop="@dimen/group_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="@dimen/group_margin"
+                    android:visibility="gone">
+
+                    <!--我的企业布局-->
+                    <LinearLayout
+                        android:id="@+id/ll_web"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/app_margin"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:paddingRight="@dimen/app_margin">
+
+                        <!--公司logo-->
+                        <ImageView
+                            android:id="@+id/img_company_logo"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerCrop"
+                            tools:src="@mipmap/icon_default_logo" />
+
+                        <TextView
+                            android:id="@+id/tv_company_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/app_margin"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/fontcColor1"
+                            android:textSize="@dimen/textSize14"
+                            tools:text="重庆礼仪之邦" />
+
+                        <TextView
+                            android:id="@+id/tv_goto_circle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="6dp"
+                            android:background="@drawable/bg_stock_gray666_2"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="6dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="6dp"
+                            android:text="企业名片"
+                            android:textColor="@color/fontcColor1"
+                            android:textSize="@dimen/textSize12" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/view_zanwei"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/single_layout_height"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/group_margin"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.like.longshaolib.widget.AutoWidthTabLayout
+                    android:id="@+id/tab_un_card_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    app:tabIndicatorColor="@color/fontcColor3"
+                    app:tabIndicatorHeight="1dp"
+                    app:tabSelectTextColor="@color/fontcColor1"
+                    app:tabSelectTextSize="14"
+                    app:tabTextColor="@color/fontcColor3"
+                    app:tabTextSize="14"
+                    app:tab_Mode="mode_fixed" />
+
+                <ImageView
+                    android:id="@+id/img_edt_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingRight="@dimen/app_margin"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_show_card_tab"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/lin_union_me_card_bootom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/single_layout_height"
+        android:background="@color/windows_bg">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/app_margin">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_video_back" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxEms="14"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize16"
+            tools:text="title" />
+
+        <ImageView
+            android:id="@+id/img_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/app_margin"
+            android:background="@drawable/ic_video_share" />
+
+    </RelativeLayout>
+
+</FrameLayout>

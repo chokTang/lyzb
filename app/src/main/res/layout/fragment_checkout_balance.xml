@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/item_border_one"/>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/fragment_checkout_balance_labelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userMoney"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/fragment_checkout_balance_balanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/placeholderBalance"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/fragment_checkout_balance_userBalance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/fragment_checkout_balance_switchImageView"
+            android:layout_width="46dp"
+            android:layout_height="26dp"
+            android:background="#ffffff"
+            android:src="@mipmap/bg_switch_off"/>
+
+    </LinearLayout>
+</LinearLayout>

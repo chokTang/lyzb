@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_image_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize18"
+            android:textColor="@color/white"
+            tools:text="1"/>
+        <TextView
+            android:id="@+id/tv_save_image_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize18"
+            android:textColor="@color/white"
+            tools:text="5"/>
+
+    </LinearLayout>
+
+    <com.lyzb.jbx.widget.PhotoViewPager
+        android:id="@+id/view_pager_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.lyzb.jbx.widget.PhotoViewPager>
+
+</LinearLayout>

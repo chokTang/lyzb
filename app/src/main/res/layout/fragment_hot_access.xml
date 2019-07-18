@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/app_margin">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/img_hot_share"
+                android:layout_width="59dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/union_hot_share" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_hot_share"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/app_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今日分享"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tv_hot_share_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="0"
+                    android:textColor="@color/app_blue"
+                    android:textSize="@dimen/textSize14" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:background="@color/white"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/img_hot_access"
+                android:layout_width="59dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/union_hot_access" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_hot_access"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/app_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今日访问"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tv_hot_access_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="0"
+                    android:textColor="@color/app_blue"
+                    android:textSize="@dimen/textSize14" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_hot"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:layout_marginBottom="@dimen/app_margin"
+            android:background="@drawable/shape_gray_white_bg"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_hot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <TextView
+            android:id="@+id/tv_fiter"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="20dp"
+            android:background="@drawable/shape_blue_round"
+            android:gravity="center"
+            android:text="筛选"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize14" />
+
+        <LinearLayout
+            android:id="@+id/layout_no_vip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.95"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/union_hot_novip" />
+
+            <TextView
+                android:id="@+id/tv_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_margin"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/text_line_space"
+                android:text="你已错过50次跟进机会\n有多少机会可以继续错过？"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/btn_go_vip"
+                style="@style/common_bottom_btn_style"
+                android:text="立即查看" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

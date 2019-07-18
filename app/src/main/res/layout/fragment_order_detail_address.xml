@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:orientation="vertical"
+    >
+
+    <include
+        layout="@layout/item_border_one"/>
+
+    <RelativeLayout
+        android:id="@+id/order_detail_address_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/fragment_order_detail_icon_locate"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/ic_location"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:id="@+id/fragment_order_detail_consignee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/fragment_order_detail_icon_locate"
+            android:layout_toRightOf="@+id/fragment_order_detail_icon_locate"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"
+            android:text="姓名"
+            android:maxEms="4"
+            android:layout_marginTop="-3dp"/>
+
+        <TextView
+            android:id="@+id/fragment_order_detail_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/fragment_order_detail_consignee"
+            android:layout_toRightOf="@+id/fragment_order_detail_consignee"
+            android:text="110"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="-3dp"/>
+
+        <TextView
+            android:id="@+id/fragment_order_detail_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_order_detail_consignee"
+            android:layout_toEndOf="@+id/fragment_order_detail_icon_locate"
+            android:layout_toRightOf="@+id/fragment_order_detail_icon_locate"
+            android:textColor="@color/colorGoodsDesc"
+            android:textSize="@dimen/fontFour"
+            android:gravity="center_vertical"
+            android:text="地址详情"
+            android:layout_marginTop="6dp"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@mipmap/bg_three_color_stripe"/>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorTen"
+                android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/flayout_same_citylife"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_same_citylife" />
+
+    <LinearLayout
+        android:id="@+id/linear_same_citylife"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/top_border_one"
+        android:clipChildren="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <include
+            android:id="@+id/activity_city_tab_home"
+            layout="@layout/activity_city_tab_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/activity_city_tab_near"
+            layout="@layout/activity_city_tab_near"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/activity_city_tab_order"
+            layout="@layout/activity_city_tab_order"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

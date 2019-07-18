@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/fragment_bonus_shop_info_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment_goods_bonus_recyclerView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bottom_border_one"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/fragment_goods_bonus_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="商店名称"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_goods_bonus_shop_name"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/take_bonus"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+    </RelativeLayout>
+
+    <!--底部按钮start-->
+    <LinearLayout
+        android:id="@+id/fragment_goods_bonus_cancel_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/fragment_goods_bonus_cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:text="@string/close"
+            android:textColor="#fff"
+            android:textSize="@dimen/fontThree" />
+
+    </LinearLayout>
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/fragment_goods_bonus_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@+id/fragment_goods_bonus_cancel_button_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorTen" />
+
+    <TextView
+        android:id="@+id/fragment_goods_bonus_cancel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment_bonus_shop_info_relativelayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>

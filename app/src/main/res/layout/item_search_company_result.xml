@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/group_margin">
+
+        <ImageView
+            android:id="@+id/img_company"
+            android:layout_width="@dimen/member_headerImg_big"
+            android:layout_height="@dimen/member_headerImg_big"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/group_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/text_line_space"
+                android:lines="1"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14"
+                tools:text="重庆市礼仪之邦电子商务有庆市礼仪之邦重庆市礼仪之邦电子商务有庆市礼仪之邦" />
+            <TextView
+                android:id="@+id/tv_create_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_marginTop="5dp"
+                android:lines="1"
+                android:maxEms="10"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14"
+                tools:text="张三" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_member"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:layout_gravity="bottom"
+                    android:lines="1"
+                    android:maxEms="16"
+                    android:textColor="@color/fontcColor2"
+                    android:textSize="@dimen/textSize14"
+                    tools:text="制造业.20成员" />
+
+                <TextView
+                    android:id="@+id/tv_jion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/group_margin"
+                    android:background="@drawable/selector_apply"
+                    android:paddingLeft="@dimen/group_margin"
+                    android:paddingTop="4dp"
+                    android:paddingRight="@dimen/group_margin"
+                    android:paddingBottom="4dp"
+                    android:text="加入" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="@dimen/group_margin"
+        android:background="@color/divider" />
+
+</LinearLayout>

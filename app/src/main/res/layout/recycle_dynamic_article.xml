@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp">
+
+    <include layout="@layout/recycle_dynamic_header" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="推荐热文"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_article_header"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/icon_space_text"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_article_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="名片name"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:id="@+id/tv_article_introduce"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:lineSpacingExtra="@dimen/text_line_space"
+                android:text="名片的个人介绍"
+                android:textColor="@color/fontcColor3"
+                android:textSize="@dimen/textSize14" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pub_right" />
+    </LinearLayout>
+
+    <include layout="@layout/view_common_recycle_dynamic_footer"/>
+</LinearLayout>

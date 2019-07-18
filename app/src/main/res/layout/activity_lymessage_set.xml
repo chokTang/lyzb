@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_ly_message_set"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/toolbar_bottom_border"
+        android:theme="@style/ToolbarTheme"
+        app:navigationIcon="@mipmap/btn_back_dark">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="消息设置"
+            android:textColor="@color/colorOne"
+            android:textSize="18dp"/>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/aliwx_white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:text="新消息声音提示"
+            android:textColor="@color/message_hint"
+            android:textSize="16dp"/>
+
+        <ImageView
+            android:id="@+id/img_message_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/bg_mess_on"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

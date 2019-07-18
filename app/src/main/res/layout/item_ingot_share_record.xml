@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/aliwx_white">
+
+    <TextView
+        android:id="@+id/tv_ingot_share_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textColor="@color/ads_out_bg"
+        android:textSize="14dp"
+        tools:text="2018-06-16 16:18:19"/>
+
+    <TextView
+        android:id="@+id/tv_ingot_share_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="12dp"
+        android:textColor="@color/ads_out_bg"
+        android:visibility="gone"
+        tools:text="分享"/>
+
+    <View
+        android:id="@+id/view_ingot_share"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tv_ingot_share_time"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/ing_expl_view"/>
+
+    <RelativeLayout
+        android:id="@+id/rela_ingot_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_ingot_share">
+
+        <TextView
+            android:id="@+id/tv_ingot_share_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/ing_number"
+            android:textSize="14dp"
+            tools:text="元宝数量:500个,剩余200个"/>
+
+        <TextView
+            android:id="@+id/tv_ingot_share_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ingot_share_total"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/colorOne"
+            android:textSize="14dp"
+            tools:text="分享次数:500个,剩余200次"/>
+
+        <TextView
+            android:id="@+id/tv_ingot_share_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ingot_share_number"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/ing_number"
+            android:textSize="14dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/img_ingot_share_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

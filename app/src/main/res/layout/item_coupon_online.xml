@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_coupon_normal">
+
+        <!--额度模块-->
+        <RelativeLayout
+            android:id="@+id/rl_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+            <TextView
+                android:id="@+id/tv_rmb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="@color/white"
+                android:layout_marginLeft="16dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/tv_coupon_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="55"
+                android:textSize="48dp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignTop="@+id/tv_rmb"
+                android:layout_alignLeft="@+id/tv_rmb"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+
+        <!--中间模块-->
+        <LinearLayout
+            android:id="@+id/ll_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rl_one"
+            android:layout_marginLeft="21dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_coupon_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:text="优惠券"
+                    />
+                <TextView
+                    android:id="@+id/tv_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:text="（使用5元宝可得）"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:text="发行方：店铺名称"
+                />
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:text="领取之日起3日有效"
+                />
+
+        </LinearLayout>
+
+
+        <!--立即领取-->
+        <TextView
+            android:id="@+id/tv_now_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立即领取"
+            android:textSize="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/root_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#252C39"
+              android:orientation="vertical">
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/topLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:orientation="vertical">-->
+        <!---->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_is_p2p"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="#fff"/>-->
+
+    <!--</LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1" >
+
+           <ImageView
+               android:id="@+id/swing_card"
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               android:layout_marginTop="96dp"
+               android:layout_centerHorizontal="true"
+               android:src="@drawable/ease_default_avatar"/>
+
+           <TextView
+               android:id="@+id/tv_nick"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:text="张三"
+               android:layout_centerHorizontal="true"
+               android:layout_below="@id/swing_card"
+               android:textColor="@android:color/white"
+               android:textSize="18dp"
+               tools:ignore="HardcodedText"/>
+
+           <TextView
+               android:id="@+id/tv_call_state"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:textColor="@color/btn_white_normal"
+               android:layout_below="@id/tv_nick"
+               android:layout_marginTop="12dp"
+               tools:text="正在等待对方接听..."
+               android:textSize="14dp"/>
+
+           <TextView
+               android:id="@+id/tv_network_status"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="12dp"
+               android:layout_centerHorizontal="true"
+               android:layout_below="@id/tv_call_state"
+               tools:text="通话质量不佳提示"
+               android:textColor="@android:color/white"/>
+
+       </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <com.hyphenate.easeui.widget.MyChronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Chronometer"
+        android:textColor="#fff"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_voice_control"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="DisableBaselineAlignment">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_mute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/em_icon_mute_normal"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="@string/mute"
+                    android:textColor="@color/btn_white_normal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_hangup_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/btn_hangup_call"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/voice_return"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_gravity="center"
+                    android:text="@string/hang_up"
+                    android:textColor="@color/btn_white_normal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_handsfree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/em_icon_speaker_normal"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="@string/Hands_free"
+                    android:textColor="@color/btn_white_normal"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp">
+
+            <LinearLayout
+                android:id="@+id/ll_coming_call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btn_refuse_call"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/voice_return"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:text="@string/hang_up"
+                        android:textColor="@color/btn_white_normal"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btn_answer_call"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/voice_answer"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:text="@string/answer"
+                        android:textColor="@color/btn_white_normal"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_refuse_call"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/em_call_hangup_bg"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/hang_up"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="20sp"/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_answer_call"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_marginLeft="30dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/em_call_answer_bg"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/answer"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="20sp"/>-->
+
+</LinearLayout>

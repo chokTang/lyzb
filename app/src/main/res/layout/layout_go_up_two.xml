@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+<ImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/go_up_button"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:alpha="0.0"
+    android:background="#00000000"
+    android:contentDescription="@string/goToTop"
+    android:src="@mipmap/btn_arrow_up_circled"
+    android:visibility="invisible"
+    android:layout_marginBottom="20dp"
+    android:layout_marginRight="10dp"
+    /></merge>

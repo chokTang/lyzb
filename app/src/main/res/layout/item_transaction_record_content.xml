@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/app_margin">
+
+        <TextView
+            android:id="@+id/transaction_record_content_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:maxLength="10"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14"
+            tools:text="商品标题"/>
+
+
+        <TextView
+            android:id="@+id/transaction_record_content_number_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14"
+            tools:text="11"/>
+
+
+        <TextView
+            android:id="@+id/transaction_record_content_money_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14"
+            tools:text="99"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/transaction_record_content_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:textColor="@color/fontcColor3"
+        android:textSize="@dimen/textSize14"
+        tools:text="用户名称"/>
+
+</LinearLayout>

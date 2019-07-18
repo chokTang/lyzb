@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white_f5"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_un_cd_info_onther_edt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@mipmap/btn_back_dark"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/colorOne"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#0079E5"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/adaptive_6dp"
+        android:background="@color/white"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/adaptive_16dp"
+                android:gravity="center"
+                android:text="其他"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/adaptive_18sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#C9C9C9"/>
+
+            <LinearLayout
+                android:id="@+id/ll_domain"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/adaptive_16dp"
+                    android:layout_weight="1"
+                    android:text="熟悉领域"
+                    android:textColor="@color/colorOne"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/img_other_domain_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/adaptive_48dp"
+                    android:paddingRight="@dimen/adaptive_12dp"
+                    android:src="@mipmap/union_me_go"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recy_other_domain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/adaptive_48dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="@dimen/adaptive_16dp"
+                android:layout_marginRight="12dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#C9C9C9"/>
+
+            <LinearLayout
+                android:id="@+id/ll_other_dat"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/adaptive_16dp"
+                    android:layout_weight="1"
+                    android:text="期待认识"
+                    android:textColor="@color/colorOne"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/img_other_dat_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/adaptive_48dp"
+                    android:paddingRight="@dimen/adaptive_12dp"
+                    android:src="@mipmap/union_me_go"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recy_other_know"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/adaptive_48dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="@dimen/adaptive_16dp"
+                android:layout_marginRight="12dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#C9C9C9"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/adaptive_16dp"
+                    android:layout_weight="1"
+                    android:text="兴趣爱好"
+                    android:textColor="@color/colorOne"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_other_like_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/adaptive_6dp"
+                    android:paddingBottom="@dimen/adaptive_4dp"
+                    android:paddingLeft="@dimen/adaptive_12dp"
+                    android:paddingRight="@dimen/adaptive_12dp"
+                    android:paddingTop="@dimen/adaptive_4dp"
+                    android:text="+ 添加"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/adaptive_14sp"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recy_other_hobb"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/adaptive_48dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="12dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#C9C9C9"/>
+
+            <LinearLayout
+                android:id="@+id/ll_city"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:text="我的家乡"
+                    android:textColor="@color/colorOne"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_other_city_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="+ 添加"
+                    android:paddingLeft="@dimen/adaptive_12dp"
+                    android:paddingRight="12dp"
+                    android:textColor="@color/fontcColor1"
+                    android:textColorHint="@color/fontcColor1"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#C9C9C9"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/adaptive_16dp"
+                    android:layout_weight="1"
+                    android:text="常来往地"
+                    android:textColor="@color/colorOne"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_stay_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/adaptive_6dp"
+                    android:paddingBottom="@dimen/adaptive_4dp"
+                    android:paddingLeft="@dimen/adaptive_12dp"
+                    android:paddingRight="@dimen/adaptive_12dp"
+                    android:paddingTop="@dimen/adaptive_4dp"
+                    android:text="+ 添加"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/adaptive_14sp"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_stay_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/adaptive_48dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="12dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#C9C9C9"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:text="毕业院校"
+                    android:textColor="@color/colorOne"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/edt_other_school_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/adaptive_12dp"
+                    android:background="@null"
+                    android:gravity="right|center"
+                    android:hint="请输入毕业院校"
+                    android:paddingRight="12dp"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_un_card_other_info_save"
+                    style="@style/common_bottom_btn_style"
+                    android:text="保存"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+</LinearLayout>

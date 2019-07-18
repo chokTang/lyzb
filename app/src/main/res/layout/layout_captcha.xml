@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/fragment_edit_password_name_layout"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/bottom_border_one"
+    android:gravity="center_vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/imageCaptcha"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontTwo" />
+
+    <com.szy.common.View.CommonEditText
+        android:id="@+id/captcha_edittext"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:hint="@string/captcha"
+        android:singleLine="true"
+        android:textColorHint="@color/colorFive"
+        android:layout_weight="1"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontTwo"/>
+    
+    <ImageView
+        android:id="@+id/captcha"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/pl_image"
+        android:scaleType="fitXY"/>
+</LinearLayout>

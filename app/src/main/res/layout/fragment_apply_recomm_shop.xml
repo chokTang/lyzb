@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorTen"
+              android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearlayout_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="店铺名称："
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <com.szy.common.View.CommonEditText
+                    android:id="@+id/commonEditText_shop_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="请输入店铺名称"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:textColor="@color/colorThree"
+                    android:textColorHint="@color/colorThree"
+                    android:textSize="@dimen/fontThree"/>
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/item_border_two"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="联系电话："
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <com.szy.common.View.CommonEditText
+                    android:id="@+id/commonEditText_contact_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入联系电话"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:textColor="@color/colorThree"
+                    android:textColorHint="@color/colorThree"
+                    android:textSize="@dimen/fontThree"/>
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/item_border_two"/>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_delivery_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="所属区域："
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_location"/>
+
+                <TextView
+                    android:id="@+id/textView_delivery_address"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请选择收货地址"
+                    android:paddingLeft="4dp"
+                    android:textColor="@color/colorThree"
+                    android:textColorHint="@color/colorThree"
+                    android:textSize="@dimen/fontThree"/>
+
+                <ImageView
+                    android:id="@+id/btn_right_arrow"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@mipmap/btn_right_arrow"/>
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/item_border_two"/>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_detailed_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="详细地址："
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <com.szy.common.View.CommonEditText
+                    android:id="@+id/commonEditText_detailed_address"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入详细地址"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/colorThree"
+                    android:textColorHint="@color/colorThree"
+                    android:textSize="@dimen/fontThree"/>
+
+
+                <TextView
+                    android:id="@+id/fragment_address_detail_labelTextView_complete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/labelAddressDetailComplete"
+                    android:visibility="gone"
+                    android:textColor="#248DC1"
+                    android:textSize="@dimen/fontThree"/>
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/item_border_two"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:background="@android:color/white"
+                android:gravity="top"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="推荐理由："
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <com.szy.common.View.CommonEditText
+                    android:id="@+id/commonEditText_recommended_reasons"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="请输入推荐理由"
+                    android:inputType="text"
+                    android:singleLine="false"
+                    android:textColor="@color/colorThree"
+                    android:textColorHint="@color/colorThree"
+                    android:textSize="@dimen/fontThree"/>
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/item_border_two"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="店铺门面/名片"
+                        android:textColor="@color/colorOne"
+                        android:textSize="@dimen/fontTwo"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(非必填)："
+                        android:textColor="@color/colorThree"
+                        android:textSize="@dimen/fontTwo"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="10dp"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_dashed"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+"
+                                android:textColor="#ddd"
+                                android:textSize="28dp"/>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="上传图片"
+                                android:textColor="@color/colorThree"
+                                android:textSize="@dimen/fontFour"/>
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/imageView_upload1"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:id="@+id/imageView_upload1_close"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:visibility="gone"
+                            app:srcCompat="@mipmap/btn_clear_image"/>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_dashed"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+"
+                                android:textColor="#ddd"
+                                android:textSize="28dp"/>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="上传图片"
+                                android:textColor="@color/colorThree"
+                                android:textSize="@dimen/fontFour"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imageView_upload2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:id="@+id/imageView_upload2_close"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:visibility="gone"
+                            app:srcCompat="@mipmap/btn_clear_image"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/item_border_one"/>
+
+            <include
+                layout="@layout/layout_submit_button"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/fragment_address_poi_list_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_address_poi_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorEight"
+            />
+
+    </LinearLayout>
+</FrameLayout>

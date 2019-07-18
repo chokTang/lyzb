@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_ads_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/frame_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="24dp">
+
+        <TextView
+            android:id="@+id/tv_ads_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_skip_bg"
+            android:textColor="@color/aliwx_white"
+            android:textSize="14dp"
+            tools:text="1s 跳过"/>
+    </FrameLayout>
+
+
+</RelativeLayout>

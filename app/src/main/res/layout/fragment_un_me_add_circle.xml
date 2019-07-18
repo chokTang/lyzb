@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_layout"/>
+
+    <TextView
+        android:id="@+id/tv_add_cricle_btn"
+        style="@style/common_bottom_btn_style"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/app_margin"
+        android:text="确定创建"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_add_cricle_btn"
+        android:layout_marginTop="@dimen/toolbar_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_margin"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_margin">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/app_margin"
+                        android:paddingTop="@dimen/app_margin"
+                        android:text="圈子名称"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14"/>
+
+                    <EditText
+                        android:id="@+id/edt_add_circle_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/adaptive_12dp"
+                        android:background="@null"
+                        android:gravity="center|right"
+                        android:hint="请输入圈子名称"
+                        android:textColor="@color/fontcColor2"
+                        android:textSize="@dimen/textSize12"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/lineSize"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@color/lineColor"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_margin">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/app_margin"
+                        android:paddingTop="@dimen/app_margin"
+                        android:text="是否需要审核加入"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14"/>
+
+                    <CheckBox
+                        android:id="@+id/cbx_add_examine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/app_margin"
+                        android:background="@null"
+                        android:button="@drawable/ic_createcirclr_examine"
+                        android:gravity="center|right"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/lineSize"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@color/lineColor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:gravity="center"
+                    android:padding="@dimen/app_margin"
+                    android:text="圈子简介"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14"/>
+
+
+                <EditText
+                    android:id="@+id/edt_add_circle_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请输入圈子简介"
+                    android:padding="6dp"
+                    android:textColor="@color/fontcColor2"
+                    android:textSize="@dimen/textSize12"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/lineSize"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@color/lineColor"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="圈子头像"
+                            android:textColor="@color/fontcColor1"
+                            android:textSize="@dimen/textSize14"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="(请上传圈子头像,建议尺寸130*130)"
+                            android:textColor="@color/fontcColor2"
+                            android:textSize="@dimen/textSize12"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/img_add_circle_head"
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/un_me_circle_head_add"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/lineSize"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@color/lineColor"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/adaptive_66dp"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/app_margin"
+                        android:gravity="center"
+                        android:text="圈子背景"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/app_margin"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="请上传圈子背景图片,建议尺寸比例16:9"
+                        android:textColor="@color/fontcColor2"
+                        android:textSize="@dimen/textSize12"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_add_circle_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:layout_marginTop="@dimen/group_margin"
+                    android:adjustViewBounds="true"
+                    android:background="@mipmap/un_me_add_circle_bg"
+                    android:scaleType="centerCrop"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

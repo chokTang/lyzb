@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--title-->
+    <include layout="@layout/layout_send_title" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="@dimen/group_margin"
+        android:paddingRight="@dimen/group_margin"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--发布视频模块-->
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:id="@+id/img_video"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+
+
+            <ImageView
+                android:id="@+id/img_video_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/icon_video_play" />
+
+            <TextView
+                android:id="@+id/tv_video_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_8r_red"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColor="#fefefe"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/edit_video_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_send_content"
+            android:gravity="start"
+            android:hint="此时想说点什么..."
+            android:minHeight="100dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/windows_bg"/>
+        <!--推荐商品-->
+        <LinearLayout
+            android:id="@+id/ll_recommendedProduct"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="推荐商品"
+                android:layout_marginLeft="@dimen/group_margin"
+                android:gravity="center_vertical"
+                android:drawableLeft="@mipmap/icon_rec_product"
+                android:drawablePadding="5dp"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize16"/>
+
+            <TextView
+                android:id="@+id/tv_select_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:textSize="@dimen/textSize14"
+                android:hint="未选择"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/bg_arrow_right_gray"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/windows_bg"/>
+
+
+        <!--选择项标签tag-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/group_margin">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>

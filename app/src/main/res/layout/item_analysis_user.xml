@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/app_margin"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/app_margin">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/analysis_user_head_iv"
+                android:layout_width="@dimen/member_headerImg_big"
+                android:layout_height="@dimen/member_headerImg_big"
+                tools:src="@mipmap/ic_launcher"/>
+
+            <ImageView
+                android:id="@+id/analysis_user_isvip_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/union_vip"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/analysis_user_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize16"
+                tools:text="LYZB002(宁忆)"/>
+
+            <TextView
+                android:id="@+id/analysis_user_content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/fontcColor3"
+                android:textSize="@dimen/textSize14"
+                tools:text="通过XX注册"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:background="@color/line_color"/>
+
+    <TextView
+        android:id="@+id/analysis_user_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/fontcColor3"
+        android:textSize="@dimen/textSize12"
+        tools:text="注册时间"/>
+</LinearLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_shop_contentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen">
+
+    <ImageView
+        android:id="@+id/activity_shop_topImageView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_user_top"
+        android:tint="#77000000" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_shop_toolbarWrapper"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/activity_shop_appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            app:elevation="0dp"
+            app:layout_behavior="com.szy.yishopcustomer.View.FlingBehavior">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <include
+                    layout="@layout/activity_shop_info_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <include
+                    layout="@layout/activity_shop_info_wrapper_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <include
+                    layout="@layout/activity_shop_tab_red_packet"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp" />
+
+                <!--<include
+                    layout="@layout/activity_shop_tab_top_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />-->
+            </LinearLayout>
+
+            <include
+                android:id="@+id/activity_shop_tab_bottom_wrapper"
+                layout="@layout/activity_shop_tab_bottom_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tabHeight" />
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/activity_shop_frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_shop_cartWrapperOne"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/activity_shop_cart_wrapper"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/activity_shop_cartWrapperOne"
+            android:layout_marginLeft="5dp">
+
+            <ImageView
+                android:id="@+id/imageView_empty_cart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/btn_shop_cart_normal"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="购物车为空"
+            android:textColor="#C7C7C7"
+            android:textSize="@dimen/fontTwo" />
+
+
+        <Button
+            android:id="@+id/fragment_shop_goods_list_checkoutButton"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|bottom"
+            android:background="@drawable/bottom_button_selector"
+            android:enabled="false"
+            android:text="@string/goCheckout"
+            android:textColor="@drawable/button_text_selector"
+            android:textSize="@dimen/fontSeven" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/activity_shop_cartWrapperTwo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/activity_shop_cartWrapperOne"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="invisible"
+        >
+
+        <ImageView
+            android:id="@+id/fragment_shop_goods_list_cartImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/btn_shop_cart_selected" />
+
+        <TextView
+
+            android:id="@+id/fragment_shop_goods_list_cartNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/fragment_shop_category_list_item_number"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/colorPrimary"
+            android:textSize="11dp" />
+
+    </FrameLayout>
+
+    <include
+        android:id="@+id/activity_shop_toolbarWrapper"
+        layout="@layout/activity_shop_toolbar_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+</RelativeLayout>

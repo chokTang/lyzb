@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/ic_alert_circled"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_success_red"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/fragment_distributor_result_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree"
+            android:text="提交成功！"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/fragment_distributor_result_buttonOne"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:background="@drawable/enable_button"
+            android:text="商城首页"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontSeven"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/fragment_distributor_result_buttonTwo"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:background="@drawable/enable_button"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontSeven"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

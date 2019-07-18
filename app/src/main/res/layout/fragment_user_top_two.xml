@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="135dp">
+
+    <ImageView
+        android:id="@+id/fragment_user_top_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <ImageButton
+        android:id="@+id/fragment_user_top_settingImageButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignTop="@+id/fragment_user_top_messageImageButton"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/fragment_user_top_messageImageButton"
+        android:layout_toStartOf="@+id/fragment_user_top_messageImageButton"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        android:src="@mipmap/btn_user_setting_white" />
+
+    <ImageButton
+        android:id="@+id/fragment_user_top_messageImageButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        android:src="@mipmap/btn_user_message_white" />
+
+    <View
+        android:id="@+id/fragment_user_top_messageView"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignRight="@+id/fragment_user_top_messageImageButton"
+        android:layout_alignTop="@+id/fragment_user_top_messageImageButton"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/fragment_user_top_message"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/fragment_user_top_nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fragment_user_top_avatarCircleImageView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/fragment_user_top_avatarCircleImageView"
+        android:layout_toRightOf="@+id/fragment_user_top_avatarCircleImageView"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxEms="15"
+        android:paddingBottom="2dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:text="@string/placeholderUserName"
+        android:textColor="@android:color/white"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/fragment_user_top_rankTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fragment_user_top_avatarCircleImageView"
+        android:layout_alignLeft="@+id/fragment_user_top_nameTextView"
+        android:layout_alignStart="@+id/fragment_user_top_nameTextView"
+        android:background="@drawable/gray_circle_button"
+        android:gravity="center"
+        android:minWidth="60dp"
+        android:paddingBottom="2dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="1dp"
+        android:text="@string/placeholderUserRank"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/fontEight"
+        android:visibility="invisible" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_user_top_avatarCircleImageView"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/fragment_user_top_settingImageButton"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:src="@mipmap/pl_user_avatar"
+        app:civ_border_color="#3fffffff"
+        app:civ_border_width="2dp"
+        app:civ_fill_color="#fff" />
+
+    <TextView
+        android:id="@+id/fragment_user_top_badgeTextView"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignEnd="@+id/fragment_user_top_messageImageButton"
+        android:layout_alignRight="@+id/fragment_user_top_messageImageButton"
+        android:layout_alignTop="@+id/fragment_user_top_messageImageButton"
+        android:background="@drawable/activity_root_tab_cart_badge"
+        android:text=""
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/linearlayoutPaymentCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:scaleType="center"
+            android:src="@mipmap/ic_member_code" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="出示会员码"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontFour" />
+
+    </LinearLayout>
+</RelativeLayout>

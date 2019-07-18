@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorTen"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fragement_recharge_record_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tabHeight"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/fragment_recharge_record_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/all"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/fragment_recharge_record_paid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/paySuccess"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/fragment_recharge_record_not_paid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/noPay"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo"/>
+
+    </LinearLayout>
+
+    <me.zongren.pullablelayout.Main.PullableLayout
+        xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_rechage_record_pullablelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        PullableLayout:pullablelayout_side="TOP">
+
+        <com.szy.common.View.CommonRecyclerView
+            xmlns:commonRecyclerView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fragment_recharge_record_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            commonRecyclerView:emptyImage="@mipmap/bg_public"
+            commonRecyclerView:emptyTitle="@string/emptyData"/>
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+    <include layout="@layout/layout_bottom_menu_common" />
+
+</LinearLayout>

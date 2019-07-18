@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_type1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="物流公司"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo" />
+
+        <TextView
+            android:id="@+id/tv_type1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/radia_4_stock_selector"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="上门取件"
+            android:textColor="@color/c_black_red"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_wuliu_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_type1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/delivery_company_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/white"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/fragment_delivery_address_textOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物流公司"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo" />
+
+            <TextView
+                android:id="@+id/fragment_delivery_address_textTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:text="请选择物流公司"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                app:srcCompat="@mipmap/bg_arrow_down_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/delivery_sn_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/delivery_company_layout"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物流费用"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo" />
+
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/edt_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:hint="请填写运费"
+                android:paddingLeft="20dp"
+                android:paddingRight="35dp"
+                android:textColorHint="@color/colorTwo"
+                android:textSize="@dimen/fontThree" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/delivery_sn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/delivery_sn_layout1"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/fragment_delivery_address_textThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物流单号"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo" />
+
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/commonEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:hint="自行配送可不填"
+                android:paddingLeft="20dp"
+                android:paddingRight="35dp"
+                android:textColorHint="@color/colorTwo"
+                android:textSize="@dimen/fontThree" />
+
+            <ImageView
+                android:id="@+id/scan_bar_code"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/tab_shop_code" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/layout_bottom_button" />
+
+</RelativeLayout>

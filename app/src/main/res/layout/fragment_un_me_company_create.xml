@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/windows_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/app_margin"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/adaptive_12dp"
+                        android:text="企业名称"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14"/>
+
+                    <EditText
+                        android:id="@+id/edt_comd_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/adaptive_12dp"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="输入企业名称"
+                        android:textColorHint="@color/fontcColor3"
+                        android:textSize="@dimen/textSize14"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white_f5"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_12dp"
+                        android:text="企业类型"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14"/>
+
+                    <TextView
+                        android:id="@+id/tv_comd_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/adaptive_12dp"
+                        android:gravity="right|center"
+                        android:hint="选择类型 >"
+                        android:textColor="@color/fontcColor2"
+                        android:textColorHint="@color/fontcColor3"
+                        android:textSize="@dimen/textSize14"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/group_margin"
+                    android:background="#f5f5f5"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/adaptive_6dp"
+                    android:layout_marginRight="@dimen/adaptive_6dp"
+                    android:paddingBottom="@dimen/adaptive_18dp"
+                    android:paddingTop="@dimen/adaptive_18dp">
+
+                    <ImageView
+                        android:id="@+id/img_comd_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/card_com_video"/>
+
+                    <com.xiao.nicevideoplayer.NiceVideoPlayer
+                        android:id="@+id/video_un_play"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/img_comd_video_cancle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingBottom="@dimen/adaptive_16dp"
+                        android:paddingLeft="@dimen/adaptive_16dp"
+                        android:src="@mipmap/union_add_img_cancle"
+                        android:visibility="gone"/>
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/group_margin"
+                    android:background="#f5f5f5"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/adaptive_18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_12dp"
+                        android:layout_marginTop="@dimen/adaptive_18dp"
+                        android:text="公司简介"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14"/>
+
+                    <TextView
+                        android:id="@+id/tv_comd_info_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_12dp"
+                        android:layout_marginRight="@dimen/adaptive_12dp"
+                        android:layout_marginTop="@dimen/adaptive_12dp"
+                        android:textColor="@color/fontcColor2"
+                        android:textSize="@dimen/textSize14"
+                        android:visibility="gone"
+                        tools:text="公司简介信息公司简介信息公司简介信息公司简介信息"/>
+
+                    <ImageView
+                        android:id="@+id/img_comd_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_12dp"
+                        android:layout_marginRight="@dimen/adaptive_12dp"
+                        android:layout_marginTop="@dimen/adaptive_12dp"
+                        android:src="@mipmap/card_com_info"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recy_comd_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_6dp"
+                        android:layout_marginRight="@dimen/adaptive_6dp"
+                        android:layout_marginTop="@dimen/adaptive_12dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/group_margin"
+                    android:background="#f5f5f5"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/adaptive_18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_12dp"
+                        android:layout_marginTop="@dimen/adaptive_18dp"
+                        android:text="企业文化/荣誉/团队"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14"/>
+
+                    <TextView
+                        android:id="@+id/tv_comd_honr_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_12dp"
+                        android:layout_marginRight="@dimen/adaptive_12dp"
+                        android:layout_marginTop="@dimen/adaptive_12dp"
+                        android:textColor="@color/fontcColor2"
+                        android:textSize="@dimen/textSize14"
+                        android:visibility="gone"
+                        tools:text="公司荣誉文本公司荣誉文本公司荣誉文本"/>
+
+                    <ImageView
+                        android:id="@+id/img_comd_honr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_12dp"
+                        android:layout_marginRight="@dimen/adaptive_12dp"
+                        android:layout_marginTop="@dimen/adaptive_12dp"
+                        android:src="@mipmap/card_com_honr"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recy_comd_honr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_6dp"
+                        android:layout_marginRight="@dimen/adaptive_6dp"
+                        android:layout_marginTop="@dimen/adaptive_12dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/group_margin"
+                    android:background="#f5f5f5"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/adaptive_18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_12dp"
+                        android:layout_marginTop="@dimen/adaptive_18dp"
+                        android:text="品牌展示"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14"/>
+
+                    <TextView
+                        android:id="@+id/tv_comd_good_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_12dp"
+                        android:layout_marginRight="@dimen/adaptive_12dp"
+                        android:layout_marginTop="@dimen/adaptive_12dp"
+                        android:textColor="@color/fontcColor2"
+                        android:textSize="@dimen/textSize14"
+                        android:visibility="gone"
+                        tools:text="品牌展示品牌展示品牌展示品牌展示"/>
+
+                    <ImageView
+                        android:id="@+id/img_comd_good"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_12dp"
+                        android:layout_marginRight="@dimen/adaptive_12dp"
+                        android:layout_marginTop="@dimen/adaptive_12dp"
+                        android:src="@mipmap/card_com_good"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recy_comd_good"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/adaptive_6dp"
+                        android:layout_marginRight="@dimen/adaptive_6dp"
+                        android:layout_marginTop="@dimen/adaptive_12dp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/group_margin"
+                    android:background="#f5f5f5"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/adaptive_6dp"
+                    android:layout_marginLeft="@dimen/adaptive_12dp"
+                    android:layout_marginRight="@dimen/adaptive_12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/adaptive_36dp"
+                        android:gravity="center"
+                        android:text="公司电话"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14"/>
+
+                    <TextView
+                        android:id="@+id/tv_comd_moble"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/adaptive_36dp"
+                        android:layout_gravity="center|left"
+                        android:layout_marginRight="@dimen/adaptive_12dp"
+                        android:layout_marginTop="@dimen/adaptive_6dp"
+                        android:gravity="center|left"
+                        android:hint="点击添加电话号码"
+                        android:textColor="@color/fontcColor2"
+                        android:textSize="@dimen/textSize14"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white_f5"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/adaptive_6dp"
+                    android:layout_marginLeft="@dimen/adaptive_12dp"
+                    android:layout_marginRight="@dimen/adaptive_12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/adaptive_36dp"
+                        android:gravity="center"
+                        android:text="公司地址"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14"/>
+
+                    <EditText
+                        android:id="@+id/edt_comd_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/adaptive_6dp"
+                        android:background="@drawable/border_gray_white_bg"
+                        android:gravity="center|left"
+                        android:hint="点击添加地址"
+                        android:minHeight="30dp"
+                        android:textColor="@color/fontcColor2"
+                        android:textSize="@dimen/textSize14"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/img_add_comd"
+                style="@style/common_bottom_btn_style"
+                android:text="创建企业"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:paddingBottom="4dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/fragment_tab_one"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_integral_sort_default_textview"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="正在疯抢"
+            android:background="#FFE6EA"
+            android:textColor="@drawable/tab_text_selector_five"
+            android:textSize="@dimen/fontThree" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="10dp"
+            android:background="@mipmap/icon_tab_dsj" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_tab_two"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/fragment_integral_sort_exchange_amount_textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="即将开始"
+            android:background="#FF6C74"
+            android:textColor="@drawable/tab_text_selector_five"
+            android:textSize="@dimen/fontThree" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="10dp"
+            android:background="@mipmap/icon_tab_dsj" />
+
+    </LinearLayout>
+
+</LinearLayout>

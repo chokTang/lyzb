@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/aliwx_white">
+
+    <ImageView
+        android:id="@+id/img_rob_record_img"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@id/img_rob_record_img"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_rob_record_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorOne"
+                android:textSize="14dp"
+                tools:text="用户名01"/>
+
+            <TextView
+                android:id="@+id/tv_rob_record_best"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/shape_red_line_background"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:textColor="@color/ing_number"
+                android:textSize="12dp"
+                android:visibility="gone"
+                tools:text="手气最佳"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_rob_record_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/ads_out_bg"
+            android:textSize="12dp"
+            tools:text="2018-06-15 15:15:16"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_rob_record_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/ing_number"
+        android:textSize="14dp"
+        tools:text="500元宝"/>
+
+</RelativeLayout>

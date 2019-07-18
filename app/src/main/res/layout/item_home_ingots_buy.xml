@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_left_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_home_ingots_buy"
+            android:drawablePadding="5dp"
+            android:lines="1"
+            android:text="元宝换购"
+            android:textColor="@color/ingot_detail_text"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_right_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/message_next"
+            android:lines="1"
+            android:text="更多"
+            android:textColor="@color/ingot_detail_time_text"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_radio_5_white">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_home_ingot_buy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+</RelativeLayout>

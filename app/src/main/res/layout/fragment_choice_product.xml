@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title"/>
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/windows_bg"
+        android:gravity="center"
+        android:paddingTop="@dimen/app_margin"
+        android:paddingBottom="@dimen/app_margin"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:background="@drawable/bg_white"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:scaleType="center"
+                android:src="@drawable/search_home" />
+
+            <com.like.longshaolib.widget.ClearEditText
+                android:id="@+id/edt_search_value"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入商品名称/ID"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:singleLine="true"
+                android:textColor="@color/fontcColor1"
+                android:textColorHint="@color/fontcColor2"
+                android:textSize="@dimen/textSize14" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/app_margin"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/app_blue"
+            android:text="历史选择"/>
+    </LinearLayout>
+
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_choice_product"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/app_margin">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_choice_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/app_margin"
+                android:paddingRight="@dimen/app_margin"/>
+
+            <include
+                android:id="@+id/empty_view"
+                layout="@layout/empty_layout"
+                android:visibility="gone" />
+        </FrameLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/windows_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="90dp"
+        android:paddingLeft="@dimen/app_margin"
+        android:paddingRight="@dimen/app_margin"
+        android:paddingTop="@dimen/group_margin"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择商品"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize16"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(请选择1-5款商品，长按可拖动排序)"
+                android:textSize="@dimen/textSize12"
+                android:layout_marginLeft="@dimen/group_margin"
+                android:textColor="@color/red"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_chosen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/group_margin"
+            android:layout_marginBottom="@dimen/group_margin">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>

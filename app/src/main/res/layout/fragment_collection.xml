@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:commonRecyclerView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout_content"
+    tools:context="com.szy.yishopcustomer.Fragment.CollectionFragment"
+    android:background="@color/colorTen">
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tabHeight"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fragment_goods_collection_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/goodsCollection"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo" />
+
+        <TextView
+            android:id="@+id/fragment_shop_collection_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/shopCollection"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/linearlayout"
+        android:background="@color/colorEight" />
+
+    <me.zongren.pullablelayout.Main.PullableLayout xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_collection_pullableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearlayout"
+        android:layout_above="@+id/fragment_collection_bottom_layout"
+        >
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_collection_pullableRecyclerView"
+            commonRecyclerView:emptyButtonTitle="@string/doSomeShopping"
+            commonRecyclerView:emptyImage="@mipmap/bg_public"
+            PullableLayout:emptyTitle="@string/emptyMessageSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+    <include
+        android:id="@+id/fragment_collection_cart_relativeLayout"
+        layout="@layout/layout_float_cart"
+        />
+
+    <LinearLayout
+        android:id="@+id/fragment_collection_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        >
+
+        <include
+            layout="@layout/layout_checkbox"/>
+
+        <TextView
+            android:id="@+id/fragment_collection_goods_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="已选0件商品"
+            android:gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+             />
+        <TextView
+            android:id="@+id/collection_delete_button"
+            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:text="删除"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

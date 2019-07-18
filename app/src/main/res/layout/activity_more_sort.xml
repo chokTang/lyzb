@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/aliwx_white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_more_sort_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/btn_back_dark"/>
+
+
+        <TextView
+            android:id="@+id/tv_more_sort_seach"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_same_more_sort"
+            android:drawableLeft="@mipmap/edt_seach"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="请输入关键字"/>
+
+    </LinearLayout>
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/recy_more_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"/>
+
+</LinearLayout>

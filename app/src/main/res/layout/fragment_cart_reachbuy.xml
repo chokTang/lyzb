@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cart_toolbar"
+        android:background="@drawable/bottom_border_two"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/fragment_cart_tip"
+            android:background="@drawable/enable_button"
+            android:text="@string/login"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontFour" />
+
+        <TextView
+            android:id="@+id/fragment_cart_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/fragment_cart_tip"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_cart_bottom_layout"
+        android:layout_below="@+id/login_layout"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearlayout_go_order_list"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/login_layout"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="堂内点餐订单"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击查看"
+                android:textColor="@android:color/white" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/btn_right_arrow"
+                android:tint="@android:color/white" />
+
+        </LinearLayout>
+
+        <me.zongren.pullablelayout.Main.PullableLayout xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fragment_cart_goods_listView_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTen"
+            PullableLayout:pullablelayout_side="TOP">
+
+            <com.szy.common.View.CommonRecyclerView
+                android:id="@+id/fragment_cart_goods_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null" />
+
+        </me.zongren.pullablelayout.Main.PullableLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_cart_bottom_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/top_border_one">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/fragment_cart_total_price"
+            android:layout_toStartOf="@+id/fragment_cart_total_price"
+            android:gravity="start|center_vertical"
+            android:text="@string/sampleCheckoutDesc"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/fragment_cart_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/fragment_cart_checkout_button"
+            android:layout_toStartOf="@+id/fragment_cart_checkout_button"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontOne" />
+
+        <TextView
+            android:id="@+id/fragment_cart_checkout_button"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bottom_button_selector"
+            android:gravity="center"
+            android:text="@string/goCheckout"
+            android:textColor="@drawable/button_text_selector"
+            android:textSize="@dimen/fontOne" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageViewBack"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/reachbuy_cart_code" />
+</RelativeLayout>

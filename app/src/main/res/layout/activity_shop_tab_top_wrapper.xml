@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="25dp"
+    android:background="@drawable/activity_shop_menu_wrapper"
+    android:orientation="horizontal"
+    >
+
+    <RelativeLayout
+        android:id="@+id/activity_shop_tabTopIndexWrapper"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        >
+
+        <ImageView
+            android:id="@+id/activity_shop_tabIndexImageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/activity_shop_ico_home_selector" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorTen"
+        />
+
+    <RelativeLayout
+        android:id="@+id/activity_shop_tabTopCategoryWrapper"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        >
+
+
+        <TextView
+            android:id="@+id/activity_shop_tabCategoryTopTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@drawable/tab_text_selector_two" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorTen"
+        />
+
+    <RelativeLayout
+        android:id="@+id/activity_shop_tabTopInfoWrapper"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        >
+
+        <ImageView
+            android:id="@+id/activity_shop_tabInfoImageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/activity_shop_ico_detail_selector" />
+
+    </RelativeLayout>
+
+</LinearLayout>

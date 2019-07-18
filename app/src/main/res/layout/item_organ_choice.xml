@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:background="@color/lineColor" />
+
+    <ImageView
+        android:id="@+id/organ_choice_item_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:src="@drawable/ic_customer_sex_default" />
+
+    <TextView
+        android:id="@+id/organ_choice_item_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_toRightOf="@id/organ_choice_item_iv"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="机构类型"
+        android:textColor="@color/fontcColor2"
+        android:textSize="@dimen/textSize14" />
+
+    <ImageView
+        android:id="@+id/organ_choice_item_more_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/app_margin"
+        android:src="@drawable/pub_right" />
+
+</RelativeLayout>

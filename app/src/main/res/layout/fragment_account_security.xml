@@ -1,0 +1,241 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    tools:context="com.szy.yishopcustomer.Fragment.AccountSecurityFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="建议您启动全部安全设置，以保障账户及资金安全"
+            android:maxLines="2"
+            android:textSize="@dimen/fontThree"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:visibility="gone"
+            android:textColor="#FF8500"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayoutPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="top"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewPwd"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_safety_verification" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="登录密码"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <TextView
+                    android:id="@+id/textViewPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="已设置登录密码。"
+                    android:textColor="@color/colorThree"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/fontThree"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/btn_right_arrow" />
+
+        </LinearLayout>
+        <include layout="@layout/item_border_one"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:background="@android:color/white"
+            android:paddingBottom="10dp"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewEmail"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_safety_verification" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="邮箱验证"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo" />
+
+                <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorThree"
+                    android:textSize="@dimen/fontThree" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/btn_right_arrow" />
+
+        </LinearLayout>
+        <include layout="@layout/item_border_one"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayoutMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:background="@android:color/white"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewMobile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_safety_verification" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="手机验证"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo" />
+
+                <TextView
+                    android:id="@+id/textViewMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorThree"
+                    android:textSize="@dimen/fontThree" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/btn_right_arrow" />
+
+        </LinearLayout>
+        <include layout="@layout/item_border_one"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayoutPayPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@android:color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewPayPwd"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_safety_verification" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="支付密码"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo" />
+
+                <TextView
+                    android:id="@+id/textViewPayPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorThree"
+                    android:textSize="@dimen/fontThree" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/btn_right_arrow" />
+
+        </LinearLayout>
+        <include layout="@layout/item_border_one"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

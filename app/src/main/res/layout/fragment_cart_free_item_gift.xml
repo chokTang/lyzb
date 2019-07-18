@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fragment_cart_gift_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp">
+
+
+        <ImageView
+            android:id="@+id/item_cart_goods_imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/gray_border_button_two"
+            android:padding="0.5dp"
+            android:src="@mipmap/pl_image"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:background="@drawable/shape_freebuy_radius"
+                android:textSize="@dimen/fontSix"
+                android:layout_marginRight="5dp"
+                android:padding="2dp"
+                android:text="赠"/>
+
+            <TextView
+                android:id="@+id/item_cart_goods_name_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="11111111"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontThree" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/item_cart_goods_attribute_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="2"
+            android:text="asdasdasd"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontSix" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_cart_goods_price_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/placeholderGoodsPrice"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontThree" />
+
+
+            <ImageView
+                android:id="@+id/item_cart_goods_minus_button"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:background="@drawable/selector_btn_free_minus"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/item_cart_goods_number"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:gravity="center|bottom"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontThree" />
+
+            <ImageView
+                android:id="@+id/item_cart_goods_add_button"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:background="@drawable/selector_btn_free_plus"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/fragment_cart_goods_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <include layout="@layout/line_cart_free" />
+</LinearLayout>

@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.szy.yishopcustomer.View.MyScrollView
+            android:id="@+id/fragment_goods_index_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/viewPagerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.szy.yishopcustomer.View.HeadWrapContentViewPager
+                            android:id="@+id/fragment_goods_thumb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom_border_two" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/fragment_goods_index_video_show"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_alignBottom="@+id/fragment_index_banner_pageIndicator"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:src="@mipmap/btn_video_show"
+                        android:visibility="gone" />
+
+                    <com.szy.yishopcustomer.View.CirclePageIndicator
+                        android:id="@+id/fragment_index_banner_pageIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignBottom="@+id/viewPagerLayout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dp"
+                        app:fillColor="#fc4955"
+                        app:pageColor="#88f4f7fc"
+                        app:radius="4dp"
+                        app:strokeColor="#88d5dae2"
+                        app:strokeWidth="0.5dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_goods_normal_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/bottom_border_two"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/fragment_goods_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toLeftOf="@+id/btn_share_layout"
+                        android:layout_toStartOf="@+id/btn_share_layout"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="10dp"
+                        android:text="商品名称"
+                        android:textColor="@color/colorOne"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/fragmeng_goods_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/fragment_goods_name"
+                        android:layout_alignRight="@+id/fragment_goods_name"
+                        android:layout_below="@+id/fragment_goods_name"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="描述"
+                        android:visibility="gone"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/fontFour" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fragmeng_goods_description"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/fragment_goods_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="价格"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/fontPrice" />
+
+                        <TextView
+                            android:id="@+id/fragment_goods_market_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="10dp"
+                            android:text=""
+                            android:textColor="@color/colorFive"
+                            android:textSize="@dimen/fontFive" />
+
+                        <TextView
+                            android:id="@+id/fragment_goods_sale_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="数量"
+                            android:textColor="@color/colorFive"
+                            android:textSize="@dimen/fontFive" />
+
+                        <TextView
+                            android:id="@+id/fragment_goods_evaluate_number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="用户评价：0"
+                            android:textColor="@color/colorFive"
+                            android:textSize="@dimen/fontFive"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colorTen"/>
+
+                <LinearLayout
+                    android:id="@+id/fragment_goods_shop_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment_goods_comment_layout"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/top_bottom_border_two"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/fragment_goods_shop_normal_info_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp">
+
+                        <ImageView
+                            android:id="@+id/fragment_goods_shop_logo"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/gray_border_button_six"
+                            android:padding="1dp" />
+
+                        <TextView
+                            android:id="@+id/fragment_goods_shop_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_toEndOf="@+id/fragment_goods_shop_logo"
+                            android:layout_toRightOf="@+id/fragment_goods_shop_logo"
+                            android:textColor="@color/colorOne"
+                            android:textSize="@dimen/fontThree"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            />
+                        <TextView
+                            android:id="@+id/fragment_goods_shop_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/fragment_goods_shop_name"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_toEndOf="@+id/fragment_goods_shop_name"
+                            android:layout_toRightOf="@+id/fragment_goods_shop_name"
+                            android:background="@drawable/enable_button"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/fontSix" />
+
+                        <TextView
+                            android:id="@+id/fragment_goods_shop_logistics_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/fragment_goods_shop_logo"
+                            android:layout_marginBottom="2dp"
+                            android:layout_toEndOf="@+id/fragment_goods_shop_logo"
+                            android:layout_toRightOf="@+id/fragment_goods_shop_logo"
+                            android:textColor="@color/colorThree"
+                            android:textSize="@dimen/fontSix" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fragment_goods_shop_score_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:id="@+id/fragment_goods_all_products_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/fragment_goods_all_products"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorOne"
+                                android:textSize="@dimen/fontSeven" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/allProducts"
+                                android:textColor="@color/colorThree"
+                                android:textSize="@dimen/fontSix" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/colorTen" />
+
+                        <LinearLayout
+                            android:id="@+id/fragment_goods_shop_fans_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/fragment_goods_collect_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorOne"
+                                android:textSize="@dimen/fontSeven" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/collectNumber"
+                                android:textColor="@color/colorThree"
+                                android:textSize="@dimen/fontSix" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/colorTen" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="66dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp">
+
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/description"
+                                android:textColor="@color/colorOne"
+                                android:textSize="@dimen/fontSix" />
+
+                            <TextView
+                                android:id="@+id/fragment_goods_shop_desc_score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/textView5"
+                                android:layout_toRightOf="@+id/textView5"
+                                android:text="5.00"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/fontTwo" />
+
+                            <TextView
+                                android:id="@+id/textView17"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:text="@string/serviceAttitude"
+                                android:textColor="@color/colorOne"
+                                android:textSize="@dimen/fontSix" />
+
+                            <TextView
+                                android:id="@+id/fragment_goods_shop_service_score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textView17"
+                                android:text="5.00"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/fontTwo" />
+
+
+                            <TextView
+                                android:id="@+id/fragment_goods_shop_deliverySpeed_tip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginRight="10dp"
+                                android:text="@string/deliverySpeed"
+                                android:textColor="@color/colorOne"
+                                android:textSize="@dimen/fontSix" />
+
+                            <TextView
+                                android:id="@+id/fragment_goods_shop_send_score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_toRightOf="@+id/fragment_goods_shop_deliverySpeed_tip"
+                                android:text="5.0"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/fontTwo" />
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:id="@+id/fragmnet_goods_collect_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/gray_border_button_four"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/ic_shop_collection"
+                                    android:layout_width="17dp"
+                                    android:layout_height="17dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@mipmap/ic_shop_collection_normal" />
+
+                                <TextView
+                                    android:id="@+id/ic_shop_collection_tip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/saveThisSeller"
+                                    android:textColor="@color/colorTwo"
+                                    android:textSize="@dimen/fontTwo" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fragment_goods_enter_shop_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/gray_border_button_four"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="17dp"
+                                    android:layout_height="17dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@mipmap/ic_shop_seller" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/enterTheShop"
+                                    android:textColor="@color/colorTwo"
+                                    android:textSize="@dimen/fontTwo" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_goods_desc_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="1dp"
+                        android:background="@color/colorNine"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#b2b2b2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textSize="@dimen/fontThree"
+                        android:text="商品详情"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="1dp"
+                        android:background="@color/colorNine"
+                        />
+
+                </LinearLayout>
+
+                <com.szy.yishopcustomer.View.ScrollWebView
+                    android:id="@+id/webViewDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.szy.yishopcustomer.View.ScrollWebView>
+
+            </LinearLayout>
+        </com.szy.yishopcustomer.View.MyScrollView>
+
+        <ImageView android:id="@+id/go_up_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/btn_arrow_up_circled"
+            xmlns:android="http://schemas.android.com/apk/res/android" />
+
+    </RelativeLayout>
+</LinearLayout>

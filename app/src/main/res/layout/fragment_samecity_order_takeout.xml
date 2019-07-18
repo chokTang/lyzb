@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/type_rg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/aliwx_white"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RadioButton
+            android:id="@+id/tv_same_city_order_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="全部"
+            android:textColor="@drawable/order_type_radio_text_color"/>
+
+        <RadioButton
+            android:id="@+id/tv_same_city_order_evaluate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="待评价"
+            android:textColor="@drawable/order_type_radio_text_color"/>
+
+        <RadioButton
+            android:id="@+id/tv_same_city_order_refund"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="退款"
+            android:textColor="@drawable/order_type_radio_text_color"/>
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine"/>
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/recy_same_city_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"/>
+
+</LinearLayout>

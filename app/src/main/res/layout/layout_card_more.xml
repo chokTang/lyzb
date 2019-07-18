@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+
+    <!--手机-->
+    <LinearLayout
+        android:id="@+id/ll_mobile_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/group_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:id="@+id/edt_mobile_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/group_margin"
+                android:layout_weight="1"
+                android:inputType="phone"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize12"
+                tools:text="17783842859" />
+
+            <TextView
+                android:id="@+id/tv_call_mobile_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_call_phone"
+                android:paddingLeft="@dimen/group_margin"
+                android:paddingRight="@dimen/group_margin"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="拨打"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize12" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:background="@color/windows_bg" />
+
+    </LinearLayout>
+
+    <!--座机-->
+    <LinearLayout
+        android:id="@+id/ll_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/group_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="座机"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize12" />
+
+
+            <TextView
+                android:id="@+id/edt_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/group_margin"
+                android:layout_weight="1"
+                android:inputType="phone"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize12"
+                tools:text="17783842859" />
+
+            <TextView
+                android:id="@+id/tv_call_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_call_phone"
+                android:paddingLeft="@dimen/group_margin"
+                android:paddingRight="@dimen/group_margin"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="拨打"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize12" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:background="@color/windows_bg" />
+
+    </LinearLayout>
+
+
+    <!--微信-->
+    <LinearLayout
+        android:id="@+id/ll_wx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/group_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize12" />
+
+
+            <TextView
+                android:id="@+id/edt_wx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/group_margin"
+                android:layout_weight="1"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize12"
+                tools:text="17783842859" />
+
+            <TextView
+                android:id="@+id/tv_copy_wx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_call_phone"
+                android:paddingLeft="@dimen/group_margin"
+                android:paddingRight="@dimen/group_margin"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="复制"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize12" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:background="@color/windows_bg" />
+
+    </LinearLayout>
+
+
+    <!--邮箱-->
+    <LinearLayout
+        android:id="@+id/ll_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/group_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邮箱"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize12" />
+
+
+            <TextView
+                android:id="@+id/edt_mail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/group_margin"
+                android:layout_weight="1"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize12"
+                tools:text="327827947@qq.com" />
+
+            <TextView
+                android:id="@+id/tv_copy_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_call_phone"
+                android:paddingLeft="@dimen/group_margin"
+                android:paddingRight="@dimen/group_margin"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="复制"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize12" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:background="@color/windows_bg" />
+
+    </LinearLayout>
+
+
+    <!--公司-->
+    <LinearLayout
+        android:id="@+id/ll_shop_more_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/group_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="公司"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize12" />
+
+
+            <TextView
+                android:id="@+id/edt_shop_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/group_margin"
+                android:layout_weight="1"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize12"
+                tools:text="礼仪之邦" />
+
+            <TextView
+                android:id="@+id/tv_copy_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_call_phone"
+                android:paddingLeft="@dimen/group_margin"
+                android:paddingRight="@dimen/group_margin"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="复制"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize12" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:background="@color/windows_bg" />
+
+    </LinearLayout>
+
+
+    <!--地址-->
+    <LinearLayout
+        android:id="@+id/ll_shop_more_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/app_margin"
+        android:paddingRight="@dimen/app_margin"
+       >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址"
+            android:paddingTop="@dimen/group_margin"
+            android:paddingBottom="@dimen/group_margin"
+            android:textColor="@color/fontcColor2"
+            android:textSize="@dimen/textSize12" />
+
+
+        <TextView
+            android:id="@+id/edt_shop_address"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/group_margin"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize12"
+            tools:text="重庆渝北区重庆渝北区重庆渝北区重庆渝北区重庆渝北区" />
+
+        <TextView
+            android:id="@+id/tv_copy_shop_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_call_phone"
+            android:paddingLeft="@dimen/group_margin"
+            android:paddingRight="@dimen/group_margin"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="导航"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize12" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

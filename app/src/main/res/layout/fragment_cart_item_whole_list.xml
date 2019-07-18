@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingBottom="5dp">
+
+    <include
+        layout="@layout/layout_checkbox"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8F8F8"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="4dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="4dp">
+
+            <TextView
+                android:id="@+id/item_cart_goods_attribute_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontSix" />
+
+            <TextView
+                android:id="@+id/item_cart_goods_price_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/placeholderGoodsPrice"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontThree" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_add_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

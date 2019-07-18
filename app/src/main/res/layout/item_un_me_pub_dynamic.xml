@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item_dynamic_year"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="center|left"
+        android:textColor="@color/black_333333"
+        android:textSize="16sp"
+        tools:text="2019年"/>
+
+    <View
+        android:id="@+id/view_item_dynamic_year"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bg_ececec"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/adaptive_66dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_item_dynamic_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_333333"
+                android:textSize="36sp"
+                tools:text="18"/>
+
+            <TextView
+                android:id="@+id/tv_item_dynamic_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_333333"
+                android:textSize="@dimen/adaptive_14sp"
+                tools:text="1月"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="4dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_item_dynamic_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="@dimen/text_line_space"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14"
+                tools:text="百甲餐饮管理有限公司百甲餐饮管理有限公司百甲餐饮管理有限公司百甲餐饮管理有限公司百甲餐饮管理有限公司"/>
+
+            <TextView
+                android:id="@+id/tv_item_dynamic_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="全文"
+                android:textColor="#247cf0"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recy_item_dynamic_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_item_dynamic_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="right"
+        android:paddingLeft="24dp"
+        android:paddingRight="6dp"
+        android:src="@mipmap/union_me_publish_menu"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bg_ececec"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_item_dynamic_browse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="12sp"
+            tools:text="2322人浏览"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_item_dynamic_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/un_me_ph_dyn_like"
+                android:drawablePadding="12dp"
+                android:textSize="12sp"
+                tools:text="3366"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_item_dynamic_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/un_me_ph_dyn_msg"
+                android:drawablePadding="12dp"
+                android:textSize="12sp"
+                tools:text="666"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_item_dynamic_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/un_me_ph_dyn_share"
+                android:drawablePadding="12dp"
+                android:textSize="12sp"
+                tools:text="66"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

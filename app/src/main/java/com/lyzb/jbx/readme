@@ -1,0 +1,5 @@
+一、打包的时候URL路径有4个地方需要修改
+   1、CdLongShaoAppaction.java 中的地址需要修改
+   3、Config.BASE_URL 的地址的修改
+   4、Api 下的地址的修改 是修改一大片
+   5、ICommonApi 下的getGuaGuaHotShop路径需要修改

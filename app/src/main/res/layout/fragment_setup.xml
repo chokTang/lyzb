@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/top_border_one"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_setup_version"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:text="@string/version"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/fragment_setup_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="@string/version"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout3"
+        android:background="@color/colorEight" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_setup_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_border_one"
+        android:padding="15dp"
+        android:layout_below="@+id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_setup_clear_number"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:text="@string/clearTheCache"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/fragment_setup_clear_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:text="0b"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/fragment_setup_clear"
+        android:background="@drawable/bg_radio_5_white"
+        android:text="退出登录"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="@color/red"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        />
+</RelativeLayout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/takeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.szy.yishopcustomer.View.ResizeAbleSurfaceView
+            android:id="@+id/cameraView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dip"
+                android:src="@mipmap/ic_fh" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/flash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dip"
+                android:src="@mipmap/ic_sgd_gb" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#88333333"
+            android:gravity="center"
+            android:layout_above="@+id/ll_bottom_selector"
+            android:paddingBottom="20dip"
+            android:paddingTop="20dip">
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/chosePic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_send_take_cancel" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/takePic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_pz" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/flip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_jtfz" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_selector"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_take_pic_buy"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="拍照"
+                    android:textColor="@color/ads_white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view_divider_take_pic_buy"
+                    android:layout_width="30dp"
+                    android:layout_height="1dp"
+                    android:background="@color/ads_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_scan"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="视频拍摄"
+                    android:textColor="@color/ads_white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view_divider_scan"
+                    android:layout_width="30dp"
+                    android:layout_height="1dp"
+                    android:background="@color/ads_white" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never">
+
+            <com.edmodo.cropper.CropImageView
+                android:id="@+id/cropImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+        </ScrollView>
+
+        <com.szy.yishopcustomer.View.SlidingLayer
+            android:id="@+id/mSlidingLayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="64dip"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/topPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_top_corners">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="20dip"
+                        android:text="为您搜到以下商品"
+                        android:textColor="#666666"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/closeGoodsList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="20dip"
+                        android:src="@mipmap/ic_zbxq_sc" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/topPanel"
+                    android:background="#f0f1f1">
+
+                    <com.szy.common.View.CommonRecyclerView
+                        android:id="@+id/goodsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/emptyView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dip"
+                        android:gravity="center"
+                        android:text="未找到相关产品哟~"
+                        android:textColor="#666666"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </FrameLayout>
+
+            </RelativeLayout>
+
+        </com.szy.yishopcustomer.View.SlidingLayer>
+    </RelativeLayout>
+</RelativeLayout>

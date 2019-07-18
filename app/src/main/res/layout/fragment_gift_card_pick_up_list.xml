@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/textView_card_no"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="卡号:"
+            android:textSize="@dimen/fontTwo"
+            android:textColor="@color/colorOne"/>
+
+        <TextView
+            android:id="@+id/textView_exit_card_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="退出提货券"
+            android:gravity="center"
+            android:textSize="@dimen/fontThree"
+            android:textColor="@color/colorOne"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/item_border_one"/>
+
+    <me.zongren.pullablelayout.Main.PullableLayout xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_pullableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTen"
+        PullableLayout:pullablelayout_side="TOP">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTen"
+            android:divider="@null" />
+
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+</LinearLayout>

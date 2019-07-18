@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/fragment_invoice_info_vat_label_starTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/symbolStar"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontThree"
+        android:textColorHint="@color/colorFive"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/fragment_invoice_info_vat_label_textView"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/fragment_invoice_info_vat_label_starTextView"
+        android:gravity="left|center"
+        android:text="@string/placeholderTitle"
+        android:textSize="@dimen/fontThree"
+        android:textColor="@color/colorTwo"/>
+
+    <com.szy.common.View.CommonEditText
+        android:id="@+id/fragment_invoice_info_vat_label_editText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/fragment_invoice_info_vat_label_textView"
+        android:gravity="start|center_vertical"
+        android:hint="@string/hintEnter"
+        android:imeOptions="actionDone"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/colorTwo"
+        android:textColorHint="@color/colorFive"
+        android:textSize="@dimen/fontThree"
+        android:paddingLeft="10dp"
+        android:background="@null"
+        android:layout_marginRight="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="@color/colorEight"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

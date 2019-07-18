@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_union_me_cricle_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/icon_back_black"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我的圈子"
+            android:textColor="@color/fontcColor1"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/tv_union_me_add_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/adaptive_18dp"
+            android:paddingRight="@dimen/app_margin"
+            android:text="创建"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/windows_bg"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/sf_un_me_circle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recy_un_me_circle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <include
+                    android:id="@+id/circle_empty_view"
+                    layout="@layout/empty_layout"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

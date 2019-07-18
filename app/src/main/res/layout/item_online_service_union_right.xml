@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--右边头像-->
+        <com.szy.yishopcustomer.View.CircleImageView
+            android:id="@+id/img_msg_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/bg_default_avatar" />
+
+        <!--左边消息内容-->
+        <LinearLayout
+            android:id="@+id/ll_msg_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/img_msg_avatar"
+            android:layout_alignTop="@+id/img_msg_avatar"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_msg_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="官方客服" />
+
+            <TextView
+                android:id="@+id/tv_msg_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_right_msg"
+                android:text="官方客服是发的消息是,现在是测试消息不知道有多长得看看才知道"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical">
+
+    <com.baoyachi.stepview.HorizontalStepView
+        android:id="@+id/stepview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearlayout_step_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/fragment_edit_password_password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/top_bottom_border_one"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="新邮箱地址："
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontTwo" />
+
+                <com.szy.common.View.CommonEditText
+                    android:id="@+id/fragment_edit_password_password_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontTwo" />
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/layout_waring"
+                layout="@layout/layout_warning"
+                android:visibility="gone"
+                />
+
+            <include
+                layout="@layout/layout_submit_button"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_step_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+                    android:src="@mipmap/bg_check_selected" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="邮件发送成功!"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontTwo" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="请您进入邮箱点击相应链接进行验证！"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontTwo" />
+
+            <Button
+                android:id="@+id/fragment_edit_email_next_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_marginLeft="@dimen/buttonEdgeMargin"
+                android:layout_marginTop="@dimen/buttonMarginTop"
+                android:layout_marginRight="@dimen/buttonEdgeMargin"
+                android:textColor="@drawable/button_text_selector"
+                android:background="@drawable/enable_button"
+                android:textSize="@dimen/fontSeven"
+                android:text="返回账户安全中心" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

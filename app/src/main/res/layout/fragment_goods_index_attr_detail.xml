@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.szy.yishopcustomer.View.GoodsListView
+        android:id="@+id/fragment_goods_attr_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null" />
+
+    <include
+        android:visibility="gone"
+        layout="@layout/layout_default_empty"/>
+
+</RelativeLayout>

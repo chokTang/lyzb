@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/item_cart_goods_imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/item_cart_goods_treeCheckBox"
+            android:layout_toRightOf="@+id/item_cart_goods_treeCheckBox"
+            android:background="@drawable/gray_border_button_two"
+            android:padding="0.5dp"
+            android:src="@mipmap/pl_image" />
+
+        <TextView
+            android:id="@+id/item_cart_goods_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_toEndOf="@+id/item_cart_goods_imageView"
+            android:layout_toRightOf="@+id/item_cart_goods_imageView"
+            android:maxLines="2"
+            android:text="商品名称"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/item_cart_goods_attribute_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/item_cart_goods_name_textView"
+            android:layout_alignStart="@+id/item_cart_goods_name_textView"
+            android:layout_below="@+id/item_cart_goods_name_textView"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontSix" />
+
+        <TextView
+            android:id="@+id/item_cart_goods_price_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_cart_goods_imageView"
+            android:layout_toEndOf="@+id/item_cart_goods_imageView"
+            android:layout_toRightOf="@+id/item_cart_goods_imageView"
+            android:text="@string/placeholderGoodsPrice"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontOne"  />
+
+        <TextView
+            android:id="@+id/fragment_cart_goods_moq"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:layout_alignBottom="@+id/item_cart_goods_imageView"
+            android:layout_alignEnd="@+id/item_cart_goods_imageView"
+            android:layout_alignRight="@+id/item_cart_goods_imageView"
+            android:layout_toRightOf="@+id/item_cart_goods_treeCheckBox"
+            android:background="#7f000000"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontSix"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/fragment_cart_goods_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/item_cart_goods_price_textView"
+            android:layout_alignBaseline="@+id/item_cart_goods_price_textView"
+            android:gravity="right"
+            android:text="x1"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour"
+            />
+    </RelativeLayout>
+
+    <include layout="@layout/item_border_one" />
+
+</LinearLayout>

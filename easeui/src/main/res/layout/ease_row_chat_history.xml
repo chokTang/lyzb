@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hyphenate.easeui.widget.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="59dp"
+    android:layout_marginBottom="5dip"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:ios="false"
+    app:leftSwipe="true"
+    app:swipeEnable="true">
+
+    <RelativeLayout
+        android:id="@+id/list_itease_layout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#fff"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/avatar_container"
+            android:layout_width="59dp"
+            android:layout_height="59dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ease_default_avatar" />
+
+            <TextView
+                android:id="@+id/unread_msg_number"
+                style="@style/common_message_noread"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/avatar_container"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_toLeftOf="@+id/time"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            tools:text="沙雕康康ssssssssssssssssssssssss" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="7dp"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            tools:text="2018-02-02 12:00:00" />
+
+        <ImageView
+            android:id="@+id/msg_state"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/avatar_container"
+            android:src="@drawable/ease_msg_state_fail_resend"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mentioned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/msg_state"
+            android:paddingLeft="4dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:text="@string/were_mentioned"
+            android:textColor="#e84e40"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_toLeftOf="@id/time"
+            android:layout_toRightOf="@id/mentioned"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="4dp"
+            android:singleLine="true"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            tools:text="sssss" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="63dp"
+            android:layout_alignParentBottom="true"
+            android:background="#eaeaea"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="#ff4a57"
+        android:text="删除"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+</com.hyphenate.easeui.widget.SwipeMenuLayout>

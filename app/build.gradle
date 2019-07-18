@@ -1,0 +1,271 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'org.greenrobot.greendao'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+def cfg = rootProject.ext.configuration//配置
+def libs = rootProject.ext.libraries//库
+
+android {
+    compileSdkVersion cfg.compileVersion
+    buildToolsVersion cfg.buildToolsVersion
+
+    useLibrary 'org.apache.http.legacy'//IM添加
+
+    defaultConfig {
+        applicationId cfg.package
+        minSdkVersion cfg.minSdk
+        targetSdkVersion cfg.targetSdk
+        versionCode cfg.version_code
+        versionName cfg.version_name
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        flavorDimensions "versionCode"
+
+        ndk {
+            abiFilters "armeabi"
+            abiFilters "x86"
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/rxjava.properties'
+
+        pickFirst 'lib/armeabi-v7a/libijkplayer.so'
+        pickFirst 'lib/armeabi-v7a/libijksdl.so'
+        pickFirst 'lib/armeabi-v7a/libijkffmpeg.so'
+        pickFirst 'lib/x86/libijkplayer.so'
+        pickFirst 'lib/x86/libijksdl.so'
+        pickFirst 'lib/x86/libijkffmpeg.so'
+        pickFirst 'lib/armeabi/libijkplayer.so'
+        pickFirst 'lib/armeabi/libijksdl.so'
+        pickFirst 'lib/armeabi/libijkffmpeg.so'
+
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'YiShopCustomer'
+            keyPassword 'szyapp1234'
+            storeFile file('YiShopCustomerKey.jks')
+            storePassword 'szyapp1234'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false //是否混淆
+            shrinkResources false //移除无用的资源文件
+            zipAlignEnabled true//是否启用zipAlign压缩
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            manifestPlaceholders = [baidu_id         : "10196519",
+                                    baidu_key        : "ZAoEap7c4NwrwkNyNLtjL7SgDsqnVK4K",
+                                    baidu_secret     : "OxCGD3xxVqcg6NAIjWMUPAFZcrfrqGRM",
+                                    TENCENT_ID_SCHEME: "tencent1106638898",
+                                    huawei_push_appid: "100219423"
+            ]
+            buildConfigField "Boolean", "ENVIRONMENT", "false"
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            manifestPlaceholders = [baidu_id         : "10196519",
+                                    baidu_key        : "ZAoEap7c4NwrwkNyNLtjL7SgDsqnVK4K",
+                                    baidu_secret     : "OxCGD3xxVqcg6NAIjWMUPAFZcrfrqGRM",
+                                    TENCENT_ID_SCHEME: "tencent1106638898",
+                                    huawei_push_appid: "100219423"
+            ]
+            buildConfigField "Boolean", "ENVIRONMENT", "true"
+        }
+    }
+
+    /*greendao配置*/
+    greendao {
+        schemaVersion 1
+    }
+
+    dexOptions {
+        jumboMode true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation "com.android.support.test:runner:${libs.runner}"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:${libs.espresso_core}"
+    testImplementation "junit:junit:${libs.junitVersion}"
+    api project(':longshaolib')
+    api project(':easeui')
+    api project(':PhotoPicker')
+    api project(':videocompressor')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${libs.kotlin_version}"
+
+    /*自动生成库编译*/
+
+    //    compileOnly project(':annotationlib')
+
+    //    annotationProcessor project(':compilerlib')
+
+    //视频文件缓存
+//    implementation 'com.danikula:videocache:2.7.1'
+
+    /*轮滑图片或者各种轮滑布局框架*/
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    /*数据库依赖*/
+    implementation "org.greenrobot:greendao-generator:${libs.greendao}"
+    implementation "org.greenrobot:greendao:${libs.greendao}"
+
+    /*数据库升依赖*/
+    implementation('com.github.yuweiguocn:GreenDaoUpgradeHelper:v1.4.0') {
+        exclude group: 'com.android.support'
+    }
+
+    /*辅助数据库查看工具*/
+    api 'com.facebook.stetho:stetho:1.5.0'
+    api 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    /*流失布局依赖库*/
+    api 'com.hyman:flowlayout-lib:1.1.2'
+
+    /*eventbus*/
+    api "org.greenrobot:eventbus:${libs.eventbus}"
+
+    /*解决方法数量超过64K的问题*/
+    api 'com.android.support:multidex:1.0.3'
+
+    /*时间选择器*/
+    api 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+
+    //------------原生APP自带的-------
+
+    //新浪微博
+    implementation 'com.sina.weibo.sdk:core:2.0.3:openDefaultRelease@aar'
+    implementation(name: 'lib-zxing-release', ext: 'aar')
+    implementation(name: 'stepview-release', ext: 'aar')
+
+    //银联综合支付
+    implementation(name: 'qmf-ppplugin-android-3.0.3', ext: 'aar')
+
+    //不知道啥玩意--商之翼的公共类 直接去掉
+    implementation('com.szy:common:1.1.2') {
+        exclude group: 'com.android.support'
+        exclude group: 'com.yalantis'
+    }
+
+    //字体加载包
+    implementation 'uk.co.chrisjenx:calligraphy:2.2.0'
+
+    //类似于tabLayout+fragment的效果
+    implementation 'com.gxz.pagerslidingtabstrip:library:1.3'
+
+    //图片加载器
+    implementation 'com.github.chrisbanes.photoview:library:1.2.4'
+
+    //辅助侧滑
+    implementation 'com.jude:swipebackhelper:3.1.2'
+
+    //权限处理 最新2.0.1
+    implementation 'pub.devrel:easypermissions:0.4.0'
+
+    //时间选择组件
+    implementation 'com.github.iwgang:countdownview:2.1.6'
+    implementation "com.android.support:gridlayout-v7:${libs.supportVersion}"
+
+    //可展开的Textview
+    implementation 'com.ms-square:expandableTextView:0.1.4'
+
+    //seekbar的组件
+    implementation 'com.github.Jay-Goo:RangeSeekBar:v1.1.0'
+
+    //butterknife 注解组件
+    kapt 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //视频播放器
+    implementation('com.shuyu:GSYVideoPlayer:2.1.1') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.shuyu:gsyVideoPlayer-armv5:2.1.1'
+    implementation 'com.shuyu:gsyVideoPlayer-armv7a:2.1.1'
+    implementation 'com.shuyu:gsyVideoPlayer-arm64:2.1.1'
+    implementation 'com.shuyu:gsyVideoPlayer-x64:2.1.1'
+    implementation 'com.shuyu:gsyVideoPlayer-x86:2.1.1'
+
+    //倒计时
+    implementation 'com.github.erehmi:countdowntask:1.0.1'
+
+    //选择相册框中的图片
+    implementation 'com.zhihu.android:matisse:0.4.3'
+
+    //阿里云服务图片
+    implementation 'com.aliyun.dpa:oss-android-sdk:+'
+
+    //网络服务
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.squareup.okio:okio:1.9.0'
+
+    /*bug分析工具*/
+    implementation 'com.tencent.bugly:crashreport:2.6.6'
+
+    //动态权限
+    implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+
+    //适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
+
+    //仿抖音点赞星星
+    implementation('com.github.jd-alexander:LikeButton:0.2.3') {
+        exclude group: 'com.android.support'
+    }
+
+    //百度统计
+    implementation 'com.baidu.mobstat:mtj-sdk:latest.integration'
+
+    //视频 照片选择器
+    implementation "com.github.LuckSiege.PictureSelector:picture_library:${libs.picture_library}"
+
+    //沉浸式状态栏
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+
+    //webSocket
+    implementation 'org.java-websocket:Java-WebSocket:1.4.0'
+
+    //音频格式转换
+    implementation 'com.github.adrielcafe:AndroidAudioConverter:0.0.8'
+}

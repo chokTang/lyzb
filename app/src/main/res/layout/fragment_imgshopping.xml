@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/top_bottom_border_one"
+        android:layout_height="185dip">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"><!--设置可滚动并且折叠在顶部-->
+            <RelativeLayout
+                android:layout_width="125dp"
+                android:layout_gravity="center"
+                android:id="@+id/takePic"
+                android:layout_height="125dp">
+                <ImageView
+                    android:layout_width="125dp"
+                    android:src="@mipmap/pl_image"
+                    android:id="@+id/image"
+                    android:scaleType="centerCrop"
+                    android:layout_height="125dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/ic_pzg_bj"/>
+            </RelativeLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+    <com.szy.common.View.CommonRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:overScrollMode="never"
+        android:id="@+id/goodsList"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/emptyView"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:visibility="gone"
+        android:textColor="#666666"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:text="未找到相关产品哟~"
+        android:layout_height="wrap_content" />
+</android.support.design.widget.CoordinatorLayout>

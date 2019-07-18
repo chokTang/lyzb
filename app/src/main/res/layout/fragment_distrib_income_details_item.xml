@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <com.szy.yishopcustomer.View.CircleImageView
+        android:id="@+id/user_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:src="@mipmap/pl_user_avatar"
+        />
+
+    <TextView
+        android:id="@+id/remark"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="11111"
+        android:textColor="@color/colorGreen"
+        android:textSize="@dimen/fontTwo"
+        android:layout_alignTop="@+id/user_photo"
+        android:layout_toRightOf="@+id/user_photo"
+        android:layout_toEndOf="@+id/user_photo"/>
+
+    <TextView
+        android:id="@+id/textView_use_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontFive"
+        android:ellipsize="end"
+        android:text="222222222222222222222222222222222"
+        android:layout_below="@+id/remark"
+        android:layout_toRightOf="@+id/user_photo"
+        android:layout_toEndOf="@+id/user_photo"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/textView_order_sn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_photo"
+        android:layout_toRightOf="@+id/user_photo"
+        android:maxLines="1"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontFive"
+        android:text="333"/>
+
+    <TextView
+        android:id="@+id/dis_money"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:textColor="@color/colorGreen"
+        android:textSize="@dimen/fontTwo"
+        android:layout_alignBottom="@+id/remark"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="44444"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/add_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontFive"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="55555555"
+        android:layout_alignBottom="@+id/textView_use_name"
+        android:layout_marginRight="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@color/colorEight"
+        android:layout_below="@+id/user_photo"/>
+</RelativeLayout>

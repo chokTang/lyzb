@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/fragment_pick_up_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment_pick_up_recyclerView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bottom_border_one"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/fragment_goods_bonus_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/pickUpList"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontOne"/>
+
+    </RelativeLayout>
+
+    <!--底部按钮start-->
+    <Button
+        android:id="@+id/fragment_pick_up_cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:text="@string/close"
+        android:textColor="#fff"
+        android:textSize="@dimen/fontThree"/>
+
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/fragment_pick_up_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@+id/fragment_pick_up_cancel_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/white"/>
+
+</RelativeLayout>

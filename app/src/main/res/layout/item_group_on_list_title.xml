@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_tab_title_textView"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    android:background="@drawable/group_on_list_title_tab_bg_selector"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:text="@string/pl_category_name"
+    android:textColor="@drawable/tab_text_selector"
+    android:textSize="@dimen/fontThree"
+    />

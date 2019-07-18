@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <com.szy.common.View.SquareImageView
+        android:id="@+id/goodsImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:padding="0.5dp"
+        android:src="@mipmap/pl_image" />
+
+    <TextView
+        android:id="@+id/goodsName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goodsImg"
+        android:layout_marginTop="5dp"
+        android:lines="2"
+        android:maxLines="2"
+        android:padding="10dip"
+        android:text="@string/placeholderGoodsName"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree" />
+
+    <LinearLayout
+        android:id="@+id/priceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goodsName">
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontOne"
+            tools:text="￥100" />
+
+        <TextView
+            android:id="@+id/discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/priceLayout"
+            android:layout_marginLeft="5dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontFive"
+            tools:text="+50元宝" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_bx_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/priceLayout"
+        android:layout_marginLeft="10dp"
+        android:text="宝箱价:¥23"
+        android:textColor="@color/gl_goods_price"
+        android:textSize="12dp" />
+</RelativeLayout>

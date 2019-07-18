@@ -1,0 +1,85 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.szy.yishopcustomer.Fragment.PaymentPwdVerFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入支付密码，以完成支付"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayoutPaymentAmount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付密码："
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontTwo" />
+
+
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/editTextPaymentPwd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="请输入余额支付密码"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textSize="@dimen/fontTwo"
+                android:textColor="@color/colorOne"
+                android:textColorHint="@color/colorThree" />
+
+            <ImageView
+                android:id="@+id/fragment_show_password"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/btn_show_password_disabled"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/fragment_login_action_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="@dimen/buttonMarginTop"
+            android:layout_marginRight="15dp"
+            android:textColor="@drawable/button_text_selector"
+            android:background="@drawable/normal_button_selector"
+            android:textSize="@dimen/fontSeven"
+            android:layout_below="@+id/fragment_login_function_layout"
+            android:layout_centerHorizontal="true"
+            android:text="确定"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_bottom_border_two"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/fragment_goods_top_sale"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="销售量"
+            android:textColor="@drawable/tab_text_selector_four"
+            android:textSize="@dimen/fontThree" />
+
+        <View
+            android:id="@+id/fragment_goods_top_view"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorNine" />
+
+        <TextView
+            android:id="@+id/fragment_goods_top_collect"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="收藏数"
+            android:textColor="@drawable/tab_text_selector_four"
+            android:textSize="@dimen/fontThree" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_goods_top_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.szy.yishopcustomer.View.CustomViewPager
+            android:id="@+id/fragment_goods_top_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <com.viewpagerindicator.CirclePageIndicator xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fragment_goods_top_iconPageIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingTop="10dp"
+            app:fillColor="#fc4955"
+            app:paddingStart="5dp"
+            app:pageColor="#ebe9e9"
+            app:radius="3dp"
+            app:strokeWidth="0dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/aliwx_white">
+
+    <ImageView
+        android:id="@+id/img_bargain_img"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="12dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/img_bargain_img"
+        android:layout_toRightOf="@id/img_bargain_img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_bargain_help_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxEms="11"
+            android:lines="1"
+            android:visibility="visible"
+            android:textColor="@color/black_deep"
+            tools:text="JBX1359430677215171921232527"/>
+
+
+        <TextView
+            android:id="@+id/tv_bargain_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTranslucent"
+            android:textSize="12dp"
+            tools:text="已砍至:$100"/>
+
+        <TextView
+            android:id="@+id/tv_bargain_invent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            tools:text="库存:50"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_bargain_in"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/img_bargain_img"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/yellow_border_tv"
+        android:gravity="center"
+        android:textColor="#EEC176"
+        android:textSize="12dp"
+        tools:text="未参与"/>
+
+    <TextView
+        android:id="@+id/tv_bargain_help"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_bargain_in"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/green_border_tv"
+        android:gravity="center"
+        android:textColor="#9DD4A0"
+        android:textSize="12dp"
+        tools:text="0人帮砍"/>
+
+    <View
+        android:id="@+id/view_bargain_one"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@id/tv_bargain_help"
+        android:background="#ECF2F2"/>
+
+    <TextView
+        android:id="@+id/tv_bargain_rule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_bargain_one"
+        android:drawableRight="@mipmap/bg_arrow_right_gray"
+        android:gravity="center|left"
+        android:padding="12dp"
+        android:text="砍价规则"
+        android:textColor="@color/colorTranslucent"/>
+
+
+    <View
+        android:id="@+id/view_bargain_two"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_bargain_rule"
+        android:background="#ECF2F2"/>
+
+    <TextView
+        android:id="@+id/tv_bargain_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_bargain_two"
+        android:drawableRight="@mipmap/bg_arrow_right_gray"
+        android:gravity="center|left"
+        android:padding="12dp"
+        android:text="砍价名单"
+        android:textColor="@color/colorTranslucent"/>
+
+</RelativeLayout>

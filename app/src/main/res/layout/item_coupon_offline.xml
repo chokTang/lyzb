@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_hxq">
+
+        <!--图片-->
+        <ImageView
+            android:id="@+id/img_hxq"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/bg_cfx_default"
+            />
+
+        <!--中间模块-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/img_hxq"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_hxq_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxEms="8"
+                android:ellipsize="end"
+                android:text="核销券名称"
+                android:textSize="18dp"
+                android:textColor="#333333"/>
+            <TextView
+                android:id="@+id/tv_hxq_ingot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="￥0+200元宝"
+                android:textSize="16dp"
+                android:textColor="#333333"/>
+            <TextView
+                android:id="@+id/tv_hxq_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lines="1"
+                android:maxEms="18"
+                android:ellipsize="end"
+                android:text="发行方：店铺名称"
+                android:textSize="12dp"
+                android:textColor="#333333"/>
+            <TextView
+                android:id="@+id/tv_hxq_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="距您4.9km"
+                android:textSize="12dp"
+                android:textColor="#333333"/>
+        </LinearLayout>
+
+
+        <!--立即领取-->
+        <TextView
+            android:id="@+id/tv_now_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_12"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:text="立即领取"/>
+    </RelativeLayout>
+</LinearLayout>

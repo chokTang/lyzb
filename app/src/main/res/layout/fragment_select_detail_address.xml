@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bottom_border_two">
+
+    <RelativeLayout
+        android:id="@+id/fragment_select_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/fragment_address_detail_labelTextView"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:text="@string/labelAddressDetail"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/fragment_address_detail_commonEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/fragment_address_detail_labelTextView"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/hintEnterDetail"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textColor="@color/colorThree"
+            android:textColorHint="@color/colorThree"
+            android:textSize="@dimen/fontThree"
+            />
+
+    </RelativeLayout>
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/fragment_address_detail_poiNearResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_select_detail_layout"
+        android:background="@android:color/white"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorTen"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:gravity="center">
+
+        <include
+            layout="@layout/layout_submit_button"/>
+    </RelativeLayout>
+</RelativeLayout>

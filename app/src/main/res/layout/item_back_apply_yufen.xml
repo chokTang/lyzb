@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:id="@+id/yunfei_rl"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/search_edittext_border"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/required_label"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:text="*"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontTwo" />
+
+    <TextView
+        android:id="@+id/back_apply_refund_label"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/required_label"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:text="运费金额"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontTwo" />
+
+    <com.szy.common.View.CommonEditText
+        android:id="@+id/back_apply_yunfeicontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/bg_arrow_down_gray"
+        android:layout_toRightOf="@+id/back_apply_refund_label"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontTwo" />
+</RelativeLayout>

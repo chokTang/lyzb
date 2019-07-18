@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/activity_root_tab_inventory_imageView"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activity_root_tab_inventory_image_selector"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_root_tab_inventory_imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="@string/tabInventory"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@drawable/tab_text_selector_two"
+        android:textSize="@dimen/fontEight"
+        />
+</RelativeLayout>

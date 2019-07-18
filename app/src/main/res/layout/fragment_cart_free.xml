@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorTen"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/cart_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/free_buy_primary">
+
+        <LinearLayout
+            android:id="@+id/imageView_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:paddingLeft="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/btn_back_dark"
+                android:tint="@android:color/white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/toolbar_common_titleTextView"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/title_cart"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/fragment_cart_delete_all_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/clear"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            android:textSize="@dimen/fontTwo"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cart_toolbar"
+        android:background="@drawable/bottom_border_two"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/fragment_cart_tip"
+            android:background="@drawable/enable_button"
+            android:text="@string/login"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontFour" />
+
+        <TextView
+            android:id="@+id/fragment_cart_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/fragment_cart_tip"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_go_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/login_layout"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自由购订单点击查看"
+                android:textColor="@color/free_buy_primary" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/btn_right_arrow"
+                android:tint="@color/free_buy_primary" />
+
+    </LinearLayout>
+
+
+    <me.zongren.pullablelayout.Main.PullableLayout xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_cart_goods_listView_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_cart_bottom_layout"
+        android:layout_below="@+id/linearlayout_go_order_list"
+        android:background="@mipmap/bg_freebuy_cart"
+        PullableLayout:pullablelayout_side="TOP">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_cart_goods_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null" />
+
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_cart_bottom_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/top_border_one">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/fragment_cart_total_price"
+            android:layout_toStartOf="@+id/fragment_cart_total_price"
+            android:gravity="start|center_vertical"
+            android:text="@string/sampleCheckoutDesc"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/fragment_cart_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/fragment_cart_checkout_button"
+            android:layout_toStartOf="@+id/fragment_cart_checkout_button"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/free_buy_primary"
+            android:textSize="@dimen/fontOne" />
+
+        <Button
+            android:id="@+id/fragment_cart_checkout_button"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/free_buy_primary"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/goCheckout"
+            android:textColor="#fff"
+            android:textSize="@dimen/fontOne" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/fragment_cart_back"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/fragment_cart_bottom_layout"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/ic_free_cart_code" />
+</RelativeLayout>

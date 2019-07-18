@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/app_margin"
+    android:paddingRight="@dimen/app_margin"
+    android:paddingTop="@dimen/app_margin">
+
+    <ImageView
+        android:id="@+id/img_item_cir_merber_head"
+        android:layout_width="@dimen/member_headerImg_big"
+        android:layout_height="@dimen/member_headerImg_big"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/adaptive_12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_cir_merber_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize16"
+            tools:text="赵婷婷"/>
+
+        <TextView
+            android:id="@+id/tv_item_cir_merber_com"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/fontcColor3"
+            android:textSize="@dimen/textSize12"
+            tools:text="重庆市礼仪之邦电子商务有限公司"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_item_cir_merber_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/st_f5f5f5_r5"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="移除"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14"
+        android:visibility="gone"/>
+</LinearLayout>

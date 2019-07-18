@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_one"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="15dp"
+    android:layout_marginTop="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView_card_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="编号:6"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/textView_card_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-2.80"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontThree" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_card_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用类型：消费"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree" />
+
+    <TextView
+        android:id="@+id/textView_card_order_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="消费订单号：222222222222222222"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree" />
+
+    <TextView
+        android:id="@+id/textView_card_use_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2017-08-25 16:52:43"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorThree"
+        android:gravity="right"
+        android:textSize="@dimen/fontFour" />
+</LinearLayout>

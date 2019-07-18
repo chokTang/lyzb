@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/group_margin">
+
+
+    <ImageView
+        android:id="@+id/img_product"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ease_default_image"/>
+
+    <LinearLayout
+        android:id="@+id/ll_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/group_margin"
+        android:layout_toRightOf="@+id/img_product"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxEms="12"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize16"
+            tools:text="贺东庄园桃红葡萄酒750ml"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/group_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textSize16"
+                tools:text="¥188"/>
+
+            <TextView
+                android:id="@+id/tv_acer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textSize12"
+                tools:text="+29元宝"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/group_margin"
+            android:textColor="@color/fontcColor3"
+            android:textSize="@dimen/textSize12"
+            tools:text="蓝莓酱旗舰店"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_choice"
+        android:layout_width="50dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/st_linecolor_r2"
+        android:gravity="center"
+        android:text="选择"
+        android:textColor="@color/c_black_blue"
+        android:textSize="@dimen/textSize14"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll_center"
+        android:layout_marginLeft="@dimen/group_margin"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/img_product"
+        android:background="@color/lineColor"/>
+</RelativeLayout>

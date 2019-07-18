@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/bottom_border_one"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:gravity="end|center_vertical"
+    >
+
+    <TextView
+        android:id="@+id/item_order_list_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/total_goods_number"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFive"
+        />
+
+    <TextView
+        android:id="@+id/sample_checkout_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="实付："
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFive"
+        />
+
+    <TextView
+        android:id="@+id/item_order_list_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_goods_amount"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontSeven"
+        />
+
+    <TextView
+        android:id="@+id/price_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontSix"
+        android:text="改"
+        android:background="@drawable/enable_button"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/item_order_list_shipping_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="运费"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFive"
+        android:layout_marginLeft="10dp"
+         />
+
+</LinearLayout>

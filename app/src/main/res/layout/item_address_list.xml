@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/ads_white"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/check_ads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:button="@null"
+        android:checked="false"
+        android:drawableLeft="@drawable/ads_checked"
+        android:padding="9dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/linea_ads_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_ads_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/ingot_detail_text"
+            android:textSize="14dp"
+            android:visibility="gone"
+            tools:text="超出配送范围"/>
+
+        <TextView
+            android:id="@+id/tv_ads_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/ingot_detail_text"
+            android:textSize="14dp"
+            tools:text="重庆市渝北区海王星E区礼仪之邦重庆市渝市渝北区海王星E区礼仪之邦重庆重庆"/>
+
+        <TextView
+            android:id="@+id/tv_ads_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/ingot_detail_text"
+            android:textSize="14dp"
+            tools:text="李雷18232458745"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_ads_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ads_edt"
+        android:drawablePadding="6dp"
+        android:padding="9dp"
+        android:textSize="12dp"
+        android:textColor="@color/ingot_usable_instructions"
+        tools:text="编辑"/>
+
+</LinearLayout>

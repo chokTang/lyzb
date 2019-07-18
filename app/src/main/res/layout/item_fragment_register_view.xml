@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/phoneRegistered"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/textView13"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/fontTwo"
+        android:textColor="@color/colorOne"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/goLogin"
+        android:textColor="#4b89dc"
+        android:id="@+id/dialong_button_one"
+        android:layout_below="@+id/textView13"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/top_border_one"
+        android:textSize="@dimen/fontTwo"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/forgetPassword"
+        android:id="@+id/dialong_button_two"
+        android:layout_below="@+id/dialong_button_one"
+        android:layout_centerHorizontal="true"
+        android:textColor="#4b89dc"
+        android:background="@drawable/top_border_one"
+        android:textSize="@dimen/fontTwo"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonCancel"
+        android:id="@+id/dialong_button_three"
+        android:layout_below="@+id/dialong_button_two"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/top_border_one"
+        android:textColor="#4b89dc"
+        android:textSize="@dimen/fontTwo"/>
+</RelativeLayout>

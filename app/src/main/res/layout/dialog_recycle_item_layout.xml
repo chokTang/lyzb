@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/single_layout_height"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/app_margin">
+
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重庆市"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14" />
+
+    <ImageView
+        android:id="@+id/city_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:src="@drawable/red_dui" />
+</LinearLayout>

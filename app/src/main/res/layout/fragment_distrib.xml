@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/fragment_distrib_top"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@mipmap/bg_login_top"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/fragment_distrib_setting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/btn_setting_white"
+            android:padding="8dp"/>
+
+        <com.szy.yishopcustomer.View.CircleImageView
+            android:id="@+id/fragment_distrib_user_photo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/pl_user_avatar"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/fragment_distrib_user_photo"
+            android:layout_toRightOf="@+id/fragment_distrib_user_photo"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fragment_distrib_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontSeven"
+                android:text="用户名"/>
+
+            <TextView
+                android:id="@+id/fragment_distrib_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontFive"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_distrib_money_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户余额（元）"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontThree"/>
+
+            <TextView
+                android:id="@+id/fragment_distrib_total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontPrice"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_distrib_deposit_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="可提现金额"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"
+            />
+
+        <TextView
+            android:id="@+id/fragment_distrib_deposit_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/fontThree"
+            />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/btn_right_arrow"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@color/colorTen"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_distrib_gridlayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@android:color/white"
+        >
+
+        <LinearLayout
+            android:id="@+id/fragment_distrib_order_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/btn_distribution_order"/>
+
+            <TextView
+                android:id="@+id/fragment_distrib_order_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxEms="6"
+                android:maxLines="1"
+                android:textSize="@dimen/fontFour"
+                android:textColor="@color/colorOne"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.6dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorTen"/>
+
+        <LinearLayout
+            android:id="@+id/fragment_distrib_income_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/btn_distribution_account"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的账户"
+                android:textSize="@dimen/fontFour"
+                android:textColor="@color/colorOne"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.6dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorTen"/>
+
+        <LinearLayout
+            android:id="@+id/fragment_distrib_team_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/btn_team"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的团队"
+                android:textSize="@dimen/fontFour"
+                android:textColor="@color/colorOne"/>
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="0.6dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorTen"/>
+
+        <LinearLayout
+            android:id="@+id/fragment_distrib_category_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/btn_distribution_shopgoods"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxEms="6"
+                android:maxLines="1"
+                android:text="小店上货"
+                android:textSize="@dimen/fontFour"
+                android:textColor="@color/colorOne"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_distrib_gridlayout2"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="0.6dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/fragment_distrib_shop_set_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/btn_distribution_setup"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="店铺设置"
+                android:textSize="@dimen/fontFour"
+                android:textColor="@color/colorOne"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.6dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorTen"/>
+
+        <LinearLayout
+            android:id="@+id/fragment_distrib_income_add"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/btn_withdraw"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="金额提现"
+                android:textSize="@dimen/fontFour"
+                android:textColor="@color/colorOne"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.6dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorTen"/>
+
+        <LinearLayout
+            android:id="@+id/fragment_distrib_help_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/btn_distribution_help"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fontFour"
+                android:textColor="@color/colorOne"
+                android:text="新手必看"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.6dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorTen"/>
+
+        <LinearLayout
+            android:id="@+id/fragment_distributor_index_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/btn_distribution_micro_shop"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fontFour"
+                android:textColor="@color/colorOne"
+                android:text="查看微店"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorEight"/>
+
+</LinearLayout>

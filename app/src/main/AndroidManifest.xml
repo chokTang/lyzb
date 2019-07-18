@@ -1,0 +1,1158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lyzb.jbx"
+    tools:ignore="InnerclassSeparator">
+
+    <!-- 必要的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission
+        android:name="android.permission.SET_DEBUG_APP"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+
+    <!--IM新增的权限-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.ACCESS_MOCK_LOCATION"
+        tools:ignore="MockLocation,ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+    <!--兼容小米推送-->
+    <permission
+        android:name="com.lyzb.jbx.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.lyzb.jbx.permission.MIPUSH_RECEIVE" />
+
+    <!--华为推送-->
+    <permission
+        android:name="com.lyzb.jbx.permission.PROCESS_PUSH_MSG"
+        android:protectionLevel="signatureOrSystem" />
+    <uses-permission android:name="com.lyzb.jbx.permission.PROCESS_PUSH_MSG" />
+
+    <application
+        android:name=".CdLongShaoAppaction"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme_longshao"
+        tools:replace="android:theme,android:name">
+
+        <activity android:name="com.lyzb.jbx.activity.GuideActivity" />
+
+        <activity android:name="com.szy.yishopcustomer.Activity.SplashActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="yishopcustomer" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lyzb.jbx.activity.HomeActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask" />
+
+        <activity android:name="com.lyzb.jbx.activity.GoodToMeActivity" />
+
+        <activity android:name="com.lyzb.jbx.activity.ScanAndLikeActivity"
+            android:theme="@style/themeSendMessageTranslucent" />
+        <activity
+            android:name="com.lyzb.jbx.activity.SendMessageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/themeSendMessageTranslucent" />
+
+        <activity android:name="com.lyzb.jbx.activity.CricleDetailActivity" />
+        <activity android:name="com.lyzb.jbx.activity.PerfectActivity" />
+
+        <!--微信配置开始-->
+        <activity
+            android:name="com.lyzb.jbx.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="微信回调"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lyzb.jbx.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:label="微信支付回调"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <!--微信配置结束-->
+
+        <!-- APP更新下载 -->
+        <receiver android:name="com.lyzb.jbx.fragment.update.InstalledReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <!-- 一个新应用包已经安装在设备上，数据包括包名（监听所在的app，新安装时，不能接收到这个广播） -->
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <!-- 一个新版本的应用安装到设备，替换之前已经存在的版本  替换时会先收到卸载的再收到替换的， 替换自身也能收到-->
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+        <!--APP更新下载结束-->
+
+
+        <!--原来APP的-->
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="${baidu_id}" />
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="${baidu_key}" />
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="${baidu_secret}" />
+
+        <meta-data
+            android:name="PPPaySDK"
+            android:value="true" />
+
+        <!--华为推送服务开始-->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=${huawei_push_appid}" />
+
+        <provider
+            android:name="com.huawei.hms.update.provider.UpdateProvider"
+            android:authorities="com.lyzb.jbx.hms.update.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+
+        <provider
+            android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider"
+            android:authorities="com.lyzb.jbx.updateSdk.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+
+        <service
+            android:name="com.huawei.updatesdk.service.deamon.download.DownloadService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".service.HuaWeiPushService"
+            android:permission="com.lyzb.jbx.permission.PROCESS_PUSH_MSG">
+            <intent-filter>
+                <!-- 必须,用于接收token -->
+                <action android:name="com.huawei.android.push.intent.REGISTRATION" />
+                <!-- 必须, 用于接收透传消息 -->
+                <action android:name="com.huawei.android.push.intent.RECEIVE" />
+                <!-- 必须, 用于接收通知栏消息点击事件 此事件不需要开发者处理，只需注册就可以-->
+                <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.huawei.android.hms.agent.common.HMSAgentActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+        <!--华为推送服务结束-->
+
+        <!--百度统计的配置-->
+        <!-- 您从百度网站获取的APP KEY，根据实际您的APP申请的APP_KEY进行修改 -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="dc050c7f3d" />
+
+        <!-- 是否开启错误日志统计，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true" />
+
+        <!-- 日志仅在wifi网络下发送，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="false" />
+
+        <!-- 是否获取基站位置信息 ,默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_CELL_LOCATION"
+            android:value="true" />
+
+        <!-- 是否获取GPS位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_GPS_LOCATION"
+            android:value="true" />
+
+        <!-- 是否获取WIFI位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_WIFI_LOCATION"
+            android:value="true" />
+
+        <!--全面屏适配-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="3.0" />
+
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false" />
+
+        <!-- 请确认集成后的包名是否正确，本demo的包名是com.baidu.speech.recognizerdemo，在build.gradle文件中查看 -->
+        <service
+            android:name="com.baidu.speech.VoiceRecognitionService"
+            android:exported="false" />
+
+        <!-- 内部Activity -->
+        <service android:name="com.szy.yishopcustomer.Service.LocationService" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.RootActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/themeWithNoActionBarForRoot"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/login" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ProfileActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/user_info_activity_label" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/phoneNumberQuickRegistration" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityLoading" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.YSCWebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityLoading"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.FindPasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/find_password" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.RechargeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityRecharge"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GoodsListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityGoodsList"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.SetUpActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activitySetUp" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ChangeNickNameActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityChangeNickName"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ChangeSexActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityChangeSex" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.DepositListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityWithdrawalRecord"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.CartActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityCart" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GroupBuyActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityGroupBuy"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.CheckoutActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityCheckout"
+            android:theme="@style/themeWithNoActionBarNoBackground" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ReviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/ReviewActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ReviewListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityReviewList"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.common.Activity.RegionActivity"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ShareActivity"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.BonusActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/myBonus" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ShopStreetActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityShopStreet"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ShopStreetCateActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/themeShopStreet" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.OrderListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityOrderList"
+            android:theme="@style/PopupMenu"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.OrderDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityOrderDetail" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.InventoryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityInventory" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GroupBuyListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityGroupBuy" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.AttributeActivity"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ShopActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityShop"
+            android:theme="@style/PopupMenu"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ShopGoodsListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.InvoiceInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityInvoiceInfo" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.MessageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/messageActivityLabel"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ArticleListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/articleListActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.AccountBalanceActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityAccountBalance" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.DetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityDetail"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.DepositActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityWithdrawal"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.BestTimeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityBestTime"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.AddressActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityAddress"
+            android:theme="@style/themeWithNoActionBarNoBackground"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.AddressListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityAddressList" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ExpressActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/logisticsDetails" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.UserAgreementActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/agreement" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ResultActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityResult"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.OrderPayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityPay" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GuideActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityGuide"
+            android:theme="@style/themeWithNoActionBarTwo" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.FilterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/themeTransparent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.SiteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activitySite" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ViewOriginalImageActivity"
+            android:label="@string/activityViewOriginalImage"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.TencentShareActivity"
+            android:label="@string/activityTencentShare"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.WeiBoShareActivity"
+            android:label="@string/activityWeiBoShare" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.WeiXinShareActivity"
+            android:label="@string/activityWeiXinShare"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.TencentQzoneShareActivity"
+            android:label="@string/activityTencentQzoneShare"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.BarcodeSearchActivity"
+            android:label="@string/scanShop" />
+
+        <!-- 外部Activity -->
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/activityUnionPay"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:label="@string/cropImage"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+
+        <!-- 网易云捕配置 -->
+        <meta-data
+            android:name="BUGRPT_APPID"
+            android:value="A002224551" />
+        <!-- 高德地图配置 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="@string/AMAP_APIKEY" />
+
+        <service android:name="com.amap.api.location.APSService" />
+        <!-- BugHD配置 -->
+        <meta-data
+            android:name="BUG_HD_SDK_GENERAL_KEY"
+            android:value="369f2eeda3678ad0411b29a7b5e5dc69" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.MapActivity"
+            android:label="@string/activityMapActivity" />
+        <activity android:name="com.szy.yishopcustomer.Activity.AmapNaviActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.MessageDetailActivity"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.InvoiceGoodsActivity"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GoodsBonusActivity"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.RegisterBonusActivity"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.UnionpayDummyActivity"
+            android:theme="@style/themeTransparent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.CropImageDummyActivity"
+            android:theme="@style/themeTransparent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.CollectionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityCollection" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.LoginBindingStepOneActivity"
+            android:label="@string/activityLoginBinding" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.LoginBindingStepTwoActivity"
+            android:label="@string/activityLoginBinding" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.LoginBindingStepThreeActivity"
+            android:label="@string/activityLoginBinding" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.OrderReviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityOrderReview" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ShopCloseActivity"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.SearchActivity"
+            android:label="@string/searchActivity"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GoodsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityGoodsList"
+            android:launchMode="standard" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.SelectAddressActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/SelectAddress"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.BindAccountActivity"
+            android:label="@string/bindAccount"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.AddAccountActivity"
+            android:label="@string/addAccount"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.BackListActivity"
+            android:label="@string/CancelGoodsListActivity"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.BackDetailActivity"
+            android:label="@string/BackDetailActivity"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.UserGroupOnListActivity"
+            android:label="@string/groupOnListActivity"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GroupOnListActivity"
+            android:label="@string/GroupOnListActivity"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.RechargeRecordActivity"
+            android:label="@string/activityRechargeRecord"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.BackApplyActivity"
+            android:label="@string/activityBackApply" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.DeliveryAddressActivity"
+            android:label="@string/activityDeliveryAddress"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GroupOnRulesActivity"
+            android:label="@string/activityGroupOnRules"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.FloatADActivity"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity android:name="com.szy.yishopcustomer.Activity.ShopArticleActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.SelectDetailAddressActivity"
+            android:label="@string/activityAddress" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ShopPrepareActivity"
+            android:label="@string/activityShopPrepare"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.RecommStoreActivity"
+            android:label="@string/recommStoreActivity"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ApplyRecommShopActivity"
+            android:label="@string/applyRecommendedShop"
+            android:theme="@style/PopupMenu"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.CartEditNumberActivity"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.PickUpActivity"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity android:name="com.szy.yishopcustomer.Activity.ScanActivity" />
+        <activity android:name="com.szy.yishopcustomer.Activity.MallStatusActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GoodsRankPriceActivity"
+            android:label="@string/userRankPrice" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.DepositCardActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/depositCardActivity"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.RechargeCardActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/rechargeCardActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.IntegralMallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/integralMallActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.RedExchangeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/redExchangeActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.UserIntegralActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/userIntegralActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ConvertibleActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/convertibleActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ExchangeDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityOrderDetail" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.CheckoutExchangeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityCheckout" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.PickUpListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.EditPasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityEditPassword" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ShopCartActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppThemeDialogIsTranslucent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.SelectShopActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activitySelectShop" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ScanActivityTwo"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.RecommendActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/myRecommend" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.DistributorCheckActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.DistributorApplyActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.DistribActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ExpressDeliveryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.SweepShoppingTipActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ShoppingBagActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.CartFreeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityCart" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.CheckoutFreeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityCheckout"
+            android:theme="@style/themeWithNoActionBarNoBackground" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.OrderListFreeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityOrderListFree"
+            android:theme="@style/PopupMenu"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ResultFreeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityResult"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.OrderDetailFreeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activityOrderDetail" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.HybridWebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ShopClassActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/PopupMenu"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.CertificationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/certificationActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.BindDepositCardActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/bindDepositCardActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.CardUsageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cardUsageActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.UserGroupOnDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/groupOnDetailActivity"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.AttributeWholesaleActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ShellActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ReachbuyActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ReachbuyCartActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/ReachbuyCartActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.VideoFullActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.AccountSecurityActivity"
+            android:label="@string/AccountSecurityActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GiftCardsActivity"
+            android:label="@string/GiftCardsActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GiftCardPickUpActivity"
+            android:label="@string/GiftCardPickUpActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.AccountSecurityStepActivity"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ComplaintDetailActivity"
+            android:label="@string/complaintActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.BackActivity"
+            android:label="@string/awaitCancel"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ComplaintActivity"
+            android:label="@string/complaintActivity"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GiftCardPickUpListActivity"
+            android:label="@string/GiftCardPickUpListActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.PromotionPopActivity"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.PromotionActivity"
+            android:label="@string/PromotionActivity" />
+        <activity android:name="com.szy.yishopcustomer.Activity.GoodsIntegralActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.AttributeIntegralActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppThemeDialogIsTranslucent" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.CheckoutIntegralActivity"
+            android:label="@string/CheckoutIntegralActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.UserCardActivity"
+            android:label="@string/UserCardActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.UserPayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/UserPayActivity" />
+        <activity android:name="com.szy.yishopcustomer.Activity.BarCodeActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.MerchantPaymentActivity"
+            android:label="@string/MerchantPaymentActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.PaymentPwdVerActivity"
+            android:label="@string/PaymentPwdVerActivity" />
+        <activity android:name="com.szy.yishopcustomer.Activity.BalancePayResultActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.IntegralOutLinePayActivity"
+            android:label="@string/IntegralOutLinePayActivity" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.InvalidActivity"
+            android:label="@string/systemPrompt" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ProjectH5Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:label="专题活动H5" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.IngotListActivity"
+            android:label="@string/ingot" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.IngotExplainActivity"
+            android:label="@string/ingot_explain" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.IngotSendActivity"
+            android:label="@string/ingot_send" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.SendRecordActivity"
+            android:label="@string/ingot_send_record" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.IngotRobRecordActivity"
+            android:label="@string/ingot_rob_record" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.IngotDetailActivity"
+            android:label="@string/ingot_detail" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.MallWebviewActivity"
+            android:label="@string/mall" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.samecity.CityLifeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:label="@string/citylife" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.GetIngotActivity"
+            android:label="@string/get_ingot" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.RegisterSuccessActivity"
+            android:label="@string/register_success" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ShareIngotActivity"
+            android:label="@string/share_ingot" />
+
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.samecity.CityListActivity"
+            android:label="@string/city_list"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity android:name="com.szy.yishopcustomer.Activity.TakeOutAddressListActivity" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.samecity.OrderDetailActivity"
+            android:label="外卖订单详情" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.samecity.ApplyRefundActivity"
+            android:label="外卖申请退款" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.im.ImCommonActivity"
+            android:label="Im聊天"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.im.GroupDetailActivity"
+            android:label="群组资料" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.samecity.SortStoreActivity"
+            android:label="店铺分类" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.samecity.SortSeachActivity"
+            android:label="分类搜索" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.samecity.SortGroupActivity"
+            android:label="团购" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.samecity.SortMoreActivity"
+            android:label="更多分类" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.MoneyIntoActivity"
+            android:label="集食惠预存货款迁入" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.MoneyIntoHintActivity"
+            android:label="迁入成功" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.AdsActivity"
+            android:label="广告" />
+
+        <activity android:name=".widget.PhotoViewActivity" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.im.LyMessageActivity"
+            android:label="消息" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.im.LyMessageSetActivity"
+            android:label="消息设置" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.im.LyMessageListActivity"
+            android:label="消息提醒" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.BargainListActivity"
+            android:label="砍价推荐" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.HelpBargainListActivity"
+            android:label="帮砍名单" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.SimilarGoodsActivity"
+            android:label="相似" />
+
+        <!--附近商家-更多-->
+        <activity android:name="com.szy.yishopcustomer.Activity.NearShopMoreActivity" />
+        <!--同城店铺详情-->
+        <activity android:name="com.szy.yishopcustomer.Activity.samecity.ShopDetailActivity" />
+        <!--同城店铺详情地图-->
+        <activity android:name="com.szy.yishopcustomer.Activity.samecity.AmapActivity" />
+        <!--同城团购详情-->
+        <activity android:name="com.szy.yishopcustomer.Activity.samecity.GroupBuyActivity" />
+        <!--确认订单-->
+        <activity android:name="com.szy.yishopcustomer.Activity.samecity.ConfirmOrderActivity" />
+
+        <!--订单支付选择页面-->
+        <activity android:name="com.szy.yishopcustomer.Activity.samecity.OrderPayActivity" />
+
+        <!--订单支付失败页面-->
+        <activity android:name="com.szy.yishopcustomer.Activity.samecity.GroupBuyPayFailActivity" />
+        <!--订单支付成功页面-->
+        <activity android:name="com.szy.yishopcustomer.Activity.samecity.GroupBuyPaySuccessActivity" />
+
+        <!--直接买单页面-->
+        <activity android:name="com.szy.yishopcustomer.Activity.samecity.FacePayOrderActivity" />
+
+
+        <!--同城生活美食排序界面-->
+        <activity android:name="com.szy.yishopcustomer.Activity.samecity.SortFoodActivity" />
+
+        <!--直播视频页面-->
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <!--...............................IM环信配置开始........................-->
+        <activity android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity" />
+        <activity android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity" />
+        <activity android:name="com.hyphenate.easeui.ui.EaseDingMsgSendActivity" />
+        <activity android:name="com.hyphenate.easeui.ui.EaseShowNormalFileActivity" />
+        <activity android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity" />
+        <activity android:name="com.hyphenate.easeui.ui.EaseDingAckUserListActivity" />
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1108180702146001#jbxgo" />
+        <!-- 声明SDK所需的service SDK核心功能-->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <!--兼容小米推送-->
+        <!-- mi push -->
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":pushservice" />
+
+        <receiver
+            android:name=".service.XMPushService"
+            android:exported="true">
+            <!--这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名-->
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.hyphenate.chat.EMMipushReceiver"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+        <!-- mi push end -->
+
+        <!-- 百度地图所需的service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="32gTGhMCsba8AdVbM9RjnGmVEjWeBkT9"
+            tools:replace="android:value" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.im.ImageGridActivity"
+            android:label="视频列表" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.im.VideoCallActivity"
+            android:label="视频通话" />
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.im.VoiceCallActivity"
+            android:label="语音通话" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.im.RecorderVideoActivity"
+            android:label="视频录制" />
+
+        <activity
+            android:name="com.szy.yishopcustomer.Activity.ImgSearchActivity"
+            android:label="拍照购" />
+
+        <receiver
+            android:name="com.szy.yishopcustomer.Activity.im.CallReceiver"
+            android:exported="true" />
+
+        <!--...............................IM环信配置结束........................-->
+    </application>
+</manifest>

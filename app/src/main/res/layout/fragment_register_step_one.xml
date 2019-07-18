@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/registration_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/registration_tip1"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontFive" />
+
+    <include layout="@layout/item_border_one" />
+
+    <LinearLayout
+        android:id="@+id/fragment_register_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/fragment_register_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree" />
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/fragment_register_phone_number_editText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:hint="@string/please_enter_phone"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/colorTwo"
+            android:textColorHint="@color/colorFive"
+            android:textSize="@dimen/fontThree" />
+    </LinearLayout>
+
+    <include layout="@layout/item_border_one" />
+
+    <include
+        layout="@layout/layout_warning"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp">
+
+        <include layout="@layout/layout_checkbox" />
+
+        <TextView
+            android:id="@+id/fragment_register_agreement_link_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="我已阅读并同意《共商联盟服务协议》,并允许共商联盟推荐和展示我的个人信息"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontFive" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_submit_button" />
+</LinearLayout>

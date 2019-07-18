@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_share_wx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/icon_share_wx"
+                android:drawablePadding="@dimen/group_margin"
+                android:text="微信好友"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_share_haibao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/icon_share_haibao"
+                android:drawablePadding="@dimen/group_margin"
+                android:text="名片海报"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:background="@color/windows_bg"/>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/single_layout_height"
+        android:text="取消"
+        android:gravity="center"
+        android:textSize="@dimen/textSize16"
+        android:textColor="@color/fontcColor1"/>
+
+</LinearLayout>

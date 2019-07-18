@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/colorTen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tabHeight"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dis_all_textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/all"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/dis_already_textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/distribAlready"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/dis_cancel_textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/distribCancel"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo" />
+
+    </LinearLayout>
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/fragment_distrib_income_details_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        app:emptyImage="@mipmap/bg_public"
+        app:emptyTitle="@string/emptyData"
+        />
+
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/colorTen"
+              android:orientation="vertical"
+    >
+
+    <include
+        layout="@layout/item_border_one"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+
+        <TextView
+            android:id="@+id/fragment_distrib_order_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会员等级："
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"/>
+
+        <ImageView
+            android:id="@+id/fragment_distrib_order_user_rank"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/ic_topay"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorEight"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tip_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商    家："
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"/>
+        <TextView
+            android:id="@+id/fragment_distrib_order_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"
+            android:text="123456"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tip_one"
+            android:layout_toEndOf="@+id/tip_one"/>
+
+        <TextView
+            android:id="@+id/tip_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单号："
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"
+            android:layout_below="@+id/tip_one"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/fragment_distrib_order_sn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"
+            android:text="987654"
+            android:layout_toRightOf="@+id/tip_two"
+            android:layout_toEndOf="@+id/tip_two"
+            android:layout_alignBottom="@+id/tip_two"/>
+
+
+        <TextView
+            android:id="@+id/tip_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获得佣金："
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"
+            android:layout_below="@+id/tip_two"
+            android:layout_marginTop="10dp"/>
+
+
+        <TextView
+            android:id="@+id/fragment_distrib_order_dis_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontOne"
+            android:text="$100"
+            android:layout_toRightOf="@+id/tip_three"
+            android:layout_toEndOf="@+id/tip_three"
+            android:layout_alignBottom="@+id/tip_three"/>
+
+
+
+        <TextView
+            android:id="@+id/tip_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="佣金比例："
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"
+            android:layout_toRightOf="@+id/fragment_distrib_order_dis_money"
+            android:layout_toEndOf="@+id/fragment_distrib_order_dis_money"
+            android:layout_alignBottom="@+id/tip_three"
+            android:layout_marginLeft="10dp"/>
+
+
+        <TextView
+            android:id="@+id/fragment_distrib_order_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontOne"
+            android:text="20%"
+            android:layout_toRightOf="@+id/tip_four"
+            android:layout_toEndOf="@+id/tip_four"
+            android:layout_alignBottom="@+id/tip_three"/>
+
+        <ImageView
+            android:id="@+id/dis_status"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/item_border_one"/>
+
+</LinearLayout>

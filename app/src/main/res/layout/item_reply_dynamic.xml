@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:background="#f5f5f5"
+    android:paddingLeft="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/group_margin"
+        android:layout_marginBottom="@dimen/group_margin">
+
+        <ImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/bg_default_avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/group_margin"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:text="张三"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14" />
+
+                <ImageView
+                    android:id="@+id/img_item_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:src="@drawable/union_delete" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/group_margin"
+                android:text="味道好，分量足，确实不错！！！老客户了, 味道一直都还不错。。。"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize12" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/group_margin">
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01-25 12:55"
+                    android:textColor="@color/fontcColor3"
+                    android:textSize="@dimen/textSize12" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:rating="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/item_evaluate_shop_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shop_grade"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontTwo" />
+
+    <TextView
+        android:id="@+id/tv_five_star_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/giveFiveStar"
+        android:textSize="@dimen/fontThree" />
+
+    <View
+        android:id="@+id/item_evaluate_shop_line_one"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/item_evaluate_shop_title"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorEight" />
+
+    <!--服务态度-->
+    <TextView
+        android:id="@+id/item_evaluate_shop_service_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/item_evaluate_shop_line_one"
+        android:layout_marginLeft="20dp"
+        android:text="@string/serviceAttitude"
+        android:textSize="@dimen/fontTwo"
+        android:gravity="center"/>
+
+    <!--发货速度-->
+    <TextView
+        android:id="@+id/item_evaluate_shop_speed_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/item_evaluate_shop_service_textView"
+        android:layout_alignStart="@+id/item_evaluate_shop_service_textView"
+        android:layout_below="@+id/item_evaluate_shop_service_textView"
+        android:layout_marginTop="20dp"
+        android:text="@string/deliverySpeed"
+        android:textSize="@dimen/fontTwo"
+        android:gravity="center"/>
+
+    <!--物流服务-->
+    <TextView
+        android:id="@+id/item_evaluate_logistics_speed_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/item_evaluate_shop_service_textView"
+        android:layout_alignStart="@+id/item_evaluate_shop_service_textView"
+        android:layout_below="@+id/item_evaluate_shop_speed_textView"
+        android:layout_marginTop="20dp"
+        android:text="@string/logistics_speed"
+        android:textSize="@dimen/fontTwo"
+        android:gravity="center"/>
+
+    <!--服务态度-->
+    <com.szy.yishopcustomer.View.RatingBar
+        android:id="@+id/item_evaluate_shop_service_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        rating:clickable="true"
+        android:layout_marginTop="2dp"
+        rating:image_height="26dp"
+        rating:image_padding="1dp"
+        rating:image_width="26dp"
+        rating:star="0"
+        android:layout_marginLeft="90dp"
+        android:layout_alignTop="@+id/item_evaluate_shop_service_textView"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/item_evaluate_shop_service_textView"
+        rating:star_count="5"
+        rating:star_img="@mipmap/btn_evaluation_selected"
+        rating:unstar_img="@mipmap/btn_evaluation_normal" />
+
+    <!--发货速度-->
+    <com.szy.yishopcustomer.View.RatingBar
+        android:id="@+id/item_evaluate_shop_speed_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        rating:clickable="true"
+        android:layout_marginTop="2dp"
+        rating:image_height="26dp"
+        rating:image_padding="1dp"
+        rating:image_width="26dp"
+        rating:star="0"
+        android:layout_alignLeft="@+id/item_evaluate_shop_service_ratingBar"
+        android:layout_alignStart="@+id/item_evaluate_shop_service_ratingBar"
+        android:layout_alignTop="@+id/item_evaluate_shop_speed_textView"
+        android:layout_toRightOf="@+id/item_evaluate_shop_speed_textView"
+        android:isIndicator="false"
+        rating:star_count="5"
+        rating:star_img="@mipmap/btn_evaluation_selected"
+        rating:unstar_img="@mipmap/btn_evaluation_normal" />
+
+    <!--物流服务-->
+    <com.szy.yishopcustomer.View.RatingBar
+        android:id="@+id/item_evaluate_logistics_speed_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        rating:clickable="true"
+        rating:image_height="26dp"
+        rating:image_padding="1dp"
+        rating:image_width="26dp"
+        android:layout_marginTop="2dp"
+        rating:star="0"
+        android:layout_alignLeft="@+id/item_evaluate_shop_service_ratingBar"
+        android:layout_alignStart="@+id/item_evaluate_shop_service_ratingBar"
+        android:layout_alignTop="@+id/item_evaluate_logistics_speed_textView"
+        android:isIndicator="false"
+        rating:star_count="5"
+        rating:star_img="@mipmap/btn_evaluation_selected"
+        rating:unstar_img="@mipmap/btn_evaluation_normal" />
+
+    <!--   android:progressDrawable="@drawable/ratingbar_selector"-->
+
+    <View
+        android:id="@+id/item_evaluate_line_two_View"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/item_evaluate_logistics_speed_ratingBar"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorEight" />
+
+    <LinearLayout
+        android:id="@+id/item_evaluate_button_relativeLayout"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/item_evaluate_line_two_View"
+        android:background="@drawable/gray_border_button_two"
+        android:paddingBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_pencil_red" />
+
+        <TextView
+            android:id="@+id/item_evaluate_shop_publish_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发表评价"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontThree" />
+    </LinearLayout>
+
+</RelativeLayout>

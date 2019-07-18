@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <com.szy.yishopcustomer.View.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/bg_support_shop_logo" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_shop_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/fontFour"
+                android:singleLine="true"
+                android:textColor="@color/colorOne" />
+
+            <TextView
+                android:id="@+id/textView_server_tel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textSize="@dimen/fontFour"
+                android:textColor="@color/colorThree" />
+
+            <TextView
+                android:id="@+id/textView_address_info"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textSize="@dimen/fontFour"
+                android:textColor="@color/colorThree" />
+
+        </LinearLayout>
+
+        <com.szy.yishopcustomer.View.CircleImageView
+            android:id="@+id/imageView_status"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/item_border_one"/>
+
+
+</LinearLayout>

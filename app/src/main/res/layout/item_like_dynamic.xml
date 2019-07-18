@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/app_margin">
+
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        tools:background="@mipmap/bg_default_avatar" />
+
+    <ImageView
+        android:id="@+id/img_vip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_avatar"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/union_vip" />
+
+    <TextView
+        android:id="@+id/tv_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/selector_like"
+        android:drawablePadding="@dimen/text_icon_space"
+        android:text="赞"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/tv_like"
+        android:layout_toRightOf="@+id/img_avatar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxEms="10"
+                android:text="张三"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxEms="20"
+            android:text="重庆市义务有限公司"
+            android:textColor="@color/fontcColor3"
+            android:textSize="@dimen/textSize12" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:background="@drawable/goods_list_item_border">
+
+    <com.szy.common.View.SquareImageView
+        android:id="@+id/fragment_index_goods_thumbImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerInside"
+        android:src="@mipmap/pl_image"/>
+
+    <TextView
+        android:id="@+id/fragment_index_goods_nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fragment_index_goods_thumbImageView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="start|center_vertical"
+        android:lines="2"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="@string/placeholderGoodsName"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontFive"/>
+
+    <TextView
+        android:id="@+id/fragment_index_goods_priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_index_goods_nameTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="start|center_vertical"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontOne"/>
+
+
+    <!-- android:background="@drawable/shape_red_line_background" 描边 -->
+    <TextView
+        android:id="@+id/fragment_index_goods_deductibleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:layout_below="@+id/fragment_index_goods_priceTextView"
+        android:ellipsize="end"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="@string/placeholderGoodsName"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontFive"/>
+
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="2.5dp"
+        android:layout_marginRight="2.5dp"
+        android:background="@color/colorTen" />-->
+
+    <ImageView
+        android:id="@+id/fragment_index_goods_tag"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_index_new"
+        android:visibility="gone"
+        />
+</RelativeLayout>

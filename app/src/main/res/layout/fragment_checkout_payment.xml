@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                >
+<!--    <LinearLayout
+        android:id="@+id/fragment_checkout_payment_linarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@drawable/gray_border_button_one">
+
+        <ImageView
+            android:id="@+id/fragment_checkout_payment_checkboxImageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/btn_review"/>
+
+        <TextView
+            android:id="@+id/fragment_checkout_payment_nameTextView"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="货到付款"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/fragment_checkout_payment_labelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(+￥2.00)"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontFour"
+            />
+
+    </LinearLayout>-->
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_checkout_payment_linarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gray_border_button_one"
+        >
+
+        <LinearLayout
+            android:id="@+id/contntLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <ImageView
+                android:id="@+id/fragment_checkout_payment_checkboxImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/btn_review"/>
+
+            <TextView
+                android:id="@+id/fragment_checkout_payment_nameTextView"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="货到付款"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_checkout_payment_labelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/contntLayout"
+            android:layout_toRightOf="@+id/contntLayout"
+            android:layout_marginLeft="-25dp"
+            android:text="(+￥2.00)"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontFive" />
+
+    </RelativeLayout>
+
+</LinearLayout>

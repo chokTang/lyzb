@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.YSCWebViewActivity">
+
+    <include
+        android:id="@+id/activity_common_toolbar"
+        layout="@layout/activity_web_view_toolbar"/>
+
+
+    <com.szy.yishopcustomer.View.YSCBaseWebView
+        android:id="@+id/activity_web_view_yscBaseWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_common_toolbar"
+        android:background="@color/colorTen"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/activity_common_toolbar"
+        android:progressDrawable="@drawable/progressbar"
+        />
+
+
+</RelativeLayout>

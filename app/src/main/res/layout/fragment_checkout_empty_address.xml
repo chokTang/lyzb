@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@android:color/white"
+    android:id="@+id/fragment_checkout_empty_address_layout"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/fragment_checkout_empty_address_plusImageView"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@mipmap/btn_plus_normal"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/buttonAddAddress"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_three_color_stripe"
+        />
+
+</LinearLayout>

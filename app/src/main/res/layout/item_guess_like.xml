@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/like_good_rela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+    <ImageView
+        android:id="@+id/like_goodimg_img"
+        android:layout_width="180dp"
+        android:layout_height="180dp"/>
+
+    <TextView
+        android:id="@+id/like_goodname_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/like_goodimg_img"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/ingot_detail_text"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:id="@+id/like_goodprice_linea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/like_goodname_text"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/like_goodprice_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@color/ingot_usable_buy_bg"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_dedu_ingot_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="8dp"
+            android:text="抵后价"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/like_ingot_number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/like_goodprice_linea"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="3dp"
+        android:textColor="#f35e05"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

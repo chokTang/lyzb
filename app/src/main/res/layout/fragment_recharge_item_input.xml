@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/bottom_border_two"
+    android:paddingBottom="5dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="5dp"
+    >
+
+    <TextView
+        android:id="@+id/fragment_recharge_item_input_labelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/moneyAmount"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontTwo"/>
+
+    <com.szy.common.View.CommonEditText
+        android:id="@+id/fragment_recharge_item_input_editText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:background="@null"
+        android:hint="@string/hintPleaseEnterMoney"
+        android:inputType="numberDecimal"
+        android:textColor="@color/colorOne"
+        android:textColorHint="@color/colorFive"
+        android:textCursorDrawable="@drawable/recharge_edittext_background"
+        android:textSize="@dimen/fontTwo"/>
+
+</LinearLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <me.zongren.pullablelayout.Main.PullableLayout xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_cart_goods_listView_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment_cart_bottom_layout"
+        android:layout_below="@+id/login_layout"
+        android:background="@color/colorTen"
+        PullableLayout:pullablelayout_side="TOP">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_cart_goods_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null" />
+
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+    <LinearLayout
+        android:id="@+id/shop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorShopBase"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:visibility="gone"
+        android:layout_below="@+id/login_layout"
+        >
+        <ImageView android:id="@+id/image_checkbox_s"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:src="@drawable/image_checkbox_selector"
+            />
+
+        <ImageView
+            android:id="@+id/item_cart_shop_icon_imageView"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:src="@mipmap/ic_shop_seller"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"/>
+
+
+        <TextView
+            android:id="@+id/item_cart_shop_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxEms="12"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"
+            />
+
+        <TextView
+            android:id="@+id/textViewTableNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/red_border_button_one"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:text="0111"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontFour"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/item_cart_shop_grab_bonus"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/grab_bonus"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontFive"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cart_toolbar"
+        android:background="@drawable/bottom_border_two"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/fragment_cart_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_cart_tip"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour" />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/enable_button"
+            android:text="@string/login"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontFour"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/cart_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/toolbar_bottom_border">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/title_cart"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontOne" />
+
+        <TextView
+            android:id="@+id/fragment_cart_delete_all_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/clear"
+            android:textColor="@color/colorGoodsDesc"
+            android:textSize="@dimen/fontTwo"
+            android:visibility="invisible" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/fragment_cart_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/top_border_one"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+
+        <include
+            layout="@layout/layout_checkbox"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/select_all"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sampleCheckoutDesc"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/fragment_cart_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontOne"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/fragment_cart_checkout_button"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@drawable/bottom_button_selector"
+            android:gravity="center"
+            android:text="@string/goCheckout"
+            android:textColor="@drawable/button_text_selector"
+            android:textSize="@dimen/fontOne"/>
+
+    </LinearLayout>
+</RelativeLayout>

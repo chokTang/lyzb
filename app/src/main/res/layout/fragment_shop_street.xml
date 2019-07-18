@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen">
+
+    <me.zongren.pullablelayout.Main.PullableLayout
+        android:id="@+id/fragment_shop_street_recyclerView_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/fragment_shop_street_topWrapperRelativeLayout">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_shop_street_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/colorPrimary"
+            android:dividerHeight="0.5dp" />
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_shop_street_mask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_shop_street_topWrapperRelativeLayout"
+        android:background="#66000000"
+        android:orientation="vertical"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_shop_street_all_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_shop_street_topWrapperRelativeLayout"
+        android:background="@android:color/white"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_shop_street_sortRecyclerView_one"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/fragment_goods_list_topWrapperRelativeLayout"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:scrollbars="vertical" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_shop_street_sortRecyclerView_two"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/fragment_goods_list_topWrapperRelativeLayout"
+                android:layout_weight="1"
+                android:background="@color/colorTen" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_shop_street_nearShopRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_shop_street_topWrapperRelativeLayout"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:visibility="invisible" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_shop_street_intelligentSortingRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/fragment_shop_street_topWrapperRelativeLayout"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:visibility="invisible" />
+
+
+    <LinearLayout
+        android:id="@+id/fragment_shop_street_topWrapperRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/appBarLayout"
+        android:background="@drawable/bottom_border_one"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/fragment_shop_street_releaseRelativeLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fragment_goods_list_sort_background"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/fragment_shop_street_all_category_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/allCategories"
+                android:textColor="@drawable/tab_text_selector"
+                android:textSize="@dimen/fontThree" />
+
+            <ImageView
+                android:id="@+id/fragment_shop_street_all_category_image_view"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/bg_arrow_down_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_shop_street_sortWrapperRelativeLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fragment_goods_list_sort_background_left"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/fragment_shop_street_sortTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/nearShop"
+                android:textColor="@drawable/tab_text_selector"
+                android:textSize="@dimen/fontThree" />
+
+            <ImageView
+                android:id="@+id/fragment_shop_street_sortImageView"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/bg_arrow_down_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_shop_street_intelligentSortingRelativeLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fragment_goods_list_sort_background_left"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/fragment_shop_street_filterTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/intelligentSorting"
+                android:textColor="@drawable/tab_text_selector"
+                android:textSize="@dimen/fontThree" />
+
+            <ImageView
+                android:id="@+id/fragment_shop_street_filterImageView"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/bg_arrow_down_gray" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <include layout="@layout/layout_shop_street_search" />
+
+
+</RelativeLayout>

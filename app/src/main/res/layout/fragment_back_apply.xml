@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorTen"
+    >
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/back_apply_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_button"
+        app:emptyImage="@mipmap/bg_system_error"
+        app:emptyButtonTitle="@string/goLastPage"
+        />
+
+    <include
+        android:id="@+id/bottom_button"
+        layout="@layout/layout_bottom_button"/>
+
+</RelativeLayout>

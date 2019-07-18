@@ -1,0 +1,48 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen">
+
+    <include
+        android:id="@+id/fragment_category_title"
+        layout="@layout/fragment_category_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_category_title"
+        android:orientation="horizontal">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_category_level_one_listView"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/colorTen"
+            android:divider="@color/colorTen"
+            android:dividerHeight="0.5dp"
+            android:scrollbars="none"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_category_level_two_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/white"
+            android:scrollbars="none"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/activity_common_offline_view"
+        layout="@layout/offline_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</RelativeLayout>

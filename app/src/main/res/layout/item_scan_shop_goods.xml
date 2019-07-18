@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_scan_goods"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_border_one"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/item_scan_shop_goods_imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/pl_image" />
+
+
+        <TextView
+            android:id="@+id/item_scan_shop_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_scan_shop_goods_imageView"
+            android:layout_toEndOf="@+id/item_scan_shop_goods_imageView"
+            android:layout_toRightOf="@+id/item_scan_shop_goods_imageView"
+            android:text="商品名称"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree" />
+
+        <LinearLayout
+            android:id="@+id/fragment_scan_shop_percentSaleLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/item_scan_shop_name_textView"
+            android:layout_alignStart="@+id/item_scan_shop_name_textView"
+            android:layout_below="@+id/item_scan_shop_name_textView"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/fragment_scan_shop_percentSaleProgressBar"
+                style="@style/StyleProgressBarMini"
+                android:layout_width="120dp"
+                android:layout_height="8dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:max="100"
+                android:progress="50" />
+
+            <TextView
+                android:id="@+id/fragment_scan_shop_percentSaleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/fragment_goods_list_item_plusImageView"
+                android:layout_marginLeft="8dp"
+                android:text="0"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontSix"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_scan_shop_numberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fragment_scan_shop_deductibleTextView"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/item_scan_shop_goods_imageView"
+            android:layout_toRightOf="@+id/item_scan_shop_goods_imageView"
+            android:text="商品价格"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/fragment_scan_shop_deductibleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_scan_shop_goods_number"
+            android:layout_alignLeft="@+id/fragment_scan_shop_numberTextView"
+            android:layout_alignStart="@+id/fragment_scan_shop_numberTextView"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontFive"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/fragment_scan_shop_plus"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignBottom="@+id/item_scan_shop_goods_imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/plus_button_selector" />
+
+        <TextView
+            android:id="@+id/fragment_scan_shop_goods_number"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_scan_shop_plus"
+            android:layout_alignTop="@+id/fragment_scan_shop_plus"
+            android:layout_toLeftOf="@+id/fragment_scan_shop_plus"
+            android:background="@null"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="0"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree" />
+
+        <ImageView
+            android:id="@+id/fragment_scan_shop_minus"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignBottom="@+id/fragment_scan_shop_goods_number"
+            android:layout_alignTop="@+id/fragment_scan_shop_goods_number"
+            android:layout_toLeftOf="@+id/fragment_scan_shop_goods_number"
+            android:layout_toStartOf="@+id/fragment_scan_shop_goods_number"
+            android:scaleType="fitXY"
+            android:src="@drawable/minus_button_selector" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/layout_one"></LinearLayout>
+
+</RelativeLayout>

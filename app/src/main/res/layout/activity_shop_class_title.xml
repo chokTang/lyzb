@@ -1,0 +1,65 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_shop_class_toolbarWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/bottom_border_one"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    >
+
+    <ImageButton
+        android:id="@+id/activity_shop_class_backImageButton"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="2dp"
+        android:src="@mipmap/btn_back_dark"
+        />
+
+    <com.szy.common.View.CommonEditText
+        android:id="@+id/activity_shop_class_commonEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/fragment_category_title_search_background"
+        android:hint="@string/hintEnterShopName"
+        android:imeOptions="actionSearch"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingLeft="40dp"
+        android:paddingRight="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:singleLine="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/activity_shop_class_backImageButton"
+        android:layout_toEndOf="@+id/activity_shop_class_backImageButton"
+        android:layout_toLeftOf="@+id/activity_shop_class_moreImageButton"
+        android:layout_toStartOf="@+id/activity_shop_class_moreImageButton"
+        android:textColor="@color/colorOne"
+        android:textColorHint="@color/colorFive"
+        android:textSize="@dimen/fontThree"/>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/activity_shop_class_backImageButton"
+        android:src="@mipmap/ic_search"
+        />
+
+    <ImageButton
+        android:id="@+id/activity_shop_class_moreImageButton"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="13dp"
+        android:src="@mipmap/btn_more_dark"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

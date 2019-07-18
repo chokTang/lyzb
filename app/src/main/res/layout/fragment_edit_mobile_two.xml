@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorTen"
+              android:orientation="vertical">
+
+    <com.baoyachi.stepview.HorizontalStepView
+        android:id="@+id/stepview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_edit_password_password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/top_bottom_border_one"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="新手机号码"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo"/>
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/fragment_edit_password_password_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:inputType="phone"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_login_password_captcha_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/top_bottom_border_one"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/captcha"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"/>
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/fragment_login_password_captcha_edittext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/captcha"
+            android:singleLine="true"
+            android:textColor="@color/colorTwo"
+            android:textColorHint="@color/colorFive"
+            android:textSize="@dimen/fontThree"/>
+
+        <ImageView
+            android:id="@+id/fragment_login_password_login_captcha"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:src="@mipmap/pl_image"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/fragment_edit_password_code_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="手机验证码："
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo"/>
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/fragment_edit_password_code_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:hint="动态验证码"
+            android:paddingRight="5dp"
+            android:inputType="number"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo"/>
+
+        <include layout="@layout/layout_sms_sendcode_button"/>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_waring"
+        layout="@layout/layout_warning"
+        android:visibility="gone"
+        />
+
+    <include layout="@layout/layout_submit_button"/>
+
+</LinearLayout>

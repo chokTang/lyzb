@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:commonRecyclerView="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorTen">
+
+    <me.zongren.pullablelayout.Main.PullableLayout
+        xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_address_list_pullableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_button"
+        PullableLayout:pullablelayout_side="BOTTOM">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_address_list_pullableRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            commonRecyclerView:emptyImage="@mipmap/bg_public"
+            commonRecyclerView:emptyTitle="@string/emptyIndex"/>
+
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+    <include
+        layout="@layout/layout_bottom_button"/>
+
+</RelativeLayout>

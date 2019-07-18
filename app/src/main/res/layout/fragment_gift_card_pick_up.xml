@@ -1,0 +1,80 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.szy.yishopcustomer.Fragment.GiftCardPickUpFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/fragment_linearlayout_gift_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/top_bottom_border_one"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="提货券卡号："
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo" />
+
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/fragment_edittext_gift_card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:inputType="text"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_edit_password_password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/top_bottom_border_one"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="提货券密码："
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo" />
+
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/fragment_edit_password_password_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:inputType="textPassword"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo" />
+
+            <ImageView
+                android:id="@+id/fragment_edit_password_show_password"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/btn_show_password_disabled" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_submit_button"/>
+
+    </LinearLayout>
+</FrameLayout>

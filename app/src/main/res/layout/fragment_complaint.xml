@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorTen"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_complaint_confirmButton">
+
+        <LinearLayout
+            android:id="@+id/linearlayout_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/search_edittext_border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:text="*"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="投诉原因"
+                    android:textColor="@color/colorThree"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <TextView
+                    android:id="@+id/fragment_complaint_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"
+                    />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@mipmap/bg_arrow_down_gray"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/search_edittext_border"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:text="*"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="投诉说明"
+                    android:textColor="@color/colorThree"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <com.szy.common.View.CommonEditText
+                    android:id="@+id/fragment_complaint_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left|start"
+                    android:hint="@string/hintAdvice"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/colorOne"
+                    android:textColorHint="@color/colorFive"
+                    android:textSize="@dimen/fontTwo"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/search_edittext_border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:text="*"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontTwo"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="联系电话"
+                    android:textColor="@color/colorThree"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <com.szy.common.View.CommonEditText
+                    android:id="@+id/fragment_complaint_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left|start|center_vertical"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"
+                    />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@mipmap/bg_arrow_down_gray"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/search_edittext_border">
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/item_back_detail_upload_image"
+                    />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/fragment_complaint_order_info"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        layout="@layout/layout_bottom_button"/>
+</RelativeLayout>

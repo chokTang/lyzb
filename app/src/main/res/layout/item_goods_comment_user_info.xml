@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/comment_headimg"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@mipmap/pl_user_avatar" />
+
+    <TextView
+        android:id="@+id/comment_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="会员名称"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree" />
+
+    <ImageView
+        android:id="@+id/comment_user_rank"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="5dp" />
+
+</LinearLayout>

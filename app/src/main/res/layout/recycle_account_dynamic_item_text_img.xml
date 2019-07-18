@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+                                              xmlns:app="http://schemas.android.com/apk/res-auto"
+                                              xmlns:tools="http://schemas.android.com/tools"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:background="@color/windows_bg"
+                                              android:orientation="vertical"
+                                              android:padding="10dp"
+                                              app:divider="@drawable/listdivider_window_10"
+                                              app:showDividers="middle">
+
+    <com.lyzb.jbx.widget.link.AutoLinkTextView
+        android:id="@+id/tv_item_text_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/text_line_space"
+        android:maxLines="3"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14"
+        tools:text="ajsjajsajlksljajlsjlaa；测试数据"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_multiple_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"/>
+
+    <include layout="@layout/recycle_account_dynamic_bottom"/>
+
+</android.support.v7.widget.LinearLayoutCompat>

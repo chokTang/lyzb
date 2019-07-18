@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_three"
+    android:paddingTop="15dp">
+
+    <ImageView
+        android:id="@+id/fragment_checkout_goods_imageView"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/gray_border_button_six"
+        android:padding="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="15dp"
+        />
+
+    <TextView
+        android:id="@+id/fragment_checkout_goods_giftTextView"
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:layout_alignLeft="@+id/fragment_checkout_goods_imageView"
+        android:layout_alignTop="@+id/fragment_checkout_goods_imageView"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="@string/gift"
+        android:textColor="#fff"
+        android:textSize="@dimen/fontSix"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_goods_nameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fragment_checkout_goods_imageView"
+        android:layout_toRightOf="@+id/fragment_checkout_goods_imageView"
+        android:lineSpacingMultiplier="1.2"
+        android:maxLines="2"
+        android:text="商品名称"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/fragment_checkout_no_stock_image"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/fragment_checkout_goods_numberTextView"
+        android:layout_toStartOf="@+id/fragment_checkout_goods_numberTextView"
+        android:src="@mipmap/bg_beyond_scope"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_goods_numberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fragment_checkout_goods_imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:text="@string/placeholderGoodsNumber"
+        android:textColor="@color/colorGoodsDesc"
+        android:textSize="@dimen/fontFive"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/fragment_checkout_goods_attributeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_checkout_goods_nameTextView"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/fragment_checkout_goods_imageView"
+        android:layout_toRightOf="@+id/fragment_checkout_goods_imageView"
+        android:gravity="left"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="商品属性"
+        android:textColor="@color/colorGoodsDesc"
+        android:textSize="@dimen/fontSix"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/item_order_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fragment_checkout_goods_imageView"
+        android:layout_toRightOf="@+id/fragment_checkout_goods_imageView"
+        android:background="@drawable/green_border_button_four"
+        android:maxLines="2"
+        android:paddingBottom="1dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="1dp"
+        android:text="搭配套餐"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontEight"
+        android:layout_marginTop="2dp"
+        />
+
+    <TextView
+        android:id="@+id/fragment_checkout_goods_priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment_checkout_deductibleTextView"
+        android:layout_toRightOf="@+id/fragment_checkout_goods_imageView"
+        android:text="@string/placeholderGoodsPrice"
+        android:layout_marginLeft="-1dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontThree" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_deductibleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fragment_checkout_goods_imageView"
+        android:layout_alignLeft="@+id/fragment_checkout_goods_priceTextView"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:visibility="visible"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontFive" />
+
+</RelativeLayout>

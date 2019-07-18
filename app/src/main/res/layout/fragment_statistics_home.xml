@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_statistics"/>
+
+    <com.like.longshaolib.widget.AutoWidthTabLayout
+        android:id="@+id/statistics_date_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/fontcColor3"
+        app:tabIndicatorHeight="1dp"
+        app:tabSelectTextColor="@color/fontcColor1"
+        app:tabSelectTextSize="16"
+        app:tabTextColor="@color/fontcColor3"
+        app:tabTextSize="16"
+        app:tab_Mode="mode_fixed"/>
+    <!--头部的布局在layout_statistics_head.xml-->
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/statistics_smartrefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableLoadMore="false">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/statistics_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

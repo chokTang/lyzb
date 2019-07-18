@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <EditText
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/group_margin"
+        android:maxLength="4"
+        android:background="@drawable/bg_radiu_5_stock_1"
+        android:layout_marginRight="20dp"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/fontcColor1"
+        tools:text="个人"/>
+
+    <CheckBox
+        android:id="@+id/check_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14"
+        android:button="@null"
+        android:checked="false"
+        android:drawablePadding="@dimen/group_margin"
+        android:drawableRight="@drawable/selector_tab"
+        android:text="隐藏"/>
+
+</LinearLayout>

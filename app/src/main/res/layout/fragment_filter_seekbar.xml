@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:focusableInTouchMode="true"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/progressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/btn_dialog_box"
+        android:paddingBottom="5dp"
+        />
+
+    <com.jaygoo.widget.RangeSeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lineColorSelected="@color/colorPrimary"
+        app:lineColorEdge="@color/colorSeven"
+        app:thumbSize="35dp"
+        app:seekBarHeight="10dp"
+        app:cellMode="number"
+        app:seekBarMode="range"
+        app:progressHintMode="alwaysHide"
+        />
+
+</LinearLayout>

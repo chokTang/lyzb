@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rating="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <com.szy.yishopcustomer.View.CircleImageView
+        android:id="@+id/img_shop_detail_user_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ease_default_avatar" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_shop_detail_evaluation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/img_shop_detail_user_avatar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_shop_detail_user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="1"
+                android:ellipsize="end"
+                android:maxLength="13"
+                android:text="用户名字"
+                android:textColor="@color/ingot_detail_text"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_shop_detail_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="2018/03/09" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_shop_detail_evaluation_group_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_r1_green"
+                android:text="团购"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:textColor="@color/ads_white"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评分"
+                android:textSize="10dp" />
+
+            <com.szy.yishopcustomer.View.RatingBar
+                android:id="@+id/ratingBar_shop_detail_user_evaluation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_gravity="center"
+                rating:clickable="true"
+                rating:image_height="13dp"
+                rating:image_padding="1dp"
+                rating:image_width="13dp"
+                rating:star="5"
+                rating:star_count="5"
+                rating:star_img="@mipmap/btn_evaluation_selected"
+                rating:unstar_img="@mipmap/btn_evaluation_normal" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_shop_detail_evaluation_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:maxLines="2"
+            android:text="味道好,分量足,交通方便,老客户了,味道一直倍棒,都很喜欢"
+            android:textColor="@color/ingot_detail_text"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tv_shop_detail_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="3dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/bg_evaluation_reply"
+            android:text="商家回复:66666"
+            android:textSize="11dp"
+            android:textColor="@color/ingot_detail_text"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ll_shop_detail_evaluation"
+        android:background="@color/colorEight"/>
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/app_margin">
+
+        <ImageView
+            android:id="@+id/analysis_ranking_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ranking_no1" />
+
+        <TextView
+            android:id="@+id/analysis_ranking_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minWidth="30dp"
+            android:minHeight="30dp"
+            android:text="04."
+            android:textColor="@color/app_blue"
+            android:textSize="@dimen/textSize14" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/app_margin">
+
+
+            <ImageView
+                android:id="@+id/analysis_ranking_head_iv"
+                android:layout_width="@dimen/member_headerImg_big"
+                android:layout_height="@dimen/member_headerImg_big"
+                tools:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/analysis_ranking_isvip_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/union_vip" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/analysis_ranking_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize16"
+                tools:text="LYZB002(宁忆)" />
+
+            <TextView
+                android:id="@+id/analysis_ranking_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14"
+                tools:text="100人" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/app_margin"
+            android:src="@mipmap/union_me_go" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="50dp"
+        android:background="@color/line_color" />
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rating="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_radio_5"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ll_near_shop_bg"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@mipmap/bg_ht_default">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_near_shop_gradient"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp">
+
+                    <ImageView
+                        android:id="@+id/img_near_shop_header"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@mipmap/bg_zfx_default"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_near_shop_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/img_near_shop_header"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxLength="8"
+                        android:textColor="@color/ingot_detail_text"
+                        android:textSize="18dp" />
+
+
+                    <com.szy.yishopcustomer.View.RatingBar
+                        android:id="@+id/ratingbar_near_shop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_near_shop_name"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@+id/img_near_shop_header"
+                        rating:clickable="true"
+                        rating:image_height="10dp"
+                        rating:image_padding="1dp"
+                        rating:image_width="10dp"
+                        rating:star="0"
+                        rating:star_count="5"
+                        rating:star_img="@mipmap/btn_evaluation_selected"
+                        rating:unstar_img="@mipmap/btn_evaluation_normal" />
+
+
+                    <TextView
+                        android:id="@+id/tv_near_shop_condition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ratingbar_near_shop"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@+id/img_near_shop_header"
+                        android:lines="1"
+                        android:textColor="@color/ingot_detail_text"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_near_time_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tv_near_shop_name"
+                        android:layout_marginRight="15dp"
+                        android:textColor="@color/ingot_detail_time_text"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="5dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_home_near_shop_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#F2F5F7" />
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp">
+
+    <ImageView
+        android:id="@+id/fragment_checkout_payment_checkboxImageView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/btn_review"/>
+
+
+    <LinearLayout
+        android:id="@+id/fragment_checkout_payment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/fragment_checkout_payment_checkboxImageView"
+        android:layout_toRightOf="@+id/fragment_checkout_payment_checkboxImageView"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_checkout_payment_nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="货到付款"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/fragment_checkout_payment_wx_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="亿万用户的选择,更快更安全"
+            android:textSize="11dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/fragment_checkout_payment_labelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/fragment_checkout_payment_name"
+        android:background="#FB8316"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontFive"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/image_checkbox"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/image_checkbox_selector"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorEight"/>
+
+</RelativeLayout>

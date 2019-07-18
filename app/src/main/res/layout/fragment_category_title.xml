@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_category_title"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/toolbar_bottom_border">
+
+    <ImageView
+        android:id="@+id/fragment_category_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/btn_back_dark" />
+
+    <TextView
+        android:id="@+id/fragment_category_title_input"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@+id/fragment_category_back"
+        android:layout_toLeftOf="@+id/fragment_category_title_scanButton"
+        android:layout_toRightOf="@+id/fragment_category_back"
+        android:layout_toStartOf="@+id/fragment_category_title_scanButton"
+        android:background="@drawable/fragment_category_title_search_background"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:singleLine="true"
+        android:text="@string/searchGoods"
+        android:layout_centerVertical="true"
+        android:textColor="@color/colorFive"
+        android:textSize="@dimen/fontThree" />
+
+    <ImageView
+        android:id="@+id/fragment_category_image_view"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/fragment_category_title_scanButton"
+        android:src="@mipmap/ic_search" />
+
+    <ImageView
+        android:id="@+id/fragment_category_title_scanButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:padding="13dp"
+        android:src="@mipmap/btn_scan_dark" />
+
+    <View
+        android:id="@+id/textView_cart_badge"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/activity_root_tab_cart_badge"
+        android:text=""
+        android:visibility="gone" />
+
+</RelativeLayout>

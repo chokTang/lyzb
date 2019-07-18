@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/lin_message_list"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_message_list_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/text_message_time_bg"
+        android:paddingBottom="2dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="2dp"
+        android:textColor="@color/aliwx_white"
+        android:textSize="@dimen/textSize12"
+        tools:text="2018年08月23日 09:53"/>
+
+    <RelativeLayout
+        android:id="@+id/rela_ly_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rela_message_content_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_message_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:lines="1"
+            android:maxEms="16"
+            android:ellipsize="end"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14"
+            tools:text="赠送消息标题"/>
+
+        <ImageView
+            android:id="@+id/img_message_list_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/message_next"
+            android:visibility="gone"/>
+
+        <com.szy.yishopcustomer.View.DashLineView
+            android:id="@+id/view_message_list"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/tv_message_list_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_message_list_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_message_list"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="@dimen/text_line_space"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/fontcColor2"
+            android:layout_marginBottom="10dp"
+            android:textSize="@dimen/textSize12"
+            tools:text="用户LDSWX25424,赠送你8元宝,请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收请查收"/>
+    </RelativeLayout>
+</LinearLayout>

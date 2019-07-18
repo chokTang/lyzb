@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <ImageView
+        android:id="@+id/img_near_shop_product_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@mipmap/bg_zfx_default"
+        />
+
+    <TextView
+        android:id="@+id/tv_near_shop_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLength="6"
+        android:text="黑猫瓜子"
+        android:textColor="@color/ingot_detail_text"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_near_shop_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥200"
+            android:textStyle="bold"
+            android:textColor="#f23030"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_near_shop_product_ingots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+12元宝"
+            android:textColor="#f23030"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

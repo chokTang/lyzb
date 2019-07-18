@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+    >
+
+    <com.szy.yishopcustomer.View.CircleImageView
+        android:id="@+id/headimg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/pl_user_avatar"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/headimg"
+        android:layout_toRightOf="@id/headimg"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="会员：达芙妮旗舰店店长"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontTwo"
+        />
+
+    <TextView
+        android:id="@+id/total_user_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name"
+        android:layout_toRightOf="@id/headimg"
+        android:text="团队人数：2"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontFour"/>
+
+    <TextView
+        android:id="@+id/reg_time_format"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/total_user_count"
+        android:layout_toRightOf="@id/headimg"
+        android:text="加入时间：2016-8-15"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontFour"/>
+
+    <TextView
+        android:id="@+id/dis_total_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/headimg"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontTwo"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_below="@id/headimg"
+        android:background="@color/colorEight"/>
+
+</RelativeLayout>

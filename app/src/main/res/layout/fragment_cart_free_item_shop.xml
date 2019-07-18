@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="8dp">
+
+        <ImageView
+            android:id="@+id/image_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/image_checkbox_selector" />
+
+        <ImageView
+            android:id="@+id/item_cart_shop_icon_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_cart_shop_name_textView"
+            android:layout_alignTop="@+id/item_cart_shop_name_textView"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:src="@mipmap/ic_shop" />
+
+        <TextView
+            android:id="@+id/item_cart_shop_grab_bonus"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/grab_bonus"
+            android:textColor="@color/free_buy_primary"
+            android:textSize="@dimen/fontFive" />
+
+        <TextView
+            android:id="@+id/item_cart_shop_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/item_cart_shop_icon_imageView"
+            android:layout_toLeftOf="@+id/item_cart_shop_grab_bonus"
+            android:layout_toRightOf="@+id/item_cart_shop_icon_imageView"
+            android:layout_toStartOf="@+id/item_cart_shop_grab_bonus"
+            android:singleLine="true"
+            android:text="店铺名称店铺名称店铺名称店铺名称店铺名称"
+            android:textColor="#8e8e8e"
+            android:textSize="@dimen/fontThree" />
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/line_cart_free" />
+
+    <TextView
+        android:id="@+id/textViewTableNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+</LinearLayout>

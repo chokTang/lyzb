@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:padding="@dimen/app_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="是否在共商联盟中公开我的所有信息"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14" />
+
+        <CheckBox
+            android:id="@+id/switch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/ic_createcirclr_examine"
+            android:paddingLeft="@dimen/text_icon_space"
+            android:text="公开" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/app_margin"
+        android:lineSpacingExtra="@dimen/text_line_space"
+        android:text="公开后系统会将你的名片推送给共商联盟中与你资源相匹配的用户，同时你的名片会被他人搜到。"
+        android:textColor="@color/fontcColor2"
+        android:textSize="@dimen/textSize12" />
+</LinearLayout>

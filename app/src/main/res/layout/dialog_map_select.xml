@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_baidu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="百度地图"
+        android:paddingTop="@dimen/group_margin"
+        android:paddingBottom="@dimen/group_margin"
+        android:textColor="@color/fontcColor1"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/tv_gaode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="高德地图"
+        android:paddingTop="@dimen/group_margin"
+        android:paddingBottom="@dimen/group_margin"
+        android:textColor="@color/fontcColor1"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/tv_tencent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="腾讯地图"
+        android:paddingTop="@dimen/group_margin"
+        android:paddingBottom="@dimen/group_margin"
+        android:textColor="@color/fontcColor1"
+        android:textSize="20dp"/>
+</LinearLayout>

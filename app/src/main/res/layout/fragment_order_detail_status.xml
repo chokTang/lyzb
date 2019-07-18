@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+    >
+
+    <include
+        layout="@layout/item_border_one"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/ic_notepad"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_notepad"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trading_status"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/trading_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontThree"
+            android:layout_weight="1"
+            android:gravity="right"
+            />
+    </LinearLayout>
+
+    <include
+        layout="@layout/item_border_one"/>
+
+</LinearLayout>

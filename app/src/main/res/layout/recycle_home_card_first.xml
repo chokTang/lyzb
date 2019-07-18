@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/con_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:background="@mipmap/union_home_card"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_me_info"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:background="@drawable/shape_card_info_me"
+            android:drawableRight="@drawable/union_white_round_right"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="14dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize12"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="完善资料" />
+
+        <ImageView
+            android:id="@+id/img_me_header"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="34dp"
+            android:scaleType="fitXY"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher" />
+
+        <LinearLayout
+            android:id="@+id/layout_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/app_inside_margin"
+            android:layout_marginTop="34dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/img_me_header"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_me_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize14"
+                tools:text="张三张三张三张三张三张三张三张三张三张三三" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_card"
+            style="@style/me_info_proress"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_marginLeft="@dimen/app_inside_margin"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="15dp"
+            android:progress="50"
+            app:layout_constraintLeft_toRightOf="@+id/img_me_header"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_name" />
+
+        <TextView
+            android:id="@+id/tv_me_info_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/app_inside_margin"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize12"
+            app:layout_constraintLeft_toRightOf="@+id/img_me_header"
+            app:layout_constraintTop_toBottomOf="@+id/progress_card"
+            tools:text="名片完善度80%" />
+
+        <TextView
+            android:id="@+id/tv_throw_card"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginLeft="@dimen/app_inside_margin"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_card_move"
+            android:drawableLeft="@drawable/union_card_move"
+            android:drawablePadding="@dimen/icon_space_text"
+            android:gravity="center_vertical"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:text="递名片"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize12"
+            app:layout_constraintLeft_toRightOf="@+id/img_me_header"
+            app:layout_constraintTop_toBottomOf="@+id/tv_me_info_progress" />
+
+        <TextView
+            android:id="@+id/tv_card_file"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginLeft="@dimen/app_inside_margin"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_card_move"
+            android:drawableLeft="@drawable/union_card_cilp"
+            android:drawablePadding="@dimen/icon_space_text"
+            android:gravity="center_vertical"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:text="名片夹"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize12"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_throw_card"
+            app:layout_constraintLeft_toRightOf="@+id/tv_throw_card"
+            app:layout_constraintTop_toBottomOf="@+id/tv_me_info_progress" />
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_screen"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/app_margin"
+        android:paddingRight="@dimen/app_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/con_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名片推荐"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tv_industry"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/union_bottom"
+            android:drawablePadding="@dimen/text_icon_space"
+            android:gravity="center_vertical|right"
+            android:hint="行业筛选"
+            android:textColor="@color/fontcColor2"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="35dp"
+            android:drawableRight="@drawable/union_bottom"
+            android:drawablePadding="@dimen/text_icon_space"
+            android:gravity="center_vertical|right"
+            android:hint="联系方式"
+            android:textColor="@color/fontcColor2"
+            android:textSize="@dimen/textSize14" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

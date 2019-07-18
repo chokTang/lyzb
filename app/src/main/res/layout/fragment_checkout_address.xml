@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_checkout_address_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/fragment_checkout_address_consigneeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxEms="8"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontTwo"
+        android:layout_alignLeft="@+id/fragment_checkout_address_consigneeAddressTextView"/>
+
+    <TextView
+        android:id="@+id/fragment_checkout_address_phoneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toEndOf="@+id/fragment_checkout_address_consigneeTextView"
+        android:layout_toRightOf="@+id/fragment_checkout_address_consigneeTextView"
+        android:text="@string/placeholderPhoneFormat"
+        android:textStyle="bold"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontTwo" />
+
+
+    <ImageView
+        android:id="@+id/fragment_checkout_address_locationIconImageView"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@+id/fragment_checkout_address_consigneeTextView"
+        android:src="@mipmap/ic_location"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/fragment_checkout_address_consigneeAddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_checkout_address_consigneeTextView"
+        android:layout_toRightOf="@+id/fragment_checkout_address_locationIconImageView"
+        android:maxLines="2"
+        android:text="@string/placeholderConsigneeAddress"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontFive"
+        android:layout_alignTop="@+id/fragment_checkout_address_locationIconImageView"
+        android:layout_toLeftOf="@+id/fragment_checkout_address_rightArrowImageView"
+        android:layout_marginLeft="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/identity_verification_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fragment_checkout_address_consigneeAddressTextView"
+        android:layout_alignStart="@+id/fragment_checkout_address_consigneeAddressTextView"
+        android:layout_below="@+id/fragment_checkout_address_consigneeAddressTextView"
+        android:layout_marginTop="5dp"
+
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/ic_profile_red" />
+
+        <TextView
+            android:id="@+id/fragment_checkout_address_id_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontFive"
+            />
+
+        <TextView
+            android:id="@+id/fragment_checkout_address_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontEight" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fragment_checkout_address_rightArrowImageView"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/btn_right_arrow" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/identity_verification_layout"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_three_color_stripe" />
+</RelativeLayout>

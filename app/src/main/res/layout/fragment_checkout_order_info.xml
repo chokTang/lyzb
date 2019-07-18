@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingBottom="15dp">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/colorLine" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_product_amount_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/productAmount"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_product_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/fragment_checkout_product_amount_textView"
+        android:layout_marginRight="10dp"
+        android:text="11"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_shipping_deductible_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fragment_checkout_product_amount_textView"
+        android:layout_below="@+id/fragment_checkout_product_amount_textView"
+        android:layout_marginBottom="10dp"
+        android:text="@string/shippingDeductible"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_shipping_deductible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/fragment_checkout_product_amount"
+        android:layout_alignTop="@+id/fragment_checkout_shipping_deductible_textView"
+        android:layout_below="@+id/fragment_checkout_product_amount"
+        android:text="11"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_shipping_fee_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fragment_checkout_shipping_deductible_textView"
+        android:layout_below="@+id/fragment_checkout_shipping_deductible_textView"
+        android:layout_marginBottom="10dp"
+        android:text="@string/shippingFee"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_shipping_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/fragment_checkout_shipping_deductible"
+        android:layout_alignTop="@+id/fragment_checkout_shipping_fee_textView"
+        android:layout_below="@+id/fragment_checkout_shipping_deductible"
+        android:text="11"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_cash_more_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fragment_checkout_product_amount_textView"
+        android:layout_below="@+id/fragment_checkout_shipping_fee_textView"
+        android:layout_marginBottom="10dp"
+        android:text="@string/codCashMore"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_cash_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/fragment_checkout_product_amount"
+        android:layout_alignTop="@+id/fragment_checkout_cash_more_textView"
+        android:text="11"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontFour"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_bonus_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fragment_checkout_product_amount_textView"
+        android:layout_below="@+id/fragment_checkout_cash_more_textView"
+        android:layout_marginBottom="10dp"
+        android:text="@string/bonus"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_bonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/fragment_checkout_product_amount"
+        android:layout_alignTop="@+id/fragment_checkout_bonus_textView"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fragment_checkout_product_amount_textView"
+        android:layout_below="@+id/fragment_checkout_bonus_textView"
+        android:layout_marginBottom="10dp"
+        android:text="@string/benefit"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree"
+
+        />
+
+    <TextView
+        android:id="@+id/fragment_checkout_benefit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/fragment_checkout_product_amount"
+        android:layout_alignTop="@+id/fragment_checkout_balance"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontFour" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_balance_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fragment_checkout_product_amount_textView"
+        android:layout_below="@+id/fragment_checkout_balance"
+        android:text="@string/labelBalance"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree" />
+
+    <TextView
+        android:id="@+id/fragment_order_detail_confirm_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/fragment_checkout_product_amount"
+        android:layout_alignTop="@+id/fragment_checkout_balance_textView"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontFour" />
+
+</RelativeLayout>

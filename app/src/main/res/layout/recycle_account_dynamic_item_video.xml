@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+                                              xmlns:app="http://schemas.android.com/apk/res-auto"
+                                              xmlns:tools="http://schemas.android.com/tools"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:background="@color/windows_bg"
+                                              android:orientation="vertical"
+                                              android:padding="10dp"
+                                              app:divider="@drawable/listdivider_window_10"
+                                              app:showDividers="middle">
+
+    <com.lyzb.jbx.widget.link.AutoLinkTextView
+        android:id="@+id/tv_item_text_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/text_line_space"
+        android:maxLines="3"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14"
+        tools:text="ajsjajsajlksljajlsjlaa；测试数据"/>
+
+    <FrameLayout
+        android:id="@+id/layout_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.xiao.nicevideoplayer.NiceVideoPlayer
+            android:id="@+id/video_play"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            />
+
+        <ImageView
+            android:id="@+id/img_item_first_img"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/union_dynamic_start"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <include layout="@layout/recycle_account_dynamic_bottom"/>
+
+</android.support.v7.widget.LinearLayoutCompat>

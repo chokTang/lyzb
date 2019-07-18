@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <me.zongren.pullablelayout.Main.PullableLayout xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_message_pullableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button"
+        android:background="@color/colorTen"
+        PullableLayout:pullablelayout_side="TOP">
+
+        <com.szy.common.View.CommonRecyclerView xmlns:commonRecyclerView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fragment_message_pullableRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            commonRecyclerView:emptyImage="@mipmap/bg_empty_message"
+            commonRecyclerView:emptyTitle="@string/emptyMessage"
+            commonRecyclerView:emptySubtitle="@string/emptyMessageSubtitle"
+            tools:listitem="@layout/item_message" />
+
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+    <Button
+        android:id="@+id/button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_marginLeft="@dimen/buttonEdgeMargin"
+        android:layout_marginTop="@dimen/buttonMarginTop"
+        android:layout_marginRight="@dimen/buttonEdgeMargin"
+        android:textColor="@drawable/button_text_selector"
+        android:background="@drawable/normal_button_selector"
+        android:textSize="@dimen/fontSeven"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="立即登录查看更多信息"
+        android:visibility="gone" />
+
+</RelativeLayout>

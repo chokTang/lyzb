@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_checkout_child_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingLeft="20dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="@color/colorEight"/>
+
+    <ImageView
+        android:id="@+id/image_checkbox"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/image_checkbox_selector" />
+
+    <ImageView
+        android:id="@+id/fragment_checkout_child_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/image_checkbox"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/image_checkbox"
+        android:layout_toRightOf="@+id/image_checkbox"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/fragment_checkout_child_titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/image_checkbox"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/fragment_checkout_child_image"
+        android:layout_toRightOf="@+id/fragment_checkout_child_image"
+        android:gravity="center"
+        android:text="@string/placeholderTitle"
+        android:textColor="@color/colorGoodsDesc"
+        android:textSize="@dimen/fontThree" />
+
+
+    <TextView
+        android:id="@+id/fragment_checkout_child_subtitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fragment_checkout_child_titleTextView"
+        android:layout_alignStart="@+id/fragment_checkout_child_titleTextView"
+        android:layout_below="@+id/fragment_checkout_child_titleTextView"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontFour"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/fragment_checkout_child_titleTwoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/image_checkbox"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/fragment_checkout_child_titleTextView"
+        android:layout_toRightOf="@+id/fragment_checkout_child_titleTextView"
+        android:gravity="center"
+        android:text="满100"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontTwo"
+        android:visibility="gone" />
+</RelativeLayout>

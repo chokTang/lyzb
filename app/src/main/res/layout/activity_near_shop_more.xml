@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/img_near_shop_more_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp"
+            android:src="@mipmap/btn_back_dark" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxEms="16"
+            android:text="地址"
+            android:textColor="@color/ingot_detail_text"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/edt_search_near_shop_more"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/fragment_category_title_search_background"
+            android:gravity="center_vertical"
+            android:hint="找附近的吃喝玩乐"
+            android:imeOptions="actionSearch"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColor="@color/colorOne"
+            android:textColorHint="@color/colorFive"
+            android:textSize="@dimen/fontThree" />
+
+
+    </LinearLayout>
+
+    <me.zongren.pullablelayout.Main.PullableLayout
+        android:id="@+id/near_shop_more_pullableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTen">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/rv_near_shop_more"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.szy.common.View.CommonRecyclerView>
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+</LinearLayout>

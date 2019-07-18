@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp">
+
+
+    <ImageView
+        android:id="@+id/img_seach_photo_goodimg"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@mipmap/pl_image"/>
+
+    <TextView
+        android:id="@+id/tv_seach_photo_goodname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_seach_photo_goodimg"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:lineSpacingExtra="2dp"
+        android:lines="2"
+        android:maxLines="2"
+        android:text="@string/placeholderGoodsName"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontFive"/>
+
+    <TextView
+        android:id="@+id/tv_seach_photo_tag_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_seach_photo_goodname"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/guess_like_tag"
+        android:paddingBottom="1dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="1dp"
+        android:textColor="@color/aliwx_white"
+        android:textSize="10dp"
+        android:visibility="visible"
+        tools:text="大惠战"/>
+
+    <TextView
+        android:id="@+id/tv_seach_photo_tag_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_seach_photo_goodname"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/tv_seach_photo_tag_one"
+        android:background="@drawable/guess_like_tag"
+        android:paddingBottom="1dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="1dp"
+        android:textColor="@color/aliwx_white"
+        android:textSize="10dp"
+        android:visibility="visible"
+        tools:text="包邮"/>
+
+    <TextView
+        android:id="@+id/tv_seach_photo_tag_thr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_seach_photo_goodname"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/tv_seach_photo_tag_two"
+        android:background="@drawable/guess_like_tag"
+        android:paddingBottom="1dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="1dp"
+        android:textColor="@color/aliwx_white"
+        android:textSize="10dp"
+        android:visibility="visible"
+        tools:text="包邮"/>
+
+    <TextView
+        android:id="@+id/tv_seach_photo_goodprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_seach_photo_tag_one"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="4dp"
+        android:gravity="start|center_vertical"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontOne"
+        tools:text="Y569"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_seach_photo_goodprice"
+        android:layout_marginBottom="3dp"
+        android:layout_toRightOf="@id/tv_seach_photo_goodprice"
+        android:text="抵后价"
+        android:textColor="@color/ads_out_bg"
+        android:textSize="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_seach_photo_deductible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_seach_photo_goodprice"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingBottom="8dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="4dp"
+        android:paddingTop="2dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="10dp"
+        tools:text="元宝最高抵扣$120"/>
+
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignBottom="@id/tv_seach_photo_deductible"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="12dp"
+        android:src="@mipmap/btn_cart_list"/>
+
+</RelativeLayout>

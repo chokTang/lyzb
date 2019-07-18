@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorTen"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/top_bottom_border_one"
+        android:padding="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单信息"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_border_one"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholderShopName"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"/>
+
+        <TextView
+            android:id="@+id/fragment_complaint_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:text=""
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_border_one"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/orderSn"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"/>
+
+        <TextView
+            android:id="@+id/fragment_complaint_order_sn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:text=""
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_border_one"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shippingFee"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"/>
+
+        <TextView
+            android:id="@+id/fragment_complaint_shipping_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:text=""
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_border_one"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总计"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"/>
+
+        <TextView
+            android:id="@+id/fragment_complaint_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:text=""
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_border_one"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addTime"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"/>
+
+        <TextView
+            android:id="@+id/fragment_complaint_add_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:text=""
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"
+            />
+    </LinearLayout>
+
+</LinearLayout>

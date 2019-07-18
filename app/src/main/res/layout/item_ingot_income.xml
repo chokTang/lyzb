@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/aliwx_white">
+
+    <TextView
+        android:id="@+id/item_ingot_income_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/ingot_usable_instructions"
+        android:textSize="14dp"
+        tools:text="元宝收入"/>
+
+    <TextView
+        android:id="@+id/item_ingot_income_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_ingot_income_type"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/ads_out_bg"
+        android:textSize="11dp"
+        tools:text="2018-04-12 12:20:22"/>
+
+    <TextView
+        android:id="@+id/item_ingot_income_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxEms="14"
+        android:maxLines="2"
+        android:textColor="@color/ingot_detail_text"
+        android:textSize="12dp"
+        tools:text="收入来源收入来源收入来源收入来源收入来源收入来源收入"/>
+
+
+    <TextView
+        android:id="@+id/item_ingot_income_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/item_ingot_income_type"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/ing_number"
+        android:textSize="12dp"
+        tools:text="+500元宝"/>
+
+</RelativeLayout>

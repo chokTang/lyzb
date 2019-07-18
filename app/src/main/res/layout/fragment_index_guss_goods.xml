@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/index_fragment_guesslike_bg"
+    android:padding="1dp">
+
+    <com.szy.common.View.SquareImageView
+        android:id="@+id/img_guess_like_img"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/pl_image" />
+
+    <TextView
+        android:id="@+id/tv_guess_like_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/img_guess_like_img"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:lineSpacingExtra="2dp"
+        android:lines="2"
+        android:maxLines="2"
+        android:minHeight="48dp"
+        android:text="@string/placeholderGoodsName"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontFive"
+        tools:text="商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称" />
+
+    <LinearLayout
+        android:id="@+id/lin_goods_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_guess_like_name"
+        android:minHeight="24dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_guess_like_tag_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/guess_like_tag"
+            android:paddingBottom="1dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="1dp"
+            android:textColor="@color/aliwx_white"
+            android:textSize="10dp"
+            android:visibility="visible"
+            tools:text="大惠战" />
+
+        <TextView
+            android:id="@+id/tv_guess_like_tag_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/guess_like_tag"
+            android:paddingBottom="1dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="1dp"
+            android:textColor="@color/aliwx_white"
+            android:textSize="10dp"
+            android:visibility="visible"
+            tools:text="包邮" />
+
+        <TextView
+            android:id="@+id/tv_guess_like_tag_thr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/guess_like_tag"
+            android:paddingBottom="1dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="1dp"
+            android:textColor="@color/aliwx_white"
+            android:textSize="10dp"
+            android:visibility="visible"
+            tools:text="包邮" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_guess_like_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lin_goods_tags"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="4dp"
+        android:gravity="start|center_vertical"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontOne"
+        tools:text="￥569" />
+
+    <TextView
+        android:id="@+id/tv_gl_ingot_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_guess_like_price"
+        android:layout_below="@+id/lin_goods_tags"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@id/tv_guess_like_price"
+        android:gravity="bottom"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        tools:text="+120元宝" />
+
+    <TextView
+        android:id="@+id/tv_guess_like_goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_guess_like_price"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/gl_goods_price"
+        android:textSize="10dp"
+        tools:text="宝箱价格￥150" />
+
+    <TextView
+        android:id="@+id/tv_guess_like_similar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_guess_like_goods_price"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/guess_like_similar"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="2dp"
+        android:text="相似"
+        android:textColor="@color/ing_total_tx"
+        android:textSize="10dp" />
+
+    <TextView
+        android:id="@+id/tv_guess_like_deductible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_guess_like_goods_price"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="10dp"
+        tools:text="元宝最高抵扣$120" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_guess_like_goods_price"
+        android:layout_marginLeft="2dp"
+        android:paddingBottom="5dp"
+        android:layout_marginRight="6dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_index_guss_shop_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLength="6"
+            android:text="黑猫毛家"
+            android:textColor="@color/colorThree"
+            android:textSize="12dp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="11dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorThree" />
+
+        <TextView
+            android:id="@+id/tv_guss_go_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进店"
+            android:textColor="@color/colorTwo"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+</RelativeLayout>

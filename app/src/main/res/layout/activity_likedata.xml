@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <me.zongren.pullablelayout.Main.PullableLayout
+        xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_regs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F5F7"
+        PullableLayout:pullablelayout_side="BOTTOM">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/recy_like_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"/>
+
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+package com.szy.yishopcustomer.ResponseModel.Pay;
+
+/**
+ * Created by 宗仁 on 16/8/2.
+ * All Rights Reserved By 秦皇岛商之翼网络科技有限公司.
+ */
+public class OrderModel {
+    public String order_id;//731,
+    public String order_sn;//"20160924031450",
+    public String parent_sn;//null,
+    public String user_id;//70,
+    public String order_status;//0,
+    public String shop_id;//2,
+    public String site_id;//13,
+    public String store_id;//0,
+    public String shipping_status;//0,
+    public String pay_status;//0,
+    public String consignee;//"笨笨",
+    public String region_code;//"13,03,03",
+    public String address;//"森林已成",
+    public String receiving_mode;//0,
+    public String tel;//"13333333333",
+    public String email;//"",
+    public String postscript;//"",
+    public String best_time;//"工作日/周末/假日均可 ",
+    public String pay_id;//1,
+    public String pay_code;//"alipay",
+    public String pay_name;//"支付宝",
+    public String pay_sn;//"0",
+    public String is_cod;//0,
+    public String is_freebuy;
+    public String order_amount;//"160.00",
+    public String money_paid;//"160.00",
+    public String goods_amount;//"160.00",
+    public String inv_fee;//"0.00",
+    public String shipping_fee;//"0.00",
+    public String surplus;//"0.00",
+    public String bonus_id;//null,
+    public String shop_bonus_id;//0,
+    public String bonus;//"0.00",
+    public String shop_bonus;//"0.00",
+    public String integral;//0,
+    public String integral_money;//"0.00",
+    public String give_integral;//0,
+    public String order_from;//"1",
+    public String add_time;//1474695164,
+    public String pay_time;//0,
+    public String shipping_time;//0,
+    public String confirm_time;//0,
+    public String delay_days;//0,
+    public String order_type;//0,
+    public String service_mark;//0,
+    public String send_mark;//0,
+    public String shipping_mark;//0,
+    public String buyer_type;//0,
+    public String evaluate_status;//0,
+    public String evaluate_time;//0,
+    public String end_time;//0,
+    public String region_names;//""
+    public String order_left_money;
+    public String money_paid_format;//"160.00",
+}

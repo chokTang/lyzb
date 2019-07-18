@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorTen"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/fragment_group_on_categray_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:paddingLeft="5dp"
+
+        >
+
+        <TextView
+            android:id="@+id/fragment_group_on_list_all_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/group_on_list_title_tab_bg_selector"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/all"
+            android:textColor="@drawable/tab_text_selector"
+            android:textSize="@dimen/fontThree"/>
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_group_on_list_title_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:id="@+id/left_bg"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bg_top_right_dividing_line"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/item_group_on_list_imageView"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@mipmap/btn_down_arrow_red"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorEight"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <me.zongren.pullablelayout.Main.PullableLayout
+            xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fragment_grup_on_list_pullAbleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            PullableLayout:pullablelayout_side="TOP"
+            >
+
+            <com.szy.common.View.CommonRecyclerView
+                android:id="@+id/fragment_group_on_list_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </me.zongren.pullablelayout.Main.PullableLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_group_on_list_attr_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:background="@android:color/white"
+            android:visibility="gone"
+            >
+
+            <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_group_on_list_attr_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginTop="10dp"
+            />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="30dp"
+                android:background="@drawable/fragment_group_on_list_gradient_bg"
+                >
+
+                <ImageView
+                    android:id="@+id/fragment_group_on_list_attr_close_imageView"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@mipmap/btn_close_circled"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <include layout="@layout/layout_bottom_menu_common"/>
+
+</LinearLayout>

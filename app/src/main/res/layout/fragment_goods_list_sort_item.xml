@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bottom_border_two"
+              android:orientation="horizontal"
+              android:paddingLeft="20dp"
+              android:paddingRight="20dp"
+    >
+
+    <TextView
+        android:id="@+id/fragment_goods_list_sort_item_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:maxLines="2"
+        android:paddingLeft="10dp"
+        android:text="@string/pl_category_name"
+        android:textColor="@drawable/tab_text_selector_two"
+        android:textSize="@dimen/fontFour"
+        />
+
+    <ImageView
+        android:id="@+id/fragment_goods_list_sort_item_imageView"
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_check_red"
+        android:visibility="invisible"/>
+
+</LinearLayout>

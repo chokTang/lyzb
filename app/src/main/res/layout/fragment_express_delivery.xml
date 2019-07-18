@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal|bottom"
+              android:orientation="vertical"
+    >
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/fragment_express_delivery_mapView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginBottom="50dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/message_close_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="50dp"
+        android:src="@mipmap/btn_close_white"
+        />
+
+</LinearLayout>

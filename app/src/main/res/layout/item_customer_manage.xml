@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="7dp"
+    android:layout_marginLeft="@dimen/app_margin"
+    android:layout_marginRight="@dimen/app_margin"
+    android:background="@drawable/sl_white_r5"
+    android:elevation="5dp"
+    android:orientation="vertical"
+    android:padding="@dimen/app_margin">
+
+    <include layout="@layout/layout_customer_head"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lineSize"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/customer_manage_time_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/fontcColor3"
+            android:textSize="@dimen/textSize12"
+            tools:text="最近访问：2019年5月6日 10:51:05"/>
+
+        <TextView
+            android:id="@+id/customer_manage_track_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round_bg"
+            android:paddingBottom="2dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize12"
+            tools:text="跟进20次"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorTen"
+              android:orientation="vertical"
+              android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/fragment_register_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/setLoginPassword"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontFive"/>
+
+    <include layout="@layout/item_border_one"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:background="@android:color/white"
+        >
+
+        <TextView
+            android:id="@+id/fragment_register_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/passwordFormat"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"
+            />
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/fragment_register_password_editText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/colorTwo"
+            android:textColorHint="@color/colorFive"
+            android:textSize="@dimen/fontThree"
+            />
+        <ImageView
+            android:id="@+id/fragment_register_show_password"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/btn_show_password_disabled"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/item_border_one"/>
+
+    <include layout="@layout/layout_warning"
+        android:visibility="gone"/>
+
+    <include
+        layout="@layout/layout_submit_button"/>
+</LinearLayout>

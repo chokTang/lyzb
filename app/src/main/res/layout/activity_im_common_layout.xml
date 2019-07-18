@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:hyphenate="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/activity_common_toolbar"
+        layout="@layout/toolbar_common" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/common_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_weight="1" />
+
+    <com.hyphenate.easeui.widget.EaseChatMessageList
+        android:id="@+id/messageList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        hyphenate:msgListShowUserAvatar="false"
+        android:layout_weight="1" />
+
+    <include layout="@layout/view_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:minHeight="45dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/input_content_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入要咨询的问题"
+            android:lineSpacingExtra="2dp"
+            android:minHeight="45dp"
+            android:padding="10dp"
+            android:textColor="@color/colorOne"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/input_btn"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:background="#ff2302"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@color/aliwx_white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

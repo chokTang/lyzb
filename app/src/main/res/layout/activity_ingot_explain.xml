@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                       android:id="@+id/toolbar_ingot_explain"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="50dp"
+                                       android:background="@drawable/toolbar_bottom_border"
+                                       android:theme="@style/ToolbarTheme"
+                                       app:navigationIcon="@mipmap/btn_back_dark">
+
+        <TextView
+            android:id="@+id/toolbar_share_ingot_text"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/ingot_explain"
+            android:textColor="#222222"
+            android:textSize="18sp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="第一条  概述
+本规则适用于集宝箱用户的元宝获得、存放与使用。
+\n\n第二条  元宝的获得
+2.1注册得元宝
+当用户注册成为集宝箱集采会员时，即刻获得平台赠送给新注册会员的18元宝。
+2.2荐得元宝
+当用户通过分享成功引流集采会员后，即刻获得平台赠送给分享者的18元宝。
+2.3消费得元宝
+当用户在集宝箱商城（含零售商城、集食惠、同城生活）中发生消费，且在“支付成功”后，即刻获得与实际支付金额相同数值（运费须扣除）的元宝。
+注：用户使用“元宝”换购商品发生消费后，也遵循本规则。
+\n\n第三条  元宝的存放
+1.每个用户有专门的元宝账户，能时时查询元宝余额、赠送明细、使用明细、有效状态等。
+2.元宝具有有效期，均为90天，即从获得元宝当日算起90天（含）内有效；一旦超期，则自动失效，元宝不可以再被使用。
+\n\n第四条  元宝的使用
+1.在集宝箱商城（含零售商城、集食惠、同城生活）中，若商品可用元宝换购，则该商品页面展示“元宝最高抵扣：￥**”，反之不会展示。
+2.对于可用元宝换购的商品，用户可使用元宝加现金换购商品（注意：使用额度不超过“元宝最高抵扣：￥**”，同时不超过用户的元宝余额）。
+例如用户现有30元宝，商品销售价￥100，元宝最高抵扣￥20，则该用户购买1个该商品时仅需支付80元现金和20元宝；再如用户现有30元宝，商品销售价￥100，元宝最高抵扣￥40，则该用户购买1个该商品时仅需支付70元现金和30元宝。
+3.当用户使用元宝换购商品后，若要退款，则元宝不退回给用户，例如用户现有30元宝，商品销售价￥100，元宝最高抵扣￥20，则该用户购买1个该商品时需支付80元现金和20元宝，当退款时，仅退回80元现金，不退回20元宝。
+4.当用户使用元宝换购商品，在“支付成功”时会获得元宝（详见2.3），但若该用户将该笔订单进行退款，则须按照退款金额扣回已赠送的元宝，若用户已有的元宝数量小于须被扣回的元宝数量，则将用户已有元宝数量扣减为负数为止。
+5.其它说明
+5.1对于部分元宝换购商品，平台会设置限购，具体限购规则见集宝箱商品页系统提示。
+5.2对于部分元宝换购商品，商家会设置限购，具体限购规则见集宝箱商品页系统提示。
+\n\n第五条  附则
+1.本规则于2018年5月8日生效。
+2.集宝箱可根据平台运营情况，随时调整本说明规则并向用户公示。"
+            android:textSize="16sp"/>
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!--android:background="@drawable/top_border_one"-->
+
+    <LinearLayout
+        android:id="@+id/activity_root_tabWrapperLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@mipmap/bg_home_bottom"
+        android:layout_alignParentBottom="true"
+        android:clipChildren="false"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <include
+            android:id="@+id/activity_root_tabHome"
+            layout="@layout/activity_root_tab_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/activity_root_tabCategory"
+            layout="@layout/activity_root_tab_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/activity_root_tabInventory"
+            layout="@layout/activity_root_tab_inventory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/activity_root_tabShop"
+            layout="@layout/activity_root_tab_shop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/activity_root_tabCart"
+            layout="@layout/activity_root_tab_cart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/activity_root_tabUser"
+            layout="@layout/activity_root_tab_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</merge>

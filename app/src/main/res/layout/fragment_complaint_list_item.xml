@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_shop_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投诉编号："
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/complaint_sn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontFour" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单编号："
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/order_sn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="22"
+            android:textColor="@color/colorFive"
+            android:textSize="@dimen/fontFour" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="卖家："
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="33"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontFour" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投诉原因："
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/complaint_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="44"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontFour" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申请时间："
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/add_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="55"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontFour" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_list_bottom_button"/>
+
+</LinearLayout>

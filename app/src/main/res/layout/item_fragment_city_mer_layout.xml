@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_city_mer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/aliwx_white">
+
+    <ImageView
+        android:id="@+id/fragment_city_mer_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/fragment_city_mer_img"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/fragment_city_mer_img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_city_mer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLength="13"
+            android:textColor="@color/aliwx_black"
+            android:textSize="14dp"
+            tools:text="苏格甜品苏格甜品苏格甜品苏格甜品" />
+
+        <TextView
+            android:id="@+id/fragment_city_mer_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12dp"
+            tools:text="双人自选套餐,提供免费WIFI,提供免费WIFI提供免费WIFI" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/fragment_city_mer_img"
+        android:layout_toRightOf="@id/fragment_city_mer_img"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragment_city_mer_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gallery_red"
+                android:textSize="16dp"
+                tools:text="$55.00" />
+            <TextView
+                android:id="@+id/fragment_city_mer_acer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gallery_red"
+                android:textSize="12dp"
+                tools:text="$55.00" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="起"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fragment_city_mer_img"
+            android:layout_marginTop="4dp">
+
+            <LinearLayout
+                android:id="@+id/lin_dedu_title_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_dedu_label_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@mipmap/dedu_label" />
+
+                <TextView
+                    android:id="@+id/tv_ingot_dedu_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/label_bg"
+                    android:textSize="12dp"
+                    tools:text="元宝最高抵扣$5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_takeout_title_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lin_dedu_title_home"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_takeout_label_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@mipmap/takeout_label" />
+
+                <TextView
+                    android:id="@+id/tv_takeout_title_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/label_bg"
+                    android:textSize="12dp"
+                    tools:text="商家支持外卖" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fragment_city_mer_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/fragment_city_mer_img"
+        android:layout_marginRight="10dp"
+        android:textSize="10dp"
+        tools:text="102m" />
+
+    <TextView
+        android:id="@+id/fragment_city_mer_sale_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/fragment_city_mer_img"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textSize="13dp"
+        tools:text="已售63" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/fragment_city_mer_img"
+        android:background="@color/grgray"/>
+</RelativeLayout>

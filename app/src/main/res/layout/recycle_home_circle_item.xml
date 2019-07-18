@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="80dp"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_circle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <ImageView
+            android:id="@+id/img_recmmond_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:src="@drawable/union_recommend_circle"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_circle_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/app_margin"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/text_line_space"
+        android:maxLines="1"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize12"
+        tools:text="圈子名字"/>
+</LinearLayout>

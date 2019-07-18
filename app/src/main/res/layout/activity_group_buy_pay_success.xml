@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/img_group_buy_order_pay_success_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp"
+            android:src="@mipmap/btn_back_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="支付结果"
+            android:textColor="@color/ingot_detail_text"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/icon_pay_success" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="购买成功"
+            android:textColor="@color/colorGreen"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共计支付"
+                android:textColor="@color/ingot_detail_text"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_pay_success_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="¥123"
+                android:textColor="@color/red"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消耗元宝:"
+                android:textColor="@color/ingot_detail_text"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_pay_success_acer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="30"
+                android:textColor="@color/red"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_pay_order_success_shop_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:textSize="16dp"
+        android:background="@color/white"
+        android:textColor="@color/ingot_detail_text"
+        android:text="店铺名字"/>
+
+    <TextView
+        android:id="@+id/tv_pay_order_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="1dp"
+        android:textSize="16dp"
+        android:background="@color/white"
+        android:textColor="@color/ingot_detail_text"
+        android:text="券码:1358644"/>
+    <TextView
+        android:id="@+id/tv_show_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="16dp"
+        android:background="@color/white"
+        android:textColor="@color/ads_out_bg"
+        android:text="可在'订单'-'待使用'中查看"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="元宝奖励"
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:textColor="@color/ingot_detail_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ingot_detail_text"
+            android:textSize="16dp"
+            android:lines="1"
+            android:text="获得"
+            />
+        <TextView
+            android:id="@+id/tv_get_acer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textSize="16dp"
+            android:lines="1"
+            android:text="20"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ingot_detail_text"
+            android:textSize="16dp"
+            android:lines="1"
+            android:text="元宝"
+            />
+        <TextView
+            android:id="@+id/tv_can_use_acer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ingot_detail_text"
+            android:textSize="16dp"
+            android:layout_marginLeft="5dp"
+            android:lines="1"
+            android:text="可用20元宝"
+            />
+    </LinearLayout>
+
+</LinearLayout>

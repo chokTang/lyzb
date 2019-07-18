@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.szy.yishopcustomer.View.CustomViewPager
+            android:id="@+id/fragment_index_goods_navigation_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            />
+
+
+        <!-- <android.support.v7.widget.RecyclerView
+             android:id="@+id/fragment_index_navigation_recyclerView"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingLeft="10dp"
+             android:paddingRight="10dp"
+             android:paddingTop="10dp"
+             android:paddingBottom="5dp"/>-->
+
+        <!-- <View
+             android:layout_width="wrap_content"
+             android:layout_height="@dimen/itemBorderBottom"
+             android:layout_below="@id/fragment_index_navigation_recyclerView"
+             android:background="@color/colorEight" />-->
+
+        <com.viewpagerindicator.CirclePageIndicator xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fragment_index_goods_navigation_iconPageIndicator"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/fragment_index_goods_navigation_viewPager"
+            android:layout_height="10dp"
+            android:paddingTop="0dp"
+            android:visibility="gone"
+            app:fillColor="#fc4955"
+            app:pageColor="#ebe9e9"
+            app:radius="3dp"
+            app:strokeWidth="0dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

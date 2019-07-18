@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_un_me_info_add"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        tools:src="@mipmap/union_card_info_add_img" />
+
+    <ImageView
+        android:id="@+id/img_un_me_img_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_un_me_info_add"
+        android:layout_alignRight="@+id/img_un_me_info_add"
+        android:paddingLeft="@dimen/app_margin"
+        android:paddingBottom="@dimen/app_margin"
+        android:src="@mipmap/union_add_img_cancle" />
+</RelativeLayout>

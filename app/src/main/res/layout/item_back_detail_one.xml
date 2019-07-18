@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_back_detail_one_imageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/item_back_detail_one_title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="TITLE"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/item_back_detail_one_name_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="3dp"
+        android:text="11111"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontThree" />
+
+
+    <TextView
+        android:id="@+id/item_back_detail_one_name_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="3dp"
+        android:text="22222"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontThree" />
+
+    <TextView
+        android:id="@+id/item_back_detail_one_name_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="3dp"
+        android:text="333333"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontThree" />
+
+    <LinearLayout
+        android:id="@+id/item_back_detail_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/item_back_detail_one_TextView_one"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/gray_border_button_one"
+            android:gravity="center"
+            android:text="再次申请退款"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree" />
+
+        <TextView
+            android:id="@+id/item_back_detail_one_TextView_two"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/gray_border_button_one"
+            android:gravity="center"
+            android:text="再次申请退款"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_back_detail_one_TextView_three"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gray_border_button_one"
+        android:gravity="center"
+        android:text="要求平台方介入处理"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree"
+        android:visibility="gone" />
+
+</LinearLayout>

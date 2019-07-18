@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fragment_share_relarivelayout">
+
+    <TextView
+        android:id="@+id/fragment_share_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="还差9人就能组团成功"
+        android:gravity="center"
+        android:layout_marginTop="150dp"
+        android:textSize="@dimen/fontFour"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/fragment_share_tiptwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="快邀请更多小伙伴来参团吧"
+        android:layout_below="@id/fragment_share_tip"
+        android:gravity="center"
+        android:textSize="@dimen/fontFour"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_share_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/fragment_share_cancelButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/top_border_one"
+            android:text="@string/buttonCancel"
+            android:textSize="@dimen/fontTwo"
+            android:textColor="@color/colorOne"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:id="@+id/fragment_distributor_applay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="店铺名称："
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"/>
+
+
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/fragment_distributor_apply_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"
+                />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/item_border_two"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="QQ："
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"/>
+
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/fragment_distributor_apply_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"
+                />
+
+        </LinearLayout>
+
+
+        <include
+            layout="@layout/item_border_two"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@android:color/white"
+            >
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="微信号："
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"/>
+
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/fragment_distributor_apply_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_distributor_apply_tip_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:id="@+id/ic_alert_circled"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_alert_circled" />
+
+            <TextView
+                android:id="@+id/fragment_edit_password_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontFour"
+                android:text="店铺名称不能为空"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_distributor_apply_tip_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_alert_circled" />
+
+            <TextView
+                android:id="@+id/fragment_distrib_apply_tip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontFour"
+                android:text="QQ只能包含至多20个字符"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_distributor_apply_tip_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_alert_circled" />
+
+            <TextView
+                android:id="@+id/fragment_distrib_apply_tip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontFour"
+                android:text="微信号只能包含至多20个字符"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_submit_button"/>
+
+    </LinearLayout>
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/fragment_distributor_result"
+        layout="@layout/fragment_distributor_result"/>
+
+</LinearLayout>

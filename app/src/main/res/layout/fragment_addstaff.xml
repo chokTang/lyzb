@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/addstaff_title"
+        layout="@layout/toolbar_statistics" />
+
+    <LinearLayout
+        android:id="@+id/addstaff_bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/addstaff_delete_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="删除员工"
+            android:textColor="#FF1A00"
+            android:textSize="@dimen/textSize14"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/addstaff_sure_tv"
+            style="@style/common_bottom_btn_style"
+            android:text="确定" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/addstaff_bottom_ll"
+        android:layout_below="@id/addstaff_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/addstaff_accounts_prefix_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/addstaff_accounts_prefix_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:text="帐号前缀"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <EditText
+                        android:id="@+id/addstaff_accounts_prefix_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入3-10位字母"
+                        android:maxLength="10"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:paddingTop="15dp"
+                        android:paddingRight="@dimen/app_margin"
+                        android:paddingBottom="15dp"
+                        android:textColor="@color/fontcColor1"
+                        android:textColorHint="@color/fontcColor3"
+                        android:textSize="@dimen/textSize14" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/addstaff_accounts_prefix_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:background="@color/lineColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/addstaff_accounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:text="登录帐号"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <TextView
+                        android:id="@+id/addstaff_accounts_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:paddingTop="15dp"
+                        android:paddingRight="@dimen/app_margin"
+                        android:paddingBottom="15dp"
+                        android:textColor="@color/fontcColor1"
+                        android:textColorHint="@color/fontcColor3"
+                        android:textSize="@dimen/textSize14" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/addstaff_accounts_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:background="@color/lineColor"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addstaff_accounts_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_margin"
+                android:text="账号前缀保存后不可更改，登录账号由系统自动生成"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize12" />
+
+            <LinearLayout
+                android:id="@+id/addstaff_password_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addstaff_password_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:text="初始密码"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14" />
+
+                <EditText
+                    android:id="@+id/addstaff_password_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入初始密码"
+                    android:inputType="textVisiblePassword"
+                    android:maxLength="20"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingTop="15dp"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/fontcColor1"
+                    android:textColorHint="@color/fontcColor3"
+                    android:textSize="@dimen/textSize14" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addstaff_password_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_margin"
+                android:text="初始密码不填写时默认为123456"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/addstaff_name_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:background="@color/lineColor"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:text="姓名"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <EditText
+                        android:id="@+id/addstaff_name_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入员工姓名"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:paddingTop="15dp"
+                        android:paddingRight="@dimen/app_margin"
+                        android:paddingBottom="15dp"
+                        android:textColor="@color/fontcColor1"
+                        android:textColorHint="@color/fontcColor3"
+                        android:textSize="@dimen/textSize14" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:background="@color/lineColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:text="电话号码"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <EditText
+                        android:id="@+id/addstaff_phone_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入电话号码"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:paddingTop="15dp"
+                        android:paddingRight="@dimen/app_margin"
+                        android:paddingBottom="15dp"
+                        android:textColor="@color/fontcColor1"
+                        android:textColorHint="@color/fontcColor3"
+                        android:textSize="@dimen/textSize14" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/addstaff_setlogin_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:background="@color/lineColor"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/addstaff_setlogin_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="是否可登录"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <ImageView
+                        android:id="@+id/addstaff_setlogin_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/app_margin"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:text="所属机构"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/addstaff_organ_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingTop="15dp"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingBottom="15dp"
+                    android:text="选择机构"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14" />
+
+                <ImageView
+                    android:id="@+id/addstaff_organ_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingRight="@dimen/app_margin"
+                    android:src="@drawable/pub_right" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/addstaff_organ_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

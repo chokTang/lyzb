@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fragment_index_item_background"
+    android:orientation="vertical"
+    android:paddingBottom="0.5dp"
+    android:paddingTop="5dp"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_index_goods_promotion_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.szy.yishopcustomer.View.CustomViewPager
+        android:id="@+id/fragment_index_goods_promotion_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />
+
+<!--    <com.viewpagerindicator.LinePageIndicator
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_index_goods_promotion_iconPageIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:gapWidth="12dp"
+        app:lineWidth="20dp"
+        app:selectedColor="#f74f69"
+        app:strokeWidth="2dp"
+        app:unselectedColor="#ebe9e9"
+        />-->
+
+    <com.viewpagerindicator.CirclePageIndicator
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_index_goods_promotion_iconPageIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:fillColor="#fc4955"
+        app:pageColor="#ebe9e9"
+        app:radius="3dp"
+        app:strokeWidth="0dp"
+        app:paddingStart="5dp"
+        android:paddingTop="10dp"
+
+        />
+</LinearLayout>

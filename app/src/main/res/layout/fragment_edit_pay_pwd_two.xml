@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical">
+
+    <com.baoyachi.stepview.HorizontalStepView
+        android:id="@+id/stepview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:background="@android:color/white"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_edit_password_password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/top_bottom_border_one"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="新余额支付密码："
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo"/>
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/fragment_edit_password_password_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo"
+            android:layout_weight="1"
+            android:inputType="textPassword"/>
+
+        <ImageView
+            android:id="@+id/fragment_edit_password_show_password"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/btn_show_password_disabled"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_waring"
+        layout="@layout/layout_warning"
+        android:visibility="gone"/>
+
+    <include
+        layout="@layout/layout_submit_button"/>
+
+</LinearLayout>

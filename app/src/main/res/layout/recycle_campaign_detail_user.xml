@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_member_header"
+            android:layout_width="@dimen/member_headerImg_big"
+            android:layout_height="@dimen/member_headerImg_big"
+            android:scaleType="fitXY"
+            tools:src="@mipmap/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/img_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/union_vip"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_member_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/icon_space_text"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14"
+        tools:text="三个字" />
+</LinearLayout>

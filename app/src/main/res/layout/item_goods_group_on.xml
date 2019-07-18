@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_two"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/comment_headimg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/pl_user_avatar"/>
+
+        <TextView
+            android:id="@+id/shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/comment_headimg"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/comment_headimg"
+            android:text="达芙妮旗舰店"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"/>
+
+        <TextView
+            android:id="@+id/goupOn_shop"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/enable_button"
+            android:gravity="center"
+            android:text="去参团"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/groupOn_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/shop_name"
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@+id/comment_headimg"
+            android:layout_toRightOf="@+id/comment_headimg"
+            android:gravity="center"
+            android:text="还差1人"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontFive"/>
+
+        <cn.iwgang.countdownview.CountdownView
+            android:id="@+id/groupOn_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/comment_headimg"
+            android:layout_below="@+id/shop_name"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/textView12"
+            android:layout_toLeftOf="@+id/groupOn_number"
+            android:layout_toRightOf="@+id/textView12"
+            android:paddingTop="3dp"
+            app:isHideTimeBackground="false"
+            app:isShowDay="true"
+            app:isShowHour="true"
+            app:isShowMillisecond="false"
+            app:isShowMinute="true"
+            app:isShowSecond="true"
+            app:suffix=":"
+            app:suffixGravity="center"
+            app:suffixTextColor="@color/colorThree"
+            app:suffixTextSize="14dp"
+            app:timeBgColor="#FFFFFF"
+            app:timeBgRadius="4dp"
+            app:timeBgSize="14dp"
+            app:timeTextColor="@color/colorThree"
+            app:timeTextSize="@dimen/fontFour"/>
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/shop_name"
+            android:layout_toEndOf="@+id/groupOn_number"
+            android:layout_toRightOf="@+id/groupOn_number"
+            android:gravity="center"
+            android:text="剩余"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontFive"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/background_circle">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="@color/colorCyan"
+                    android:textSize="@dimen/fontFive" />
+
+                <TextView
+                    android:id="@+id/textView_red_amount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="10000000000000.00"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/colorCyan"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:id="@+id/textView_use_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="满100元使用"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontFour" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_shop_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:text="发行方：zhaoyunlong_店铺1"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontFive" />
+
+            <TextView
+                android:id="@+id/textView_limit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:text="限品类：指定商品"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontFive" />
+
+            <TextView
+                android:id="@+id/textView_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:text="发行数量：10"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontFive" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_corner_red_small"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="使用"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/fontSix" />
+
+                <TextView
+                    android:id="@+id/textView_effective_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:maxLines="1"
+                    android:text="2017-06-27 ~ 2017-07-04"
+                    android:textColor="@color/colorThree"
+                    android:textSize="@dimen/fontFive" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_corner_red_small"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="兑换"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/fontSix" />
+
+                <TextView
+                    android:id="@+id/textView_exchange_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:maxLines="1"
+                    android:text="不限日期"
+                    android:textColor="@color/colorThree"
+                    android:textSize="@dimen/fontFive" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@mipmap/bg_bonus_integral" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_border_cyan_radius"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|left">
+
+                    <TextView
+                        android:id="@+id/textView_integral_required"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/fontOne" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="积分"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/fontFive" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView_exchange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_corner_transparent"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="立即兑换"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/fontThree" />
+
+                <TextView
+                    android:id="@+id/textView_exchange_figures"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="1人兑换"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/fontThree" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

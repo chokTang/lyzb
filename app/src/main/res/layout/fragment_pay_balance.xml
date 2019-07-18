@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/fragment_rela_user_balance"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/fragment_pay_balance_currentBalanceLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="start|center_vertical"
+        android:text="@string/labelCurrentAvailableBalance"
+        android:textSize="@dimen/fontThree"
+        android:textColor="@color/colorTwo"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/fragment_pay_balance_availableBalanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignTop="@+id/fragment_pay_balance_currentBalanceLabelTextView"
+        android:layout_alignBottom="@+id/fragment_pay_balance_currentBalanceLabelTextView"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/fragment_pay_balance_currentBalanceLabelTextView"
+        android:gravity="start|center_vertical"
+        android:text="@string/placeholderUserMoney"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontThree"/>
+
+    <TextView
+        android:id="@+id/fragment_pay_balance_labelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="start|center_vertical"
+        android:text=",使用"
+        android:textSize="@dimen/fontTwo"
+        android:textColor="@color/colorTwo"
+        android:layout_toRightOf="@+id/fragment_pay_balance_availableBalanceTextView"
+        />
+
+
+    <TextView
+        android:id="@+id/fragment_pay_balance_moneyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_toRightOf="@+id/fragment_pay_balance_labelTextView"
+        android:gravity="start|center_vertical"
+        android:textSize="@dimen/fontTwo"
+        android:text="@string/placeholderUserMoney"
+        android:maxLines="1"
+        android:textColor="@color/colorOne"
+        android:layout_alignTop="@+id/fragment_pay_balance_labelTextView"
+        android:layout_marginLeft="5dp"/>
+
+    <ImageView
+        android:id="@+id/fragment_pay_balance_checkboxImageView"
+        android:layout_width="46dp"
+        android:layout_height="26dp"
+        android:src="@mipmap/bg_switch_off"
+        android:layout_alignTop="@+id/fragment_pay_balance_availableBalanceTextView"
+        android:layout_alignBottom="@+id/fragment_pay_balance_availableBalanceTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"/>
+
+
+
+    <EditText
+        android:id="@+id/fragment_pay_balance_editText"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:background="@drawable/gray_border_button_two"
+        android:hint="@string/hintEnterBalance"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:inputType="numberDecimal"
+        android:padding="5dp"
+        android:textSize="@dimen/fontThree"
+        android:textColor="@color/colorOne"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/fragment_pay_balance_labelTextView"
+        android:layout_alignBottom="@+id/fragment_pay_balance_labelTextView"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/fragment_pay_balance_unitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="start|center_vertical"
+        android:text="@string/monetaryUnit"
+        android:textSize="@dimen/fontTwo"
+        android:textColor="@color/colorTwo"
+        android:layout_toRightOf="@+id/fragment_pay_balance_editText"
+        android:layout_toEndOf="@+id/fragment_pay_balance_editText"
+        android:layout_marginLeft="5dp"
+        android:layout_alignTop="@+id/fragment_pay_balance_labelTextView"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/fragment_pay_balance_minusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/fragment_pay_balance_unitTextView"
+        android:gravity="start|center_vertical"
+        android:padding="5dp"
+        android:text="@string/symbolMinus"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontTwo"
+        android:layout_alignTop="@+id/fragment_pay_balance_labelTextView"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@color/colorSeven"
+        android:layout_below="@id/fragment_pay_balance_currentBalanceLabelTextView"/>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/aliwx_white"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="@string/explain"
+        android:textColor="@color/ingot_usable_instructions"
+        android:textSize="16dp"/>
+
+
+    <TextView
+        android:id="@+id/item_ingot_overdue_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/ing_number"
+        android:textSize="36dp"
+        tools:text="50"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:text="@string/text_ingot"
+        android:textColor="@color/ingot_usable_instructions"
+        android:textSize="16dp"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/item_ingot_overdue_share"
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/item_ingot_exp_btn"
+            android:text="@string/donate_ingot"
+            android:textColor="@color/aliwx_white"
+            android:textSize="16dp"/>
+
+        <Button
+            android:id="@+id/item_ingot_overdue_shop"
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="24dp"
+            android:background="@drawable/item_ingot_exp_btn"
+            android:text="@string/shop_ingot"
+            android:textColor="@color/aliwx_white"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

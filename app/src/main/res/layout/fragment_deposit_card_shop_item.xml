@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linearlayout_left_bg"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="@mipmap/bg_bonus_border_left"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView_par_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000000000000999.00"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="@dimen/fontThree" />
+
+
+            <TextView
+                android:id="@+id/textView_exchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_corner_transparent"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="查看使用记录"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontThree" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:id="@+id/textView_shop_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="店铺：10元储值卡"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontThree" />
+
+            <TextView
+                android:id="@+id/textView_card_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                android:text="名称：10元储值卡"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontFour" />
+
+            <TextView
+                android:id="@+id/textView_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                android:text="asdasd"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontFour" />
+
+            <TextView
+                android:id="@+id/textView_card_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                android:text="asdasd"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontFour" />
+
+            <TextView
+                android:id="@+id/textView_card_limit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                android:text="asdasd"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontFour" />
+
+
+            <TextView
+                android:id="@+id/textView_used_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                android:text="asdasd"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontFour" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView_used_state"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/ic_coupon_used"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imageView_over_state"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/ic_expired"
+        android:visibility="gone" />
+</RelativeLayout>

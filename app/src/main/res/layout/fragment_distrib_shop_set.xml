@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/fragment_distrib_shop_set_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/small_shop_logo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="@string/smallLogo"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontTwo"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_small_shop_logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/title_shap"
+                android:src="@mipmap/bg_default_micro_shop"/>
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@mipmap/btn_right_arrow"/>
+        </LinearLayout>
+
+        <include
+            layout="@layout/item_border_two"/>
+
+        <LinearLayout
+            android:id="@+id/small_shop_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/smallName"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontTwo"/>
+
+            <TextView
+                android:id="@+id/item_small_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontFour"/>
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@mipmap/btn_right_arrow"/>
+        </LinearLayout>
+
+        <include
+            layout="@layout/item_border_two"/>
+
+        <LinearLayout
+            android:id="@+id/small_shop_QQ_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/smallQQ"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontTwo"/>
+
+            <TextView
+                android:id="@+id/item_small_shop_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontFour"/>
+
+            <ImageView
+                android:id="@+id/item_user_info_right_angle_imageView2"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@mipmap/btn_right_arrow"
+                />
+        </LinearLayout>
+
+        <include
+            layout="@layout/item_border_two"/>
+
+        <LinearLayout
+            android:id="@+id/small_shop_weixin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/smallWX"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontTwo"/>
+
+            <TextView
+                android:id="@+id/item_small_shop_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontFour"/>
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@mipmap/btn_right_arrow"
+                />
+        </LinearLayout>
+
+        <include
+            layout="@layout/item_border_two"/>
+
+        <LinearLayout
+            android:id="@+id/small_shop_background_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="@string/smallBackground"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontTwo"/>
+
+            <ImageView
+                android:id="@+id/item_small_shop_background"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/bg_distribution_shop_top"/>
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@mipmap/btn_right_arrow"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/fragment_distrib_shop_set_value_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/item_border_two"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/fragment_distrib_shop_set_tip"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"/>
+
+
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/fragment_distrib_shop_set_value"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"
+                />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/item_border_two"/>
+
+    </LinearLayout>
+
+</LinearLayout>

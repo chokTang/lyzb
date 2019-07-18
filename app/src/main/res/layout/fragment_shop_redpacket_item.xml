@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="225dp"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:paddingRight="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/fontFour" />
+
+                <TextView
+                    android:id="@+id/textViewBonusPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:id="@+id/textViewBonusTip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="满399元使用"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/fontSix" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewBonusTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:gravity="left"
+                android:ellipsize="end"
+                android:text="有效期2017.09.26-2017.09.28"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontSix" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:background="#3b333333"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewUsed"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="1"
+                android:textSize="@dimen/fontFour"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:lineSpacingExtra="1dp"
+                android:text="使用"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewReceive"
+        android:layout_width="24dp"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/ic_receive" />
+
+</RelativeLayout>

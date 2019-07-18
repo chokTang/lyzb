@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorTen"
+                android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_button"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/depositMoneyLimit"
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontThree"/>
+
+                <TextView
+                    android:id="@+id/fragment_deposit_user_format_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22dp"/>
+
+            </LinearLayout>
+
+
+            <include layout="@layout/item_border_one"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提现金额"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <EditText
+                    android:id="@+id/item_fragment_withdrawal_edit_text_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="提现金额"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTwo"
+                    android:textColorHint="@color/colorFive"
+                    android:textSize="@dimen/fontThree"/>
+            </LinearLayout>
+
+            <include layout="@layout/item_border_one"/>
+
+            <LinearLayout
+                android:id="@+id/R1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="请选择提现账户"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"/>
+
+                <TextView
+                    android:id="@+id/fragment_deposit_account_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:singleLine="true"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontThree"
+                    />
+
+                <ImageView
+                    android:id="@+id/fragment_withdrawal_image_view"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@mipmap/bg_arrow_down_dark"/>
+
+            </LinearLayout>
+
+            <com.szy.yishopcustomer.View.MyListView
+                android:id="@+id/my_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:choiceMode="singleChoice"
+                android:visibility="gone"/>
+
+            <include layout="@layout/item_border_one"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="给网站留言"
+                    android:textColor="@color/colorOne"/>
+
+
+                <EditText
+                    android:id="@+id/item_fragment_withdrawal_edit_text_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="您可以填写需要网站方注意的事项哦！"
+                    android:minLines="3"
+                    android:textColor="@color/colorTwo"
+                    android:textColorHint="@color/colorFive"
+                    android:textSize="@dimen/fontThree"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        layout="@layout/layout_bottom_button"/>
+
+    <include
+        layout="@layout/layout_default_empty"/>
+
+</RelativeLayout>

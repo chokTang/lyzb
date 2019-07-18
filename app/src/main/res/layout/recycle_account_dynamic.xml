@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="15dp"
+    android:paddingRight="10dp">
+
+    <include layout="@layout/recycle_dynamic_header" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_account_dynamic"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_dynamic_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingTop="5dp"
+        android:paddingBottom="20dp"
+        android:text="查看全部的20条动态 >"
+        android:textColor="@color/app_blue"
+        android:textSize="@dimen/textSize14" />
+</LinearLayout>

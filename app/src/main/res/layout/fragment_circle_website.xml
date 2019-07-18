@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/circle_website_video_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:layout_marginRight="@dimen/adaptive_12dp"
+                android:layout_marginTop="@dimen/adaptive_12dp">
+
+                <com.xiao.nicevideoplayer.NiceVideoPlayer
+                    android:id="@+id/circle_website_video_paly"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/group_margin"
+                android:layout_marginTop="20dp"
+                android:background="@color/windows_bg"/>
+
+        </LinearLayout>
+
+        <!--公司简介-->
+        <LinearLayout
+            android:id="@+id/circle_website_info_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:layout_marginRight="@dimen/adaptive_12dp"
+                android:layout_marginTop="@dimen/adaptive_12dp"
+                android:text="公司简介"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize16"/>
+
+            <TextView
+                android:id="@+id/circle_website_comd_info_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:layout_marginRight="@dimen/adaptive_24dp"
+                android:layout_marginTop="@dimen/adaptive_12dp"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14"
+                tools:text="公司简介"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/circle_website_com_img_rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/group_margin"
+                android:background="@color/windows_bg"/>
+
+        </LinearLayout>
+
+
+        <!--企业文化荣誉-->
+        <LinearLayout
+            android:id="@+id/circle_website_honor_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:layout_marginRight="@dimen/adaptive_12dp"
+                android:layout_marginTop="@dimen/adaptive_12dp"
+                android:text="企业文化/荣誉/团队"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize16"/>
+
+            <TextView
+                android:id="@+id/circle_website_comd_honr_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:layout_marginRight="@dimen/adaptive_24dp"
+                android:layout_marginTop="@dimen/adaptive_12dp"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14"
+                tools:text="荣誉介绍"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/circle_website_com_honor_img_rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/group_margin"
+                android:layout_marginTop="20dp"
+                android:background="@color/windows_bg"/>
+
+        </LinearLayout>
+
+
+        <!--企业品牌-->
+        <LinearLayout
+            android:id="@+id/circle_website_brand_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:layout_marginRight="@dimen/adaptive_12dp"
+                android:layout_marginTop="@dimen/adaptive_12dp"
+                android:text="品牌展示"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize16"/>
+
+            <TextView
+                android:id="@+id/circle_website_comd_good_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:layout_marginRight="@dimen/adaptive_24dp"
+                android:layout_marginTop="@dimen/adaptive_12dp"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14"
+                tools:text="品牌展示文本"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/circle_website_com_product_rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/adaptive_12dp"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:paddingBottom="12dp"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/group_margin"
+                android:background="@color/windows_bg"/>
+
+        </LinearLayout>
+
+
+        <!--电话-->
+        <LinearLayout
+            android:id="@+id/circle_website_comd_phone_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/single_layout_height"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:layout_marginRight="@dimen/adaptive_12dp"
+                android:layout_marginTop="@dimen/adaptive_12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="公司电话"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14"/>
+
+                <TextView
+                    android:id="@+id/circle_website_comd_moble_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:hint="点我输入公司联系电话"
+                    android:textColor="@color/fontcColor2"
+                    android:textSize="@dimen/textSize14"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--公司地址-->
+
+        <LinearLayout
+            android:id="@+id/circle_website_comd_address_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/single_layout_height"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:layout_marginRight="@dimen/adaptive_12dp"
+                android:layout_marginTop="@dimen/adaptive_12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="公司地址"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14"/>
+
+                <TextView
+                    android:id="@+id/circle_website_comd_address_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center|right"
+                    android:hint="点我输入公司地址"
+                    android:paddingRight="@dimen/adaptive_6dp"
+                    android:textColor="@color/fontcColor2"
+                    android:textSize="@dimen/textSize14"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--企业为空页面-->
+        <LinearLayout
+            android:id="@+id/circle_website_empty_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:minHeight="500dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/union_comd_empty"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="该企业很懒，什么也没留下~~"
+                android:textColor="#95BDFA"
+                android:textSize="@dimen/textSize16"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

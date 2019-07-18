@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_statistics" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/windows_bg"
+        android:paddingLeft="@dimen/app_margin"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="数据预览"
+        android:textColor="@color/fontcColor3"
+        android:textSize="@dimen/textSize14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/union_access_share" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/analysis_share_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/adaptive_25dp"
+                android:gravity="center"
+                android:text="累计分享"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:id="@+id/analysis_share_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/analysis_share_tv"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/app_blue"
+                android:textSize="24sp"
+                tools:text="5000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/analysis_share_number_tv"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@id/analysis_share_number_tv"
+                android:gravity="center"
+                android:text="次"
+                android:textColor="@color/app_blue"
+                android:textSize="@dimen/textSize12" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/windows_bg"
+        android:paddingLeft="@dimen/app_margin"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="分享效果分析"
+        android:textColor="@color/fontcColor3"
+        android:textSize="@dimen/textSize14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/app_margin"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:layout_width="@dimen/member_headerImg_big"
+                android:layout_height="@dimen/member_headerImg_big"
+                android:src="@drawable/union_access_card" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="名片"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize16" />
+
+                <TextView
+                    android:id="@+id/analysis_share_bcard_number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:textColor="@color/fontcColor3"
+                    android:textSize="@dimen/textSize12"
+                    tools:text="分享222次" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="70dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/layout_dynamic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/app_margin"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:layout_width="@dimen/member_headerImg_big"
+                android:layout_height="@dimen/member_headerImg_big"
+                android:src="@drawable/union_access_dynamic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="动态"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize16" />
+
+                <TextView
+                    android:id="@+id/analysis_share_dynamic_number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:textColor="@color/fontcColor3"
+                    android:textSize="@dimen/textSize12"
+                    tools:text="分享222次" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="70dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/layout_hot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/app_margin"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:layout_width="@dimen/member_headerImg_big"
+                android:layout_height="@dimen/member_headerImg_big"
+                android:src="@drawable/union_access_hottext" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="热文"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize16" />
+
+                <TextView
+                    android:id="@+id/analysis_share_hottext_number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:textColor="@color/fontcColor3"
+                    android:textSize="@dimen/textSize12"
+                    tools:text="分享222次" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

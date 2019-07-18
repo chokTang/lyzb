@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <View
+        android:id="@+id/fragment_index_ad_title_left_line_view"
+        android:layout_width="30dp"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/fragment_index_ad_title_textView"
+        android:layout_toStartOf="@+id/fragment_index_ad_title_textView"
+        android:background="@color/colorEight"
+        />
+
+    <TextView
+        android:id="@+id/fragment_index_ad_title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/placeholderTitle"
+        android:textColor="@color/colorEight"
+        android:textSize="@dimen/fontTwo"
+        />
+    <!--android:textStyle="bold"-->
+
+    <View
+        android:id="@+id/fragment_index_ad_title_right_line_view"
+        android:layout_width="30dp"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/fragment_index_ad_title_textView"
+        android:layout_toRightOf="@+id/fragment_index_ad_title_textView"
+        android:background="@color/colorEight"
+        />
+</RelativeLayout>

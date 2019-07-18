@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+    >
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_circle"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/fragment_cart_edit_number_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="修改购买数量"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <EditText
+            android:id="@+id/fragment_cart_edit_number_editText"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/fragment_cart_edit_number_textView"
+            android:layout_alignStart="@+id/fragment_cart_edit_number_textView"
+            android:layout_below="@+id/fragment_cart_edit_number_textView"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_cart_number_edittext_border"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="11"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/fragment_cart_edit_number_reduce"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/fragment_cart_edit_number_editText"
+            android:layout_toLeftOf="@+id/fragment_cart_edit_number_textView"
+            android:layout_toStartOf="@+id/fragment_cart_edit_number_textView"
+            android:background="@drawable/edit_cart_number_left_border"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@color/colorOne"
+            />
+
+        <TextView
+            android:id="@+id/fragment_cart_edit_number_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/fragment_cart_edit_number_editText"
+            android:layout_toEndOf="@+id/fragment_cart_edit_number_textView"
+            android:layout_toRightOf="@+id/fragment_cart_edit_number_textView"
+            android:background="@drawable/edit_cart_number_right_border"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="@color/colorOne"
+            />
+
+        <Button
+            android:id="@+id/fragment_cart_edit_number_cancel"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/disable_button"
+            android:text="取消"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"/>
+
+        <Button
+            android:id="@+id/fragment_cart_edit_number_confirm"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/enable_button"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontThree"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

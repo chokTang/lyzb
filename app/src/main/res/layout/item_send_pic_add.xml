@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_add_pic"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:background="@mipmap/icon_pic_add"
+        android:gravity="center">
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/icon_pic_add"
+            />
+    </LinearLayout>
+
+</LinearLayout>

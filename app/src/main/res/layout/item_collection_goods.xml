@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_two"
+    android:padding="10dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <include
+        layout="@layout/layout_checkbox"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:id="@+id/collection_goods_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/pl_image"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/collection_goods_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontThree"
+            android:textColor="@color/colorOne"
+            android:text="商品名称"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/collection_goods_image"
+            android:layout_toEndOf="@+id/collection_goods_image"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/collection_goods_price_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥200"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17dp"
+            android:layout_toRightOf="@+id/collection_goods_image"
+            android:layout_toEndOf="@+id/collection_goods_image"
+            android:layout_alignBottom="@+id/collection_goods_image"/>
+
+        <TextView
+            android:id="@+id/tv_collec_dedu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_toRightOf="@+id/collection_goods_price_textView"
+            android:layout_alignBottom="@+id/collection_goods_price_textView"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/collection_goods_image"
+            android:id="@+id/collection_goods_edit_cart_layout">
+
+            <ImageView
+                android:id="@+id/minus_button"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/minus_button_selector"
+                />
+
+            <TextView
+                android:id="@+id/item_collection_goods_number"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:text="20"
+                android:gravity="center"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontFour"
+                />
+
+            <ImageView
+                android:id="@+id/plus_button"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/plus_button_selector"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

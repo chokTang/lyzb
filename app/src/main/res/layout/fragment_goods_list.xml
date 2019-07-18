@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+              android:background="@color/windows_bg"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_shop_category_categoryRecyclerView"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/fragment_shop_goods_list_pushView"
+            android:layout_below="@+id/fragment_goods_list_topWrapperRelativeLayout"
+            android:background="@drawable/fragment_shop_category_list_right_border"
+            tools:listitem="@layout/fragment_shop_category_list_parent_item" />
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_shop_category_goodsListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/fragment_shop_goods_list_pushView"
+            android:layout_below="@+id/fragment_goods_list_topWrapperRelativeLayout"
+            android:layout_toRightOf="@+id/fragment_shop_category_categoryRecyclerView"
+            android:scrollbars="vertical"
+            app:emptyImage="@mipmap/bg_public"
+            app:emptyTitle="@string/emptyGoodsList"
+            app:emptySubtitle="@string/emptyGoodsListSubtitle"
+            tools:listitem="@layout/fragment_shop_goods_list_item_list" />
+
+        <LinearLayout
+            android:id="@+id/fragment_shop_goods_list_pushView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="invisible" />
+
+        <include
+            android:id="@+id/fragment_shop_goods_list_offlineView"
+            layout="@layout/offline_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/layout_go_up_two"/>
+
+        <View
+            android:id="@+id/fragment_goods_list_shadowView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#66000000"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_goods_list_sortRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fragment_goods_list_topWrapperRelativeLayout"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/fragment_goods_list_topWrapperRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bottom_border_one"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/fragment_goods_list_compositeWrapperRelativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/fragment_goods_list_compositeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/composite"
+                    android:textColor="@drawable/tab_text_selector_two"
+                    android:textSize="@dimen/fontTwo" />
+
+                <ImageView
+                    android:id="@+id/fragment_goods_list_composite_sortImageView"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/ic_sorting_arrow_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_goods_list_salesRelativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/fragment_goods_list_salesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelSale"
+                    android:textColor="@drawable/tab_text_selector_two"
+                    android:textSize="@dimen/fontTwo"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_goods_list_releaseRelativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/fragment_goods_list_releaseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/release"
+                    android:textColor="@drawable/tab_text_selector_two"
+                    android:textSize="@dimen/fontTwo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_goods_list_sortWrapperRelativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/fragment_goods_list_sortTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price"
+                    android:textColor="@drawable/tab_text_selector_two"
+                    android:textSize="@dimen/fontTwo" />
+
+                <ImageView
+                    android:id="@+id/fragment_goods_list_sortImageView"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/bg_arrow_default" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_goods_list_filterWrapperRelativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/fragment_goods_list_filterTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filter"
+                    android:textColor="@drawable/tab_text_selector_two"
+                    android:textSize="@dimen/fontTwo" />
+
+                <ImageView
+                    android:id="@+id/fragment_goods_list_filterImageView"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/ic_triangle_down_normal"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textView_page_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/4"
+            android:textSize="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/background_circle_black"
+            android:alpha="0.3"
+            android:visibility="gone"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_bottom_menu_common" />
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_two">
+
+    <TextView
+        android:id="@+id/item_tab_title_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.3dp"
+        android:background="@drawable/shop_street_left_tab_bg_selector_one"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:maxLines="2"
+        android:paddingBottom="13dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="13dp"
+        android:text="@string/pl_category_name"
+        android:textColor="@drawable/tab_text_selector_two"
+        android:textSize="@dimen/fontFour" />
+
+    <ImageView
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/ic_next_dark"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/imageView4" />
+</RelativeLayout>

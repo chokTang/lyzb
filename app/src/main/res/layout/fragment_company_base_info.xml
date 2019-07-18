@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/app_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:layout_weight="1"
+                android:text="企业logo"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/group_margin"
+                android:paddingBottom="@dimen/group_margin">
+
+                <!--加号图标-->
+                <LinearLayout
+                    android:id="@+id/ll_add_pic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/icon_pic_add"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@mipmap/icon_pic_add" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_logo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/app_margin"
+                    tools:background="@mipmap/bg_default_avatar" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white_f5" />
+
+        <!--企业名称-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/single_layout_height"
+            android:background="@color/white"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:text="企业名称"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/adaptive_12dp"
+                android:background="@null"
+                android:gravity="right|center"
+                android:lineSpacingExtra="@dimen/text_line_space"
+                android:lines="1"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14"
+                tools:text="重庆礼仪之邦电子商务有限公司" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white_f5" />
+
+        <!--企业类型-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/single_layout_height"
+            android:background="@color/white"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:text="企业类型"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:id="@+id/tv_comd_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/adaptive_12dp"
+                android:gravity="right|center"
+                android:lineSpacingExtra="@dimen/text_line_space"
+                android:textColor="@color/fontcColor1"
+                android:textColorHint="@color/fontcColor3"
+                android:textSize="@dimen/textSize14"
+                tools:text="选择类型 > " />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white_f5" />
+
+        <!--企业电话-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/single_layout_height"
+            android:background="@color/white"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:text="公司电话"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14" />
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/adaptive_12dp"
+                android:background="@null"
+                android:lineSpacingExtra="@dimen/text_line_space"
+                android:gravity="right|center"
+                android:inputType="phone"
+                android:lines="1"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14"
+                tools:text="4000-123-456" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white_f5" />
+
+        <!--企业地址-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/single_layout_height"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/adaptive_12dp"
+                android:text="公司地址"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14" />
+
+            <EditText
+                android:id="@+id/edit_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/adaptive_12dp"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxLines="2"
+                android:lineSpacingExtra="@dimen/text_line_space"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14"
+                tools:text="重庆市渝北区星光三路60号重庆市渝北区星光三路60号" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

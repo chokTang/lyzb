@@ -1,0 +1,124 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/customer_manage_head_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/customer_manage_head_iv"
+            android:background="@drawable/item_customer_bcard_bg"
+            android:gravity="center"
+            android:text="TA的名片"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSize10"/>
+
+        <ImageView
+            android:id="@+id/customer_manage_isvip_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/customer_manage_head_iv"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/union_vip"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/customer_manage_name_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize16"
+                tools:text="李某人"/>
+
+            <TextView
+                android:id="@+id/customer_manage_addtrack_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_gray_line"
+                android:drawableLeft="@drawable/union_add_gray"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/union_add_gray"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:text="添加跟进"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize12"/>
+
+            <TextView
+                android:id="@+id/customer_manage_delete_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingTop="2dp"
+                android:text="删除客户"
+                android:textColor="@color/fontcColor3"
+                android:textSize="@dimen/textSize12"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/customer_manage_company_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/fontcColor3"
+            android:textSize="@dimen/textSize12"
+            tools:text="重庆礼仪之邦有限公司"/>
+
+        <TextView
+            android:id="@+id/customer_manage_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize12"
+            tools:text="看了我的名片5次，商品1次，动态8次"/>
+    </LinearLayout>
+
+
+</LinearLayout>

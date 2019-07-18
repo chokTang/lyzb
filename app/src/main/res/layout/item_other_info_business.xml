@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_business"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/adaptive_6dp"
+            android:background="@drawable/bg_business"
+            android:padding="2dp"
+            android:text="人工智能"
+            android:textColor="#247cf0"
+            android:textSize="@dimen/textSize14"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

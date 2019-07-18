@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="57dp"
+    android:background="@drawable/fragment_shop_category_list_parent_item"
+    >
+
+    <TextView
+        android:id="@+id/fragment_shop_category_list_item_titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/fragment_shop_category_list_item_numberTextView"
+        android:layout_toStartOf="@+id/fragment_shop_category_list_item_numberTextView"
+        android:gravity="left"
+        android:maxLines="2"
+        android:text="@string/placeholderText"
+        android:textColor="@drawable/tab_text_selector"
+        android:textSize="@dimen/fontThree"/>
+
+    <ImageView
+        android:id="@+id/fragment_shop_category_list_item_numberTextView"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="3dp"
+        android:src="@mipmap/btn_right_arrow"
+        android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <com.like.longshaolib.widget.ClearEditText
+        android:id="@+id/cet_search"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:background="@drawable/shape_round_gray_line"
+        android:drawableLeft="@drawable/search_home"
+        android:drawablePadding="@dimen/text_icon_space"
+        android:hint="请输入姓名、企业名称"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/app_inside_margin"
+        android:paddingRight="@dimen/app_inside_margin"
+        android:singleLine="true"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/sf_union_me_fans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/app_margin">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recy_union_me_fans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/inc_fans_empty"
+                layout="@layout/empty_layout"
+                android:visibility="gone" />
+
+        </FrameLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

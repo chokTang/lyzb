@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@mipmap/ingot" />
+
+    <TextView
+        android:id="@+id/item_ingot_usable_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="2888"
+        android:textColor="@color/ingot_usable_number"
+        android:textSize="44sp"/>
+
+    <TextView
+        android:id="@+id/item_ingot_usable_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/item_ingot_usable_number"
+        android:textColor="@color/ingot_usable_number"
+        android:text="可用元宝"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/item_ingot_usable_buy"
+        android:layout_width="190dp"
+        android:layout_height="42dp"
+        android:layout_centerInParent="true"
+        android:text="去换购"
+        android:textColor="@color/aliwx_white"
+        android:textSize="18sp"
+        android:background="@drawable/fragment_ingot_usable_buy" />
+
+
+    <TextView
+        android:id="@+id/item_ingot_usable_instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:text="元宝使用说明>>"
+        android:textSize="14sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/ingot_usable_bg" />
+
+</RelativeLayout>

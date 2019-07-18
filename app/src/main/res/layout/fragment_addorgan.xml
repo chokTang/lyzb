@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_statistics" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/addorgan_content_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="机构类型"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <RadioGroup
+                        android:id="@+id/addorgan_organtype_rg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/addorgan_department_rbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableLeft="@drawable/ic_customer_sex"
+                            android:drawablePadding="10dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:text="部门"
+                            android:textColor="@color/fontcColor1"
+                            android:textSize="@dimen/textSize14" />
+
+                        <RadioButton
+                            android:id="@+id/addorgan_company_rbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/ic_customer_sex"
+                            android:drawablePadding="10dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:text="企业"
+                            android:textColor="@color/fontcColor1"
+                            android:textSize="@dimen/textSize14" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/addorgan_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14"
+                        android:visibility="gone"
+                        tools:text="部门" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:background="@color/windows_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:text="机构名称"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <EditText
+                        android:id="@+id/addorgan_name_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入机构名称"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:paddingTop="15dp"
+                        android:paddingRight="@dimen/app_margin"
+                        android:paddingBottom="15dp"
+                        android:textColor="@color/fontcColor1"
+                        android:textColorHint="@color/fontcColor3"
+                        android:textSize="@dimen/textSize14" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/addorgan_name_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:background="@color/windows_bg"
+                    android:visibility="visible" />
+
+
+                <LinearLayout
+                    android:id="@+id/addorgan_admin_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:text="机构负责人"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <TextView
+                        android:id="@+id/addorgan_admin_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请选择"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:paddingTop="15dp"
+                        android:paddingRight="@dimen/app_margin"
+                        android:paddingBottom="15dp"
+                        android:textColor="@color/fontcColor1"
+                        android:textColorHint="@color/fontcColor3"
+                        android:textSize="@dimen/textSize14" />
+
+                    <ImageView
+                        android:id="@+id/addorgan_admin_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/app_margin"
+                        android:src="@drawable/pub_right" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/addorgan_admin_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:background="@color/windows_bg"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/addorgan_companyinfo_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/windows_bg" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:paddingTop="15dp"
+                        android:paddingRight="@dimen/app_margin"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="企业logo"
+                            android:textColor="@color/fontcColor1"
+                            android:textSize="@dimen/textSize14" />
+
+                        <ImageView
+                            android:id="@+id/addorgan_company_logo_iv"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/icon_pic_add" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/app_margin"
+                        android:background="@color/windows_bg" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/app_margin"
+                            android:text="企业类型"
+                            android:textColor="@color/fontcColor1"
+                            android:textSize="@dimen/textSize14" />
+
+                        <TextView
+                            android:id="@+id/addorgan_companytype_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:hint="请选择"
+                            android:paddingLeft="@dimen/app_margin"
+                            android:paddingTop="15dp"
+                            android:paddingRight="@dimen/app_margin"
+                            android:paddingBottom="15dp"
+                            android:textColor="@color/fontcColor1"
+                            android:textColorHint="@color/fontcColor3"
+                            android:textSize="@dimen/textSize14" />
+
+                        <ImageView
+                            android:id="@+id/addorgan_companytype_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingRight="@dimen/app_margin"
+                            android:src="@drawable/pub_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/addorgan_company_edit_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/app_margin"
+                            android:background="@color/windows_bg" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/app_margin"
+                                android:text="企业电话"
+                                android:textColor="@color/fontcColor1"
+                                android:textSize="@dimen/textSize14" />
+
+                            <EditText
+                                android:id="@+id/addorgan_phone_edit"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="right"
+                                android:hint="请输入企业电话"
+                                android:inputType="phone"
+                                android:paddingLeft="@dimen/app_margin"
+                                android:paddingTop="15dp"
+                                android:paddingRight="@dimen/app_margin"
+                                android:paddingBottom="15dp"
+                                android:textColor="@color/fontcColor1"
+                                android:textColorHint="@color/fontcColor3"
+                                android:textSize="@dimen/textSize14" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/app_margin"
+                            android:background="@color/windows_bg" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/app_margin"
+                                android:text="企业地址"
+                                android:textColor="@color/fontcColor1"
+                                android:textSize="@dimen/textSize14" />
+
+                            <TextView
+                                android:id="@+id/addorgan_address_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="right"
+                                android:hint="请选择"
+                                android:paddingLeft="@dimen/app_margin"
+                                android:paddingTop="15dp"
+                                android:paddingRight="@dimen/app_margin"
+                                android:paddingBottom="15dp"
+                                android:textColor="@color/fontcColor1"
+                                android:textColorHint="@color/fontcColor3"
+                                android:textSize="@dimen/textSize14" />
+
+                            <ImageView
+                                android:id="@+id/addorgan_address_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingRight="@dimen/app_margin"
+                                android:src="@drawable/pub_right" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/windows_bg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/addorgan_superiororgan_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:text="上级机构"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <TextView
+                        android:id="@+id/addorgan_superiororgan_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:hint="请选择"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:paddingTop="15dp"
+                        android:paddingRight="@dimen/app_margin"
+                        android:paddingBottom="15dp"
+                        android:textColor="@color/fontcColor1"
+                        android:textColorHint="@color/fontcColor3"
+                        android:textSize="@dimen/textSize14" />
+
+                    <ImageView
+                        android:id="@+id/addorgan_superiororgan_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/app_margin"
+                        android:src="@drawable/pub_right" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addorgan_hint_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_margin"
+                android:text="温馨提示：\n1、机构类型选择部门时，机构为企业内部机构，不对外展示\n2、机构类型选择企业时，机构会对外展示，外部人员可以通过搜索加入"
+                android:textColor="@color/fontcColor3"
+                android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:id="@+id/addorgan_delete_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="删除机构"
+                android:textColor="#FF1A00"
+                android:textSize="@dimen/textSize14"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/addorgan_confirm_tv"
+        style="@style/common_bottom_btn_style"
+        android:layout_marginTop="10dp"
+        android:text="确定" />
+</LinearLayout>

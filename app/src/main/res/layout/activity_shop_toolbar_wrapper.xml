@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_shop_toolbarWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <ImageButton
+        android:id="@+id/activity_shop_backImageButton"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:src="@mipmap/btn_back_dark"
+        android:tint="@android:color/white" />
+
+    <com.szy.common.View.CommonEditText
+        android:id="@+id/activity_shop_commonEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/fragment_shop_qrcode"
+        android:layout_toRightOf="@+id/activity_shop_backImageButton"
+        android:layout_weight="1"
+        android:background="@drawable/fragment_category_title_search_background_translucent"
+        android:hint="@string/hintSearchGoodsInThisShop"
+        android:imeOptions="actionSearch"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingLeft="32dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="#bdbdbd"
+        android:textSize="@dimen/fontThree" />
+
+    <ImageView
+        android:id="@+id/imageViewSearch"
+        android:layout_width="17dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/activity_shop_backImageButton"
+        android:src="@mipmap/ic_search"
+        android:tint="@android:color/white" />
+
+    <ImageButton
+        android:id="@+id/activity_shop_shareImageButton"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/activity_shop_moreImageButton"
+        android:layout_toStartOf="@+id/activity_shop_moreImageButton"
+        android:padding="6dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/btn_share_groupon"
+        android:tint="@android:color/white"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_shop_qrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/activity_shop_moreImageButton"
+        android:layout_toStartOf="@+id/activity_shop_moreImageButton"
+        android:visibility="gone"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/activity_shop_qrcode"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/btn_scan_dark"
+            android:tint="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/activity_shop_qrcode"
+            android:text="@string/scan"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontEight" />
+    </RelativeLayout>
+
+
+    <ImageButton
+        android:id="@+id/activity_shop_moreImageButton"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/btn_more_dark"
+        android:tint="@android:color/white" />
+
+</RelativeLayout>

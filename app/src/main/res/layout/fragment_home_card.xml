@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_card_info"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:background="@color/white_f5"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_card_template"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@mipmap/bg_card_default"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_card_template"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-120dp"
+                android:layout_marginRight="15dp">
+
+                <ImageView
+                    android:id="@+id/img_top_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/fl_avatar"
+                    android:background="@mipmap/bg_top_card" />
+
+                <FrameLayout
+                    android:id="@+id/fl_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp">
+
+                    <ImageView
+                        android:id="@+id/img_card_head"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="bottom"
+                        tools:src="@mipmap/ic_launcher" />
+
+                    <ImageView
+                        android:id="@+id/img_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:src="@drawable/union_vip" />
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_top_bar"
+                    android:background="@color/white"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_card_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:maxEms="5"
+                            android:textColor="@color/fontcColor1"
+                            android:textSize="18sp"
+                            tools:text="李中强" />
+
+                        <View
+                            android:id="@+id/view_line1"
+                            android:layout_width="1dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/tv_card_name"
+                            android:background="@color/fontcColor2" />
+
+                        <TextView
+                            android:id="@+id/tv_card_position"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/view_line1"
+                            android:textColor="@color/fontcColor3"
+                            android:textSize="@dimen/textSize14"
+                            tools:text="市场总监" />
+                    </RelativeLayout>
+
+                    <!--公司logo-->
+                    <ImageView
+                        android:id="@+id/img_company_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="@dimen/app_margin"
+                        android:maxWidth="80dp"
+                        android:maxHeight="30dp"
+                        android:scaleType="centerCrop"
+                        tools:src="@mipmap/icon_default_logo" />
+
+                    <!--电话-->
+                    <TextView
+                        android:id="@+id/tv_card_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_name"
+                        android:textColor="@color/fontcColor2"
+                        android:textSize="@dimen/textSize14"
+                        tools:text="17783842859" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/layout_screen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/app_margin"
+            android:paddingRight="@dimen/app_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名片推荐"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_industry"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/union_bottom"
+                android:drawablePadding="@dimen/text_icon_space"
+                android:gravity="center_vertical|right"
+                android:hint="行业筛选"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:drawableRight="@drawable/union_bottom"
+                android:drawablePadding="@dimen/text_icon_space"
+                android:gravity="center_vertical|right"
+                android:hint="联系方式"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14" />
+        </LinearLayout>
+    </FrameLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

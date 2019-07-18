@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="@drawable/fragment_index_item_background"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    >
+
+    <ImageView
+        android:layout_width="24.6dp"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_shop_street"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_index_shop_street_recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+</LinearLayout>

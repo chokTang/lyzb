@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7f000000">
+
+    <com.szy.yishopcustomer.View.HackyViewPager
+        android:id="@+id/fragment_goods_original_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+   <!-- <com.viewpagerindicator.CirclePageIndicator
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_view_original_image_pageIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        app:fillColor="#fc4955"
+        app:pageColor="#88f4f7fc"
+        app:radius="5dp"
+        app:strokeColor="#88d5dae2"
+        app:strokeWidth="0.5dp"
+        android:layout_alignBottom="@id/fragment_goods_original_thumb"
+        />-->
+
+    <TextView
+        android:id="@+id/textView_position_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontOne"
+        android:layout_marginBottom="20dp"
+        android:text=""
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

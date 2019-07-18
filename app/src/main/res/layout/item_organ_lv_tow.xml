@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="40dp">
+
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_dedede" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:background="@color/color_dedede" />
+
+        <ImageView
+            android:id="@+id/organ_tow_line"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_dedede" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="1dp"
+        android:background="@color/color_dedede" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_dedede"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/ov_dedede_w1"/>
+
+        <ImageView
+            android:id="@+id/organ_tow_line3"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_dedede" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/organ_lvtow_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:maxLines="1"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14"
+        tools:text="这是机构名称" />
+</LinearLayout>

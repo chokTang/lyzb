@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.3dp"
+        android:background="#7fcbcbcb"
+        android:layout_toLeftOf="@+id/item_shop_article_shop_article_title"
+        android:layout_alignTop="@+id/item_shop_article_shop_article_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/item_shop_article_shop_article_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="商家公告"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontSeven"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:background="#7fcbcbcb"
+        android:layout_toRightOf="@+id/item_shop_article_shop_article_title"
+        android:layout_alignTop="@+id/item_shop_article_shop_article_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/item_shop_article_shop_article_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_shop_article_shop_article_title"
+        android:text="1.iphone7 火热抢购中\n2.iphone8 预售中"
+        android:textSize="@dimen/fontThree"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="30dp"/>
+
+</RelativeLayout>

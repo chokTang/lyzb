@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="4dp"
+    android:paddingTop="5dp"
+    >
+
+    <ImageView
+        android:id="@+id/activity_root_tab_cart_imageView"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activity_root_tab_cart_image_selector"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_root_tab_cart_imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="@string/tabCart"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@drawable/color_root_tv"
+        android:textSize="@dimen/fontEight"
+        />
+
+    <TextView
+        android:id="@+id/activity_root_tab_cart_badgeTextView"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignEnd="@+id/activity_root_tab_cart_imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/activity_root_tab_cart_imageView"
+        android:layout_marginRight="-2dp"
+        android:background="@drawable/activity_root_tab_cart_badge"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#f23030"
+        android:textSize="10dp" />
+</RelativeLayout>

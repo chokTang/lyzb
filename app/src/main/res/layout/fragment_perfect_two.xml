@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    android:orientation="vertical">
+
+    <!--title-->
+    <include layout="@layout/layout_xx_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/app_margin"
+        android:paddingRight="@dimen/app_margin">
+
+        <!--描述 完善信息-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/single_layout_height"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="选择感兴趣的行业"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/group_margin"
+                android:text="为您精准推荐资讯动态、机会、人脉"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/single_layout_height"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="期待结识"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize14" />
+
+            <LinearLayout
+                android:id="@+id/ll_business"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_business"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:layout_marginLeft="@dimen/group_margin"/>
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/icon_wsxx_xybj" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_join_union"
+        style="@style/common_bottom_btn_style"
+        android:layout_marginBottom="40dp"
+        android:text="进入共商联盟" />
+</LinearLayout>

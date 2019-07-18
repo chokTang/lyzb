@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/activity_common_toolbar"
+        layout="@layout/toolbar_common"
+        />
+
+    <FrameLayout
+        android:id="@+id/activity_distrib_fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@color/colorEight"
+        android:layout_above="@+id/activity_distrib_tabWrapperLinearLayout"/>
+
+    <LinearLayout
+        android:id="@+id/activity_distrib_tabWrapperLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:clipChildren="false"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:background="@android:color/white">
+
+        <include
+            android:id="@+id/activity_root_tabHome"
+            layout="@layout/activity_root_tab_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <include
+            android:id="@+id/activity_root_tabCategory"
+            layout="@layout/activity_root_tab_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <include
+            android:id="@+id/activity_root_tabDistrib"
+            layout="@layout/activity_root_tab_distrib"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <include
+            android:id="@+id/activity_root_tabCart"
+            layout="@layout/activity_root_tab_cart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <include
+            android:id="@+id/activity_root_tabUser"
+            layout="@layout/activity_root_tab_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+</LinearLayout>

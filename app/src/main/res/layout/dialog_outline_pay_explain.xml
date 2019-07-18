@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_exchange_rule_bg"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#fffa00" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:text="使用说明"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontOne"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#fffa00" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="        自2017年10元15日起，系统开启消费者消耗积分功能，消费者即可在商城线下积分兑换区域使用线上积分兑换商品，实现线上线下互用效果。"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontFour" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="一、线下商城积分兑换区域开展积分兑换活动"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontFour" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text="        打开&quot;用户中心&quot;- >&quot;我的积分&quot;->&quot;消耗积分&quot;后，输入线下积分兑换商品所需的金额以及积分值，立即支付即可完成线下积分兑换。"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontThree" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="二、积分消耗明细统计"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontFour" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="        会员积分变动明细中明确记录积分消耗记录。"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontThree" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:tint="@android:color/white"
+        android:src="@mipmap/btn_close_circled" />
+</LinearLayout>

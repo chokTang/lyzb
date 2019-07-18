@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/single_layout_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:drawableRight="@mipmap/icon_arrow_down"
+                android:drawablePadding="4dp"
+                android:text="重庆"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize16"
+                tools:text="重庆" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edt_search_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/group_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:background="@drawable/bg_search_address"
+            android:hint="请输入地址"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/group_margin"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14" />
+
+    </LinearLayout>
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/mMapView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="@dimen/group_margin"
+        android:focusable="true" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

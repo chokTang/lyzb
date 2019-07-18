@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:alpha="0.5"
+        android:background="@color/app_shadow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@drawable/bg_radio_10top_left_right"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/single_layout_height">
+
+            <com.like.longshaolib.widget.AutoWidthTabLayout
+                android:id="@+id/tablayout_scan"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                app:tabIndicatorColor="@color/fontcColor3"
+                app:tabIndicatorHeight="1dp"
+                app:tabSelectTextColor="@color/fontcColor1"
+                app:tabSelectTextSize="14"
+                app:tabTextColor="@color/fontcColor3"
+                app:tabTextSize="14"
+                app:tab_Mode="mode_fixed" />
+
+            <ImageView
+                android:id="@+id/btnCancel"
+                android:layout_width="@dimen/single_layout_height"
+                android:layout_height="@dimen/single_layout_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/ic_video_colse" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_layout" />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_scan_like"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_scan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_like"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/empty_view"
+                    layout="@layout/empty_layout"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</LinearLayout>

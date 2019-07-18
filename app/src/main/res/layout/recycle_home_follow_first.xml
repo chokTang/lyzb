@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:paddingTop="@dimen/app_margin"
+    android:paddingBottom="@dimen/app_margin"
+    android:id="@+id/focus_num"
+    android:orientation="horizontal">
+
+    <include layout="@layout/view_three_header" />
+
+    <TextView
+        android:id="@+id/tv_follow_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/fontcColor2"
+        android:textSize="@dimen/textSize14"
+        tools:text="等5人关注了您" />
+</LinearLayout>

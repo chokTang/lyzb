@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="10dp"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/img_video"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:background="@mipmap/bg_zfx_default"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@+id/img_video"
+        android:layout_alignBottom="@+id/img_video"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@mipmap/icon_video_play"/>
+
+    <TextView
+        android:id="@+id/tv_video_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_video"
+        android:layout_marginTop="10dp"
+        android:lines="1"
+        android:maxEms="12"
+        android:ellipsize="end"
+        android:text="第198次落地会召开"
+        android:textColor="@color/ingot_detail_text"
+        android:textSize="14dp"/>
+
+    <TextView
+        android:id="@+id/tv_video_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_video_name"
+        android:layout_marginTop="2dp"
+        android:lines="1"
+        android:maxEms="12"
+        android:ellipsize="end"
+        android:text="主播昵称"
+        android:textColor="@color/ingot_usable_instructions"
+        android:textSize="12dp"/>
+</RelativeLayout>

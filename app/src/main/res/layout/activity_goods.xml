@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:app1="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorTen"
+              android:orientation="vertical"
+              tools:context="com.szy.yishopcustomer.Activity.GoodsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_goods_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bottom_border_one"
+        android:theme="@style/ToolbarTheme"
+        app1:popupTheme="@style/PopupMenu">
+
+        <com.gxz.PagerSlidingTabStrip
+            android:id="@+id/activity_goods_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textColor="@color/colorOne"
+            android:textSize="15sp"
+            app:pstsDividerColor="@android:color/transparent"
+            app:pstsDividerPaddingTopBottom="0dp"
+            app:pstsIndicatorColor="@color/colorPrimary"
+            app:pstsIndicatorHeight="2dp"
+            app:pstsScaleZoomMax="0.0"
+            app:pstsShouldExpand="false"
+            app:pstsSmoothScrollWhenClickTab="false"
+            app:pstsTabPaddingLeftRight="12dp"
+            app:pstsTextAllCaps="false"
+            app:pstsTextSelectedColor="@color/colorPrimary"
+            app:pstsUnderlineHeight="0dp"
+            />
+
+        <TextView
+            android:id="@+id/activity_goods_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/goodsDesc"
+            android:textColor="@color/colorOne"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+    </android.support.v7.widget.Toolbar>
+
+    <com.szy.yishopcustomer.View.NoScrollViewPager
+        android:id="@+id/activity_goods_noScrollViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <include
+        android:id="@+id/view_goods_do_buy"
+        layout="@layout/fragment_goods_bottom"/>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_one"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/fragment_shop_info_item_text_nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/placeholderText"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree"
+        />
+
+    <TextView
+        android:id="@+id/fragment_shop_info_item_text_valueTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/fragment_shop_info_item_text_iconImageView"
+        android:layout_toRightOf="@+id/fragment_shop_info_item_text_nameTextView"
+        android:text="@string/placeholderText"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontThree"
+        />
+
+    <ImageView
+        android:id="@+id/fragment_shop_info_item_text_iconImageView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/tab_shop_contact_selected"
+        />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--实现应用背景颜色渐变-->
+    <gradient
+        android:startColor="@color/translate80"
+        android:endColor="@color/translate20"
+        android:angle="90"/>
+    <corners android:topLeftRadius="5dp" android:topRightRadius="5dp"/>
+</shape>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/cancel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text=""/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/login_by_phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bottom_border_two"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/btn_other_login"
+                />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="手机登录"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontTwo"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_by_qq_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bottom_border_two"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/btn_qq_friends"
+                />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="QQ登录"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontTwo"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_by_weibo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bottom_border_two"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/btn_sina"
+                />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="微博登录"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontTwo"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/blank"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/colorTen"/>
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/top_border_two"
+            android:text="@string/buttonCancel"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontThree"/>
+
+    </LinearLayout>
+
+</LinearLayout>

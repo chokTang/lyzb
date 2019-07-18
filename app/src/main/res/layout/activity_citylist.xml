@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar_same_city_list"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/toolbar_bottom_border"
+        android:theme="@style/ToolbarTheme"
+        app:navigationIcon="@mipmap/btn_back_dark">
+
+        <TextView
+            android:id="@+id/toolbar_city_list_text"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="城市选择"
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/aliwx_white"
+        android:orientation="horizontal">
+
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/edt_city_list_seach"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@+id/activity_search_srearch_button"
+            android:layout_toStartOf="@+id/activity_search_srearch_button"
+            android:background="@drawable/fragment_category_title_search_background"
+            android:drawableLeft="@mipmap/edt_seach"
+            android:gravity="center_vertical"
+            android:hint="城市/行政区"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColor="@color/colorOne"
+            android:textColorHint="@color/colorFive"
+            android:textSize="@dimen/fontThree" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/aliwx_color_gray_01" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/aliwx_white">
+
+
+        <TextView
+            android:id="@+id/tv_city_list_curr_location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_city_list_curr_location"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="刷新"
+            android:textColor="@color/colorBlue"/>
+        <TextView
+            android:id="@+id/tv_city_list_choose_county"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="选择区县"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/county_list_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/aliwx_white"
+        android:visibility="gone" />
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/sreach_result_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/data_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/item_recy_city_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/item_city_dialog"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerInParent="true"
+            android:background="#BEBEBE"
+            android:gravity="center"
+            android:textColor="@color/aliwx_white"
+            android:textSize="30dp"
+            android:visibility="invisible" />
+
+        <FrameLayout
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <com.szy.yishopcustomer.View.SideBar
+                android:id="@+id/item_sidebar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_no_date"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/empty_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/bg_offline"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="抱歉，未找到相关位置，可尝试修改后重试" />
+    </RelativeLayout>
+</LinearLayout>

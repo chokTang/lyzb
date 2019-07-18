@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+    <com.szy.yishopcustomer.View.CircleImageView
+        android:id="@+id/groupon_head_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="0.5dp"/>
+
+    <TextView
+        android:id="@+id/groupon_head_tipImage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/groupon_head_image"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/groupon_head_image"
+        android:background="@drawable/circler_shap"
+        android:gravity="center"
+        android:text="团"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontSix"/>
+
+</RelativeLayout>

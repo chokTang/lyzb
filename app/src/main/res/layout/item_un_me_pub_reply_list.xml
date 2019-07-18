@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/app_margin">
+
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/tv_un_me_pub_reply_list_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/text_line_space"
+        tools:text="{iconclose} {fa-code}"
+        android:textColor="@color/fontcColor3"
+        android:textSize="@dimen/textSize14" />
+
+    <TextView
+        android:id="@+id/tv_un_me_pub_reply_list_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/app_margin"
+        android:textColor="@color/fontcColor3"
+        android:textSize="@dimen/textSize12"
+        tools:text="2018.2.24" />
+
+    <View
+        android:id="@+id/item_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/app_margin"
+        android:background="@drawable/shape_dash_line" />
+</LinearLayout>

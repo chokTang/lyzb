@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        >
+        <include
+            android:id="@+id/activity_common_toolbar"
+            layout="@layout/toolbar_common"/>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/activity_common_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <include
+        android:id="@+id/activity_goods_list_cartWrapper"
+        layout="@layout/layout_float_cart"/>
+
+</android.support.design.widget.CoordinatorLayout>

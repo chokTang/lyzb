@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_guide_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/fragment_guide_enter_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/fragment_guid_enter_button_circle"
+        android:paddingBottom="8dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="8dp"
+        android:text="@string/enterRoot"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontThree"/>
+
+    <Button
+        android:id="@+id/fragment_guide_enterButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/fragment_guide_enter_button"
+        android:gravity="center"
+        android:text="@string/enterApp"
+        android:textColor="#ffffff"
+        android:visibility="invisible"/>
+
+    <ImageButton
+        android:id="@+id/fragment_guide_enterImageButton"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:adjustViewBounds="true"
+        android:background="#00ffffff"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"/>
+</RelativeLayout>

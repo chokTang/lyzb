@@ -1,0 +1,186 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp">
+
+                <ImageView
+                    android:id="@+id/imageViewBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/shape_background"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageViewHeadImg"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@mipmap/pl_user_avatar"
+                        app:civ_border_color="#3fffffff"
+                        app:civ_border_width="2dp"
+                        app:civ_fill_color="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewNickName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="1"
+                        android:text="昵称"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/fontTwo" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/ic_account_balance"
+                    android:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/textViewUserBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="余额（）"
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontFour" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayoutPaymentAmount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支付金额："
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo" />
+
+                <com.szy.common.View.CommonEditText
+                    android:id="@+id/editTextPaymentAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:hint="输入应付金额"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/colorOne"
+                    android:textColorHint="@color/colorThree"
+                    android:textSize="@dimen/fontTwo" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewPaymentAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="支付金额：￥0"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontThree"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/fragment_login_action_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_below="@+id/fragment_login_function_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="@dimen/buttonMarginTop"
+                android:background="@drawable/normal_button_selector"
+                android:text="立即支付"
+                android:textColor="@drawable/button_text_selector"
+                android:textSize="@dimen/fontSeven" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/background_circle"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="温馨提示"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo" />
+
+                <View
+                    android:id="@+id/dotted_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/bg_dotted_line"
+                    android:layerType="software" />
+
+                <TextView
+                    android:id="@+id/textViewCueWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="付款完成后，如有问题，请线下联系。"
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontFour" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

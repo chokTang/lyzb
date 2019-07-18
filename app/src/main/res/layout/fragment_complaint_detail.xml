@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/fragment_complaint_detail_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_button"/>
+
+    <include
+        android:id="@+id/bottom_button"
+        layout="@layout/layout_bottom_button"
+        android:visibility="gone"/>
+</RelativeLayout>

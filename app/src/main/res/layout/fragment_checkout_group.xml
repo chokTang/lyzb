@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/top_border_one"
+    android:id="@+id/fragment_checkout_group_layout"
+    android:gravity="center_vertical"
+    >
+
+    <TextView
+        android:id="@+id/fragment_checkout_group_titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/placeholderTitle"
+        android:textSize="@dimen/fontTwo"
+        android:textColor="@color/colorOne"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/fragment_checkout_group_selectedItemTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/pleaseSelect"
+        android:textSize="@dimen/fontThree"
+        android:textColor="@color/colorOne"
+        android:maxEms="14"
+        android:maxLines="1"
+        android:gravity="right"/>
+    <ImageView
+        android:id="@+id/fragment_checkout_group_indicatorImageView"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/btn_right_arrow"/>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_edittext_border"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+    >
+
+    <TextView
+        android:id="@+id/required_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="*"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignBottom="@+id/back_apply_content_label"
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/fontTwo"
+        android:visibility="gone"
+        android:paddingTop="5dp"/>
+
+    <TextView
+        android:id="@+id/back_apply_content_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/required_label"
+        android:gravity="center"
+        android:text="退款说明"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontTwo"/>
+
+    <com.szy.common.View.CommonEditText
+        android:id="@+id/back_apply_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/back_apply_content_label"
+        android:background="@null"
+        android:gravity="left"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:paddingLeft="10dp"
+        android:hint="@string/hintAdvice"
+        android:textColorHint="@color/colorFive"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontTwo"
+        android:imeOptions="actionDone"
+        />
+
+</RelativeLayout>

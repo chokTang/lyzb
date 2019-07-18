@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/union_me_pub_dy_menu"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/lin_un_me_pub_dyc_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/adaptive_4dp"
+        android:paddingBottom="@dimen/adaptive_4dp"
+        android:paddingLeft="@dimen/adaptive_12dp"
+        android:paddingRight="@dimen/adaptive_12dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/union_me_pub_dy_delete"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_12sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_un_me_pub_dyc_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/adaptive_4dp"
+        android:paddingBottom="@dimen/adaptive_4dp"
+        android:paddingLeft="@dimen/adaptive_12dp"
+        android:paddingRight="@dimen/adaptive_12dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/union_me_pub_dy_cancle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_12sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

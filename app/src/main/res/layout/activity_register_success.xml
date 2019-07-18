@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/aliwx_white"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                       android:id="@+id/toolbar_register_success"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="52dp"
+                                       android:background="@drawable/toolbar_bottom_border"
+                                       android:theme="@style/ToolbarTheme"
+                                       app:navigationIcon="@mipmap/register_success_toolbar">
+
+        <TextView
+            android:id="@+id/toolbar_register_success_textview"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="提示"
+            android:textColor="#222222"
+            android:textSize="18sp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/register_success_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<me.zongren.pullablelayout.Main.PullableLayout-->
+        <!--xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/pull_regs"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#F2F5F7"-->
+        <!--PullableLayout:pullablelayout_side="BOTTOM">-->
+        <!---->
+    <!--</me.zongren.pullablelayout.Main.PullableLayout>-->
+
+</LinearLayout>

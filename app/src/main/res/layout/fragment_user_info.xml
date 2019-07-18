@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_user_info_title_relativalayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bottom_border_two"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="@string/title"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_user_info_avatar_imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/title_shap"
+            android:src="@mipmap/pl_user_avatar"/>
+
+        <ImageView
+            android:id="@+id/item_user_info_right_angle_imageView"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/btn_right_arrow"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/item_user_info_username_relativalayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bottom_border_two"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/item_user_info_username_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontFour"/>
+
+        <ImageView
+            android:id="@+id/item_user_info_right_angle_imageView1"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/pullablelayout_ic_arrow_right"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/item_user_info_nickname_relativalayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bottom_border_two"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nickname"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/item_user_info_nickname_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour"/>
+
+        <ImageView
+            android:id="@+id/item_user_info_right_angle_imageView2"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/btn_right_arrow"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/item_user_info_sex_relativalayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bottom_border_two"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sex"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/item_user_info_sex_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour"/>
+
+        <ImageView
+            android:id="@+id/item_user_info_right_angle_imageView3"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/btn_right_arrow"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/item_user_info_birthday_relativalayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bottom_border_one"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/birthday"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/item_user_info_birthday_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour"/>
+
+        <ImageView
+            android:id="@+id/item_user_info_right_angle_imageView4"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/btn_right_arrow"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_user_info_certification_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/top_bottom_border_one"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/certification"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/btn_right_arrow"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_user_info_edit_password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/top_bottom_border_one"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/editPassword"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <ImageView
+            android:id="@+id/item_user_info_right_angle_imageView5"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/btn_right_arrow"
+            />
+    </LinearLayout>
+
+</LinearLayout>

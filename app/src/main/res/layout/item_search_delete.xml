@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="50dp"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/linearlayout_delete_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/gray_border_button_one"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@mipmap/ic_delete_dark_goods"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/colorTwo"
+            android:textSize="17dp"
+            android:text="清空历史搜索"/>
+
+    </LinearLayout>
+</LinearLayout>

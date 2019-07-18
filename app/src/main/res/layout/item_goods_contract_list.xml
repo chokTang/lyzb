@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="20dp"
+    android:gravity="center_vertical"
+    android:paddingRight="5dp">
+
+    <ImageView
+        android:id="@+id/contract_image"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@mipmap/ic_details_protection" />
+
+    <TextView
+        android:id="@+id/contract_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="7天无理由"
+        android:textColor="@color/colorGoodsDesc"
+        android:textSize="@dimen/fontFive" />
+
+</LinearLayout>

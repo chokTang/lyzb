@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/colorShopBase"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:id="@+id/fragment_cart_invalid_goods_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontThree"
+        android:text="@string/formatInvalidGoodsNum"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/fragment_cart_invalid_collect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontThree"
+        android:text="移入收藏夹"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:id="@+id/fragment_cart_invalid_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontThree"
+        android:text="清空失效宝贝"/>
+
+</LinearLayout>

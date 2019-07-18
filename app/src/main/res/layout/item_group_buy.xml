@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:id="@+id/group_buy_goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="团购名称"
+        android:textColor="@color/colorOne"
+        android:textSize="@dimen/fontTwo" />
+
+    <ImageView
+        android:id="@+id/group_buy_goods_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_buy_goods_name"
+        android:layout_marginBottom="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/pl_image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/group_buy_goods_img"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#7f000000"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/ic_watch" />
+
+        <TextView
+            android:id="@+id/group_buy_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/leftTime"
+            android:textColor="#fff"
+            android:textSize="@dimen/fontFour" />
+
+        <cn.iwgang.countdownview.CountdownView
+            android:id="@+id/cv_countdownViewGroupBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:isHideTimeBackground="true"
+            app:isShowDay="true"
+            app:isShowHour="true"
+            app:isShowMillisecond="false"
+            app:isShowMinute="true"
+            app:isShowSecond="true"
+            app:suffix=":"
+            app:suffixDay="天"
+            app:suffixGravity="center"
+            app:suffixHour="时"
+            app:suffixMinute="分"
+            app:suffixSecond="秒"
+            app:suffixTextColor="#ffffff"
+            app:suffixTextSize="13dp"
+            app:timeTextColor="#FFFFFF"
+            app:timeTextSize="13dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_buy_goods_img"
+        android:gravity="center_vertical"
+        android:layout_alignLeft="@+id/group_buy_goods_img"
+        android:layout_alignStart="@+id/group_buy_goods_img"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/group_buy_goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥100"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontOne" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/group_buy_goods_price"
+                android:layout_toEndOf="@+id/group_buy_goods_price"
+                android:layout_toRightOf="@+id/group_buy_goods_price"
+                android:text="@string/minimum"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontFour" />
+
+            <TextView
+                android:id="@+id/group_buy_goods_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/group_buy_goods_price"
+                android:layout_alignStart="@+id/group_buy_goods_price"
+                android:layout_below="@+id/group_buy_goods_price"
+                android:text="666人已抢"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontFive" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/group_buy_now"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/group_buy_goods_count"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/enable_button"
+            android:gravity="center"
+            android:text="@string/grabAtOnce"
+            android:textColor="#fff"
+            android:textSize="@dimen/fontTwo" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

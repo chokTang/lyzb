@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/fragment_invoice_info_type_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_background_selector"
+        android:gravity="center"
+        android:text="@string/placeholderTitle"
+        android:textColor="@drawable/tab_text_selector"
+        android:textSize="@dimen/fontThree"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+</RelativeLayout>

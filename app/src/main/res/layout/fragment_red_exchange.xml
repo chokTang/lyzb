@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <me.zongren.pullablelayout.Main.PullableLayout xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fragment_red_exchange_listView_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fragment_cart_bottom_layout"
+            android:layout_below="@+id/login_layout"
+            android:background="@color/colorTen"
+            PullableLayout:pullablelayout_side="TOP">
+
+            <com.szy.common.View.CommonRecyclerView
+                android:id="@+id/fragment_red_exchange_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorTen"
+                android:divider="@null" />
+
+        </me.zongren.pullablelayout.Main.PullableLayout>
+
+        <include layout="@layout/layout_default_empty" />
+    </FrameLayout>
+</LinearLayout>

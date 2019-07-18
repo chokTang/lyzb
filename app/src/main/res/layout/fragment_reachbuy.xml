@@ -1,0 +1,204 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_contentView"
+    tools:context="com.szy.yishopcustomer.Fragment.ReachbuyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_shop_cartWrapperOne"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/fragment_goods_list_topWrapperRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bottom_border_one"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/fragment_goods_list_compositeWrapperRelativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/fragment_goods_list_sort_background"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/fragment_goods_list_compositeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/composite"
+                    android:textColor="@drawable/tab_text_selector"
+                    android:textSize="@dimen/fontThree" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_goods_list_salesRelativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/fragment_goods_list_sort_background"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/fragment_goods_list_salesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelSale"
+                    android:textColor="@drawable/tab_text_selector"
+                    android:textSize="@dimen/fontThree" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/fragment_goods_list_evaluateWrapperRelativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/fragment_goods_list_sort_background"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/fragment_goods_list_evaluateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tabReview"
+                    android:textColor="@drawable/tab_text_selector"
+                    android:textSize="@dimen/fontThree" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_goods_list_sortWrapperRelativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/fragment_goods_list_sort_background"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/fragment_goods_list_sortTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/price"
+                    android:textColor="@drawable/tab_text_selector"
+                    android:textSize="@dimen/fontThree" />
+
+                <ImageView
+                    android:id="@+id/fragment_goods_list_sortImageView"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/bg_arrow_default" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/fragment_category_title"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_shop_category_categoryRecyclerView"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/fragment_shop_goods_list_pushView"
+                android:layout_below="@+id/fragment_goods_list_topWrapperRelativeLayout"
+                android:background="@drawable/fragment_shop_category_list_right_border"
+                tools:listitem="@layout/fragment_shop_category_list_parent_item"
+                />
+
+            <com.szy.common.View.CommonRecyclerView
+                android:id="@+id/fragment_shop_category_goodsListRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                app:emptyImage="@mipmap/bg_public"
+                app:emptyTitle="@string/emptyData"
+                tools:listitem="@layout/fragment_shop_goods_list_item_list"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_shop_cartWrapperOne"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:background="@drawable/top_border_one"
+        android:gravity="center_vertical|right">
+
+        <ImageView
+            android:id="@+id/imageView_empty_cart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/btn_cart_list_disabled"
+             />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            ></View>
+
+        <Button
+            android:id="@+id/fragment_shop_goods_list_checkoutButton"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bottom_button_selector"
+            android:enabled="false"
+            android:text="去购物车"
+            android:textColor="@drawable/button_text_selector"
+            android:textSize="@dimen/fontOne" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/activity_shop_cartWrapperTwo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/activity_shop_cartWrapperOne"
+        android:layout_marginBottom="23dp"
+        android:visibility="gone"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:id="@+id/fragment_shop_goods_list_cartImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/btn_cart_list" />
+
+        <TextView
+            android:id="@+id/fragment_shop_goods_list_cartNumberTextView"
+            android:layout_width="20dp"
+            android:layout_height="14dp"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/fragment_shop_category_list_item_number"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10dp" />
+
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:alpha="0.5"
+        android:background="@color/app_shadow" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="7.5dp"
+        android:paddingTop="@dimen/app_inside_margin"
+        android:paddingRight="7.5dp"
+        android:paddingBottom="@dimen/app_inside_margin" />
+
+    <include layout="@layout/line_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_video_commit"
+            android:visibility="gone" />
+
+        <com.lyzb.jbx.util.IconEditView
+            android:id="@+id/edit_send_tw"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/white"
+            android:gravity="left"
+            android:hint="{iconpig}写评论......"
+            android:lineSpacingMultiplier="1.1"
+            android:padding="10dp"
+            android:textColor="@color/fontcColor1"
+            android:textColorHint="@color/fontcColor3"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_video_s_pic" />
+
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:text="发送"
+            android:textColor="@color/app_blue"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</LinearLayout>

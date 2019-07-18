@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/mMapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true" />
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        android:src="@drawable/ic_video_back" />
+    <TextView
+        android:id="@+id/tv_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/fontcColor1"
+        android:layout_marginRight="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        android:elevation="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="@dimen/group_margin"
+        android:paddingBottom="@dimen/group_margin"
+        android:background="@color/white"
+        android:layout_gravity="right"
+        android:textSize="@dimen/textSize16"
+        android:text="使用其他地图"/>
+
+</FrameLayout>

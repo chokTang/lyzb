@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/aliwx_white"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_ingot_send"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/toolbar_bottom_border"
+        android:theme="@style/ToolbarTheme"
+        app:navigationIcon="@mipmap/btn_back_dark">
+
+        <TextView
+            android:id="@+id/ingot_send_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorOne"
+            android:textSize="18dp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ingot_send_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_send_ingot_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/aliwx_white"
+                android:textSize="14dp"
+                tools:text="@string/send_number"/>
+
+            <TextView
+                android:id="@+id/tv_send_ingot_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/aliwx_white"
+                android:textSize="22dp"
+                tools:text="5000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_ingot_expl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/send_expl"/>
+
+            <TextView
+                android:id="@+id/tv_send_ingot_expl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/aliwx_white"
+                android:textSize="14dp"
+                tools:text="@string/send_expl"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:background="@color/ads_itemd_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/item_ingot_send_edt"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_send_ingot_one"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dp"
+            android:minWidth="100dp"
+            android:maxWidth="120dp"
+            android:textColor="@color/aliwx_black"
+            android:textSize="14dp"
+            tools:text="赠送账号"/>
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/edt_send_ingot_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center|right"
+            android:hint="请输入赠送帐号"
+            android:paddingRight="12dp"
+            android:textSize="14dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/item_ingot_send_edt"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_send_ingot_two"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:minWidth="100dp"
+            android:maxWidth="120dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/aliwx_black"
+            android:textSize="14dp"
+            tools:text="赠送元宝数"/>
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/edt_send_ingot_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center|right"
+            android:hint="请输入赠送的元宝数量"
+            android:inputType="number"
+            android:maxLength="9"
+            android:paddingRight="12dp"
+            android:textSize="14dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_send_ingot"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/normal_button_selector"
+        android:enabled="false"
+        android:textColor="@drawable/button_text_selector"
+        tools:text="确定赠送"/>
+
+    <TextView
+        android:id="@+id/tv_send_ingot_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/ingot_usable_buy_bg"
+        android:textSize="14dp"
+        tools:text="账号赠送元宝记录>"/>
+
+    <TextView
+        android:id="@+id/tv_send_ingot_hint_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="6dp"
+        android:text="温馨提示"
+        android:textSize="12dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_send_ingot_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="6dp"
+        android:text="赠送账号可在，对方的集宝箱APP-我的中查看。"
+        android:textSize="12dp"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

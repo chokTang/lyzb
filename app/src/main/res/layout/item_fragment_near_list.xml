@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/rale_near_list"
+                android:layout_width="match_parent"
+                android:background="@color/aliwx_white"
+                android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_near_list_name"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/img_near_list_name"
+        android:layout_alignTop="@id/img_near_list_name"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_near_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxEms="10"
+            android:textColor="@color/aliwx_black"
+            android:textSize="14dp"
+            tools:text="美容指甲美容指甲美容美容指甲美容指甲美容"/>
+
+        <com.szy.yishopcustomer.View.ScoreStart
+            xmlns:ScoreStart="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/st_naer_list_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            ScoreStart:starBackground="@mipmap/start_normal"
+            ScoreStart:starDistance="3dp"
+            ScoreStart:starDrawBackground="@mipmap/start_selected"
+            ScoreStart:starHeight="14dp"
+            ScoreStart:starWidth="14dp"/>
+
+        <TextView
+            android:id="@+id/tv_near_list_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="12dp"
+            tools:text="美容美体美容美体美容美体美容美体美容美体"/>
+
+        <LinearLayout
+            android:id="@+id/lin_group_label_near"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@mipmap/group_label"/>
+
+            <TextView
+                android:id="@+id/tv_group_title_near"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#666666"
+                android:textSize="12dp"
+                tools:text="火锅抵扣券￥50"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_dedu_label_naer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@mipmap/dedu_label"/>
+
+            <TextView
+                android:id="@+id/tv_dedu_title_near"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="8dp"
+                android:textColor="#666666"
+                android:textSize="12dp"
+                tools:text="元宝最高抵扣￥20"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_takeout_label_near"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@mipmap/takeout_label"/>
+
+            <TextView
+                android:id="@+id/tv_takeout_title_near"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="8dp"
+                android:textColor="#666666"
+                android:textSize="12dp"
+                tools:text="商家支持外卖"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_near_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:text="102m"
+        android:textColor="@color/ads_out_bg"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_near_sale_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_near_list_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textSize="13dp"
+        tools:text="已售63"/>
+
+</RelativeLayout>

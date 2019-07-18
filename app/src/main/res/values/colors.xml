@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f23030</color><!--de1817-->
+    <color name="colorOne">#222222</color>
+    <color name="colorTwo">#666666</color>
+    <color name="colorThree">#999999</color>
+    <color name="colorFour">#B2B2B2</color>
+    <color name="colorFive">#B6B6B6</color>
+    <color name="colorSix">#BDBDBD</color>
+    <color name="colorSeven">#DDDDDD</color>
+    <color name="colorEight">#E5E5E5</color>
+    <color name="colorNine">#EEEEEE</color>
+    <color name="colorTen">#EEF2F3</color>
+
+    <color name="colorShopBase">#F8F8F8</color>
+    <color name="colorLine">#DFE1E0</color>
+    <color name="colorPink">#FFE6E6</color>
+    <color name="colorBlue">#2828FF</color>
+    <color name="colorGreen">#5FB760</color>
+    <color name="colorCyan">#73D1C3</color>
+    <color name="refrshColor">#FFFFFF</color>
+    <color name="free_buy_primary">#F55A32</color>
+    <color name="free_buy_title">#2D2D3D</color>
+    <color name="free_buy_sub_title">#CDCDCD</color>
+    <color name="colorTranslucent">#BF000000</color>
+    <color name="colorGoodsDesc">#80808c</color>
+
+    <color name="ingot_usable_number">#de1817</color>
+    <color name="ingot_usable_buy_bg">#de1817</color>
+    <color name="bg_user_top_view">#ea2834</color>
+    <color name="ingot_usable_instructions">#666666</color>
+    <color name="ingot_detail_text">#333333</color>
+    <color name="ingot_detail_time_text">#666666</color>
+    <color name="ingot_detail_number_text">#3598dd</color>
+    <color name="register_success_green">#1aad19</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="ads_white">#FFFFFF</color>
+    <color name="ads_content">#434343</color>
+    <color name="ads_itemd_bg">#F5F5F5</color>
+    <color name="ads_out_bg">#999999</color>
+
+    <color name="ing_number">#f02610</color>
+    <color name="ing_expl_view">#c3c3c3</color>
+    <color name="ing_total_tx">#797979</color>
+
+    <color name="more_sort_seach">#F2F2F2</color>
+    <color name="label_bg">#636363</color>
+
+    <color name="message_hint">#333333</color>
+    <color name="seckill_over_bg">#C3C3C3</color>
+    <color name="guess_tag_bg">#fd7100</color>
+    <color name="divider">#eeeeee</color>
+
+    <color name="recy_grid_line_bg">#FEFEFE</color>
+
+    <color name="bargain_good_bg">#F32F76</color>
+
+    <color name="bargain_suc_dialog">#F33030</color>
+
+    <color name="login_btn_df_bg">#ffcbce</color>
+
+    <color name="similar_goods_bg">#F6F6F6</color>
+
+    <color name="gl_goods_price">#8F8F8F</color>
+
+    <color name="translucentSeven">#70000000</color>//半透明
+    <color name="translucentSevenWhite">#10ffffff</color>//半透明
+
+    <color name="translate100">#ffffffff</color>
+    <color name="translate80">#ccffffff</color>
+    <color name="translate20">#33ffffff</color>
+    <color name="translate30">#4cffffff</color>
+    <color name="translate30black">#4c000000</color>
+    <color name="translate33black">#33000000</color>
+    <color name="translate15black">#13000000</color>
+    <color name="translate00">#00ffffff</color>
+    <color name="translate100_black">#00000000</color>
+
+    <!--阿里旺旺的颜色-->
+    <color name="aliwx_add_more_group_member_text_color">#818181</color>
+    <color name="aliwx_bg_color_white">#ffffff</color>
+    <color name="aliwx_black">#ff000000</color>
+    <color name="aliwx_chatting_background_color">#f9f9f9</color>
+    <color name="aliwx_chatting_detail_sysmsg_color">#FFFFFFFF</color>
+    <color name="aliwx_chatting_expand_view_background_color">#ffffff</color>
+    <color name="aliwx_chatting_reply_bar_background_color">#F7F8FA</color>
+    <color name="aliwx_chatting_system_message_background_color">#d0d0d0</color>
+    <color name="aliwx_circle_color">#80000000</color>
+    <color name="aliwx_color_blue">#00b4ff</color>
+    <color name="aliwx_color_blue_dark">#212c33</color>
+    <color name="aliwx_color_blue_dark_with_alpha">#b2212c33</color>
+    <color name="aliwx_color_blue_light">#535A60</color>
+    <color name="aliwx_color_gray_01">#525252</color>
+    <color name="aliwx_color_gray_02">#999999</color>
+    <color name="aliwx_color_gray_03">#CCCCCC</color>
+    <color name="aliwx_color_gray_04">#EEEEEE</color>
+    <color name="aliwx_color_gray_search">#C4C6CF</color>
+    <color name="aliwx_color_n1_4">#EBECF0</color>
+    <color name="aliwx_color_n1_5">#E6E7EB</color>
+    <color name="aliwx_color_n1_6">#DCDEE3</color>
+    <color name="aliwx_color_n2_2">#999999</color>
+    <color name="aliwx_color_n2_4">#3D4145</color>
+    <color name="aliwx_color_setting_title">#5f646e</color>
+    <color name="aliwx_color_white">#ffffff</color>
+    <color name="aliwx_column_bg_color_pressed">#dddddd</color>
+    <color name="aliwx_common_alpha_black">#99000000</color>
+    <color name="aliwx_common_bg_blue_color">#00b4ff</color>
+    <color name="aliwx_common_bg_color">#F0F0F0</color>
+    <color name="aliwx_common_bg_white_color">#f9f9f9</color>
+    <color name="aliwx_common_button_disable_text_color">#bbbbbb</color>
+    <color name="aliwx_common_color_blue">#0894ec</color>
+    <color name="aliwx_common_line_color">#cccccc</color>
+    <color name="aliwx_common_text_color">#ff333333</color>
+    <color name="aliwx_common_text_color2">#ff666666</color>
+    <color name="aliwx_common_text_color3">#999999</color>
+    <color name="aliwx_common_text_color4">#999999</color>
+    <color name="aliwx_common_text_color_blue">#00b4ff</color>
+    <color name="aliwx_contacts_tab_color">#f8f8f8</color>
+    <color name="aliwx_conversation_pressed_bg_color">#f5f5f5</color>
+    <color name="aliwx_conversation_unpressed_bg_color">#ffffff</color>
+    <color name="aliwx_cv_content_color">#d0d0d0</color>
+    <color name="aliwx_default_image_color">#ffc2c5cb</color>
+    <color name="aliwx_default_indicator_fill_color">#999999</color>
+    <color name="aliwx_default_indicator_page_color">#CCCCCC</color>
+    <color name="aliwx_default_indicator_stroke_color">#999999</color>
+    <color name="aliwx_divider_color">#E9E9E9</color>
+    <color name="aliwx_first_grade_color">#000000</color>
+    <color name="aliwx_grey_btn_default">#cccccc</color>
+    <color name="aliwx_halftransparent">#7F000000</color>
+    <color name="aliwx_holo_orange_light">#ffffbb33</color>
+    <color name="aliwx_hongbao_title_bg_color">#dd594d</color>
+    <color name="aliwx_hongbao_title_bg_color_alpha">#80dd594d</color>
+    <color name="aliwx_hongbao_title_text_color">#ffe0a2</color>
+    <color name="aliwx_ls_common_blue">#1A92ED</color>
+    <color name="aliwx_maintab_background">#373b3b</color>
+    <color name="aliwx_menu_normal_color">#C4C6CF</color>
+    <color name="aliwx_menu_press_color">#3d4145</color>
+    <color name="aliwx_multi_image_line">#7fcccccc</color>
+    <color name="aliwx_multi_image_title_bg">#B2f9f9f9</color>
+    <color name="aliwx_net_none_bg_color">#FFF3C9</color>
+    <color name="aliwx_net_none_text_color">#525252</color>
+    <color name="aliwx_order_grey_color">#FFA9A9A9</color>
+    <color name="aliwx_order_price_color">#ff0000</color>
+    <color name="aliwx_record_bottom_text_color">#6d6d6d</color>
+    <color name="aliwx_record_color">#d7d7d7</color>
+    <color name="aliwx_refresh_head_color">#505253</color>
+    <color name="aliwx_right_sliding_text_color">#ff333333</color>
+    <color name="aliwx_rim_color">#80626262</color>
+    <color name="aliwx_second_grade_color">#7F7F7F</color>
+    <color name="aliwx_select_fail_hint_color">#b3b3b3</color>
+    <color name="aliwx_self_help_menu_text_color">#525252</color>
+    <color name="aliwx_setting_bg_nor">#ffffff</color>
+    <color name="aliwx_setting_bg_p">#f5f5f5</color>
+    <color name="aliwx_setting_grey_bg_nor">#F0F0F0</color>
+    <color name="aliwx_setting_line_color">#cccccc</color>
+    <color name="aliwx_share_form_color">#8A8B8C</color>
+    <color name="aliwx_tab_normal_color">#666666</color>
+    <color name="aliwx_taobao_item_text_color">#2e2e2e</color>
+    <color name="aliwx_taobao_item_text_color10">#dd594d</color>
+    <color name="aliwx_taobao_item_text_color2">#f14d2a</color>
+    <color name="aliwx_taobao_item_text_color3">#3d4145</color>
+    <color name="aliwx_taobao_item_text_color4">#999999</color>
+    <color name="aliwx_taobao_item_text_color5">#3089dc</color>
+    <color name="aliwx_taobao_item_text_color6">#f5a623</color>
+    <color name="aliwx_taobao_item_text_color7">#ffe3b1</color>
+    <color name="aliwx_taobao_item_text_color8">#ffe8b5</color>
+    <color name="aliwx_taobao_item_text_color9">#ffe2b1</color>
+    <color name="aliwx_text_color_at_all_notify">#ffae1b</color>
+    <color name="aliwx_text_color_at_notify">#ab0404</color>
+    <color name="aliwx_text_color_at_unread">#00b4ff</color>
+    <color name="aliwx_text_color_black">#000000</color>
+    <color name="aliwx_text_color_blue">#00b4ff</color>
+    <color name="aliwx_text_color_gray">#bebec0</color>
+    <color name="aliwx_text_color_link">#3366FF</color>
+    <color name="aliwx_third_grade_color">#A9A9A9</color>
+    <color name="aliwx_third_text_color">#999999</color>
+    <color name="aliwx_time_text_background">#dddddd</color>
+    <color name="aliwx_title_bar_shadow_color">#C4C6CF</color>
+    <color name="aliwx_top_conversation_pressed_bg_color">#f5f5f5</color>
+    <color name="aliwx_top_grade_color">#ffffff</color>
+    <color name="aliwx_transparent_bg_gray_color">#303234</color>
+    <color name="aliwx_tribe_contacts_button_color">#3089dc</color>
+    <color name="aliwx_tribe_qrcode_bg_color">#EFF0F4</color>
+    <color name="aliwx_white">#ffffff</color>
+    <color name="aliwx_white_alpha">#80ffffff</color>
+    <color name="aliwx_white_btn_text_color">#8E8E8E</color>
+    <color name="aliwx_wq_common_button_disable_color">#e6e6e6</color>
+    <color name="aliwx_wq_common_green_button_color">#5dc4cb</color>
+    <color name="aliwx_wq_common_green_button_press_color">#339ba3</color>
+    <color name="aliwx_wq_common_grey_button_color">#cccccc</color>
+    <color name="aliwx_wq_common_grey_button_press_color">#acacac</color>
+    <color name="aliwx_wx_column_bg_color_pressed">#dddddd</color>
+    <color name="aliwx_wx_line_color">#dddddd</color>
+    <color name="aliwx_wxtribe_title_color">#333333</color>
+    <color name="dark_blue">#1a92ed</color>
+    <color name="goods_collected_color">#ffc400</color>
+    <color name="goods_uncollected_color">#051b28</color>
+    <color name="halftransparentwhite">#7FFFFFFF</color>
+    <color name="ls_alpha_white">#e6ffffff</color>
+    <color name="ls_orange">#FF9E5E</color>
+    <color name="plugin_item_title">#212C33</color>
+    <color name="red">#FF0000</color>
+    <color name="req_sysmsg_time">#CCCCCC</color>
+    <color name="right_sliding_small_text_color">#ff666666</color>
+    <color name="setting_bg_nor">#ffffff</color>
+    <color name="setting_bg_p">#f5f5f5</color>
+    <color name="text_color_link">#3366FF</color>
+    <color name="transparent_color">#00000000</color>
+
+    <color name="bg_ececec">#ECECEC</color>
+</resources>

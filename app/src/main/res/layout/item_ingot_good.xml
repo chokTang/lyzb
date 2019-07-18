@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/rela_ingot_good"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_border"
+                android:padding="5dp">
+
+    <com.szy.common.View.SquareImageView
+        android:id="@+id/img_ingot_good_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/pl_image"/>
+
+    <TextView
+        android:id="@+id/tv_ingot_good_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/img_ingot_good_img"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/colorOne"
+        android:textSize="14dp"
+        tools:text="@string/placeholderGoodsName"/>
+
+    <TextView
+        android:id="@+id/tv_ingot_good_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_ingot_good_name"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:gravity="start|center_vertical"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="￥66.00"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontOne"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_ingot_good_price"
+        android:layout_toRightOf="@id/tv_ingot_good_price"
+        android:text="抵后价"
+        android:layout_marginBottom="4dp"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_ingot_good_ing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ingot_good_price"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fontFive"
+        tools:text="@string/placeholderGoodsName"/>
+
+</RelativeLayout>

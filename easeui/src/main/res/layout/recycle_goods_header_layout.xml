@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+
+        <ImageView
+            android:id="@+id/goods_img"
+            android:layout_width="65dp"
+            android:layout_height="65dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/goods_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:lineSpacingExtra="2dp"
+                android:maxLines="2"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                tools:text="不知道在哪"/>
+
+            <TextView
+                android:id="@+id/goods_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="#ff2302"
+                android:textSize="16sp"
+                tools:text="8元"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

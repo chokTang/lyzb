@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="9dp"
+        android:text="@string/ingot_donate"
+        android:drawableLeft="@mipmap/ing_left"
+        android:drawablePadding="10dp"
+        android:textColor="@color/colorOne"
+        android:textSize="14dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <RelativeLayout
+                android:id="@+id/rela_ingot_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_centerInParent="true">
+
+
+                <ImageView
+                    android:id="@+id/img_ingot_reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ing_reg"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_ingot_reg">
+
+                    <TextView
+                        android:id="@+id/tv_ingot_reg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/ingot_reg"
+                        android:textColor="@color/colorOne"
+                        android:textSize="14dp"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_ingot_reg_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_ingot_reg"
+                        android:layout_marginLeft="6dp"
+                        android:textColor="@color/ads_out_bg"
+                        android:textSize="10dp"
+                        tools:text="即可获得18元宝"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/rela_ingot_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_centerInParent="true">
+
+
+                <ImageView
+                    android:id="@+id/img_ingot_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ing_get"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_ingot_shop">
+
+                    <TextView
+                        android:id="@+id/tv_ingot_shop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/ingot_con"
+                        android:textColor="@color/colorOne"
+                        android:textSize="14dp"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_ingot_shop_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_ingot_shop"
+                        android:layout_marginLeft="6dp"
+                        android:textColor="@color/ads_out_bg"
+                        android:textSize="10dp"
+                        android:text="消费多少得多少"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

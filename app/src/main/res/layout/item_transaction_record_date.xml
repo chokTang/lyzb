@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/transaction_record_date_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="@dimen/app_margin"
+        android:paddingTop="15dp"
+        android:textColor="@color/fontcColor3"
+        android:textSize="@dimen/textSize14"
+        tools:text="4月8日"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/app_margin">
+
+        <TextView
+            android:id="@+id/transaction_record_date_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="交易笔数"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14"/>
+
+        <TextView
+            android:id="@+id/transaction_record_date_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/transaction_record_date_number"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize18"
+            tools:text="111"/>
+
+        <TextView
+            android:id="@+id/transaction_record_date_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="合计金额"
+            android:textColor="@color/fontcColor2"
+            android:textSize="@dimen/textSize14"/>
+
+        <TextView
+            android:id="@+id/transaction_record_date_money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/transaction_record_date_money"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize18"
+            tools:text="111"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

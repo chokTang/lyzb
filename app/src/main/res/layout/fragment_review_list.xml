@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorTen"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearlyout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tabHeight"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fragment_review_list_all_comment_textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/all"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo"/>
+
+
+        <TextView
+            android:id="@+id/fragment_review_list_favourable_comment_textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/favourableComment"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo"/>
+
+
+        <TextView
+            android:id="@+id/fragment_review_list_moderate_comment_textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/moderateComment"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/fragment_review_list_negative_comment_textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/negativeComment"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorEight"/>
+
+    <me.zongren.pullablelayout.Main.PullableLayout xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+                                                   android:id="@+id/fragment_review_list_pullableLayout"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   PullableLayout:pullablelayout_side="TOP">
+
+        <com.szy.common.View.CommonRecyclerView
+            xmlns:commonRecyclerView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fragment_review_list_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/colorTen"
+            commonRecyclerView:emptyImage="@mipmap/bg_public"
+            commonRecyclerView:emptyTitle="@string/emptyReviewListTitle"
+            commonRecyclerView:emptySubtitle="@string/emptyReviewListSubtitle"
+            />
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+</LinearLayout>

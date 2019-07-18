@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="4dp">
+
+    <ImageView
+        android:id="@+id/activity_root_tab_user_imageView"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activity_root_tab_user_image_selector" />
+
+    <!--android:textColor="@drawable/tab_text_selector_two"-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/tabUser"
+        android:textColor="@drawable/color_root_tv"
+        android:textSize="@dimen/fontEight" />
+</LinearLayout>

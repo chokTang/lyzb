@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:paddingTop="@dimen/app_margin"
+    android:paddingBottom="@dimen/app_margin"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_header"
+            android:layout_width="@dimen/member_headerImg_big"
+            android:layout_height="@dimen/member_headerImg_big"
+            tools:src="@drawable/ic_launcher" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:src="@drawable/union_vip" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/fontcColor1"
+        tools:text="昵称"
+        android:layout_marginTop="@dimen/text_line_space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:textSize="@dimen/textSize12"
+        android:textColor="@color/fontcColor3"
+        tools:text="看了2篇文章\n10次"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/text_line_space"
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sf_un_me_card_mall"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scorllview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="460dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recy_un_me_card_mall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:paddingTop="@dimen/app_margin" />
+
+                <LinearLayout
+                    android:id="@+id/lin_no_good_vip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="480dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_good_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/un_cd_no_good" />
+
+                    <TextView
+                        android:id="@+id/tv_good_open_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/app_margin"
+                        android:text="你还未开通商城服务,发布的商品暂不支持交易"
+                        android:textColor="@color/fontcColor3"
+                        android:textSize="@dimen/textSize14" />
+
+                    <TextView
+                        android:id="@+id/un_cd_good_open_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/adaptive_8dp"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/app_margin"
+                        android:text="立即开通>>"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_cd_mall_no_vip"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/adaptive_48dp"
+                    android:background="@color/fontcColor1"
+                    android:orientation="horizontal"
+                  >
+
+                    <TextView
+                        android:id="@+id/tv_un_hint"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/union_card_war"
+                        android:drawablePadding="@dimen/adaptive_6dp"
+                        android:gravity="center|left"
+                        android:paddingLeft="@dimen/app_margin"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/adaptive_14sp"
+                        tools:text="您还未开通VIP服务,商品暂时不能交易。" />
+
+                    <TextView
+                        android:id="@+id/un_cd_open_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/app_margin"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/adaptive_16sp"
+                        tools:text="去开通>>" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_goods_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/app_margin"
+                    android:orientation="vertical">
+
+                    <include
+                        layout="@layout/empty_layout_card_mall"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_un_me_card_add_good"
+                style="@style/common_bottom_btn_style"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginBottom="20dp"
+                android:text="发布商品"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

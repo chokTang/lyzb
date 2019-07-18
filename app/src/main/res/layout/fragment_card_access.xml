@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/toolbar_height"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/toolbar_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="访客统计"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize16" />
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="@dimen/toolbar_height"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/union_what" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windows_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.like.longshaolib.widget.AutoWidthTabLayout
+                android:id="@+id/tab_access_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lineSize"
+                android:background="@color/white"
+                app:tabIndicatorColor="@color/fontcColor3"
+                app:tabIndicatorHeight="1dp"
+                app:tabSelectTextColor="@color/fontcColor1"
+                app:tabSelectTextSize="16"
+                app:tabTextColor="@color/fontcColor3"
+                app:tabTextSize="16"
+                app:tab_Mode="mode_fixed" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager_access"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/lineSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_no_vip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.95"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:src="@mipmap/un_cd_no_good" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="开通智能名片服务不漏过任何客户跟进机会"
+                android:textColor="@color/app_yellow"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:id="@+id/btn_go_vip"
+                android:layout_width="140dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/shape_blue_line"
+                android:gravity="center"
+                android:text="立即查看"
+                android:textColor="@color/app_blue"
+                android:textSize="@dimen/textSize14" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

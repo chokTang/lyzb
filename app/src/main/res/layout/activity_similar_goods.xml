@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/similar_goods_bg"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_similbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/toolbar_bottom_border"
+        android:theme="@style/ToolbarTheme"
+        app:navigationIcon="@mipmap/btn_back_dark">
+
+        <TextView
+            android:id="@+id/tv_adlist_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/similar_goods_title"
+            android:textColor="#222222"
+            android:textSize="18sp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/ads_white">
+
+        <ImageView
+            android:id="@+id/img_similar_goods"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"/>
+
+        <TextView
+            android:id="@+id/tv_similar_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/img_similar_goods"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@id/img_similar_goods"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/colorOne"
+            android:textSize="14dp"
+            tools:text="相似商品名称标题相似商品名称标题相似商品名称标题似商品名称标题相似商品名称标"/>
+
+        <TextView
+            android:id="@+id/tv_similar_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_similar_goods_name"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/img_similar_goods"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontOne"
+            tools:text="￥99.50"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#EAEAEA"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="更多相似推荐"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#EAEAEA"/>
+
+    </LinearLayout>
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/recy_similar_goods"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

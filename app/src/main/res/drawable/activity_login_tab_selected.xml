@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item>-->
+        <!--<unselect>-->
+            <!--<solid android:color="@color/ads_white"></solid>-->
+        <!--</unselect>-->
+    <!--</item>-->
+
+    <item>
+        <bitmap
+            android:gravity="top|center"
+            android:src="@drawable/icon_down_blue"></bitmap>
+    </item>
+
+    <!--<item android:bottom="1dp">-->
+    <!--<unselect>-->
+    <!--<solid android:color="@color/ads_white"/>-->
+    <!--</unselect>-->
+    <!--</item>-->
+
+
+</layer-list>

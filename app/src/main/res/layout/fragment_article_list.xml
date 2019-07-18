@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.zongren.pullablelayout.Main.PullableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_pullableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTen"
+    PullableLayout:pullablelayout_side="">
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/fragment_article_list_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#efeff4"
+        android:orientation="vertical"
+        android:paddingTop="10dp" />
+
+</me.zongren.pullablelayout.Main.PullableLayout>

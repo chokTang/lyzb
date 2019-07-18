@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/app_margin"
+    android:paddingTop="20dp"
+    android:paddingRight="@dimen/app_margin"
+    android:paddingBottom="20dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            tools:src="@mipmap/bg_default_avatar" />
+
+        <ImageView
+            android:id="@+id/img_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/img_avatar"
+            android:layout_alignBottom="@+id/img_avatar"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/union_vip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/group_margin"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:orientation="vertical">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxEms="10"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/img_delete"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="姓名" />
+
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLength="20"
+                    android:textColor="@color/fontcColor3"
+                    android:textSize="@dimen/textSize12"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/img_delete"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                    tools:text="公司名字" />
+
+                <ImageView
+                    android:id="@+id/img_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/union_delete"
+                    android:padding="@dimen/app_inside_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <com.lyzb.jbx.widget.link.AutoLinkTextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="@dimen/text_line_space"
+                android:visibility="gone"
+                android:textColor="@color/fontcColor1"
+                android:textSize="@dimen/textSize14"
+                tools:text="测试数据" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_pic"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/group_margin"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/group_margin">
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01-25 12:55"
+                    android:textColor="@color/fontcColor3"
+                    android:textSize="@dimen/textSize12" />
+
+                <TextView
+                    android:id="@+id/tv_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/group_margin"
+                    android:drawableLeft="@drawable/union_message"
+                    android:drawablePadding="@dimen/text_icon_space"
+                    android:gravity="center_vertical|right"
+                    android:text="回复"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize12" />
+
+                <View
+                    android:id="@+id/view_1"
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/tv_reply"
+                    android:background="@color/fontcColor3" />
+
+                <TextView
+                    android:id="@+id/tv_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/view_1"
+                    android:drawableLeft="@drawable/selector_zan"
+                    android:drawablePadding="@dimen/text_icon_space"
+                    android:gravity="center_vertical"
+                    android:text="赞"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize12" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_reply"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/app_inside_margin"
+        android:layout_marginRight="@dimen/group_margin"
+        android:paddingTop="@dimen/group_margin" />
+</LinearLayout>

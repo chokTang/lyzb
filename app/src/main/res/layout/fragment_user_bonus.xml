@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorTen"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tabHeight"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_shop_bonus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/shopBonus"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/textView_platform_bonus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="@string/platformBonus"
+            android:textColor="@drawable/tab_text_selector_two"
+            android:textSize="@dimen/fontTwo" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</LinearLayout>

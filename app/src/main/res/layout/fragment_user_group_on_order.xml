@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:id="@+id/fragment_user_groupon_goodsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp">
+
+            <ImageView
+                android:id="@+id/fragment_user_groupon_goodsImg"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/pl_image"/>
+
+            <TextView
+                android:id="@+id/fragment_user_groupon_goodsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/fragment_user_groupon_goodsImg"
+                android:layout_toRightOf="@+id/fragment_user_groupon_goodsImg"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontThree"/>
+
+            <TextView
+                android:id="@+id/fragment_user_groupon_goodsPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/fragment_user_groupon_goodsImg"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/fragment_user_groupon_goodsImg"
+                android:layout_toRightOf="@+id/fragment_user_groupon_goodsImg"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontOne"/>
+
+            <TextView
+                android:id="@+id/fragment_user_groupon_goodsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/fragment_user_groupon_goodsPrice"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/fragment_user_groupon_goodsPrice"
+                android:text=""
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontThree"/>
+
+            <ImageView
+                android:id="@+id/fragment_user_groupon_status"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+        <include
+            layout="@layout/item_border_one"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorSeven"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.szy.common.View.CommonRecyclerView
+                android:id="@+id/fragment_user_groupon_detail_headImgRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                >
+
+                <ImageView
+                    android:id="@+id/fragment_groupon_detail_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_alert_circled"
+                    />
+
+                <TextView
+                    android:id="@+id/fragment_user_groupon_tip_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="仅"
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontTwo"
+                    />
+
+                <cn.iwgang.countdownview.CountdownView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cv_countdownViewTestHasBg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:isHideTimeBackground="true"
+                    app:isShowDay="true"
+                    app:isShowHour="true"
+                    app:isShowMillisecond="false"
+                    app:isShowMinute="true"
+                    app:isShowSecond="true"
+                    app:suffixDay=":"
+                    app:suffixGravity="center"
+                    app:suffixHour=":"
+                    app:suffixMinute=":"
+                    app:suffixSecond=""
+                    app:suffixTextColor="@color/colorOne"
+                    app:suffixTextSize="15dp"
+                    app:timeTextColor="@color/colorOne"
+                    app:timeTextSize="15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/fragment_user_groupon_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="后结束"
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontTwo"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <Button
+                    style="?android:attr/borderlessButtonStyle"
+                    android:id="@+id/fragment_user_groupon_detail_share"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/enable_button"
+                    android:text="邀请好友参团"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/fontTwo"
+                    android:visibility="gone"
+                    />
+
+                <Button
+                    style="?android:attr/borderlessButtonStyle"
+                    android:id="@+id/fragment_user_groupon_detail_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/gray_border_button_one"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"
+                    />
+
+                <Button
+                    style="?android:attr/borderlessButtonStyle"
+                    android:id="@+id/fragment_user_groupon_detail_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/gray_border_button_one"
+                    android:text="查看更多拼团"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/item_border_one"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorSeven"/>
+
+        <LinearLayout
+            android:id="@+id/fragment_user_groupon_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/fragment_user_groupon_time_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开团时间"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontThree"
+                />
+
+            <TextView
+                android:id="@+id/fragment_user_groupon_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text=""
+                android:textColor="@color/colorSix"
+                android:textSize="@dimen/fontSix"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorEight"/>
+
+        <include layout="@layout/layout_groupon_rules"/>
+
+    </LinearLayout>
+</ScrollView>

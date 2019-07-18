@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white_f5"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_union_me_set_pwd_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@mipmap/btn_back_dark"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="修改密码"
+            android:textColor="@color/colorOne"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="#0880E9"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="24dp"
+        android:text="密码最少6位数"
+        android:textColor="@color/gray_999999"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            android:text="新密码"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/fontcColor1"/>
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/edt_union_set_pwd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/union_me_menu"
+            android:gravity="right|center"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:paddingRight="6dp"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/img_union_set_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingLeft="6dp"
+            android:paddingRight="12dp"
+            android:src="@mipmap/union_set_pwd_close"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E6E6E6"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            android:text="再次输入密码"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14"/>
+
+        <com.szy.common.View.CommonEditText
+            android:id="@+id/edt_union_set_again_pwd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/union_me_menu"
+            android:gravity="right|center"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword"
+            android:paddingRight="6dp"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/img_union_set_again_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingLeft="6dp"
+            android:paddingRight="12dp"
+            android:src="@mipmap/union_set_pwd_close"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

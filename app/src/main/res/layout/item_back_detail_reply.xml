@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border_one"
+                android:padding="15dp">
+
+    <TextView
+        android:id="@+id/item_back_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="卖家"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontThree" />
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_back_detail_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+
+    <TextView
+        android:id="@+id/item_back_detail_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerView"
+        android:text="2017 11-16"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontThree" />
+
+
+</RelativeLayout>

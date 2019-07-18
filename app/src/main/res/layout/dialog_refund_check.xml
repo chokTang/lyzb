@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginRight="20dp"
+    android:paddingTop="15dip"
+    android:background="@drawable/shape_rect_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_style_one_dialogStyleOneTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="温馨提示"
+        android:paddingBottom="15dip"
+        android:textColor="#666666"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dip"
+        android:textSize="15sp"
+        android:textColor="#333333"
+        tools:text="提示消息内容"
+        android:gravity="center"
+        android:background="@color/white"></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/dialog_audit_cancel_order_textViewWrapper"
+        android:background="@color/colorTen" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_style_one_dialogStyleOneConfirmButton"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="确定"
+            android:background="@null"
+            android:textColor="#3598dd"
+            android:textSize="15dp" />
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_margin="5dip"
+            android:layout_below="@+id/dialog_audit_cancel_order_textViewWrapper"
+            android:background="@color/colorTen" />
+
+        <Button
+            android:id="@+id/dialog_style_one_dialogStyleOneCancelButton"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:background="@null"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textColor="#666666"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

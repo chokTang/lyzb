@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingBottom="10dp"
+    android:paddingRight="10dp"
+    android:background="@android:color/white">
+
+    <com.szy.common.View.CommonEditText
+        android:id="@+id/fragment_invoice_info_company_editText"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/fragment_invoice_info_company"
+        android:hint="@string/hintEnterCompanyName"
+        android:textColor="@color/colorTwo"
+        android:textColorHint="@color/colorFive"
+        android:textSize="@dimen/fontThree"
+        android:paddingLeft="10dp"
+        />
+
+    <com.szy.common.View.CommonEditText
+        android:id="@+id/et_inv_taxpayers"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/fragment_invoice_info_company"
+        android:hint="@string/hintEnterInvTaxpayers"
+        android:textColor="@color/colorTwo"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="@dimen/fontThree"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+</LinearLayout>

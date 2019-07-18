@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen">
+
+    <LinearLayout
+        android:id="@+id/linearlayout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingBottom="20dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="30dp">
+
+            <ImageView
+                android:id="@+id/fragment_result_top_imageView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                 />
+
+            <TextView
+                android:id="@+id/fragment_result_top_resultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_toEndOf="@+id/fragment_result_top_imageView"
+                android:layout_toRightOf="@+id/fragment_result_top_imageView"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontSeven" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignLeft="@+id/fragment_result_top_resultTextView"
+                android:layout_alignStart="@+id/fragment_result_top_resultTextView"
+                android:layout_below="@+id/fragment_result_top_resultTextView"
+                android:textSize="@dimen/fontTwo"
+                android:textColor="@color/colorOne"
+                android:text="订单金额：" />
+
+            <TextView
+                android:id="@+id/textView_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView20"
+                android:layout_toEndOf="@+id/textView20"
+                android:layout_toRightOf="@+id/textView20"
+                android:textSize="@dimen/fontThree"
+                android:textColor="@color/colorPrimary"
+                android:text="¥ 0.0" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_free"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@mipmap/ic_pay" />
+
+                <TextView
+                    android:id="@+id/textView_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/imageView"
+                    android:text=""
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontTwo" />
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/linearlayout_order_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/textView_reachbuy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="请前往收银台出示二维码交由工作人员验证"
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontTwo"/>
+
+
+                <ImageView
+                    android:id="@+id/imageView_order_sn"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/textView_order_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="111111111111111"
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontThree" />
+
+                <TextView
+                    android:id="@+id/textView_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="111111111111111"
+                    android:textColor="@color/colorTwo"
+                    android:textSize="@dimen/fontThree" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_border_one"
+            android:paddingBottom="20dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:id="@+id/fragment_result_confirm_wrapperLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/fragment_result_confirm_orderListButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_border_button_one"
+                    android:text="@string/buttonGoToOrderList"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo" />
+
+                <Button
+                    android:id="@+id/fragment_result_save_picture"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_border_button_one"
+                    android:text="保存图片"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

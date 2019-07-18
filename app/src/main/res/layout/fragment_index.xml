@@ -1,0 +1,200 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <me.zongren.pullablelayout.Main.PullableLayout xmlns:PullableLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_index_refresh_pullableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_index_title"
+        android:background="#F2F5F7"
+        PullableLayout:pullablelayout_side="TOP">
+
+        <com.szy.common.View.CommonRecyclerView xmlns:commonRecyclerView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fragment_index_content_wrapper_commonRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            commonRecyclerView:emptyImage="@mipmap/bg_empty_cart"
+            commonRecyclerView:emptyTitle="@string/emptyIndex" />
+
+    </me.zongren.pullablelayout.Main.PullableLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_index_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/fragment_index_title_scan_topImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:paddingRight="10dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/toolbar_back" />
+
+            <LinearLayout
+                android:id="@+id/ll_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/img_back"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/weather_image_view"
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:id="@+id/tv_weather_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10°C"
+                    android:textColor="@color/white"
+                    android:textSize="9dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_home_city"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/ll_weather"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxEms="4"
+                android:paddingRight="2dp"
+                android:text="定位中"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontFour" />
+
+            <ImageView
+                android:id="@+id/img_home_city_choose"
+                android:layout_width="10dp"
+                android:layout_height="8dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/tv_home_city" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_index_title_input_relative_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.98"
+            android:background="@drawable/fragment_index_title_search_background">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="17dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/ic_search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imageView6"
+                android:gravity="start|center_vertical"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="@string/please_enter_goods_or_shop_name"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontFour" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_index_title_message_topImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/img_index_search_photo"
+                android:layout_width="26dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:src="@mipmap/icon_home_scan" />
+
+            <ImageView
+                android:id="@+id/message_image_view"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_index_search_photo"
+                android:src="@mipmap/icon_home_fl" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_index_title_site"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/fragment_index_site_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxEms="4"
+                android:paddingRight="2dp"
+                android:text="秦皇岛"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontFour" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@id/fragment_index_site_text"
+                android:src="@mipmap/btn_arrow_down_white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/layout_go_up_two" />
+
+    <ImageView
+        android:id="@+id/fragment_index_serviceImageButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/go_up_button"
+        android:layout_alignRight="@+id/go_up_button"
+        android:layout_marginBottom="10dp"
+        android:alpha="0.8"
+        android:background="#00000000"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/btn_customer_service" />
+
+</RelativeLayout>

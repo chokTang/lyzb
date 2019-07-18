@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--常用的color颜色值-->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#252525</color>
+    <color name="blue">#0000FF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#008000</color>
+    <color name="gray">#808080</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FFA500</color>
+
+    <!--网络请求对话框背景样色-->
+    <color name="bg_waitDialog">#7f000000</color>
+
+    <!--状态栏颜色-->
+    <color name="colorPrimaryDark">#ff000000</color>
+
+    <!--导航栏颜色-->
+    <color name="toolbar_bg">#ffffff</color>
+
+    <color name="translate_bg">#00000000</color>
+
+    <!--线条的颜色-->
+    <color name="lineColor">#eaeaea</color>
+
+    <!--上来加载和下拉刷新字体、图片颜色-->
+    <color name="refreshColor">#333333</color>
+
+    <!--所有按下按钮常用的配色-->
+    <color name="pressColor">#c4e1dddd</color>
+    <color name="nomalColor">@color/white</color>
+
+    <!--windows背景颜色 即：整个APP背景颜色-->
+    <color name="windows_bg">#f5f5f5</color>
+
+    <!--字体颜色等级-->
+    <color name="fontcColor1">#333333</color><!--字体默认颜色-->
+    <color name="fontcColor2">#666666</color><!--字体稍微浅色颜色-->
+    <color name="fontcColor3">#969696</color><!--字体稍微浅色颜色-->
+
+
+    <color name="app_yellow">#FFAE26</color><!--APP内黄色的颜色值-->
+    <color name="app_blue">#0052fe</color><!--APP内蓝色的颜色值-->
+    <color name="app_green">#00C29E</color><!--APP内绿色的颜色值-->
+    <color name="app_red">#DB0A0A</color><!--APP内红色的颜色值-->
+    <color name="app_bar_red">#ff1a00</color>
+    <color name="app_card_orangle1">#574612</color><!--卡片的一级颜色值-->
+    <color name="app_card_orangle2">#97791c</color><!--卡片的二级颜色值-->
+
+    <color name="app_share">#b464f8</color><!--访问数据下分享数字的颜色-->
+    <color name="app_new_account">#ff8000</color><!--访问数据下引流新用户的颜色-->
+    <color name="app_access">#00c29e</color><!--访问数据下访问次数的颜色-->
+    <color name="app_goods">#33b5ff</color><!--访问数据下商城交易次数的颜色-->
+    <color name="app_golden">#faefc9</color><!--App中金色的颜色值-->
+    <color name="color_dedede">#DEDEDE</color>
+    <color name="app_shadow">#272626</color><!--APP中阴影的颜色值 0.5的透明-->
+</resources>

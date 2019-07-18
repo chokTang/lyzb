@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_radio_5_white">
+
+        <RelativeLayout
+            android:id="@+id/rl_bg_shop_join_ad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/bg_ht_default"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="20dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_shop_join_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="28dp"
+                android:layout_marginRight="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/tv_text_shop_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_shop_join_count"
+                android:textSize="16dp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_filter_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment_filter_buttonWrapperRelativeLayout"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_filter_buttonWrapperRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:background="@drawable/top_border_one"
+        >
+
+        <Button
+            android:id="@+id/fragment_filter_clearButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/fragment_filter_clear_background"
+            android:text="@string/clear"
+            android:textColor="@color/colorOne"
+            />
+
+        <Button
+            android:id="@+id/fragment_filter_confirmButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/fragment_filter_confirm_background"
+            android:text="@string/confirm"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+</RelativeLayout>

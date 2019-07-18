@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <include layout="@layout/toolbar_statistics" />
+
+    <FrameLayout
+        android:id="@+id/mycompany_search_fl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="@dimen/app_margin"
+        android:paddingTop="@dimen/app_margin"
+        android:paddingRight="@dimen/app_margin"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/mycompany_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sl_white_r5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/search_home"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:hint="请输入搜索内容"
+            android:textColorHint="@color/fontcColor3"
+            android:textSize="@dimen/textSize14" />
+
+    </FrameLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mycompany_smartrefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mycompany_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white" />
+
+            <LinearLayout
+                android:id="@+id/mycompany_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <include layout="@layout/empty_layout" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

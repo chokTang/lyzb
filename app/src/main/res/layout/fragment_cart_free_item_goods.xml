@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_cart_goods_treeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/item_cart_goods_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_cart_goods_name_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:text="商品名称"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontThree" />
+
+            <ImageView
+                android:id="@+id/item_cart_goods_delete_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_delete_dark" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/item_cart_goods_attribute_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontSix" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_cart_goods_price_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:text="@string/placeholderGoodsPrice"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontThree" />
+
+
+            <ImageView
+                android:id="@+id/minus_button"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:background="@drawable/selector_btn_free_minus" />
+
+            <TextView
+                android:id="@+id/goods_number"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:background="@mipmap/btn_free_frame_normal"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontTwo" />
+
+            <ImageView
+                android:id="@+id/plus_button"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:background="@drawable/selector_btn_free_plus" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/fragment_cart_goods_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#fff"
+            android:textSize="@dimen/fontSix"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/fragment_cart_goods_moq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fontSix"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <include layout="@layout/line_cart_free" />
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_tab_title_textView"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="0.3dp"
+        android:background="@drawable/left_tab_bg_selector"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:padding="5dp"
+        android:text="@string/pl_category_name"
+        android:textColor="@drawable/tab_text_selector"
+        android:textSize="@dimen/fontFour" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="@color/colorEight" />
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/search_edittext_border"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/fragment_back_apply_imageRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:background="@android:color/white"
+        />
+
+    <RelativeLayout
+        android:id="@+id/fragment_back_apply_pic_relativeLayout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/review_add_pic_border"
+        android:layout_toRightOf="@+id/fragment_back_apply_imageRecyclerView"
+        >
+
+        <ImageView
+            android:id="@+id/ic_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_image"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="上传凭证"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFive"
+            android:layout_below="@+id/ic_image"
+            />
+    </RelativeLayout>
+</RelativeLayout>

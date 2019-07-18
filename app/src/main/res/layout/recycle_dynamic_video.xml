@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_item_video"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="20dp"
+    android:paddingRight="10dp">
+
+    <include layout="@layout/recycle_dynamic_header" />
+
+    <com.lyzb.jbx.widget.link.AutoLinkTextView
+        android:id="@+id/tv_content_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/text_line_space"
+        android:maxLines="3"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize16" />
+
+    <TextView
+        android:id="@+id/tv_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="展开"
+        android:textColor="@color/app_blue"
+        android:textSize="@dimen/textSize14"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/img_first"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/union_dynamic_start"
+            android:visibility="gone" />
+
+        <com.xiao.nicevideoplayer.NiceVideoPlayer
+            android:id="@+id/video_play"
+            android:layout_width="match_parent"
+            android:layout_height="180dp" />
+    </FrameLayout>
+
+    <include layout="@layout/view_common_recycle_dynamic_footer" />
+</LinearLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <!--<View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/shape_triangle" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bottom_border_one"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/linearlayout_select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <include layout="@layout/layout_checkbox" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="全选"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewHaveChosen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="(已选0件)"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontThree" />
+
+
+            <LinearLayout
+                android:id="@+id/linearlayout_clean_all"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/ic_delete_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="清空全部"
+                    android:textColor="@color/colorThree"
+                    android:textSize="@dimen/fontThree" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/colorTen"></com.szy.common.View.CommonRecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bottom_border_one"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp">
+
+            <FrameLayout
+                android:id="@+id/activity_shop_cartWrapperTwo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/linearlayout"
+                android:layout_marginLeft="0dp">
+
+                <ImageView
+                    android:id="@+id/fragment_shop_goods_list_cartImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/btn_shop_cart_selected" />
+
+                <TextView
+                    android:id="@+id/fragment_shop_goods_list_cartNumberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/fragment_shop_category_list_item_number"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="11dp" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textViewTotalPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="￥0"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontOne" />
+
+            <Button
+                android:id="@+id/fragment_shop_goods_list_checkoutButton"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|bottom"
+                android:background="@drawable/bottom_button_selector"
+                android:enabled="false"
+                android:text="@string/goCheckout"
+                android:textColor="@drawable/button_text_selector"
+                android:textSize="@dimen/fontOne" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_close"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearlayout"
+        android:layout_alignParentTop="true" />
+
+
+
+</RelativeLayout>

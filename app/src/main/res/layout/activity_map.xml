@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/activity_common_toolbar"
+        layout="@layout/toolbar_common" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/map_shop_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontOne" />
+
+        <TextView
+            android:id="@+id/map_shop_simply_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/map_shop_name_textview"
+            android:layout_alignStart="@+id/map_shop_name_textview"
+            android:layout_below="@+id/map_shop_name_textview"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontTwo" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/map_shop_simply_textview"
+            android:background="@color/colorEight"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/map_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:drawableLeft="@mipmap/btn_navigation"
+            android:gravity="center"
+            android:onClick="driveNavi"
+            android:text="导航"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontOne"
+            android:layout_below="@+id/view"
+            android:layout_alignTop="@+id/view"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"/>
+
+    </RelativeLayout>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/activity_map_mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_common_toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/relativeLayout5" >
+
+
+    </com.amap.api.maps.MapView>
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="120dp"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

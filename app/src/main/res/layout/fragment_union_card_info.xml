@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scorllview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    android:scrollbars="none">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="@dimen/app_margin"
+                android:paddingBottom="@dimen/app_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginTop="@dimen/group_margin"
+                    android:layout_marginBottom="@dimen/app_margin"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/icon_card_info"
+                    android:drawablePadding="4dp"
+                    android:text="个人信息"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize16" />
+
+                <!--录制语音-->
+                <LinearLayout
+                    android:id="@+id/ll_voice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_margin"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_avatar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_avatar" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_luyin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/group_margin"
+                            android:background="@mipmap/icon_start_voice"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="@dimen/group_margin"
+                            android:paddingBottom="5dp"
+                            android:text="长按录制语音介绍"
+                            android:textColor="@color/fontcColor1"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/img_voice_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/icon_play_voice"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp">
+
+                            <ImageView
+                                android:id="@+id/img_animal_play_voice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/voice_play_animal" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_voice_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/group_margin"
+                            android:orientation="vertical">
+
+                            <View
+                                android:id="@+id/view_red_circle"
+                                android:layout_width="4dp"
+                                android:layout_height="4dp"
+                                android:background="@drawable/bg_red_circle" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/tv_voice_length"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="23" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/img_delete_voice"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="5dp"
+                        android:src="@drawable/union_delete"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.hyphenate.easeui.widget.EaseVoiceRecorderView
+                android:id="@+id/voice_recorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <!--个人信息-->
+            <LinearLayout
+                android:id="@+id/ll_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/app_margin">
+
+                <!--个人信息空布局-->
+                <LinearLayout
+                    android:id="@+id/img_card_info_img_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@drawable/shape_card_infor_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/group_margin"
+                    android:paddingBottom="@dimen/group_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="编写个人信息，让更多人了解您!" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/group_margin"
+                        android:src="@mipmap/icon_empty_add" />
+
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:background="@mipmap/bg_card_model"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_text_info"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="3dp"
+                            android:drawableTop="@mipmap/icon_card_text"
+                            android:drawablePadding="2dp"
+                            android:textSize="@dimen/textSize12"
+                            android:gravity="center"
+                            android:text="文字" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/group_margin"
+                            android:layout_marginBottom="@dimen/group_margin"
+                            android:background="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/tv_img_info"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="3dp"
+                            android:drawableTop="@mipmap/icon_card_img"
+                            android:drawablePadding="2dp"
+                            android:textSize="@dimen/textSize12"
+                            android:gravity="center"
+                            android:text="图片" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recy_un_me_info_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_add_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/group_margin"
+                    android:paddingBottom="@dimen/group_margin">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_card_text_and_img_add" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider_info"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/group_margin"/>
+            <!--其他-->
+            <LinearLayout
+                android:id="@+id/lin_un_cd_other_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/app_margin">
+
+                <LinearLayout
+                    android:id="@+id/ll_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="熟悉领域"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <TextView
+                        android:id="@+id/add_cd_pos_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+添加标签"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize12" />
+
+                </LinearLayout>
+
+
+                <!--其他-->
+                <!--熟悉领域-->
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flowlayout_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.zhy.view.flowlayout.TagFlowLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_know"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="期待认识"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <TextView
+                        android:id="@+id/add_cd_know_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+添加标签"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize12" />
+
+                </LinearLayout>
+
+
+                <!--期待认识-->
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flowlayout_know"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.zhy.view.flowlayout.TagFlowLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_interest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="兴趣爱好"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <TextView
+                        android:id="@+id/add_cd_like_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+添加标签"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize12" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recy_card_like"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="我的家乡"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <TextView
+                        android:id="@+id/tv_card_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layerType="software"
+                        android:text="+添加家乡"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_stay_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="常来往地"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <TextView
+                        android:id="@+id/tv_stay_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+常来往地"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize12" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:layout_marginBottom="24dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="毕业院校"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize14" />
+
+                    <TextView
+                        android:id="@+id/tv_card_school"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/group_margin"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:layerType="software"
+                        android:lines="1"
+                        android:maxEms="16"
+                        android:text="+添加学校"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize12" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--官网-->
+            <LinearLayout
+                android:id="@+id/ll_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/group_margin"
+                android:visibility="gone"
+                android:background="@color/white"
+                android:paddingTop="@dimen/app_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_company_model_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_margin"
+                    android:paddingBottom="@dimen/app_margin"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/icon_my_company"
+                    android:drawablePadding="4dp"
+                    android:text="我的企业"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize16" />
+
+                <!--我的企业布局-->
+                <LinearLayout
+                    android:id="@+id/ll_web"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/app_margin"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin">
+                    <!--公司logo-->
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="30dp">
+
+                        <ImageView
+                            android:id="@+id/img_company_logo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxWidth="80dp"
+                            android:maxHeight="30dp"
+                            android:scaleType="centerCrop"
+                            tools:src="@mipmap/icon_default_logo" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_company_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/app_margin"
+                        android:layout_weight="1"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize16"
+                        tools:text="重庆礼仪之邦" />
+
+                    <TextView
+                        android:id="@+id/tv_goto_web"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_stock_gray666_2"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="进入官网"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize12" />
+                </LinearLayout>
+
+                <!--我的企业空布局-->
+                <LinearLayout
+                    android:id="@+id/ll_company_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:layout_marginBottom="@dimen/app_margin"
+                    android:background="@drawable/shape_card_infor_bg"
+                    android:minHeight="140dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@mipmap/icon_card_empty"
+                        android:drawablePadding="@dimen/group_margin"
+                        android:gravity="center"
+                        android:text="请先设置一个企业
+请在“我的—我的企业”这里设置"
+                        android:textColor="@color/fontcColor2"
+                        android:textSize="@dimen/textSize14" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--商城-->
+            <LinearLayout
+                android:id="@+id/ll_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/group_margin"
+                android:background="@color/white"
+                android:paddingTop="@dimen/app_margin"
+                android:paddingBottom="@dimen/app_margin"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_mall_model_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/app_margin"
+                        android:paddingBottom="@dimen/app_margin"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/icon_product"
+                        android:drawablePadding="4dp"
+                        android:text="主推商品"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize16" />
+
+                    <TextView
+                        android:id="@+id/tv_all_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/app_margin"
+                        android:drawableRight="@mipmap/un_me_cr_go"
+                        android:drawablePadding="5dp"
+                        android:text="全部商品"
+                        android:textColor="@color/fontcColor1"
+                        android:textSize="@dimen/textSize12" />
+                </RelativeLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <!--我的商城空布局-->
+                <LinearLayout
+                    android:id="@+id/ll_shop_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:layout_marginBottom="@dimen/app_margin"
+                    android:background="@drawable/shape_card_infor_bg"
+                    android:minHeight="140dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:drawableTop="@mipmap/icon_card_empty"
+                        android:drawablePadding="@dimen/group_margin"
+                        android:gravity="center"
+                        android:text="还没有商品信息"
+                        android:textColor="@color/fontcColor2"
+                        android:textSize="@dimen/textSize14" />
+
+                    <TextView
+                        android:id="@+id/tv_see"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/bg_stock_gray666_2"
+                        android:paddingLeft="18dp"
+                        android:paddingTop="6dp"
+                        android:paddingRight="18dp"
+                        android:paddingBottom="6dp"
+                        android:text="查看" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--我能提供的-->
+            <LinearLayout
+                android:id="@+id/ll_provide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_margin"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/app_margin"
+                android:paddingBottom="@dimen/app_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_margin"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/icon_my_provide"
+                    android:drawablePadding="4dp"
+                    android:text="我能提供的"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize16" />
+                <!--我能提供的空布局-->
+                <LinearLayout
+                    android:id="@+id/img_un_card_supply_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@drawable/shape_card_infor_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/group_margin"
+                    android:paddingBottom="@dimen/group_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="请填写您能为大家提供的资源信息，我们通过大数据推送，方便更多的用户、企业找到您!" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/group_margin"
+                        android:src="@mipmap/icon_empty_add" />
+
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:background="@mipmap/bg_card_model"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_text_provide"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="3dp"
+                            android:drawableTop="@mipmap/icon_card_text"
+                            android:drawablePadding="2dp"
+                            android:gravity="center"
+                            android:text="文字" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/group_margin"
+                            android:layout_marginBottom="@dimen/group_margin"
+                            android:background="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/tv_img_provide"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="3dp"
+                            android:drawableTop="@mipmap/icon_card_img"
+                            android:drawablePadding="2dp"
+                            android:gravity="center"
+                            android:text="图片" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recy_un_card_supply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_add_provide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/group_margin"
+                    android:paddingBottom="@dimen/group_margin">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_card_text_and_img_add" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider_provide"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/group_margin"/>
+            <!--我需要的-->
+            <LinearLayout
+                android:id="@+id/ll_need"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/app_margin"
+                android:paddingBottom="@dimen/app_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_margin"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/icon_my_need"
+                    android:drawablePadding="4dp"
+                    android:text="我所需要的"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize16" />
+
+
+                <LinearLayout
+                    android:id="@+id/img_un_card_demand_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@drawable/shape_card_infor_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/group_margin"
+                    android:paddingBottom="@dimen/group_margin">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="请填写您能为大家提供的资源信息，我们通过大数据推送，方便更多的用户、企业找到您!" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/group_margin"
+                        android:src="@mipmap/icon_empty_add" />
+
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="3dp"
+                        android:background="@mipmap/bg_card_model"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_text_need"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="3dp"
+                            android:drawableTop="@mipmap/icon_card_text"
+                            android:drawablePadding="2dp"
+                            android:textSize="@dimen/textSize12"
+                            android:gravity="center"
+                            android:text="文字" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/group_margin"
+                            android:layout_marginBottom="@dimen/group_margin"
+                            android:background="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/tv_img_need"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="3dp"
+                            android:drawableTop="@mipmap/icon_card_img"
+                            android:drawablePadding="2dp"
+                            android:textSize="@dimen/textSize12"
+                            android:gravity="center"
+                            android:text="图片" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recy_un_card_demand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_add_need"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/group_margin"
+                    android:paddingBottom="@dimen/group_margin">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_card_text_and_img_add" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:id="@+id/divider_need"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/group_margin"/>
+
+            <!--自定义模块-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_custom_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+            <!--添加模块-->
+            <LinearLayout
+                android:id="@+id/ll_add_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/group_margin"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingTop="@dimen/app_margin"
+                android:paddingBottom="@dimen/app_margin">
+
+                <TextView
+                    android:id="@+id/tv_add_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_stock_gray_2"
+                    android:paddingLeft="@dimen/group_margin"
+                    android:paddingTop="6dp"
+                    android:paddingRight="@dimen/group_margin"
+                    android:paddingBottom="6dp"
+                    android:text="+添加模块"
+                    android:textColor="@color/fontcColor1"
+                    android:textSize="@dimen/textSize14" />
+
+            </LinearLayout>
+
+            <!--升级只能名片-->
+            <TextView
+                android:id="@+id/tv_card_upgrade_vip"
+                style="@style/common_bottom_btn_style"
+                android:layout_marginTop="40dp"
+                android:text="升级智能名片"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="600dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include
+                layout="@layout/empty_layout_card_mall"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </FrameLayout>
+</android.support.v4.widget.NestedScrollView>

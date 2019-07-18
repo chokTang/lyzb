@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/fragment_attribute_hide_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_attribute_goodsImageView"
+        android:orientation="horizontal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/fragment_attribute_numberWrapperRelativeLayout"
+        android:background="@drawable/bottom_border_two"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/fragment_attribute_priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:text="@string/placeholderGoodsPrice"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontTwo"/>
+
+        <TextView
+            android:id="@+id/fragment_attribute_stockLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fragment_attribute_priceTextView"
+            android:layout_below="@+id/fragment_attribute_priceTextView"
+            android:layout_marginTop="5dp"
+            android:text="@string/labelStock"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontFour"/>
+
+
+        <Button
+            android:id="@+id/fragment_attribute_closeButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/fragment_attribute_close_button"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/fragment_attribute_goodsImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/fragment_attribute_numberWrapperRelativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/fragment_attribute_goods_image"
+        android:src="@mipmap/pl_image"/>
+
+    <com.szy.common.View.CommonRecyclerView
+        android:id="@+id/fragment_attribute_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_above="@+id/fragment_attribute_disableButton"
+        android:background="#ffffff"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+android:visibility="gone"
+        android:scrollbars="horizontal"
+        />
+
+    <RelativeLayout
+        android:id="@+id/fragment_attribute_numberWrapperRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:layout_above="@+id/fragment_attribute_recyclerView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+        <TextView
+            android:id="@+id/fragment_attribute_numberTip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="购买数量"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree"
+            />
+
+        <TextView
+            android:id="@+id/fragment_attribute_goodsMoq"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/fragment_attribute_numberTip"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree"/>
+
+        <EditText
+            android:id="@+id/fragment_attribute_numberEditText"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_attribute_plusButton"
+            android:layout_alignTop="@+id/fragment_attribute_plusButton"
+            android:layout_toLeftOf="@+id/fragment_attribute_plusButton"
+            android:background="@null"
+            android:gravity="center"
+            android:inputType="numberSigned"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="1"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree"/>
+
+        <Button
+            android:id="@+id/fragment_attribute_minusButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fragment_attribute_numberEditText"
+            android:layout_toStartOf="@+id/fragment_attribute_numberEditText"
+            android:background="@drawable/minus_button_selector"
+            android:padding="5dp"/>
+
+        <Button
+            android:id="@+id/fragment_attribute_plusButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/fragment_attribute_minusButton"
+            android:background="@drawable/attribute_plus_button_selector"
+            />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/fragment_attribute_disableButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorEight"
+        android:text="@string/confirm"
+        android:textColor="@color/colorThree"
+        android:textSize="@dimen/fontTwo"
+        />
+
+</RelativeLayout>

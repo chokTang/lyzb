@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/item_add_account_image"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/white"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_verification_step1"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_add_account_tipLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/bg_check_selected"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/bg_check_selected"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="绑定提现账户设置成功"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontTwo"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_add_account_all_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/item_add_account_one_relative"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bottom_border_one"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/item_add_account_one_text_view"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"/>
+
+            <TextView
+                android:id="@+id/item_add_account_one_ediText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"/>
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@mipmap/btn_right_arrow"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bottom_border_one"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/item_add_account_two_text_view"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"/>
+
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/item_add_account_two_ediText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"/>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/layout_captcha"
+            layout="@layout/layout_captcha"
+            android:visibility="gone"
+            />
+
+        <View
+            android:id="@+id/captcha_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.56dp"
+            android:background="@color/colorSeven"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/item_add_account_three_relative"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bottom_border_one"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/item_add_account_three_text_view"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"/>
+
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/item_add_account_three_ediText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:paddingRight="5dp"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"
+                android:minWidth="100dp"
+                />
+            <include
+                layout="@layout/layout_sms_sendcode_button"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/img_show_password"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/btn_show_password_disabled"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_add_account_four_relative"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bottom_border_one"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/item_add_account_four_text_view"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="111"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"/>
+
+            <com.szy.common.View.CommonEditText
+                android:id="@+id/item_add_account_four_ediText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#00000000"
+                android:textColor="@color/colorTwo"
+                android:textSize="@dimen/fontTwo"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_waring"
+        layout="@layout/layout_warning"
+        android:visibility="gone"/>
+
+    <include
+        layout="@layout/layout_submit_button"/>
+
+</LinearLayout>

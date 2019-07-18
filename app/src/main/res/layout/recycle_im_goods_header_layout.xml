@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/goods_img"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        tools:src="@drawable/good_open_img" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/goods_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:lineSpacingExtra="2dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            tools:text="不知道在哪" />
+
+        <TextView
+            android:id="@+id/goods_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="#ff2302"
+            android:textSize="16sp"
+            tools:text="8元" />
+    </RelativeLayout>
+
+</LinearLayout>

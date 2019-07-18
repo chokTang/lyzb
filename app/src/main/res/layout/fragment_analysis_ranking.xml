@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_statistics"/>
+
+    <com.like.longshaolib.widget.AutoWidthTabLayout
+        android:id="@+id/analysis_ranking_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/fontcColor3"
+        app:tabIndicatorHeight="1dp"
+        app:tabSelectTextColor="@color/fontcColor1"
+        app:tabSelectTextSize="16"
+        app:tabTextColor="@color/fontcColor3"
+        app:tabTextSize="16"
+        app:tab_Mode="mode_fixed"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/analysis_ranking_smartrefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableLoadMore="false">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/analysis_ranking_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <include
+                android:id="@+id/analysis_ranking_notdata"
+                layout="@layout/empty_layout"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

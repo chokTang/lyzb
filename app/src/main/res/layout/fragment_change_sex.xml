@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorTen"
+                android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/fragment_change_sex_man"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view"
+        android:background="@drawable/bottom_border_one"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_change_sex_checked_man"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:text="@string/man"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <ImageView
+            android:id="@+id/fragment_change_sex_checked_man"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_check_red"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_change_sex_wman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/fragment_change_sex_man"
+        android:background="@drawable/bottom_border_one"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_change_sex_checked_wman"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:text="@string/woman"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <ImageView
+            android:id="@+id/fragment_change_sex_checked_wman"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_check_red"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_change_sex_secrecy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/fragment_change_sex_wman"
+        android:background="@drawable/bottom_border_one"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_change_sex_checked_secrecy"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:text="@string/secrecy"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+
+        <ImageView
+            android:id="@+id/fragment_change_sex_checked_secrecy"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_check_red"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

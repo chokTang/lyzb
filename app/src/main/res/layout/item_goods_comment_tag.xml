@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp">
+
+    <com.szy.yishopcustomer.View.FilterCheckBox
+        android:id="@+id/fragment_goods_comment_tag_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/comment_rank_background_selector"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        custom:checkimg="@mipmap/ic_checklist"
+        custom:ftext="@string/placeholderAttribute"
+        custom:ftextColor="@drawable/tab_text_selector_two"
+        custom:ftextSize="@dimen/fontFour"
+        custom:imageWidth="17dp"
+        custom:spacing="5dp" />
+</LinearLayout>

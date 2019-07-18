@@ -1,0 +1,19 @@
+{
+    "fileList": [
+        {
+            "createtime": "2019-03-08 17:22:43",
+            "file": "http://b-ssl.duitang.com/uploads/item/201812/05/20181205211932_xvslr.jpeg",
+            "fileType": 0,
+            "id": "528fca818f0c4f3bbd217b2fbed470b3",
+            "sort": 1,
+            "topicId": "7167a2ac7a1e44ed804836bc55bd348c"
+        }
+    ],
+    "gsTopicInfo": {
+        "content": "我想发布一条动态",
+        "createDate": "2019-03-08 17:22:43",
+        "createMan": "32801",
+        "groupId": "1",
+        "id": "7167a2ac7a1e44ed804836bc55bd348c"
+    }
+}

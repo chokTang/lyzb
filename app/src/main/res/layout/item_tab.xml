@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/item_search_hot_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_tab_selector"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingBottom="9dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="9dp"
+        android:text="@string/placeholderAttribute"
+        android:textColor="@drawable/tab_text_selector"
+        android:textSize="@dimen/fontFour" />
+</LinearLayout>

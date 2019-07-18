@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:id="@+id/linearlayout_control"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="标题"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo" />
+
+        <ImageView
+            android:id="@+id/imageViewArrow"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/btn_right_arrow" />
+
+    </LinearLayout>
+
+    <include layout="@layout/item_border_one" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout_invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/gray_border_button_two"
+            android:padding="1px"
+            android:src="@drawable/gray_border_button_two"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/gray_border_button_two"
+            android:padding="1px"
+            android:src="@drawable/gray_border_button_two"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/gray_border_button_two"
+            android:padding="1px"
+            android:src="@drawable/gray_border_button_two"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/gray_border_button_two"
+            android:padding="1px"
+            android:src="@drawable/gray_border_button_two"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/gray_border_button_two"
+            android:padding="1px"
+            android:src="@drawable/gray_border_button_two"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearlayout_goods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/fragment_promotion_item_goods" />
+
+            <include layout="@layout/fragment_promotion_item_goods" />
+
+            <include layout="@layout/fragment_promotion_item_goods" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="套餐价："
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontThree" />
+
+            <TextView
+                android:id="@+id/textViewActPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥ 199"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontThree" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="价格："
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontFour" />
+
+            <TextView
+                android:id="@+id/textViewAllPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥199 - ¥200"
+                android:textColor="@color/colorThree"
+                android:textSize="@dimen/fontFour" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/red_border_button_one"
+            android:textSize="@dimen/fontFour"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:visibility="gone"
+            android:text="省￥90.81-￥1199.01"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="购买数量"
+                android:textColor="@color/colorOne"
+                android:textSize="@dimen/fontTwo" />
+
+            <include
+                layout="@layout/layout_add_to_cart"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/button_add_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/enable_button"
+                android:text="加入购物车"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontTwo" />
+
+            <Button
+                android:id="@+id/button_buy_now"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/enable_button_addcart"
+                android:text="立即购买"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fontTwo" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

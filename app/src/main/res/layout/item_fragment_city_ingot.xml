@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F2F2F2"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/tv_city_ingot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        tools:text="我的元宝:"
+        android:textColor="@color/aliwx_black"/>
+
+    <TextView
+        android:id="@+id/tv_city_ingot_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/tv_city_ingot"
+        android:textColor="@color/colorPrimary"/>
+
+
+    <TextView
+        android:id="@+id/tv_city_ingot_look"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="12dp"
+        tools:text="查看      >"
+        android:textColor="@color/ads_out_bg"/>
+
+</RelativeLayout>

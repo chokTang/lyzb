@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:background="@mipmap/bg_shop_detail_menu"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_menu_home"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/icon_shop_detail_menu_home"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="首页"
+            android:textColor="@color/ads_white"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/ads_white" />
+
+        <TextView
+            android:id="@+id/tv_menu_share"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/icon_shop_detail_menu_share"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="分享"
+            android:textColor="@color/ads_white"
+            android:textSize="14dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/activity_shop_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        app:layout_behavior="com.szy.yishopcustomer.View.FlingBehavior">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <com.szy.yishopcustomer.View.HeadWrapContentViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.szy.yishopcustomer.View.CirclePageIndicator xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/fragment_index_banner_pageIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    app:fillColor="#fc4955"
+                    app:paddingStart="5dp"
+                    app:pageColor="#88f4f7fc"
+                    app:radius="3dp"
+                    app:strokeColor="#88d5dae2"
+                    app:strokeWidth="0dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/bottom_border_one">
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_root"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@mipmap/btn_index" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="商城首页"
+                        android:textColor="@color/colorOne"
+                        android:textSize="@dimen/fontFour" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_convertible"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@mipmap/btn_my_redeemable" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="我可兑换"
+                        android:textColor="@color/colorOne"
+                        android:textSize="@dimen/fontFour" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_red_exchange"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@mipmap/btn_redemption" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="红包兑换"
+                        android:textColor="@color/colorOne"
+                        android:textSize="@dimen/fontFour" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_user_score"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@mipmap/btn_my_scores" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="我的积分"
+                        android:textColor="@color/colorOne"
+                        android:textSize="@dimen/fontFour" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/integral_filter_layout" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <com.szy.common.View.CommonRecyclerView
+            android:id="@+id/fragment_integral_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTen"
+            android:divider="@null"
+            />
+        <include layout="@layout/layout_default_empty" />
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

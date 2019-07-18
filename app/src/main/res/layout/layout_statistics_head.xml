@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/statistics_number_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp">
+
+        <ImageView
+            android:id="@+id/statistics_share_number_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_statistics_home"/>
+
+        <RelativeLayout
+            android:id="@+id/statistics_share_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="60dp">
+
+            <TextView
+                android:id="@+id/statistics_share_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minWidth="30dp"
+                android:textColor="@color/app_yellow"
+                android:textSize="24sp"
+                tools:text="22"/>
+
+            <TextView
+                android:id="@+id/statistics_share_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/statistics_share_number_tv"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@id/statistics_share_number_tv"
+                android:text="次"
+                android:textColor="@color/app_yellow"
+                android:textSize="@dimen/textSize12"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/statistics_share_number_tv"
+                android:layout_alignRight="@id/statistics_share_tv"
+                android:layout_below="@id/statistics_share_number_tv"
+                android:gravity="center"
+                android:text="分享"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize14"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/statistics_visit_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="45dp"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/statistics_visit_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minWidth="30dp"
+                android:textColor="#BA3DE4"
+                android:textSize="24sp"
+                tools:text="22"/>
+
+            <TextView
+                android:id="@+id/statistics_visit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/statistics_visit_number_tv"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@id/statistics_visit_number_tv"
+                android:text="次"
+                android:textColor="#BA3DE4"
+                android:textSize="@dimen/textSize12"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/statistics_visit_number_tv"
+                android:layout_alignRight="@id/statistics_visit_tv"
+                android:layout_below="@id/statistics_visit_number_tv"
+                android:gravity="center"
+                android:text="访问"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize14"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/statistics_transaction_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/statistics_share_number_iv"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="70dp"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/statistics_transaction_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minWidth="30dp"
+                android:textColor="#FF1A00"
+                android:textSize="24sp"
+                tools:text="22"/>
+
+            <TextView
+                android:id="@+id/statistics_transaction_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/statistics_transaction_number_tv"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@id/statistics_transaction_number_tv"
+                android:text="笔"
+                android:textColor="#FF1A00"
+                android:textSize="@dimen/textSize12"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/statistics_transaction_number_tv"
+                android:layout_alignRight="@id/statistics_transaction_tv"
+                android:layout_below="@id/statistics_transaction_number_tv"
+                android:gravity="center"
+                android:text="交易"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize14"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/statistics_newuser_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/statistics_share_number_iv"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="65dp"
+            android:layout_marginRight="70dp">
+
+            <TextView
+                android:id="@+id/statistics_newuser_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minWidth="30dp"
+                android:textColor="#1C83D9"
+                android:textSize="24sp"
+                tools:text="22"/>
+
+            <TextView
+                android:id="@+id/statistics_newuser_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/statistics_newuser_number_tv"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@id/statistics_newuser_number_tv"
+                android:text="人"
+                android:textColor="#1C83D9"
+                android:textSize="@dimen/textSize12"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/statistics_newuser_number_tv"
+                android:layout_alignRight="@id/statistics_newuser_tv"
+                android:layout_below="@id/statistics_newuser_number_tv"
+                android:gravity="center"
+                android:text="新用户"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize14"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statistics_number_rl"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:layout_marginTop="-15dp"
+        android:background="@drawable/sl_white_r5"
+        android:elevation="5dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/statistics_visit_rbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="按访问次数"
+            android:textColor="@color/color_statistics_type"
+            android:textSize="@dimen/textSize12"/>
+
+        <RadioButton
+            android:id="@+id/statistics_share_rbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="按分享次数"
+            android:textColor="@color/color_statistics_type"
+            android:textSize="@dimen/textSize12"/>
+
+        <RadioButton
+            android:id="@+id/statistics_newuser_rbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="按新用户人数"
+            android:textColor="@color/color_statistics_type"
+            android:textSize="@dimen/textSize12"/>
+
+        <RadioButton
+            android:id="@+id/statistics_money_rbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="按交易额"
+            android:textColor="@color/color_statistics_type"
+            android:textSize="@dimen/textSize12"/>
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/statistics_number_rl"
+        android:background="@color/windows_bg"/>
+</RelativeLayout>

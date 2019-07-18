@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    >
+    <TextView
+        android:id="@+id/fragment_cart_tip_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="以下商品无法一起进行购买"
+        android:textColor="#aaaaaa"
+        android:textSize="@dimen/fontThree"
+        android:gravity="center"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

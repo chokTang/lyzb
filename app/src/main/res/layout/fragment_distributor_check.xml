@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTen"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_distribution_application2"/>
+
+        <TextView
+            android:id="@+id/fragment_distributor_check_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:text="申请成为合伙人的前提"
+            android:textColor="@color/colorOne"
+            android:textSize="@dimen/fontTwo"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="6dp"
+            android:src="@mipmap/ic_distribution_application1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="申请成为商城会员（且登入）"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="已登入"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/fontThree"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_distributor_check_permise_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:minHeight="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/fragment_distributor_check_status_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:padding="6dp"
+            android:src="@mipmap/ic_distribution_application3"
+            />
+
+        <TextView
+            android:id="@+id/fragment_distributor_check_permise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_distributor_check_status_imageView"
+            android:layout_alignTop="@+id/fragment_distributor_check_status_imageView"
+            android:layout_toEndOf="@+id/fragment_distributor_check_status_imageView"
+            android:layout_toRightOf="@+id/fragment_distributor_check_status_imageView"
+            android:gravity="center_vertical"
+            android:text="帐号在商城累计消费满元"
+            android:textColor="@color/colorTwo"
+            android:textSize="@dimen/fontThree"/>
+
+
+        <TextView
+            android:id="@+id/fragment_distributor_check_permise_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_distributor_check_permise"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/fragment_distributor_check_permise"
+            android:gravity="center_vertical|right"
+            android:text="未达成"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"/>
+
+        <TextView
+            android:id="@+id/fragment_distributor_check_permise_status2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/fragment_distributor_check_permise_status"
+            android:layout_marginBottom="8dp"
+            android:text="已消费1000.00元"
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/fragment_distributor_check_button"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/enable_button"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontSeven"/>
+
+    <TextView
+        android:id="@+id/fragment_distributor_check_privilege"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="合伙人特权"
+        android:textColor="@color/colorTwo"
+        android:textSize="@dimen/fontTwo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/btn_goods_collection"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="独立微店"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="拥有自己的微店及推广二维码"
+                    android:textColor="@color/colorThree"
+                    android:textSize="@dimen/fontThree"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/item_border_two"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/btn_user_info"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/fragment_distributor_check_rebate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="合伙人返利"
+                    android:textColor="@color/colorOne"
+                    android:textSize="@dimen/fontTwo"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="下级会员购买，您可以获得佣金"
+                    android:textColor="@color/colorThree"
+                    android:textSize="@dimen/fontThree"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/item_border_one"/>
+
+        <TextView
+            android:id="@+id/fragment_distributor_check_explain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/colorThree"
+            android:textSize="@dimen/fontThree"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+    <ImageView
+        android:id="@+id/img_article_header"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        tools:scr="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/app_margin">
+
+        <TextView
+            android:id="@+id/tv_school_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/text_line_space"
+            android:maxLines="2"
+            android:textColor="@color/fontcColor1"
+            android:textSize="@dimen/textSize14"
+            tools:text="测试互数据手拉葫芦撒谎看啥考虑换阿斯科利哈库拉上课了" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/tv_read_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize12"
+                tools:text="658阅读" />
+
+            <TextView
+                android:id="@+id/tv_zan_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/selector_zan"
+                android:drawablePadding="@dimen/text_icon_space"
+                android:textColor="@color/fontcColor2"
+                android:textSize="@dimen/textSize12"
+                tools:text="658" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

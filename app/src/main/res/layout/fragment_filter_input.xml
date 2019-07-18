@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@android:color/white"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="5dp">
+
+    <com.szy.common.View.CommonEditText
+        android:id="@+id/fragment_filter_input_minimumEditText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/gray_border_button_two"
+        android:gravity="center"
+        android:hint="@string/hintMinimumPrice"
+        android:inputType="number"
+        android:textColor="@color/colorOne"
+        android:textColorHint="@color/colorThree"
+        android:paddingRight="5dp"
+        android:textSize="@dimen/fontFive" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="0.5dp"
+            android:layout_centerInParent="true"
+            android:background="@color/colorSeven" />
+    </RelativeLayout>
+
+
+    <com.szy.common.View.CommonEditText
+        android:id="@+id/fragment_filter_input_maximumEditText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/gray_border_button_two"
+        android:gravity="center"
+        android:hint="@string/hintMaximumPrice"
+        android:inputType="number"
+        android:textColor="@color/colorOne"
+        android:textColorHint="@color/colorThree"
+        android:paddingRight="5dp"
+        android:textSize="@dimen/fontFive" />
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_statistics" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:text="名片分享引导语"
+        android:paddingTop="10dp"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/app_margin">
+
+        <EditText
+            android:id="@+id/setshareword_bcard_edit"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="例：你好，我是重庆市礼仪之邦电子商务有限公司的张三，这是我的电子名片，请惠存。"
+            android:maxLength="50"
+            android:text="例：你好，我是重庆市礼仪之邦电子商务有限公司的张三，这是我的电子名片，请惠存。"
+            android:textColor="@color/fontcColor2"
+            android:textColorHint="@color/fontcColor3"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/setshareword_bcard_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:text="0/50"
+            android:textColor="@color/fontcColor3"
+            android:textSize="@dimen/textSize12" />
+    </LinearLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:paddingTop="10dp"
+        android:text="动态分享引导语"
+        android:textColor="@color/fontcColor1"
+        android:textSize="@dimen/textSize14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/app_margin">
+
+        <EditText
+            android:id="@+id/setshareword_dynamic_edit"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="例：你好，我是重庆市礼仪之邦电子商务有限公司的张三，把我的心情分享给你~"
+            android:maxLength="50"
+            android:textColor="@color/fontcColor2"
+            android:textColorHint="@color/fontcColor3"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/setshareword_dynamic_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:text="0/50"
+            android:textColor="@color/fontcColor3"
+            android:textSize="@dimen/textSize12" />
+    </LinearLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/app_margin"
+        android:layout_weight="1"
+        android:background="@color/windows_bg"
+        android:text="温馨提示：\n分享语设置为非必填，为空时使用默认分享语"
+        android:textColor="@color/fontcColor3"
+        android:textSize="@dimen/textSize12" />
+
+    <TextView
+        android:id="@+id/setshareword_kepp_tv"
+        style="@style/common_bottom_btn_style"
+        android:text="保存" />
+</LinearLayout>
